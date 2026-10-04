@@ -18,31 +18,31 @@
   "works": [
     {
       "id": "ramraksha-stotra",
-      "title": "सार्थ रामरक्षा स्तोत्र",
+      "title": "रामरक्षा स्तोत्र",
       "type": "स्तोत्र",
       "author": "बुधकौशिक ऋषी",
-      "description": "सार्थ रामरक्षा स्तोत्र नित्य पठणासाठी.",
+      "description": "रामरक्षा स्तोत्र नित्य पठणासाठी.",
       "file": "nitya-pathan/ramraksha-stotra.json"
     },
     {
       "id": "maruti-stotra",
-      "title": "सार्थ मारुती स्तोत्र (भीमरूपी)",
+      "title": "मारुती स्तोत्र (भीमरूपी)",
       "type": "स्तोत्र",
-      "description": "सार्थ मारुती स्तोत्र (भीमरूपी) नित्य पठणासाठी.",
+      "description": "मारुती स्तोत्र (भीमरूपी) नित्य पठणासाठी.",
       "file": "nitya-pathan/maruti-stotra.json"
     },
     {
       "id": "ganapati-atharvashirsha",
-      "title": "सार्थ श्री गणपती अथर्वशीर्ष",
+      "title": "श्री गणपती अथर्वशीर्ष",
       "type": "स्तोत्र",
-      "description": "सार्थ श्री गणपती अथर्वशीर्ष नित्य पठणासाठी.",
+      "description": "श्री गणपती अथर्वशीर्ष नित्य पठणासाठी.",
       "file": "nitya-pathan/ganapati-atharvashirsha.json"
     },
     {
       "id": "hanuman-chalisa",
-      "title": "सार्थ हनुमान चालीसा",
+      "title": "हनुमान चालीसा",
       "type": "चालीसा",
-      "description": "सार्थ हनुमान चालीसा नित्य पठणासाठी.",
+      "description": "हनुमान चालीसा नित्य पठणासाठी.",
       "file": "nitya-pathan/hanuman-chalisa.json"
     },
     {
@@ -55,60 +55,60 @@
     },
     {
       "id": "sankatnashan-ganesh",
-      "title": "सार्थ संकटनाशन गणेश स्तोत्र",
+      "title": "संकटनाशन गणेश स्तोत्र",
       "type": "स्तोत्र",
-      "description": "सार्थ संकटनाशन गणेश स्तोत्र नित्य पठणासाठी.",
+      "description": "संकटनाशन गणेश स्तोत्र नित्य पठणासाठी.",
       "file": "nitya-pathan/sankatnashan-ganesh.json"
     },
     {
       "id": "venkatesh-stotra",
-      "title": "सार्थ श्री व्यंकटेश स्तोत्र",
+      "title": "श्री व्यंकटेश स्तोत्र",
       "type": "स्तोत्र",
-      "description": "सार्थ श्री व्यंकटेश स्तोत्र नित्य पठणासाठी.",
+      "description": "श्री व्यंकटेश स्तोत्र नित्य पठणासाठी.",
       "file": "nitya-pathan/venkatesh-stotra.json"
     },
     {
       "id": "shri-sukta",
-      "title": "सार्थ ऋग्वैदिक श्रीसूक्त",
+      "title": "ऋग्वैदिक श्रीसूक्त",
       "type": "सूक्त",
-      "description": "सार्थ ऋग्वैदिक श्रीसूक्त नित्य पठणासाठी.",
+      "description": "ऋग्वैदिक श्रीसूक्त नित्य पठणासाठी.",
       "file": "nitya-pathan/shri-sukta.json"
     },
     {
       "id": "shiv-mahimna",
-      "title": "सार्थ श्री शिव महिम्न स्तोत्रम्",
+      "title": "श्री शिव महिम्न स्तोत्र",
       "type": "स्तोत्र",
       "author": "पुष्पदंत",
-      "description": "सार्थ श्री शिव महिम्न स्तोत्रम् नित्य पठणासाठी.",
+      "description": "श्री शिव महिम्न स्तोत्र नित्य पठणासाठी.",
       "file": "nitya-pathan/shiv-mahimna.json"
     },
     {
       "id": "shiv-panchakshar",
-      "title": "सार्थ श्री शिव पंचाक्षर स्तोत्रम्",
+      "title": "श्री शिव पंचाक्षर स्तोत्र",
       "type": "स्तोत्र",
-      "description": "सार्थ श्री शिव पंचाक्षर स्तोत्रम् नित्य पठणासाठी.",
+      "description": "श्री शिव पंचाक्षर स्तोत्र नित्य पठणासाठी.",
       "file": "nitya-pathan/shiv-panchakshar.json"
     },
     {
       "id": "shiv-tandav",
-      "title": "सार्थ श्री शिव तांडव स्तोत्रम्",
+      "title": "श्री शिव तांडव स्तोत्र",
       "type": "स्तोत्र",
       "author": "रावण",
-      "description": "सार्थ श्री शिव तांडव स्तोत्रम् नित्य पठणासाठी.",
+      "description": "श्री शिव तांडव स्तोत्र नित्य पठणासाठी.",
       "file": "nitya-pathan/shiv-tandav.json"
     },
     {
       "id": "parashuram-stotra",
-      "title": "सार्थ श्री परशुराम स्तोत्रम्",
+      "title": "श्री परशुराम स्तोत्र",
       "type": "स्तोत्र",
-      "description": "सार्थ श्री परशुराम स्तोत्रम् नित्य पठणासाठी.",
+      "description": "श्री परशुराम स्तोत्र नित्य पठणासाठी.",
       "file": "nitya-pathan/parashuram-stotra.json"
     },
     {
       "id": "vishnu-sahasranama",
-      "title": "सार्थ श्री विष्णु सहस्रनाम स्तोत्रम्",
+      "title": "श्री विष्णु सहस्रनाम स्तोत्र",
       "type": "स्तोत्र",
-      "description": "सार्थ श्री विष्णु सहस्रनाम स्तोत्रम् नित्य पठणासाठी.",
+      "description": "श्री विष्णु सहस्रनाम स्तोत्र नित्य पठणासाठी.",
       "file": "nitya-pathan/vishnu-sahasranama.json"
     }
   ]
