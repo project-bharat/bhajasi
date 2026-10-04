@@ -2632,7 +2632,7 @@ function App() {
                             ])}
 
                             {continueItems.length > 0 && (
-                                <section id='home-works' className='bhajasi-section bhajasi-section-works'>
+                                <section className='bhajasi-section bhajasi-section-works'>
                                     <div className='bhajasi-section-title'>
                                         <h2>वाचन पुढे सुरू ठेवा</h2>
                                     </div>
@@ -2713,7 +2713,7 @@ function App() {
                                 </div>
                             </section>
 
-                            <section className='bhajasi-section bhajasi-section-works'>
+                            <section id='home-works' className='bhajasi-section bhajasi-section-works'>
                                 <div className='bhajasi-section-title'>
                                     <h2>ग्रंथांनुसार</h2>
                                 </div>
