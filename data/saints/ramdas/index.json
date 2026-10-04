@@ -11,1362 +11,149 @@
       "file": "ramdas/manache-shlok.json"
     },
     {
-      "id": "dasbodh-01",
-      "title": "दासबोध — दशक 1",
-      "type": "दशक",
-      "file": "ramdas/dasbodh_01.json",
+      "id": "dasbodh",
+      "title": "दासबोध",
+      "type": "ग्रंथ",
       "sections": [
         {
-          "id": "dasbodh-01-samas-01",
+          "id": "dasbodh-01",
           "number": 1,
-          "title": "समास 1",
-          "type": "समास"
+          "title": "दासबोध — दशक 1",
+          "type": "दशक",
+          "file": "ramdas/dasbodh_01.json"
         },
         {
-          "id": "dasbodh-01-samas-02",
+          "id": "dasbodh-02",
           "number": 2,
-          "title": "समास 2",
-          "type": "समास"
+          "title": "दासबोध — दशक 2",
+          "type": "दशक",
+          "file": "ramdas/dasbodh_02.json"
         },
         {
-          "id": "dasbodh-01-samas-03",
+          "id": "dasbodh-03",
           "number": 3,
-          "title": "समास 3",
-          "type": "समास"
+          "title": "दासबोध — दशक 3",
+          "type": "दशक",
+          "file": "ramdas/dasbodh_03.json"
         },
         {
-          "id": "dasbodh-01-samas-04",
+          "id": "dasbodh-04",
           "number": 4,
-          "title": "समास 4",
-          "type": "समास"
+          "title": "दासबोध — दशक 4",
+          "type": "दशक",
+          "file": "ramdas/dasbodh_04.json"
         },
         {
-          "id": "dasbodh-01-samas-05",
+          "id": "dasbodh-05",
           "number": 5,
-          "title": "समास 5",
-          "type": "समास"
+          "title": "दासबोध — दशक 5",
+          "type": "दशक",
+          "file": "ramdas/dasbodh_05.json"
         },
         {
-          "id": "dasbodh-01-samas-06",
+          "id": "dasbodh-06",
           "number": 6,
-          "title": "समास 6",
-          "type": "समास"
+          "title": "दासबोध — दशक 6",
+          "type": "दशक",
+          "file": "ramdas/dasbodh_06.json"
         },
         {
-          "id": "dasbodh-01-samas-07",
+          "id": "dasbodh-07",
           "number": 7,
-          "title": "समास 7",
-          "type": "समास"
+          "title": "दासबोध — दशक 7",
+          "type": "दशक",
+          "file": "ramdas/dasbodh_07.json"
         },
         {
-          "id": "dasbodh-01-samas-08",
+          "id": "dasbodh-08",
           "number": 8,
-          "title": "समास 8",
-          "type": "समास"
+          "title": "दासबोध — दशक 8",
+          "type": "दशक",
+          "file": "ramdas/dasbodh_08.json"
         },
         {
-          "id": "dasbodh-01-samas-09",
+          "id": "dasbodh-09",
           "number": 9,
-          "title": "समास 9",
-          "type": "समास"
+          "title": "दासबोध — दशक 9",
+          "type": "दशक",
+          "file": "ramdas/dasbodh_09.json"
         },
         {
-          "id": "dasbodh-01-samas-10",
+          "id": "dasbodh-10",
           "number": 10,
-          "title": "समास 10",
-          "type": "समास"
-        }
-      ]
-    },
-    {
-      "id": "dasbodh-02",
-      "title": "दासबोध — दशक 2",
-      "type": "दशक",
-      "file": "ramdas/dasbodh_02.json",
-      "sections": [
-        {
-          "id": "dasbodh-02-samas-01",
-          "number": 1,
-          "title": "समास 1",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-02-samas-02",
-          "number": 2,
-          "title": "समास 2",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-02-samas-03",
-          "number": 3,
-          "title": "समास 3",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-02-samas-04",
-          "number": 4,
-          "title": "समास 4",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-02-samas-05",
-          "number": 5,
-          "title": "समास 5",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-02-samas-06",
-          "number": 6,
-          "title": "समास 6",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-02-samas-07",
-          "number": 7,
-          "title": "समास 7",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-02-samas-08",
-          "number": 8,
-          "title": "समास 8",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-02-samas-09",
-          "number": 9,
-          "title": "समास 9",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-02-samas-10",
-          "number": 10,
-          "title": "समास 10",
-          "type": "समास"
-        }
-      ]
-    },
-    {
-      "id": "dasbodh-03",
-      "title": "दासबोध — दशक 3",
-      "type": "दशक",
-      "file": "ramdas/dasbodh_03.json",
-      "sections": [
-        {
-          "id": "dasbodh-03-samas-01",
-          "number": 1,
-          "title": "समास 1",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-03-samas-02",
-          "number": 2,
-          "title": "समास 2",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-03-samas-03",
-          "number": 3,
-          "title": "समास 3",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-03-samas-04",
-          "number": 4,
-          "title": "समास 4",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-03-samas-05",
-          "number": 5,
-          "title": "समास 5",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-03-samas-06",
-          "number": 6,
-          "title": "समास 6",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-03-samas-07",
-          "number": 7,
-          "title": "समास 7",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-03-samas-08",
-          "number": 8,
-          "title": "समास 8",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-03-samas-09",
-          "number": 9,
-          "title": "समास 9",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-03-samas-10",
-          "number": 10,
-          "title": "समास 10",
-          "type": "समास"
-        }
-      ]
-    },
-    {
-      "id": "dasbodh-04",
-      "title": "दासबोध — दशक 4",
-      "type": "दशक",
-      "file": "ramdas/dasbodh_04.json",
-      "sections": [
-        {
-          "id": "dasbodh-04-samas-01",
-          "number": 1,
-          "title": "समास 1",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-04-samas-02",
-          "number": 2,
-          "title": "समास 2",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-04-samas-03",
-          "number": 3,
-          "title": "समास 3",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-04-samas-04",
-          "number": 4,
-          "title": "समास 4",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-04-samas-05",
-          "number": 5,
-          "title": "समास 5",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-04-samas-06",
-          "number": 6,
-          "title": "समास 6",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-04-samas-07",
-          "number": 7,
-          "title": "समास 7",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-04-samas-08",
-          "number": 8,
-          "title": "समास 8",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-04-samas-09",
-          "number": 9,
-          "title": "समास 9",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-04-samas-10",
-          "number": 10,
-          "title": "समास 10",
-          "type": "समास"
-        }
-      ]
-    },
-    {
-      "id": "dasbodh-05",
-      "title": "दासबोध — दशक 5",
-      "type": "दशक",
-      "file": "ramdas/dasbodh_05.json",
-      "sections": [
-        {
-          "id": "dasbodh-05-samas-01",
-          "number": 1,
-          "title": "समास 1",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-05-samas-02",
-          "number": 2,
-          "title": "समास 2",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-05-samas-03",
-          "number": 3,
-          "title": "समास 3",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-05-samas-04",
-          "number": 4,
-          "title": "समास 4",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-05-samas-05",
-          "number": 5,
-          "title": "समास 5",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-05-samas-06",
-          "number": 6,
-          "title": "समास 6",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-05-samas-07",
-          "number": 7,
-          "title": "समास 7",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-05-samas-08",
-          "number": 8,
-          "title": "समास 8",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-05-samas-09",
-          "number": 9,
-          "title": "समास 9",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-05-samas-10",
-          "number": 10,
-          "title": "समास 10",
-          "type": "समास"
-        }
-      ]
-    },
-    {
-      "id": "dasbodh-06",
-      "title": "दासबोध — दशक 6",
-      "type": "दशक",
-      "file": "ramdas/dasbodh_06.json",
-      "sections": [
-        {
-          "id": "dasbodh-06-samas-01",
-          "number": 1,
-          "title": "समास 1",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-06-samas-02",
-          "number": 2,
-          "title": "समास 2",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-06-samas-03",
-          "number": 3,
-          "title": "समास 3",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-06-samas-04",
-          "number": 4,
-          "title": "समास 4",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-06-samas-05",
-          "number": 5,
-          "title": "समास 5",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-06-samas-06",
-          "number": 6,
-          "title": "समास 6",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-06-samas-07",
-          "number": 7,
-          "title": "समास 7",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-06-samas-08",
-          "number": 8,
-          "title": "समास 8",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-06-samas-09",
-          "number": 9,
-          "title": "समास 9",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-06-samas-10",
-          "number": 10,
-          "title": "समास 10",
-          "type": "समास"
-        }
-      ]
-    },
-    {
-      "id": "dasbodh-07",
-      "title": "दासबोध — दशक 7",
-      "type": "दशक",
-      "file": "ramdas/dasbodh_07.json",
-      "sections": [
-        {
-          "id": "dasbodh-07-samas-01",
-          "number": 1,
-          "title": "समास 1",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-07-samas-02",
-          "number": 2,
-          "title": "समास 2",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-07-samas-03",
-          "number": 3,
-          "title": "समास 3",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-07-samas-04",
-          "number": 4,
-          "title": "समास 4",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-07-samas-05",
-          "number": 5,
-          "title": "समास 5",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-07-samas-06",
-          "number": 6,
-          "title": "समास 6",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-07-samas-07",
-          "number": 7,
-          "title": "समास 7",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-07-samas-08",
-          "number": 8,
-          "title": "समास 8",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-07-samas-09",
-          "number": 9,
-          "title": "समास 9",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-07-samas-10",
-          "number": 10,
-          "title": "समास 10",
-          "type": "समास"
-        }
-      ]
-    },
-    {
-      "id": "dasbodh-08",
-      "title": "दासबोध — दशक 8",
-      "type": "दशक",
-      "file": "ramdas/dasbodh_08.json",
-      "sections": [
-        {
-          "id": "dasbodh-08-samas-01",
-          "number": 1,
-          "title": "समास 1",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-08-samas-02",
-          "number": 2,
-          "title": "समास 2",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-08-samas-03",
-          "number": 3,
-          "title": "समास 3",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-08-samas-04",
-          "number": 4,
-          "title": "समास 4",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-08-samas-05",
-          "number": 5,
-          "title": "समास 5",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-08-samas-06",
-          "number": 6,
-          "title": "समास 6",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-08-samas-07",
-          "number": 7,
-          "title": "समास 7",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-08-samas-08",
-          "number": 8,
-          "title": "समास 8",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-08-samas-09",
-          "number": 9,
-          "title": "समास 9",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-08-samas-10",
-          "number": 10,
-          "title": "समास 10",
-          "type": "समास"
-        }
-      ]
-    },
-    {
-      "id": "dasbodh-09",
-      "title": "दासबोध — दशक 9",
-      "type": "दशक",
-      "file": "ramdas/dasbodh_09.json",
-      "sections": [
-        {
-          "id": "dasbodh-09-samas-01",
-          "number": 1,
-          "title": "समास 1",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-09-samas-02",
-          "number": 2,
-          "title": "समास 2",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-09-samas-03",
-          "number": 3,
-          "title": "समास 3",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-09-samas-04",
-          "number": 4,
-          "title": "समास 4",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-09-samas-05",
-          "number": 5,
-          "title": "समास 5",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-09-samas-06",
-          "number": 6,
-          "title": "समास 6",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-09-samas-07",
-          "number": 7,
-          "title": "समास 7",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-09-samas-08",
-          "number": 8,
-          "title": "समास 8",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-09-samas-09",
-          "number": 9,
-          "title": "समास 9",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-09-samas-10",
-          "number": 10,
-          "title": "समास 10",
-          "type": "समास"
-        }
-      ]
-    },
-    {
-      "id": "dasbodh-10",
-      "title": "दासबोध — दशक 10",
-      "type": "दशक",
-      "file": "ramdas/dasbodh_10.json",
-      "sections": [
-        {
-          "id": "dasbodh-10-samas-01",
-          "number": 1,
-          "title": "समास 1",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-10-samas-02",
-          "number": 2,
-          "title": "समास 2",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-10-samas-03",
-          "number": 3,
-          "title": "समास 3",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-10-samas-04",
-          "number": 4,
-          "title": "समास 4",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-10-samas-05",
-          "number": 5,
-          "title": "समास 5",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-10-samas-06",
-          "number": 6,
-          "title": "समास 6",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-10-samas-07",
-          "number": 7,
-          "title": "समास 7",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-10-samas-08",
-          "number": 8,
-          "title": "समास 8",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-10-samas-09",
-          "number": 9,
-          "title": "समास 9",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-10-samas-10",
-          "number": 10,
-          "title": "समास 10",
-          "type": "समास"
-        }
-      ]
-    },
-    {
-      "id": "dasbodh-11",
-      "title": "दासबोध — दशक 11",
-      "type": "दशक",
-      "file": "ramdas/dasbodh_11.json",
-      "sections": [
-        {
-          "id": "dasbodh-11-samas-01",
-          "number": 1,
-          "title": "समास 1",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-11-samas-02",
-          "number": 2,
-          "title": "समास 2",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-11-samas-03",
-          "number": 3,
-          "title": "समास 3",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-11-samas-04",
-          "number": 4,
-          "title": "समास 4",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-11-samas-05",
-          "number": 5,
-          "title": "समास 5",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-11-samas-06",
-          "number": 6,
-          "title": "समास 6",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-11-samas-07",
-          "number": 7,
-          "title": "समास 7",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-11-samas-08",
-          "number": 8,
-          "title": "समास 8",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-11-samas-09",
-          "number": 9,
-          "title": "समास 9",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-11-samas-10",
-          "number": 10,
-          "title": "समास 10",
-          "type": "समास"
-        }
-      ]
-    },
-    {
-      "id": "dasbodh-12",
-      "title": "दासबोध — दशक 12",
-      "type": "दशक",
-      "file": "ramdas/dasbodh_12.json",
-      "sections": [
-        {
-          "id": "dasbodh-12-samas-01",
-          "number": 1,
-          "title": "समास 1",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-12-samas-02",
-          "number": 2,
-          "title": "समास 2",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-12-samas-03",
-          "number": 3,
-          "title": "समास 3",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-12-samas-04",
-          "number": 4,
-          "title": "समास 4",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-12-samas-05",
-          "number": 5,
-          "title": "समास 5",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-12-samas-06",
-          "number": 6,
-          "title": "समास 6",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-12-samas-07",
-          "number": 7,
-          "title": "समास 7",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-12-samas-08",
-          "number": 8,
-          "title": "समास 8",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-12-samas-09",
-          "number": 9,
-          "title": "समास 9",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-12-samas-10",
-          "number": 10,
-          "title": "समास 10",
-          "type": "समास"
-        }
-      ]
-    },
-    {
-      "id": "dasbodh-13",
-      "title": "दासबोध — दशक 13",
-      "type": "दशक",
-      "file": "ramdas/dasbodh_13.json",
-      "sections": [
-        {
-          "id": "dasbodh-13-samas-01",
-          "number": 1,
-          "title": "समास 1",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-13-samas-02",
-          "number": 2,
-          "title": "समास 2",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-13-samas-03",
-          "number": 3,
-          "title": "समास 3",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-13-samas-04",
-          "number": 4,
-          "title": "समास 4",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-13-samas-05",
-          "number": 5,
-          "title": "समास 5",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-13-samas-06",
-          "number": 6,
-          "title": "समास 6",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-13-samas-07",
-          "number": 7,
-          "title": "समास 7",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-13-samas-08",
-          "number": 8,
-          "title": "समास 8",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-13-samas-09",
-          "number": 9,
-          "title": "समास 9",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-13-samas-10",
-          "number": 10,
-          "title": "समास 10",
-          "type": "समास"
-        }
-      ]
-    },
-    {
-      "id": "dasbodh-14",
-      "title": "दासबोध — दशक 14",
-      "type": "दशक",
-      "file": "ramdas/dasbodh_14.json",
-      "sections": [
-        {
-          "id": "dasbodh-14-samas-01",
-          "number": 1,
-          "title": "समास 1",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-14-samas-02",
-          "number": 2,
-          "title": "समास 2",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-14-samas-03",
-          "number": 3,
-          "title": "समास 3",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-14-samas-04",
-          "number": 4,
-          "title": "समास 4",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-14-samas-05",
-          "number": 5,
-          "title": "समास 5",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-14-samas-06",
-          "number": 6,
-          "title": "समास 6",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-14-samas-07",
-          "number": 7,
-          "title": "समास 7",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-14-samas-08",
-          "number": 8,
-          "title": "समास 8",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-14-samas-09",
-          "number": 9,
-          "title": "समास 9",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-14-samas-10",
-          "number": 10,
-          "title": "समास 10",
-          "type": "समास"
-        }
-      ]
-    },
-    {
-      "id": "dasbodh-15",
-      "title": "दासबोध — दशक 15",
-      "type": "दशक",
-      "file": "ramdas/dasbodh_15.json",
-      "sections": [
-        {
-          "id": "dasbodh-15-samas-01",
-          "number": 1,
-          "title": "समास 1",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-15-samas-02",
-          "number": 2,
-          "title": "समास 2",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-15-samas-03",
-          "number": 3,
-          "title": "समास 3",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-15-samas-04",
-          "number": 4,
-          "title": "समास 4",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-15-samas-05",
-          "number": 5,
-          "title": "समास 5",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-15-samas-06",
-          "number": 6,
-          "title": "समास 6",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-15-samas-07",
-          "number": 7,
-          "title": "समास 7",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-15-samas-08",
-          "number": 8,
-          "title": "समास 8",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-15-samas-09",
-          "number": 9,
-          "title": "समास 9",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-15-samas-10",
-          "number": 10,
-          "title": "समास 10",
-          "type": "समास"
-        }
-      ]
-    },
-    {
-      "id": "dasbodh-16",
-      "title": "दासबोध — दशक 16",
-      "type": "दशक",
-      "file": "ramdas/dasbodh_16.json",
-      "sections": [
-        {
-          "id": "dasbodh-16-samas-01",
-          "number": 1,
-          "title": "समास 1",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-16-samas-02",
-          "number": 2,
-          "title": "समास 2",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-16-samas-03",
-          "number": 3,
-          "title": "समास 3",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-16-samas-04",
-          "number": 4,
-          "title": "समास 4",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-16-samas-05",
-          "number": 5,
-          "title": "समास 5",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-16-samas-06",
-          "number": 6,
-          "title": "समास 6",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-16-samas-07",
-          "number": 7,
-          "title": "समास 7",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-16-samas-08",
-          "number": 8,
-          "title": "समास 8",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-16-samas-09",
-          "number": 9,
-          "title": "समास 9",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-16-samas-10",
-          "number": 10,
-          "title": "समास 10",
-          "type": "समास"
-        }
-      ]
-    },
-    {
-      "id": "dasbodh-17",
-      "title": "दासबोध — दशक 17",
-      "type": "दशक",
-      "file": "ramdas/dasbodh_17.json",
-      "sections": [
-        {
-          "id": "dasbodh-17-samas-01",
-          "number": 1,
-          "title": "समास 1",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-17-samas-02",
-          "number": 2,
-          "title": "समास 2",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-17-samas-03",
-          "number": 3,
-          "title": "समास 3",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-17-samas-04",
-          "number": 4,
-          "title": "समास 4",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-17-samas-05",
-          "number": 5,
-          "title": "समास 5",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-17-samas-06",
-          "number": 6,
-          "title": "समास 6",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-17-samas-07",
-          "number": 7,
-          "title": "समास 7",
-          "type": "समास"
+          "title": "दासबोध — दशक 10",
+          "type": "दशक",
+          "file": "ramdas/dasbodh_10.json"
         },
-        {
-          "id": "dasbodh-17-samas-08",
-          "number": 8,
-          "title": "समास 8",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-17-samas-09",
-          "number": 9,
-          "title": "समास 9",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-17-samas-10",
-          "number": 10,
-          "title": "समास 10",
-          "type": "समास"
-        }
-      ]
-    },
-    {
-      "id": "dasbodh-18",
-      "title": "दासबोध — दशक 18",
-      "type": "दशक",
-      "file": "ramdas/dasbodh_18.json",
-      "sections": [
-        {
-          "id": "dasbodh-18-samas-01",
-          "number": 1,
-          "title": "समास 1",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-18-samas-02",
-          "number": 2,
-          "title": "समास 2",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-18-samas-03",
-          "number": 3,
-          "title": "समास 3",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-18-samas-04",
-          "number": 4,
-          "title": "समास 4",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-18-samas-05",
-          "number": 5,
-          "title": "समास 5",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-18-samas-06",
-          "number": 6,
-          "title": "समास 6",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-18-samas-07",
-          "number": 7,
-          "title": "समास 7",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-18-samas-08",
-          "number": 8,
-          "title": "समास 8",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-18-samas-09",
-          "number": 9,
-          "title": "समास 9",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-18-samas-10",
-          "number": 10,
-          "title": "समास 10",
-          "type": "समास"
-        }
-      ]
-    },
-    {
-      "id": "dasbodh-19",
-      "title": "दासबोध — दशक 19",
-      "type": "दशक",
-      "file": "ramdas/dasbodh_19.json",
-      "sections": [
-        {
-          "id": "dasbodh-19-samas-01",
-          "number": 1,
-          "title": "समास 1",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-19-samas-02",
-          "number": 2,
-          "title": "समास 2",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-19-samas-03",
-          "number": 3,
-          "title": "समास 3",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-19-samas-04",
-          "number": 4,
-          "title": "समास 4",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-19-samas-05",
-          "number": 5,
-          "title": "समास 5",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-19-samas-06",
-          "number": 6,
-          "title": "समास 6",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-19-samas-07",
-          "number": 7,
-          "title": "समास 7",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-19-samas-08",
-          "number": 8,
-          "title": "समास 8",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-19-samas-09",
-          "number": 9,
-          "title": "समास 9",
-          "type": "समास"
-        },
-        {
-          "id": "dasbodh-19-samas-10",
-          "number": 10,
-          "title": "समास 10",
-          "type": "समास"
-        }
-      ]
-    },
-    {
-      "id": "dasbodh-20",
-      "title": "दासबोध — दशक 20",
-      "type": "दशक",
-      "file": "ramdas/dasbodh_20.json",
-      "sections": [
         {
-          "id": "dasbodh-20-samas-01",
-          "number": 1,
-          "title": "समास 1",
-          "type": "समास"
+          "id": "dasbodh-11",
+          "number": 11,
+          "title": "दासबोध — दशक 11",
+          "type": "दशक",
+          "file": "ramdas/dasbodh_11.json"
         },
         {
-          "id": "dasbodh-20-samas-02",
-          "number": 2,
-          "title": "समास 2",
-          "type": "समास"
+          "id": "dasbodh-12",
+          "number": 12,
+          "title": "दासबोध — दशक 12",
+          "type": "दशक",
+          "file": "ramdas/dasbodh_12.json"
         },
         {
-          "id": "dasbodh-20-samas-03",
-          "number": 3,
-          "title": "समास 3",
-          "type": "समास"
+          "id": "dasbodh-13",
+          "number": 13,
+          "title": "दासबोध — दशक 13",
+          "type": "दशक",
+          "file": "ramdas/dasbodh_13.json"
         },
         {
-          "id": "dasbodh-20-samas-04",
-          "number": 4,
-          "title": "समास 4",
-          "type": "समास"
+          "id": "dasbodh-14",
+          "number": 14,
+          "title": "दासबोध — दशक 14",
+          "type": "दशक",
+          "file": "ramdas/dasbodh_14.json"
         },
         {
-          "id": "dasbodh-20-samas-05",
-          "number": 5,
-          "title": "समास 5",
-          "type": "समास"
+          "id": "dasbodh-15",
+          "number": 15,
+          "title": "दासबोध — दशक 15",
+          "type": "दशक",
+          "file": "ramdas/dasbodh_15.json"
         },
         {
-          "id": "dasbodh-20-samas-06",
-          "number": 6,
-          "title": "समास 6",
-          "type": "समास"
+          "id": "dasbodh-16",
+          "number": 16,
+          "title": "दासबोध — दशक 16",
+          "type": "दशक",
+          "file": "ramdas/dasbodh_16.json"
         },
         {
-          "id": "dasbodh-20-samas-07",
-          "number": 7,
-          "title": "समास 7",
-          "type": "समास"
+          "id": "dasbodh-17",
+          "number": 17,
+          "title": "दासबोध — दशक 17",
+          "type": "दशक",
+          "file": "ramdas/dasbodh_17.json"
         },
         {
-          "id": "dasbodh-20-samas-08",
-          "number": 8,
-          "title": "समास 8",
-          "type": "समास"
+          "id": "dasbodh-18",
+          "number": 18,
+          "title": "दासबोध — दशक 18",
+          "type": "दशक",
+          "file": "ramdas/dasbodh_18.json"
         },
         {
-          "id": "dasbodh-20-samas-09",
-          "number": 9,
-          "title": "समास 9",
-          "type": "समास"
+          "id": "dasbodh-19",
+          "number": 19,
+          "title": "दासबोध — दशक 19",
+          "type": "दशक",
+          "file": "ramdas/dasbodh_19.json"
         },
         {
-          "id": "dasbodh-20-samas-10",
-          "number": 10,
-          "title": "समास 10",
-          "type": "समास"
+          "id": "dasbodh-20",
+          "number": 20,
+          "title": "दासबोध — दशक 20",
+          "type": "दशक",
+          "file": "ramdas/dasbodh_20.json"
         }
       ]
     },
