@@ -1,118 +1,326 @@
 {
   "id": "tukdoji",
-  "name": "संत तुकडोजी महाराज",
-  "search": "तुकडोजी महाराज ग्रामगीता ओवी ग्रामविकास सेवा स्वावलंबन",
+  "name": "राष्ट्रसंत तुकडोजी महाराज",
+  "symbol": "ग्राम",
+  "search": "तुकडोजी महाराज ग्रामगीता भजन अभंग राष्ट्रसंत विचार कीर्तन ग्रामविकास",
   "works": [
     {
-      "title": "ग्रामगीता — ओवी",
-      "days": 1,
-      "entries": [
-        {
-          "text": "गाव जागे झाले तर देश जागेल ।",
-          "meaning": "ग्रामजागृती, जबाबदारी आणि सामूहिक विकासाला केंद्रस्थानी ठेवणारा विचार."
-        },
-        {
-          "text": "श्रमाची प्रतिष्ठा वाढवावी । ग्रामजीवन उन्नत करावे ॥",
-          "meaning": "श्रम, स्वावलंबन आणि गावाच्या सर्वांगीण विकासाला महत्त्व."
-        },
-        {
-          "text": "स्वच्छ गाव सुंदर गाव । हेचि विकासाचे पहिले पाऊल ॥",
-          "meaning": "स्वच्छता आणि शिस्त यांना सामाजिक प्रगतीची पायाभरणी मानणारा विचार."
-        },
-        {
-          "text": "ग्रामसेवा हीच देशसेवा । जनहित हाच धर्म ॥",
-          "meaning": "स्थानिक समाजसेवेतून व्यापक राष्ट्रहित साधण्याची दिशा."
-        }
-      ],
-      "id": "tukdoji-work-1",
-      "type": "ओवी • ग्रामविचार"
-    },
-    {
-      "id": "tukdoji-1791091810391-0",
+      "id": "gramgeeta",
       "title": "ग्रामगीता",
       "type": "ग्रंथ",
-      "days": 1,
       "sections": [
         {
-          "id": "tukdoji-1791091810391-0-chapter-1",
+          "id": "gramgeeta-01",
+          "number": 1,
           "title": "अध्याय 1",
           "type": "अध्याय",
-          "days": 1,
-          "entries": [
-            {
-              "text": "[नमुना डेटा — प्रमाणित अध्याय मजकूर येथे जोडावा]",
-              "meaning": "हा नमुना केवळ डेटा-संरचना आणि UI तपासण्यासाठी आहे. प्रमाणित मूळ साहित्य उपलब्ध झाल्यावर येथे तेच मजकूर ठेवावा.",
-              "sample": true
-            }
-          ]
+          "file": "tukdoji/gramgeeta_01.json"
         },
         {
-          "id": "tukdoji-1791091810391-0-chapter-2",
+          "id": "gramgeeta-02",
+          "number": 2,
           "title": "अध्याय 2",
           "type": "अध्याय",
-          "days": 1,
-          "entries": [
-            {
-              "text": "[नमुना डेटा — प्रमाणित अध्याय मजकूर येथे जोडावा]",
-              "meaning": "हा नमुना केवळ डेटा-संरचना आणि UI तपासण्यासाठी आहे. प्रमाणित मूळ साहित्य उपलब्ध झाल्यावर येथे तेच मजकूर ठेवावा.",
-              "sample": true
-            }
-          ]
+          "file": "tukdoji/gramgeeta_02.json"
         },
         {
-          "id": "tukdoji-1791091810391-0-chapter-31",
+          "id": "gramgeeta-03",
+          "number": 3,
+          "title": "अध्याय 3",
+          "type": "अध्याय",
+          "file": "tukdoji/gramgeeta_03.json"
+        },
+        {
+          "id": "gramgeeta-04",
+          "number": 4,
+          "title": "अध्याय 4",
+          "type": "अध्याय",
+          "file": "tukdoji/gramgeeta_04.json"
+        },
+        {
+          "id": "gramgeeta-05",
+          "number": 5,
+          "title": "अध्याय 5",
+          "type": "अध्याय",
+          "file": "tukdoji/gramgeeta_05.json"
+        },
+        {
+          "id": "gramgeeta-06",
+          "number": 6,
+          "title": "अध्याय 6",
+          "type": "अध्याय",
+          "file": "tukdoji/gramgeeta_06.json"
+        },
+        {
+          "id": "gramgeeta-07",
+          "number": 7,
+          "title": "अध्याय 7",
+          "type": "अध्याय",
+          "file": "tukdoji/gramgeeta_07.json"
+        },
+        {
+          "id": "gramgeeta-08",
+          "number": 8,
+          "title": "अध्याय 8",
+          "type": "अध्याय",
+          "file": "tukdoji/gramgeeta_08.json"
+        },
+        {
+          "id": "gramgeeta-09",
+          "number": 9,
+          "title": "अध्याय 9",
+          "type": "अध्याय",
+          "file": "tukdoji/gramgeeta_09.json"
+        },
+        {
+          "id": "gramgeeta-10",
+          "number": 10,
+          "title": "अध्याय 10",
+          "type": "अध्याय",
+          "file": "tukdoji/gramgeeta_10.json"
+        },
+        {
+          "id": "gramgeeta-11",
+          "number": 11,
+          "title": "अध्याय 11",
+          "type": "अध्याय",
+          "file": "tukdoji/gramgeeta_11.json"
+        },
+        {
+          "id": "gramgeeta-12",
+          "number": 12,
+          "title": "अध्याय 12",
+          "type": "अध्याय",
+          "file": "tukdoji/gramgeeta_12.json"
+        },
+        {
+          "id": "gramgeeta-13",
+          "number": 13,
+          "title": "अध्याय 13",
+          "type": "अध्याय",
+          "file": "tukdoji/gramgeeta_13.json"
+        },
+        {
+          "id": "gramgeeta-14",
+          "number": 14,
+          "title": "अध्याय 14",
+          "type": "अध्याय",
+          "file": "tukdoji/gramgeeta_14.json"
+        },
+        {
+          "id": "gramgeeta-15",
+          "number": 15,
+          "title": "अध्याय 15",
+          "type": "अध्याय",
+          "file": "tukdoji/gramgeeta_15.json"
+        },
+        {
+          "id": "gramgeeta-16",
+          "number": 16,
+          "title": "अध्याय 16",
+          "type": "अध्याय",
+          "file": "tukdoji/gramgeeta_16.json"
+        },
+        {
+          "id": "gramgeeta-17",
+          "number": 17,
+          "title": "अध्याय 17",
+          "type": "अध्याय",
+          "file": "tukdoji/gramgeeta_17.json"
+        },
+        {
+          "id": "gramgeeta-18",
+          "number": 18,
+          "title": "अध्याय 18",
+          "type": "अध्याय",
+          "file": "tukdoji/gramgeeta_18.json"
+        },
+        {
+          "id": "gramgeeta-19",
+          "number": 19,
+          "title": "अध्याय 19",
+          "type": "अध्याय",
+          "file": "tukdoji/gramgeeta_19.json"
+        },
+        {
+          "id": "gramgeeta-20",
+          "number": 20,
+          "title": "अध्याय 20",
+          "type": "अध्याय",
+          "file": "tukdoji/gramgeeta_20.json"
+        },
+        {
+          "id": "gramgeeta-21",
+          "number": 21,
+          "title": "अध्याय 21",
+          "type": "अध्याय",
+          "file": "tukdoji/gramgeeta_21.json"
+        },
+        {
+          "id": "gramgeeta-22",
+          "number": 22,
+          "title": "अध्याय 22",
+          "type": "अध्याय",
+          "file": "tukdoji/gramgeeta_22.json"
+        },
+        {
+          "id": "gramgeeta-23",
+          "number": 23,
+          "title": "अध्याय 23",
+          "type": "अध्याय",
+          "file": "tukdoji/gramgeeta_23.json"
+        },
+        {
+          "id": "gramgeeta-24",
+          "number": 24,
+          "title": "अध्याय 24",
+          "type": "अध्याय",
+          "file": "tukdoji/gramgeeta_24.json"
+        },
+        {
+          "id": "gramgeeta-25",
+          "number": 25,
+          "title": "अध्याय 25",
+          "type": "अध्याय",
+          "file": "tukdoji/gramgeeta_25.json"
+        },
+        {
+          "id": "gramgeeta-26",
+          "number": 26,
+          "title": "अध्याय 26",
+          "type": "अध्याय",
+          "file": "tukdoji/gramgeeta_26.json"
+        },
+        {
+          "id": "gramgeeta-27",
+          "number": 27,
+          "title": "अध्याय 27",
+          "type": "अध्याय",
+          "file": "tukdoji/gramgeeta_27.json"
+        },
+        {
+          "id": "gramgeeta-28",
+          "number": 28,
+          "title": "अध्याय 28",
+          "type": "अध्याय",
+          "file": "tukdoji/gramgeeta_28.json"
+        },
+        {
+          "id": "gramgeeta-29",
+          "number": 29,
+          "title": "अध्याय 29",
+          "type": "अध्याय",
+          "file": "tukdoji/gramgeeta_29.json"
+        },
+        {
+          "id": "gramgeeta-30",
+          "number": 30,
+          "title": "अध्याय 30",
+          "type": "अध्याय",
+          "file": "tukdoji/gramgeeta_30.json"
+        },
+        {
+          "id": "gramgeeta-31",
+          "number": 31,
           "title": "अध्याय 31",
           "type": "अध्याय",
-          "days": 1,
-          "entries": [
-            {
-              "text": "[नमुना डेटा — प्रमाणित अध्याय मजकूर येथे जोडावा]",
-              "meaning": "हा नमुना केवळ डेटा-संरचना आणि UI तपासण्यासाठी आहे. प्रमाणित मूळ साहित्य उपलब्ध झाल्यावर येथे तेच मजकूर ठेवावा.",
-              "sample": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "tukdoji-1791091810391-1",
-      "title": "भजन / अभंग",
-      "type": "भजन संग्रह",
-      "days": 1,
-      "entries": [
+          "file": "tukdoji/gramgeeta_31.json"
+        },
         {
-          "text": "[नमुना डेटा — प्रमाणित भजन संग्रह मजकूर येथे जोडावा]",
-          "meaning": "हा नमुना केवळ डेटा-संरचना आणि UI तपासण्यासाठी आहे. प्रमाणित मूळ साहित्य उपलब्ध झाल्यावर येथे तेच मजकूर ठेवावा.",
-          "sample": true
+          "id": "gramgeeta-32",
+          "number": 32,
+          "title": "अध्याय 32",
+          "type": "अध्याय",
+          "file": "tukdoji/gramgeeta_32.json"
+        },
+        {
+          "id": "gramgeeta-33",
+          "number": 33,
+          "title": "अध्याय 33",
+          "type": "अध्याय",
+          "file": "tukdoji/gramgeeta_33.json"
+        },
+        {
+          "id": "gramgeeta-34",
+          "number": 34,
+          "title": "अध्याय 34",
+          "type": "अध्याय",
+          "file": "tukdoji/gramgeeta_34.json"
+        },
+        {
+          "id": "gramgeeta-35",
+          "number": 35,
+          "title": "अध्याय 35",
+          "type": "अध्याय",
+          "file": "tukdoji/gramgeeta_35.json"
+        },
+        {
+          "id": "gramgeeta-36",
+          "number": 36,
+          "title": "अध्याय 36",
+          "type": "अध्याय",
+          "file": "tukdoji/gramgeeta_36.json"
+        },
+        {
+          "id": "gramgeeta-37",
+          "number": 37,
+          "title": "अध्याय 37",
+          "type": "अध्याय",
+          "file": "tukdoji/gramgeeta_37.json"
+        },
+        {
+          "id": "gramgeeta-38",
+          "number": 38,
+          "title": "अध्याय 38",
+          "type": "अध्याय",
+          "file": "tukdoji/gramgeeta_38.json"
+        },
+        {
+          "id": "gramgeeta-39",
+          "number": 39,
+          "title": "अध्याय 39",
+          "type": "अध्याय",
+          "file": "tukdoji/gramgeeta_39.json"
+        },
+        {
+          "id": "gramgeeta-40",
+          "number": 40,
+          "title": "अध्याय 40",
+          "type": "अध्याय",
+          "file": "tukdoji/gramgeeta_40.json"
+        },
+        {
+          "id": "gramgeeta-41",
+          "number": 41,
+          "title": "अध्याय 41",
+          "type": "अध्याय",
+          "file": "tukdoji/gramgeeta_41.json"
         }
       ]
     },
     {
-      "id": "tukdoji-1791091810391-2",
+      "id": "bhajan-abhang",
+      "title": "भजन / अभंग",
+      "type": "भजन • अभंग",
+      "file": "tukdoji/bhajan-abhang.json"
+    },
+    {
+      "id": "rashtrasant-vichar",
       "title": "राष्ट्रसंतांचे विचार",
       "type": "विचार",
-      "days": 1,
-      "entries": [
-        {
-          "text": "[नमुना डेटा — प्रमाणित विचार मजकूर येथे जोडावा]",
-          "meaning": "हा नमुना केवळ डेटा-संरचना आणि UI तपासण्यासाठी आहे. प्रमाणित मूळ साहित्य उपलब्ध झाल्यावर येथे तेच मजकूर ठेवावा.",
-          "sample": true
-        }
-      ]
+      "file": "tukdoji/rashtrasant-vichar.json"
     },
     {
-      "id": "tukdoji-1791091810391-3",
+      "id": "kirtan-pravachan",
       "title": "कीर्तन / प्रवचन",
-      "type": "प्रवचन",
-      "days": 1,
-      "entries": [
-        {
-          "text": "[नमुना डेटा — प्रमाणित प्रवचन मजकूर येथे जोडावा]",
-          "meaning": "हा नमुना केवळ डेटा-संरचना आणि UI तपासण्यासाठी आहे. प्रमाणित मूळ साहित्य उपलब्ध झाल्यावर येथे तेच मजकूर ठेवावा.",
-          "sample": true
-        }
-      ]
+      "type": "कीर्तन • प्रवचन",
+      "file": "tukdoji/kirtan-pravachan.json"
+    },
+    {
+      "id": "gramvikas-sahitya",
+      "title": "ग्रामविकास विषयक साहित्य",
+      "type": "सामाजिक साहित्य",
+      "file": "tukdoji/gramvikas-sahitya.json"
     }
-  ],
-  "symbol": "ग्राम"
+  ]
 }
