@@ -6,9 +6,11 @@
   "works": [
     {
       "id": "haripath",
-      "title": "हरिपाठ",
-      "type": "नामस्मरण",
-      "file": "dnyaneshwar/haripath.json"
+      "title": "श्री ज्ञानेश्वर महाराज हरिपाठ",
+      "type": "हरिपाठ",
+      "file": "dnyaneshwar/haripath.json",
+      "description": "माऊली प्रणीत २८ अभंगांचा सार्थ नित्यपाठ, जो आत्मज्ञानाचा आणि विठ्ठल भक्तीचा सोपा मार्ग दाखवतो.",
+      "days": 7
     },
     {
       "id": "dnyaneshwari",
@@ -17,93 +19,147 @@
       "sections": [
         {
           "id": "dnyaneshwari-adhyay-01",
-          "title": "ज्ञानेश्वरी — अध्याय पहिला",
-          "file": "dnyaneshwar/dnyaneshwari_01.json"
+          "title": "अध्याय १ ला",
+          "file": "dnyaneshwar/dnyaneshwari_01.json",
+          "number": 1,
+          "subtitle": "अर्जुनविषाद योग",
+          "type": "अध्याय"
         },
         {
           "id": "dnyaneshwari-adhyay-02",
-          "title": "ज्ञानेश्वरी — अध्याय दुसरा",
-          "file": "dnyaneshwar/dnyaneshwari_02.json"
+          "title": "अध्याय २ रा",
+          "file": "dnyaneshwar/dnyaneshwari_02.json",
+          "number": 2,
+          "subtitle": "सांख्य योग",
+          "type": "अध्याय"
         },
         {
           "id": "dnyaneshwari-adhyay-03",
-          "title": "ज्ञानेश्वरी — अध्याय तिसरा",
-          "file": "dnyaneshwar/dnyaneshwari_03.json"
+          "title": "अध्याय ३ रा",
+          "file": "dnyaneshwar/dnyaneshwari_03.json",
+          "number": 3,
+          "subtitle": "कर्म योग",
+          "type": "अध्याय"
         },
         {
           "id": "dnyaneshwari-adhyay-04",
-          "title": "ज्ञानेश्वरी — अध्याय चौथा",
-          "file": "dnyaneshwar/dnyaneshwari_04.json"
+          "title": "अध्याय ४ था",
+          "file": "dnyaneshwar/dnyaneshwari_04.json",
+          "number": 4,
+          "subtitle": "ज्ञानकर्मसंन्यास योग",
+          "type": "अध्याय"
         },
         {
           "id": "dnyaneshwari-adhyay-05",
-          "title": "ज्ञानेश्वरी — अध्याय पाचवा",
-          "file": "dnyaneshwar/dnyaneshwari_05.json"
+          "title": "अध्याय ५ वा",
+          "file": "dnyaneshwar/dnyaneshwari_05.json",
+          "number": 5,
+          "subtitle": "कर्मसंन्यास योग",
+          "type": "अध्याय"
         },
         {
           "id": "dnyaneshwari-adhyay-06",
-          "title": "ज्ञानेश्वरी — अध्याय सहावा",
-          "file": "dnyaneshwar/dnyaneshwari_06.json"
+          "title": "अध्याय ६ वा",
+          "file": "dnyaneshwar/dnyaneshwari_06.json",
+          "number": 6,
+          "subtitle": "आत्मसंयम योग",
+          "type": "अध्याय"
         },
         {
           "id": "dnyaneshwari-adhyay-07",
-          "title": "ज्ञानेश्वरी — अध्याय सातवा",
-          "file": "dnyaneshwar/dnyaneshwari_07.json"
+          "title": "अध्याय ७ वा",
+          "file": "dnyaneshwar/dnyaneshwari_07.json",
+          "number": 7,
+          "subtitle": "ज्ञानविज्ञान योग",
+          "type": "अध्याय"
         },
         {
           "id": "dnyaneshwari-adhyay-08",
-          "title": "ज्ञानेश्वरी — अध्याय आठवा",
-          "file": "dnyaneshwar/dnyaneshwari_08.json"
+          "title": "अध्याय ८ वा",
+          "file": "dnyaneshwar/dnyaneshwari_08.json",
+          "number": 8,
+          "subtitle": "अक्षरब्रह्म योग",
+          "type": "अध्याय"
         },
         {
           "id": "dnyaneshwari-adhyay-09",
-          "title": "ज्ञानेश्वरी — अध्याय नववा",
-          "file": "dnyaneshwar/dnyaneshwari_09.json"
+          "title": "अध्याय ९ वा",
+          "file": "dnyaneshwar/dnyaneshwari_09.json",
+          "number": 9,
+          "subtitle": "राजविद्याराजगुह्य योग",
+          "type": "अध्याय"
         },
         {
           "id": "dnyaneshwari-adhyay-10",
-          "title": "ज्ञानेश्वरी — अध्याय दहावा",
-          "file": "dnyaneshwar/dnyaneshwari_10.json"
+          "title": "अध्याय १० वा",
+          "file": "dnyaneshwar/dnyaneshwari_10.json",
+          "number": 10,
+          "subtitle": "विभूती योग",
+          "type": "अध्याय"
         },
         {
           "id": "dnyaneshwari-adhyay-11",
-          "title": "ज्ञानेश्वरी — अध्याय अकरावा",
-          "file": "dnyaneshwar/dnyaneshwari_11.json"
+          "title": "अध्याय ११ वा",
+          "file": "dnyaneshwar/dnyaneshwari_11.json",
+          "number": 11,
+          "subtitle": "विश्वरूपदर्शन योग",
+          "type": "अध्याय"
         },
         {
           "id": "dnyaneshwari-adhyay-12",
-          "title": "ज्ञानेश्वरी — अध्याय बारावा",
-          "file": "dnyaneshwar/dnyaneshwari_12.json"
+          "title": "अध्याय १२ वा",
+          "file": "dnyaneshwar/dnyaneshwari_12.json",
+          "number": 12,
+          "subtitle": "भक्ती योग",
+          "type": "अध्याय"
         },
         {
           "id": "dnyaneshwari-adhyay-13",
-          "title": "ज्ञानेश्वरी — अध्याय तेरावा",
-          "file": "dnyaneshwar/dnyaneshwari_13.json"
+          "title": "अध्याय १३ वा",
+          "file": "dnyaneshwar/dnyaneshwari_13.json",
+          "number": 13,
+          "subtitle": "क्षेत्रक्षेत्रज्ञविभाग योग",
+          "type": "अध्याय"
         },
         {
           "id": "dnyaneshwari-adhyay-14",
-          "title": "ज्ञानेश्वरी — अध्याय चौदावा",
-          "file": "dnyaneshwar/dnyaneshwari_14.json"
+          "title": "अध्याय १४ वा",
+          "file": "dnyaneshwar/dnyaneshwari_14.json",
+          "number": 14,
+          "subtitle": "गुणत्रयविभाग योग",
+          "type": "अध्याय"
         },
         {
           "id": "dnyaneshwari-adhyay-15",
-          "title": "ज्ञानेश्वरी — अध्याय पंधरावा",
-          "file": "dnyaneshwar/dnyaneshwari_15.json"
+          "title": "अध्याय १५ वा",
+          "file": "dnyaneshwar/dnyaneshwari_15.json",
+          "number": 15,
+          "subtitle": "पुरुषोत्तम योग",
+          "type": "अध्याय"
         },
         {
           "id": "dnyaneshwari-adhyay-16",
-          "title": "ज्ञानेश्वरी — अध्याय सोळावा",
-          "file": "dnyaneshwar/dnyaneshwari_16.json"
+          "title": "अध्याय १६ वा",
+          "file": "dnyaneshwar/dnyaneshwari_16.json",
+          "number": 16,
+          "subtitle": "दैवासुरसंपद्विभाग योग",
+          "type": "अध्याय"
         },
         {
           "id": "dnyaneshwari-adhyay-17",
-          "title": "ज्ञानेश्वरी — अध्याय सतरावा",
-          "file": "dnyaneshwar/dnyaneshwari_17.json"
+          "title": "अध्याय १७ वा",
+          "file": "dnyaneshwar/dnyaneshwari_17.json",
+          "number": 17,
+          "subtitle": "श्रद्धात्रयविभाग योग",
+          "type": "अध्याय"
         },
         {
           "id": "dnyaneshwari-adhyay-18",
-          "title": "ज्ञानेश्वरी — अध्याय अठरावा",
-          "file": "dnyaneshwar/dnyaneshwari_18.json"
+          "title": "अध्याय १८ वा",
+          "file": "dnyaneshwar/dnyaneshwari_18.json",
+          "number": 18,
+          "subtitle": "मोक्षसंन्यास योग",
+          "type": "अध्याय"
         }
       ]
     },
