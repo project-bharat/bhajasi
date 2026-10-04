@@ -17,6 +17,13 @@
   ],
   "works": [
     {
+      "id": "trikal-sandhya",
+      "title": "त्रिकाळ संध्या",
+      "type": "संध्या",
+      "description": "प्रातःस्मरण महामंत्र, भोजनपूर्व शक्ति मंत्र आणि रात्रि शान्ति मंत्र.",
+      "file": "nitya-pathan/trikal-sandhya.json"
+    },
+    {
       "id": "ramraksha-stotra",
       "title": "रामरक्षा स्तोत्र",
       "type": "स्तोत्र",
