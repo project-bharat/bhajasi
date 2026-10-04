@@ -117,6 +117,53 @@
       "type": "स्तोत्र",
       "description": "श्री विष्णु सहस्रनाम स्तोत्र नित्य पठणासाठी.",
       "file": "nitya-pathan/vishnu-sahasranama.json"
+    },
+    {
+      "id": "mahalakshmyashtakam",
+      "title": "महालक्ष्म्यष्टकम्",
+      "type": "स्तोत्र",
+      "author": "इंद्र",
+      "description": "महालक्ष्मीचे नित्य पठणासाठी प्रसिद्ध स्तोत्र.",
+      "file": "nitya-pathan/mahalakshmyashtakam.json"
+    },
+    {
+      "id": "kanakadhara-stotra",
+      "title": "श्री कनकधारा स्तोत्र",
+      "type": "स्तोत्र",
+      "author": "आद्य शंकराचार्य",
+      "description": "श्री महालक्ष्मीची स्तुती करणारे प्रसिद्ध स्तोत्र.",
+      "file": "nitya-pathan/kanakadhara-stotra.json"
+    },
+    {
+      "id": "achyutashtakam",
+      "title": "अच्युताष्टकम्",
+      "type": "स्तोत्र",
+      "author": "आद्य शंकराचार्य",
+      "description": "श्री विष्णू-कृष्णाच्या नामरूपांची स्तुती करणारे अष्टक.",
+      "file": "nitya-pathan/achyutashtakam.json"
+    },
+    {
+      "id": "govindashtakam",
+      "title": "श्रीगोविन्दाष्टकम्",
+      "type": "स्तोत्र",
+      "author": "आद्य शंकराचार्य",
+      "description": "श्रीगोविंद-कृष्णाच्या स्वरूपाचे स्तवन करणारे अष्टक.",
+      "file": "nitya-pathan/govindashtakam.json"
+    },
+    {
+      "id": "rudrashtakam",
+      "title": "श्रीरुद्राष्टकम्",
+      "type": "स्तोत्र",
+      "author": "गोस्वामी तुलसीदास",
+      "description": "भगवान शिवाची स्तुती करणारे प्रसिद्ध रुद्राष्टक.",
+      "file": "nitya-pathan/rudrashtakam.json"
+    },
+    {
+      "id": "bilvashtakam",
+      "title": "बिल्वाष्टकम्",
+      "type": "स्तोत्र",
+      "description": "भगवान शिवाला बिल्वपत्र अर्पण करताना पठण केले जाणारे स्तोत्र.",
+      "file": "nitya-pathan/bilvashtakam.json"
     }
   ]
 }
