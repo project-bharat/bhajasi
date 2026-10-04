@@ -1,0 +1,792 @@
+{
+  "themes": {
+    "नामस्मरण": [
+      [
+        "dnyaneshwar",
+        "haripath"
+      ],
+      [
+        "tukaram",
+        "abhanga"
+      ],
+      [
+        "tukaram",
+        "gatha"
+      ],
+      [
+        "tukaram",
+        "haripath"
+      ],
+      [
+        "ramdas",
+        "atmaram"
+      ],
+      [
+        "ramdas",
+        "ramayan"
+      ],
+      [
+        "namdev",
+        "abhang"
+      ],
+      [
+        "namdev",
+        "gatha"
+      ],
+      [
+        "namdev",
+        "haripath"
+      ],
+      [
+        "eknath",
+        "bhavarth-ramayan"
+      ],
+      [
+        "eknath",
+        "haripath"
+      ],
+      [
+        "eknath",
+        "anandalahari"
+      ],
+      [
+        "tukdoji",
+        "gramgeeta"
+      ],
+      [
+        "tukdoji",
+        "gramvikas-sahitya"
+      ],
+      [
+        "meera",
+        "krishna-bhakti-pade-bhajane"
+      ],
+      [
+        "meera",
+        "viraha-krishnaprem-pade"
+      ]
+    ],
+    "भक्ती": [
+      [
+        "dnyaneshwar",
+        "haripath"
+      ],
+      [
+        "dnyaneshwar",
+        "pasaydan"
+      ],
+      [
+        "dnyaneshwar",
+        "abhang-gaulani"
+      ],
+      [
+        "tukaram",
+        "abhanga"
+      ],
+      [
+        "tukaram",
+        "gatha"
+      ],
+      [
+        "tukaram",
+        "haripath"
+      ],
+      [
+        "tukaram",
+        "kakad-aarti"
+      ],
+      [
+        "namdev",
+        "abhang"
+      ],
+      [
+        "namdev",
+        "gatha"
+      ],
+      [
+        "eknath",
+        "eknathi-bhagwat"
+      ],
+      [
+        "eknath",
+        "abhang"
+      ],
+      [
+        "janabai",
+        "abhang"
+      ],
+      [
+        "gadge",
+        "bhajane-abhang"
+      ],
+      [
+        "savata",
+        "abhang"
+      ],
+      [
+        "tukdoji",
+        "bhajan-abhang"
+      ],
+      [
+        "meera",
+        "padavali"
+      ],
+      [
+        "meera",
+        "krishna-bhakti-pade-bhajane"
+      ],
+      [
+        "meera",
+        "nivadak-meera-bhajane"
+      ]
+    ],
+    "ज्ञान": [
+      [
+        "dnyaneshwar",
+        "dnyaneshwari"
+      ],
+      [
+        "dnyaneshwar",
+        "amrutanubhav"
+      ],
+      [
+        "tukaram",
+        "gatha"
+      ],
+      [
+        "ramdas",
+        "manache-shlok"
+      ],
+      [
+        "ramdas",
+        "dasbodh"
+      ],
+      [
+        "ramdas",
+        "atmaram"
+      ],
+      [
+        "namdev",
+        "gatha"
+      ],
+      [
+        "eknath",
+        "eknathi-bhagwat"
+      ],
+      [
+        "eknath",
+        "swatmasukh"
+      ],
+      [
+        "tukdoji",
+        "gramgeeta"
+      ],
+      [
+        "tukdoji",
+        "rashtrasant-vichar"
+      ],
+      [
+        "kabir",
+        "kabir-beejak"
+      ],
+      [
+        "kabir",
+        "kabir-dohe"
+      ]
+    ],
+    "समता": [
+      [
+        "dnyaneshwar",
+        "pasaydan"
+      ],
+      [
+        "tukaram",
+        "abhanga"
+      ],
+      [
+        "ramdas",
+        "dasbodh"
+      ],
+      [
+        "namdev",
+        "abhang"
+      ],
+      [
+        "eknath",
+        "bharud"
+      ],
+      [
+        "eknath",
+        "abhang"
+      ],
+      [
+        "janabai",
+        "abhang"
+      ],
+      [
+        "janabai",
+        "stri-anubhav-bhakti-abhang"
+      ],
+      [
+        "gadge",
+        "kirtan-pravachan"
+      ],
+      [
+        "gadge",
+        "samajik-sandesh"
+      ],
+      [
+        "gadge",
+        "nivadak-vichar"
+      ],
+      [
+        "savata",
+        "abhang"
+      ],
+      [
+        "tukdoji",
+        "gramgeeta"
+      ],
+      [
+        "tukdoji",
+        "rashtrasant-vichar"
+      ],
+      [
+        "tukdoji",
+        "gramvikas-sahitya"
+      ],
+      [
+        "kabir",
+        "kabir-beejak"
+      ],
+      [
+        "kabir",
+        "doha-vani"
+      ]
+    ],
+    "सेवा": [
+      [
+        "dnyaneshwar",
+        "pasaydan"
+      ],
+      [
+        "ramdas",
+        "dasbodh"
+      ],
+      [
+        "eknath",
+        "bharud"
+      ],
+      [
+        "janabai",
+        "stri-anubhav-bhakti-abhang"
+      ],
+      [
+        "gadge",
+        "kirtan-pravachan"
+      ],
+      [
+        "gadge",
+        "samajik-sandesh"
+      ],
+      [
+        "gadge",
+        "nivadak-vichar"
+      ],
+      [
+        "tukdoji",
+        "gramgeeta"
+      ],
+      [
+        "tukdoji",
+        "rashtrasant-vichar"
+      ],
+      [
+        "tukdoji",
+        "kirtan-pravachan"
+      ],
+      [
+        "tukdoji",
+        "gramvikas-sahitya"
+      ]
+    ],
+    "वैराग्य": [
+      [
+        "dnyaneshwar",
+        "dnyaneshwari"
+      ],
+      [
+        "dnyaneshwar",
+        "amrutanubhav"
+      ],
+      [
+        "tukaram",
+        "gatha"
+      ],
+      [
+        "ramdas",
+        "manache-shlok"
+      ],
+      [
+        "ramdas",
+        "dasbodh"
+      ],
+      [
+        "ramdas",
+        "atmaram"
+      ],
+      [
+        "ramdas",
+        "ramayan"
+      ],
+      [
+        "eknath",
+        "swatmasukh"
+      ],
+      [
+        "kabir",
+        "doha-vani"
+      ],
+      [
+        "kabir",
+        "kabir-beejak"
+      ],
+      [
+        "kabir",
+        "ramaini"
+      ],
+      [
+        "meera",
+        "padavali"
+      ],
+      [
+        "meera",
+        "viraha-krishnaprem-pade"
+      ]
+    ],
+    "सदाचार": [
+      [
+        "dnyaneshwar",
+        "dnyaneshwari"
+      ],
+      [
+        "tukaram",
+        "nivadak-abhang-arthasahit"
+      ],
+      [
+        "ramdas",
+        "manache-shlok"
+      ],
+      [
+        "ramdas",
+        "dasbodh"
+      ],
+      [
+        "ramdas",
+        "ramayan"
+      ],
+      [
+        "eknath",
+        "eknathi-bhagwat"
+      ],
+      [
+        "eknath",
+        "bhavarth-ramayan"
+      ],
+      [
+        "eknath",
+        "bharud"
+      ],
+      [
+        "gadge",
+        "kirtan-pravachan"
+      ],
+      [
+        "gadge",
+        "samajik-sandesh"
+      ],
+      [
+        "gadge",
+        "nivadak-vichar"
+      ],
+      [
+        "savata",
+        "gatha"
+      ],
+      [
+        "tukdoji",
+        "gramgeeta"
+      ],
+      [
+        "tukdoji",
+        "rashtrasant-vichar"
+      ],
+      [
+        "tukdoji",
+        "gramvikas-sahitya"
+      ],
+      [
+        "kabir",
+        "doha-vani"
+      ],
+      [
+        "kabir",
+        "sakhi"
+      ]
+    ],
+    "मनःशांती": [
+      [
+        "dnyaneshwar",
+        "haripath"
+      ],
+      [
+        "dnyaneshwar",
+        "pasaydan"
+      ],
+      [
+        "dnyaneshwar",
+        "amrutanubhav"
+      ],
+      [
+        "tukaram",
+        "haripath"
+      ],
+      [
+        "ramdas",
+        "manache-shlok"
+      ],
+      [
+        "ramdas",
+        "atmaram"
+      ],
+      [
+        "ramdas",
+        "karunashtake"
+      ],
+      [
+        "ramdas",
+        "maruti-stotra"
+      ],
+      [
+        "namdev",
+        "haripath"
+      ],
+      [
+        "eknath",
+        "eknathi-bhagwat"
+      ],
+      [
+        "eknath",
+        "haripath"
+      ],
+      [
+        "eknath",
+        "swatmasukh"
+      ],
+      [
+        "eknath",
+        "anandalahari"
+      ],
+      [
+        "janabai",
+        "nivadak-abhang"
+      ],
+      [
+        "meera",
+        "padavali"
+      ],
+      [
+        "meera",
+        "krishna-bhakti-pade-bhajane"
+      ],
+      [
+        "meera",
+        "viraha-krishnaprem-pade"
+      ]
+    ]
+  },
+  "contentTypes": {
+    "dnyaneshwar": {
+      "haripath": [
+        "अभंग",
+        "ओवी"
+      ],
+      "dnyaneshwari": [
+        "ओवी",
+        "रचना"
+      ],
+      "pasaydan": [
+        "रचना"
+      ],
+      "amrutanubhav": [
+        "ओवी",
+        "रचना"
+      ],
+      "abhang-gaulani": [
+        "अभंग",
+        "रचना"
+      ]
+    },
+    "tukaram": {
+      "abhanga": [
+        "अभंग"
+      ],
+      "gatha": [
+        "अभंग"
+      ],
+      "haripath": [
+        "अभंग"
+      ],
+      "kakad-aarti": [
+        "रचना"
+      ],
+      "vitthal-bhaktigeete": [
+        "रचना"
+      ],
+      "nivadak-abhang-arthasahit": [
+        "अभंग"
+      ]
+    },
+    "ramdas": {
+      "manache-shlok": [
+        "श्लोक"
+      ],
+      "dasbodh": [
+        "ओवी",
+        "रचना"
+      ],
+      "atmaram": [
+        "ओवी",
+        "रचना"
+      ],
+      "karunashtake": [
+        "रचना"
+      ],
+      "maruti-stotra": [
+        "रचना",
+        "श्लोक"
+      ],
+      "ramayan": [
+        "ओवी",
+        "रचना"
+      ]
+    },
+    "namdev": {
+      "abhang": [
+        "अभंग"
+      ],
+      "gatha": [
+        "अभंग"
+      ],
+      "haripath": [
+        "अभंग"
+      ],
+      "hindi-pade-abhang": [
+        "पद",
+        "अभंग"
+      ],
+      "nivadak-abhang-arthasahit": [
+        "अभंग"
+      ]
+    },
+    "eknath": {
+      "eknathi-bhagwat": [
+        "ओवी",
+        "रचना"
+      ],
+      "bhavarth-ramayan": [
+        "ओवी",
+        "रचना"
+      ],
+      "bharud": [
+        "रचना"
+      ],
+      "abhang": [
+        "अभंग"
+      ],
+      "rukmini-swayamvar": [
+        "ओवी",
+        "रचना"
+      ],
+      "haripath": [
+        "अभंग"
+      ],
+      "swatmasukh": [
+        "ओवी",
+        "रचना"
+      ],
+      "anandalahari": [
+        "रचना"
+      ]
+    },
+    "janabai": {
+      "abhang": [
+        "अभंग"
+      ],
+      "nivadak-abhang": [
+        "अभंग"
+      ],
+      "vitthal-bhakti-pade": [
+        "पद"
+      ],
+      "stri-anubhav-bhakti-abhang": [
+        "अभंग"
+      ]
+    },
+    "gadge": {
+      "kirtan-pravachan": [
+        "रचना"
+      ],
+      "bhajane-abhang": [
+        "अभंग",
+        "रचना"
+      ],
+      "samajik-sandesh": [
+        "रचना"
+      ],
+      "nivadak-vichar": [
+        "रचना"
+      ]
+    },
+    "savata": {
+      "abhang": [
+        "अभंग"
+      ],
+      "gatha": [
+        "अभंग"
+      ],
+      "vitthal-bhakti-abhang": [
+        "अभंग"
+      ],
+      "nivadak-abhang-arthasahit": [
+        "अभंग"
+      ]
+    },
+    "tukdoji": {
+      "gramgeeta": [
+        "ओवी",
+        "रचना"
+      ],
+      "bhajan-abhang": [
+        "अभंग",
+        "रचना"
+      ],
+      "rashtrasant-vichar": [
+        "रचना"
+      ],
+      "kirtan-pravachan": [
+        "रचना"
+      ],
+      "gramvikas-sahitya": [
+        "रचना"
+      ]
+    },
+    "kalidas": {
+      "raghuvansha": [
+        "रचना"
+      ],
+      "kumarasambhavam": [
+        "रचना"
+      ],
+      "meghaduta": [
+        "रचना"
+      ],
+      "abhijnanashakuntalam": [
+        "रचना"
+      ],
+      "ritusamhara": [
+        "रचना"
+      ],
+      "malavikagnimitram": [
+        "रचना"
+      ],
+      "vikramorvashiyam": [
+        "रचना"
+      ]
+    },
+    "kabir": {
+      "doha-vani": [
+        "दोहा"
+      ],
+      "kabir-beejak": [
+        "दोहा",
+        "रचना"
+      ],
+      "sakhi": [
+        "दोहा"
+      ],
+      "shabd": [
+        "पद"
+      ],
+      "ramaini": [
+        "रचना"
+      ],
+      "kabir-dohe": [
+        "दोहा"
+      ],
+      "kabir-granthavali": [
+        "रचना"
+      ]
+    },
+    "meera": {
+      "padavali": [
+        "पद"
+      ],
+      "krishna-bhakti-pade-bhajane": [
+        "पद",
+        "रचना"
+      ],
+      "nivadak-meera-bhajane": [
+        "रचना"
+      ],
+      "viraha-krishnaprem-pade": [
+        "पद"
+      ],
+      "meera-kavyasangrah": [
+        "रचना"
+      ]
+    }
+  },
+  "granthGroups": [
+    {
+      "id": "warkari",
+      "title": "वारकरी साहित्य",
+      "desc": "विठ्ठलभक्ती, हरिपाठ आणि अभंगपरंपरेतील साहित्य.",
+      "saints": [
+        "dnyaneshwar",
+        "tukaram",
+        "namdev",
+        "eknath",
+        "janabai",
+        "savata"
+      ]
+    },
+    {
+      "id": "samarth",
+      "title": "समर्थ व राष्ट्रसंत साहित्य",
+      "desc": "व्यावहारिक अध्यात्म, नीती, सेवा, समाजप्रबोधन आणि राष्ट्रविचार.",
+      "saints": [
+        "ramdas",
+        "tukdoji",
+        "gadge"
+      ]
+    },
+    {
+      "id": "sanskrit",
+      "title": "संस्कृत महाकाव्य",
+      "desc": "कालिदासाचे संस्कृत महाकाव्य, काव्य आणि नाट्यसाहित्य.",
+      "saints": [
+        "kalidas"
+      ]
+    },
+    {
+      "id": "hindi",
+      "title": "हिंदी भक्ती काव्य",
+      "desc": "कबीर आणि मीराबाई यांचे हिंदी/ब्रज भक्तिकाव्य.",
+      "saints": [
+        "kabir",
+        "meera"
+      ]
+    }
+  ]
+}
