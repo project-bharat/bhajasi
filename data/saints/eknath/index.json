@@ -1,234 +1,325 @@
 {
   "id": "eknath",
   "name": "संत एकनाथ महाराज",
-  "search": "एकनाथ अभंग भारुड हरिपाठ संतवाणी",
+  "symbol": "एकनाथ",
+  "search": "एकनाथ अभंग भारुड हरिपाठ भागवत भावार्थ रामायण रुक्मिणी स्वयंवर स्वात्मसुख आनंदलहरी",
   "works": [
     {
-      "title": "अभंग",
-      "days": 1,
-      "entries": [
-        {
-          "text": "जनार्दनी एकनाथ । म्हणे भावे भजा देव ॥",
-          "meaning": "निर्मळ भावाने भक्ती करण्याचा संदेश."
-        },
-        {
-          "text": "देवाचिये द्वारीं उभा क्षणभरी ।",
-          "meaning": "देवस्मरणात मन स्थिर करण्याची दिशा."
-        },
-        {
-          "text": "एका जनार्दनी भाव । तेंचि देवाचें ठाव ॥",
-          "meaning": "भक्तीतील भाव आणि देवाशी असलेले अंतःसंबंध अधोरेखित होतात."
-        },
-        {
-          "text": "सर्वांभूतीं दया करावी । देव तेथें जाणावा ॥",
-          "meaning": "सर्व जीवांशी करुणेने वागण्यात भक्तीचा व्यवहार्य अर्थ पाहिला आहे."
-        }
-      ],
-      "id": "eknath-अभग",
-      "type": "अभंग • भारूड"
-    },
-    {
-      "title": "भारुड",
-      "days": 1,
-      "entries": [
-        {
-          "text": "नको रे मना भेदाभेद । सर्वांमध्ये एक देव ॥",
-          "meaning": "भेदभाव कमी करून समत्वाची दृष्टी ठेवण्याचा सामाजिक संदेश."
-        },
-        {
-          "text": "अंतरीचा भाव शुद्ध । तेथेंचि भेटे गोविंद ॥",
-          "meaning": "बाह्य दिखाव्यापेक्षा अंतःकरणाची निर्मळता महत्त्वाची."
-        },
-        {
-          "text": "वाणी गोड बोलावी । जीवजंतू न दुखवावी ॥",
-          "meaning": "सौम्य वाणी आणि अहिंसक व्यवहाराची शिकवण."
-        },
-        {
-          "text": "सेवा करावी मनोभावे । तेणें समाधान पावे ॥",
-          "meaning": "निःस्वार्थ सेवा मनाला समाधान देणारी साधना ठरते."
-        }
-      ],
-      "id": "eknath-भरड"
-    },
-    {
-      "id": "eknath-1791091798757-0",
+      "id": "eknathi-bhagwat",
       "title": "एकनाथी भागवत",
       "type": "ग्रंथ",
-      "days": 1,
       "sections": [
         {
-          "id": "eknath-1791091798757-0-chapter-1",
+          "id": "eknathi-bhagwat-01",
+          "number": 1,
           "title": "अध्याय 1",
           "type": "अध्याय",
-          "days": 1,
-          "entries": [
-            {
-              "text": "[नमुना डेटा — प्रमाणित अध्याय मजकूर येथे जोडावा]",
-              "meaning": "हा नमुना केवळ डेटा-संरचना आणि UI तपासण्यासाठी आहे. प्रमाणित मूळ साहित्य उपलब्ध झाल्यावर येथे तेच मजकूर ठेवावा.",
-              "sample": true
-            }
-          ]
+          "file": "eknath/eknathi_bhagwat_01.json"
         },
         {
-          "id": "eknath-1791091798757-0-chapter-2",
+          "id": "eknathi-bhagwat-02",
+          "number": 2,
           "title": "अध्याय 2",
           "type": "अध्याय",
-          "days": 1,
-          "entries": [
-            {
-              "text": "[नमुना डेटा — प्रमाणित अध्याय मजकूर येथे जोडावा]",
-              "meaning": "हा नमुना केवळ डेटा-संरचना आणि UI तपासण्यासाठी आहे. प्रमाणित मूळ साहित्य उपलब्ध झाल्यावर येथे तेच मजकूर ठेवावा.",
-              "sample": true
-            }
-          ]
+          "file": "eknath/eknathi_bhagwat_02.json"
         },
         {
-          "id": "eknath-1791091798757-0-chapter-31",
+          "id": "eknathi-bhagwat-03",
+          "number": 3,
+          "title": "अध्याय 3",
+          "type": "अध्याय",
+          "file": "eknath/eknathi_bhagwat_03.json"
+        },
+        {
+          "id": "eknathi-bhagwat-04",
+          "number": 4,
+          "title": "अध्याय 4",
+          "type": "अध्याय",
+          "file": "eknath/eknathi_bhagwat_04.json"
+        },
+        {
+          "id": "eknathi-bhagwat-05",
+          "number": 5,
+          "title": "अध्याय 5",
+          "type": "अध्याय",
+          "file": "eknath/eknathi_bhagwat_05.json"
+        },
+        {
+          "id": "eknathi-bhagwat-06",
+          "number": 6,
+          "title": "अध्याय 6",
+          "type": "अध्याय",
+          "file": "eknath/eknathi_bhagwat_06.json"
+        },
+        {
+          "id": "eknathi-bhagwat-07",
+          "number": 7,
+          "title": "अध्याय 7",
+          "type": "अध्याय",
+          "file": "eknath/eknathi_bhagwat_07.json"
+        },
+        {
+          "id": "eknathi-bhagwat-08",
+          "number": 8,
+          "title": "अध्याय 8",
+          "type": "अध्याय",
+          "file": "eknath/eknathi_bhagwat_08.json"
+        },
+        {
+          "id": "eknathi-bhagwat-09",
+          "number": 9,
+          "title": "अध्याय 9",
+          "type": "अध्याय",
+          "file": "eknath/eknathi_bhagwat_09.json"
+        },
+        {
+          "id": "eknathi-bhagwat-10",
+          "number": 10,
+          "title": "अध्याय 10",
+          "type": "अध्याय",
+          "file": "eknath/eknathi_bhagwat_10.json"
+        },
+        {
+          "id": "eknathi-bhagwat-11",
+          "number": 11,
+          "title": "अध्याय 11",
+          "type": "अध्याय",
+          "file": "eknath/eknathi_bhagwat_11.json"
+        },
+        {
+          "id": "eknathi-bhagwat-12",
+          "number": 12,
+          "title": "अध्याय 12",
+          "type": "अध्याय",
+          "file": "eknath/eknathi_bhagwat_12.json"
+        },
+        {
+          "id": "eknathi-bhagwat-13",
+          "number": 13,
+          "title": "अध्याय 13",
+          "type": "अध्याय",
+          "file": "eknath/eknathi_bhagwat_13.json"
+        },
+        {
+          "id": "eknathi-bhagwat-14",
+          "number": 14,
+          "title": "अध्याय 14",
+          "type": "अध्याय",
+          "file": "eknath/eknathi_bhagwat_14.json"
+        },
+        {
+          "id": "eknathi-bhagwat-15",
+          "number": 15,
+          "title": "अध्याय 15",
+          "type": "अध्याय",
+          "file": "eknath/eknathi_bhagwat_15.json"
+        },
+        {
+          "id": "eknathi-bhagwat-16",
+          "number": 16,
+          "title": "अध्याय 16",
+          "type": "अध्याय",
+          "file": "eknath/eknathi_bhagwat_16.json"
+        },
+        {
+          "id": "eknathi-bhagwat-17",
+          "number": 17,
+          "title": "अध्याय 17",
+          "type": "अध्याय",
+          "file": "eknath/eknathi_bhagwat_17.json"
+        },
+        {
+          "id": "eknathi-bhagwat-18",
+          "number": 18,
+          "title": "अध्याय 18",
+          "type": "अध्याय",
+          "file": "eknath/eknathi_bhagwat_18.json"
+        },
+        {
+          "id": "eknathi-bhagwat-19",
+          "number": 19,
+          "title": "अध्याय 19",
+          "type": "अध्याय",
+          "file": "eknath/eknathi_bhagwat_19.json"
+        },
+        {
+          "id": "eknathi-bhagwat-20",
+          "number": 20,
+          "title": "अध्याय 20",
+          "type": "अध्याय",
+          "file": "eknath/eknathi_bhagwat_20.json"
+        },
+        {
+          "id": "eknathi-bhagwat-21",
+          "number": 21,
+          "title": "अध्याय 21",
+          "type": "अध्याय",
+          "file": "eknath/eknathi_bhagwat_21.json"
+        },
+        {
+          "id": "eknathi-bhagwat-22",
+          "number": 22,
+          "title": "अध्याय 22",
+          "type": "अध्याय",
+          "file": "eknath/eknathi_bhagwat_22.json"
+        },
+        {
+          "id": "eknathi-bhagwat-23",
+          "number": 23,
+          "title": "अध्याय 23",
+          "type": "अध्याय",
+          "file": "eknath/eknathi_bhagwat_23.json"
+        },
+        {
+          "id": "eknathi-bhagwat-24",
+          "number": 24,
+          "title": "अध्याय 24",
+          "type": "अध्याय",
+          "file": "eknath/eknathi_bhagwat_24.json"
+        },
+        {
+          "id": "eknathi-bhagwat-25",
+          "number": 25,
+          "title": "अध्याय 25",
+          "type": "अध्याय",
+          "file": "eknath/eknathi_bhagwat_25.json"
+        },
+        {
+          "id": "eknathi-bhagwat-26",
+          "number": 26,
+          "title": "अध्याय 26",
+          "type": "अध्याय",
+          "file": "eknath/eknathi_bhagwat_26.json"
+        },
+        {
+          "id": "eknathi-bhagwat-27",
+          "number": 27,
+          "title": "अध्याय 27",
+          "type": "अध्याय",
+          "file": "eknath/eknathi_bhagwat_27.json"
+        },
+        {
+          "id": "eknathi-bhagwat-28",
+          "number": 28,
+          "title": "अध्याय 28",
+          "type": "अध्याय",
+          "file": "eknath/eknathi_bhagwat_28.json"
+        },
+        {
+          "id": "eknathi-bhagwat-29",
+          "number": 29,
+          "title": "अध्याय 29",
+          "type": "अध्याय",
+          "file": "eknath/eknathi_bhagwat_29.json"
+        },
+        {
+          "id": "eknathi-bhagwat-30",
+          "number": 30,
+          "title": "अध्याय 30",
+          "type": "अध्याय",
+          "file": "eknath/eknathi_bhagwat_30.json"
+        },
+        {
+          "id": "eknathi-bhagwat-31",
+          "number": 31,
           "title": "अध्याय 31",
           "type": "अध्याय",
-          "days": 1,
-          "entries": [
-            {
-              "text": "[नमुना डेटा — प्रमाणित अध्याय मजकूर येथे जोडावा]",
-              "meaning": "हा नमुना केवळ डेटा-संरचना आणि UI तपासण्यासाठी आहे. प्रमाणित मूळ साहित्य उपलब्ध झाल्यावर येथे तेच मजकूर ठेवावा.",
-              "sample": true
-            }
-          ]
+          "file": "eknath/eknathi_bhagwat_31.json"
         }
       ]
     },
     {
-      "id": "eknath-1791091798757-1",
+      "id": "bhavarth-ramayan",
       "title": "भावार्थ रामायण",
       "type": "ग्रंथ",
-      "days": 1,
       "sections": [
         {
-          "id": "eknath-1791091798757-1-kand-1",
-          "title": "बालकांड",
+          "id": "bhavarth-ramayan-01",
+          "number": 1,
+          "title": "कांड 1",
           "type": "कांड",
-          "days": 1,
-          "entries": [
-            {
-              "text": "[नमुना डेटा — प्रमाणित कांड मजकूर येथे जोडावा]",
-              "meaning": "हा नमुना केवळ डेटा-संरचना आणि UI तपासण्यासाठी आहे. प्रमाणित मूळ साहित्य उपलब्ध झाल्यावर येथे तेच मजकूर ठेवावा.",
-              "sample": true
-            }
-          ]
+          "file": "eknath/bhavarth_ramayan_01.json"
         },
         {
-          "id": "eknath-1791091798757-1-kand-2",
-          "title": "अयोध्याकांड",
+          "id": "bhavarth-ramayan-02",
+          "number": 2,
+          "title": "कांड 2",
           "type": "कांड",
-          "days": 1,
-          "entries": [
-            {
-              "text": "[नमुना डेटा — प्रमाणित कांड मजकूर येथे जोडावा]",
-              "meaning": "हा नमुना केवळ डेटा-संरचना आणि UI तपासण्यासाठी आहे. प्रमाणित मूळ साहित्य उपलब्ध झाल्यावर येथे तेच मजकूर ठेवावा.",
-              "sample": true
-            }
-          ]
+          "file": "eknath/bhavarth_ramayan_02.json"
         },
         {
-          "id": "eknath-1791091798757-1-kand-3",
-          "title": "अरण्यकांड",
+          "id": "bhavarth-ramayan-03",
+          "number": 3,
+          "title": "कांड 3",
           "type": "कांड",
-          "days": 1,
-          "entries": [
-            {
-              "text": "[नमुना डेटा — प्रमाणित कांड मजकूर येथे जोडावा]",
-              "meaning": "हा नमुना केवळ डेटा-संरचना आणि UI तपासण्यासाठी आहे. प्रमाणित मूळ साहित्य उपलब्ध झाल्यावर येथे तेच मजकूर ठेवावा.",
-              "sample": true
-            }
-          ]
+          "file": "eknath/bhavarth_ramayan_03.json"
         },
         {
-          "id": "eknath-1791091798757-1-kand-4",
-          "title": "किष्किंधाकांड",
+          "id": "bhavarth-ramayan-04",
+          "number": 4,
+          "title": "कांड 4",
           "type": "कांड",
-          "days": 1,
-          "entries": [
-            {
-              "text": "[नमुना डेटा — प्रमाणित कांड मजकूर येथे जोडावा]",
-              "meaning": "हा नमुना केवळ डेटा-संरचना आणि UI तपासण्यासाठी आहे. प्रमाणित मूळ साहित्य उपलब्ध झाल्यावर येथे तेच मजकूर ठेवावा.",
-              "sample": true
-            }
-          ]
+          "file": "eknath/bhavarth_ramayan_04.json"
         },
         {
-          "id": "eknath-1791091798757-1-kand-5",
-          "title": "सुंदरकांड",
+          "id": "bhavarth-ramayan-05",
+          "number": 5,
+          "title": "कांड 5",
           "type": "कांड",
-          "days": 1,
-          "entries": [
-            {
-              "text": "[नमुना डेटा — प्रमाणित कांड मजकूर येथे जोडावा]",
-              "meaning": "हा नमुना केवळ डेटा-संरचना आणि UI तपासण्यासाठी आहे. प्रमाणित मूळ साहित्य उपलब्ध झाल्यावर येथे तेच मजकूर ठेवावा.",
-              "sample": true
-            }
-          ]
+          "file": "eknath/bhavarth_ramayan_05.json"
         },
         {
-          "id": "eknath-1791091798757-1-kand-6",
-          "title": "युद्धकांड",
+          "id": "bhavarth-ramayan-06",
+          "number": 6,
+          "title": "कांड 6",
           "type": "कांड",
-          "days": 1,
-          "entries": [
-            {
-              "text": "[नमुना डेटा — प्रमाणित कांड मजकूर येथे जोडावा]",
-              "meaning": "हा नमुना केवळ डेटा-संरचना आणि UI तपासण्यासाठी आहे. प्रमाणित मूळ साहित्य उपलब्ध झाल्यावर येथे तेच मजकूर ठेवावा.",
-              "sample": true
-            }
-          ]
+          "file": "eknath/bhavarth_ramayan_06.json"
+        },
+        {
+          "id": "bhavarth-ramayan-07",
+          "number": 7,
+          "title": "कांड 7",
+          "type": "कांड",
+          "file": "eknath/bhavarth_ramayan_07.json"
         }
       ]
     },
     {
-      "id": "eknath-1791091798757-2",
+      "id": "bharud",
       "title": "एकनाथी भारुड",
-      "type": "भारुड संग्रह",
-      "days": 1,
-      "entries": [
-        {
-          "text": "[नमुना डेटा — प्रमाणित भारुड संग्रह मजकूर येथे जोडावा]",
-          "meaning": "हा नमुना केवळ डेटा-संरचना आणि UI तपासण्यासाठी आहे. प्रमाणित मूळ साहित्य उपलब्ध झाल्यावर येथे तेच मजकूर ठेवावा.",
-          "sample": true
-        }
-      ]
+      "type": "भारुड",
+      "file": "eknath/bharud.json"
     },
     {
-      "id": "eknath-1791091798757-3",
+      "id": "abhang",
       "title": "एकनाथांचे अभंग",
       "type": "अभंग",
-      "days": 1,
-      "entries": [
-        {
-          "text": "[नमुना डेटा — प्रमाणित अभंग मजकूर येथे जोडावा]",
-          "meaning": "हा नमुना केवळ डेटा-संरचना आणि UI तपासण्यासाठी आहे. प्रमाणित मूळ साहित्य उपलब्ध झाल्यावर येथे तेच मजकूर ठेवावा.",
-          "sample": true
-        }
-      ]
+      "file": "eknath/abhang.json"
     },
     {
-      "id": "eknath-1791091798757-4",
+      "id": "rukmini-swayamvar",
       "title": "रुक्मिणी स्वयंवर",
-      "type": "ग्रंथ",
-      "days": 1,
-      "entries": [
-        {
-          "text": "[नमुना डेटा — प्रमाणित ग्रंथ मजकूर येथे जोडावा]",
-          "meaning": "हा नमुना केवळ डेटा-संरचना आणि UI तपासण्यासाठी आहे. प्रमाणित मूळ साहित्य उपलब्ध झाल्यावर येथे तेच मजकूर ठेवावा.",
-          "sample": true
-        }
-      ]
+      "type": "काव्य • ग्रंथ",
+      "file": "eknath/rukmini-swayamvar.json"
     },
     {
       "id": "haripath",
       "title": "श्री एकनाथ महाराज हरिपाठ",
       "type": "हरिपाठ",
-      "description": "शांतीब्रह्म श्री संत एकनाथ महाराजांचा भावपूर्ण आणि नामस्मरणाचे महत्त्व सांगणारा पावन हरिपाठ.",
+      "days": 7,
       "file": "eknath/haripath.json"
+    },
+    {
+      "id": "swatmasukh",
+      "title": "स्वात्मसुख",
+      "type": "ग्रंथ",
+      "file": "eknath/swatmasukh.json"
+    },
+    {
+      "id": "anandalahari",
+      "title": "आनंदलहरी",
+      "type": "स्तोत्र • काव्य",
+      "file": "eknath/anandalahari.json"
     }
-  ],
-  "symbol": "समता"
+  ]
 }

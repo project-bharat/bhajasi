@@ -1,280 +1,419 @@
 {
   "id": "kalidas",
-  "name": "कालिदास",
-  "search": "कालिदास संस्कृत काव्य मेघदूत रघुवंश कुमारसंभव",
+  "name": "महाकवि कालिदास",
+  "symbol": "काव्य",
+  "search": "कालिदास रघुवंश कुमारसंभव मेघदूत अभिज्ञानशाकुंतलम् ऋतुसंहार मालविकाग्निमित्रम् विक्रमोर्वशीयम्",
   "works": [
     {
-      "title": "निवडक काव्य",
-      "days": 1,
-      "entries": [
-        {
-          "text": "वागर्थाविव संपृक्तौ वागर्थप्रतिपत्तये ।",
-          "meaning": "शब्द आणि अर्थ यांचे अविभाज्य नाते अधोरेखित करणारी प्रसिद्ध सुरुवातीची ओळ."
-        },
-        {
-          "text": "कश्चित्कान्ताविरहगुरुणा स्वाधिकारात्प्रमत्तः ।",
-          "meaning": "मेघदूतातील विरह, स्मरण आणि संदेशवाहक मेघाची काव्यकल्पना उलगडणारी सुरुवात."
-        },
-        {
-          "text": "अस्त्युत्तरस्यां दिशि देवतात्मा हिमालयो नाम नगाधिराजः ।",
-          "meaning": "हिमालयाचे भव्य आणि दिव्य रूप उभे करणारे रघुवंशातील प्रसिद्ध वर्णन."
-        },
-        {
-          "text": "उपमा कालिदासस्य ।",
-          "meaning": "कालिदासाच्या उपमेच्या काव्यशक्तीची परंपरेत झालेली प्रशंसा दर्शवणारी प्रसिद्ध उक्ती."
-        }
-      ],
-      "id": "kalidas-work-1",
-      "type": "काव्य"
-    },
-    {
-      "id": "kalidas-1791091813163-0",
+      "id": "raghuvansha",
       "title": "रघुवंश",
       "type": "महाकाव्य",
-      "days": 1,
       "sections": [
         {
-          "id": "kalidas-1791091813163-0-sarga-1",
+          "id": "raghuvansha-01",
+          "number": 1,
           "title": "सर्ग 1",
           "type": "सर्ग",
-          "days": 1,
-          "entries": [
-            {
-              "text": "[नमुना डेटा — प्रमाणित सर्ग मजकूर येथे जोडावा]",
-              "meaning": "हा नमुना केवळ डेटा-संरचना आणि UI तपासण्यासाठी आहे. प्रमाणित मूळ साहित्य उपलब्ध झाल्यावर येथे तेच मजकूर ठेवावा.",
-              "sample": true
-            }
-          ]
+          "file": "kalidas/raghuvansha_01.json"
         },
         {
-          "id": "kalidas-1791091813163-0-sarga-2",
+          "id": "raghuvansha-02",
+          "number": 2,
           "title": "सर्ग 2",
           "type": "सर्ग",
-          "days": 1,
-          "entries": [
-            {
-              "text": "[नमुना डेटा — प्रमाणित सर्ग मजकूर येथे जोडावा]",
-              "meaning": "हा नमुना केवळ डेटा-संरचना आणि UI तपासण्यासाठी आहे. प्रमाणित मूळ साहित्य उपलब्ध झाल्यावर येथे तेच मजकूर ठेवावा.",
-              "sample": true
-            }
-          ]
+          "file": "kalidas/raghuvansha_02.json"
         },
         {
-          "id": "kalidas-1791091813163-0-sarga-3",
+          "id": "raghuvansha-03",
+          "number": 3,
           "title": "सर्ग 3",
           "type": "सर्ग",
-          "days": 1,
-          "entries": [
-            {
-              "text": "[नमुना डेटा — प्रमाणित सर्ग मजकूर येथे जोडावा]",
-              "meaning": "हा नमुना केवळ डेटा-संरचना आणि UI तपासण्यासाठी आहे. प्रमाणित मूळ साहित्य उपलब्ध झाल्यावर येथे तेच मजकूर ठेवावा.",
-              "sample": true
-            }
-          ]
+          "file": "kalidas/raghuvansha_03.json"
+        },
+        {
+          "id": "raghuvansha-04",
+          "number": 4,
+          "title": "सर्ग 4",
+          "type": "सर्ग",
+          "file": "kalidas/raghuvansha_04.json"
+        },
+        {
+          "id": "raghuvansha-05",
+          "number": 5,
+          "title": "सर्ग 5",
+          "type": "सर्ग",
+          "file": "kalidas/raghuvansha_05.json"
+        },
+        {
+          "id": "raghuvansha-06",
+          "number": 6,
+          "title": "सर्ग 6",
+          "type": "सर्ग",
+          "file": "kalidas/raghuvansha_06.json"
+        },
+        {
+          "id": "raghuvansha-07",
+          "number": 7,
+          "title": "सर्ग 7",
+          "type": "सर्ग",
+          "file": "kalidas/raghuvansha_07.json"
+        },
+        {
+          "id": "raghuvansha-08",
+          "number": 8,
+          "title": "सर्ग 8",
+          "type": "सर्ग",
+          "file": "kalidas/raghuvansha_08.json"
+        },
+        {
+          "id": "raghuvansha-09",
+          "number": 9,
+          "title": "सर्ग 9",
+          "type": "सर्ग",
+          "file": "kalidas/raghuvansha_09.json"
+        },
+        {
+          "id": "raghuvansha-10",
+          "number": 10,
+          "title": "सर्ग 10",
+          "type": "सर्ग",
+          "file": "kalidas/raghuvansha_10.json"
+        },
+        {
+          "id": "raghuvansha-11",
+          "number": 11,
+          "title": "सर्ग 11",
+          "type": "सर्ग",
+          "file": "kalidas/raghuvansha_11.json"
+        },
+        {
+          "id": "raghuvansha-12",
+          "number": 12,
+          "title": "सर्ग 12",
+          "type": "सर्ग",
+          "file": "kalidas/raghuvansha_12.json"
+        },
+        {
+          "id": "raghuvansha-13",
+          "number": 13,
+          "title": "सर्ग 13",
+          "type": "सर्ग",
+          "file": "kalidas/raghuvansha_13.json"
+        },
+        {
+          "id": "raghuvansha-14",
+          "number": 14,
+          "title": "सर्ग 14",
+          "type": "सर्ग",
+          "file": "kalidas/raghuvansha_14.json"
+        },
+        {
+          "id": "raghuvansha-15",
+          "number": 15,
+          "title": "सर्ग 15",
+          "type": "सर्ग",
+          "file": "kalidas/raghuvansha_15.json"
+        },
+        {
+          "id": "raghuvansha-16",
+          "number": 16,
+          "title": "सर्ग 16",
+          "type": "सर्ग",
+          "file": "kalidas/raghuvansha_16.json"
+        },
+        {
+          "id": "raghuvansha-17",
+          "number": 17,
+          "title": "सर्ग 17",
+          "type": "सर्ग",
+          "file": "kalidas/raghuvansha_17.json"
+        },
+        {
+          "id": "raghuvansha-18",
+          "number": 18,
+          "title": "सर्ग 18",
+          "type": "सर्ग",
+          "file": "kalidas/raghuvansha_18.json"
+        },
+        {
+          "id": "raghuvansha-19",
+          "number": 19,
+          "title": "सर्ग 19",
+          "type": "सर्ग",
+          "file": "kalidas/raghuvansha_19.json"
         }
       ]
     },
     {
-      "id": "kalidas-1791091813163-1",
+      "id": "kumarasambhavam",
       "title": "कुमारसंभव",
       "type": "महाकाव्य",
-      "days": 1,
       "sections": [
         {
-          "id": "kalidas-1791091813163-1-sarga-1",
+          "id": "kumarasambhavam-01",
+          "number": 1,
           "title": "सर्ग 1",
           "type": "सर्ग",
-          "days": 1,
-          "entries": [
-            {
-              "text": "[नमुना डेटा — प्रमाणित सर्ग मजकूर येथे जोडावा]",
-              "meaning": "हा नमुना केवळ डेटा-संरचना आणि UI तपासण्यासाठी आहे. प्रमाणित मूळ साहित्य उपलब्ध झाल्यावर येथे तेच मजकूर ठेवावा.",
-              "sample": true
-            }
-          ]
+          "file": "kalidas/kumarasambhavam_01.json"
         },
         {
-          "id": "kalidas-1791091813163-1-sarga-2",
+          "id": "kumarasambhavam-02",
+          "number": 2,
           "title": "सर्ग 2",
           "type": "सर्ग",
-          "days": 1,
-          "entries": [
-            {
-              "text": "[नमुना डेटा — प्रमाणित सर्ग मजकूर येथे जोडावा]",
-              "meaning": "हा नमुना केवळ डेटा-संरचना आणि UI तपासण्यासाठी आहे. प्रमाणित मूळ साहित्य उपलब्ध झाल्यावर येथे तेच मजकूर ठेवावा.",
-              "sample": true
-            }
-          ]
+          "file": "kalidas/kumarasambhavam_02.json"
         },
         {
-          "id": "kalidas-1791091813163-1-sarga-3",
+          "id": "kumarasambhavam-03",
+          "number": 3,
           "title": "सर्ग 3",
           "type": "सर्ग",
-          "days": 1,
-          "entries": [
-            {
-              "text": "[नमुना डेटा — प्रमाणित सर्ग मजकूर येथे जोडावा]",
-              "meaning": "हा नमुना केवळ डेटा-संरचना आणि UI तपासण्यासाठी आहे. प्रमाणित मूळ साहित्य उपलब्ध झाल्यावर येथे तेच मजकूर ठेवावा.",
-              "sample": true
-            }
-          ]
+          "file": "kalidas/kumarasambhavam_03.json"
+        },
+        {
+          "id": "kumarasambhavam-04",
+          "number": 4,
+          "title": "सर्ग 4",
+          "type": "सर्ग",
+          "file": "kalidas/kumarasambhavam_04.json"
+        },
+        {
+          "id": "kumarasambhavam-05",
+          "number": 5,
+          "title": "सर्ग 5",
+          "type": "सर्ग",
+          "file": "kalidas/kumarasambhavam_05.json"
+        },
+        {
+          "id": "kumarasambhavam-06",
+          "number": 6,
+          "title": "सर्ग 6",
+          "type": "सर्ग",
+          "file": "kalidas/kumarasambhavam_06.json"
+        },
+        {
+          "id": "kumarasambhavam-07",
+          "number": 7,
+          "title": "सर्ग 7",
+          "type": "सर्ग",
+          "file": "kalidas/kumarasambhavam_07.json"
+        },
+        {
+          "id": "kumarasambhavam-08",
+          "number": 8,
+          "title": "सर्ग 8",
+          "type": "सर्ग",
+          "file": "kalidas/kumarasambhavam_08.json"
         }
       ]
     },
     {
-      "id": "kalidas-1791091813163-2",
+      "id": "meghaduta",
       "title": "मेघदूत",
       "type": "काव्य",
-      "days": 1,
       "sections": [
         {
-          "id": "kalidas-1791091813163-2-section-1",
+          "id": "meghaduta-purvamegha",
           "title": "पूर्वमेघ",
           "type": "भाग",
-          "days": 1,
-          "entries": [
-            {
-              "text": "[नमुना डेटा — प्रमाणित काव्यभाग मजकूर येथे जोडावा]",
-              "meaning": "हा नमुना केवळ डेटा-संरचना आणि UI तपासण्यासाठी आहे. प्रमाणित मूळ साहित्य उपलब्ध झाल्यावर येथे तेच मजकूर ठेवावा.",
-              "sample": true
-            }
-          ]
+          "file": "kalidas/meghaduta_purvamegha.json"
         },
         {
-          "id": "kalidas-1791091813163-2-section-2",
+          "id": "meghaduta-uttaramegha",
           "title": "उत्तरमेघ",
           "type": "भाग",
-          "days": 1,
-          "entries": [
-            {
-              "text": "[नमुना डेटा — प्रमाणित काव्यभाग मजकूर येथे जोडावा]",
-              "meaning": "हा नमुना केवळ डेटा-संरचना आणि UI तपासण्यासाठी आहे. प्रमाणित मूळ साहित्य उपलब्ध झाल्यावर येथे तेच मजकूर ठेवावा.",
-              "sample": true
-            }
-          ]
+          "file": "kalidas/meghaduta_uttaramegha.json"
         }
       ]
     },
     {
-      "id": "kalidas-1791091813163-3",
+      "id": "abhijnanashakuntalam",
       "title": "अभिज्ञानशाकुंतलम्",
       "type": "नाटक",
-      "days": 1,
       "sections": [
         {
-          "id": "kalidas-1791091813163-3-act-1",
+          "id": "abhijnanashakuntalam-01",
+          "number": 1,
           "title": "अंक 1",
           "type": "अंक",
-          "days": 1,
-          "entries": [
-            {
-              "text": "[नमुना डेटा — प्रमाणित अंक मजकूर येथे जोडावा]",
-              "meaning": "हा नमुना केवळ डेटा-संरचना आणि UI तपासण्यासाठी आहे. प्रमाणित मूळ साहित्य उपलब्ध झाल्यावर येथे तेच मजकूर ठेवावा.",
-              "sample": true
-            }
-          ]
+          "file": "kalidas/abhijnanashakuntalam_01.json"
         },
         {
-          "id": "kalidas-1791091813163-3-act-2",
+          "id": "abhijnanashakuntalam-02",
+          "number": 2,
           "title": "अंक 2",
           "type": "अंक",
-          "days": 1,
-          "entries": [
-            {
-              "text": "[नमुना डेटा — प्रमाणित अंक मजकूर येथे जोडावा]",
-              "meaning": "हा नमुना केवळ डेटा-संरचना आणि UI तपासण्यासाठी आहे. प्रमाणित मूळ साहित्य उपलब्ध झाल्यावर येथे तेच मजकूर ठेवावा.",
-              "sample": true
-            }
-          ]
+          "file": "kalidas/abhijnanashakuntalam_02.json"
         },
         {
-          "id": "kalidas-1791091813163-3-act-3",
+          "id": "abhijnanashakuntalam-03",
+          "number": 3,
           "title": "अंक 3",
           "type": "अंक",
-          "days": 1,
-          "entries": [
-            {
-              "text": "[नमुना डेटा — प्रमाणित अंक मजकूर येथे जोडावा]",
-              "meaning": "हा नमुना केवळ डेटा-संरचना आणि UI तपासण्यासाठी आहे. प्रमाणित मूळ साहित्य उपलब्ध झाल्यावर येथे तेच मजकूर ठेवावा.",
-              "sample": true
-            }
-          ]
+          "file": "kalidas/abhijnanashakuntalam_03.json"
         },
         {
-          "id": "kalidas-1791091813163-3-act-4",
+          "id": "abhijnanashakuntalam-04",
+          "number": 4,
           "title": "अंक 4",
           "type": "अंक",
-          "days": 1,
-          "entries": [
-            {
-              "text": "[नमुना डेटा — प्रमाणित अंक मजकूर येथे जोडावा]",
-              "meaning": "हा नमुना केवळ डेटा-संरचना आणि UI तपासण्यासाठी आहे. प्रमाणित मूळ साहित्य उपलब्ध झाल्यावर येथे तेच मजकूर ठेवावा.",
-              "sample": true
-            }
-          ]
+          "file": "kalidas/abhijnanashakuntalam_04.json"
         },
         {
-          "id": "kalidas-1791091813163-3-act-5",
+          "id": "abhijnanashakuntalam-05",
+          "number": 5,
           "title": "अंक 5",
           "type": "अंक",
-          "days": 1,
-          "entries": [
-            {
-              "text": "[नमुना डेटा — प्रमाणित अंक मजकूर येथे जोडावा]",
-              "meaning": "हा नमुना केवळ डेटा-संरचना आणि UI तपासण्यासाठी आहे. प्रमाणित मूळ साहित्य उपलब्ध झाल्यावर येथे तेच मजकूर ठेवावा.",
-              "sample": true
-            }
-          ]
+          "file": "kalidas/abhijnanashakuntalam_05.json"
+        },
+        {
+          "id": "abhijnanashakuntalam-06",
+          "number": 6,
+          "title": "अंक 6",
+          "type": "अंक",
+          "file": "kalidas/abhijnanashakuntalam_06.json"
+        },
+        {
+          "id": "abhijnanashakuntalam-07",
+          "number": 7,
+          "title": "अंक 7",
+          "type": "अंक",
+          "file": "kalidas/abhijnanashakuntalam_07.json"
         }
       ]
     },
     {
-      "id": "kalidas-1791091813163-4",
+      "id": "ritusamhara",
       "title": "ऋतुसंहार",
       "type": "काव्य",
-      "days": 1,
       "sections": [
         {
-          "id": "kalidas-1791091813163-4-sarga-1",
+          "id": "ritusamhara-01",
+          "number": 1,
           "title": "सर्ग 1",
           "type": "सर्ग",
-          "days": 1,
-          "entries": [
-            {
-              "text": "[नमुना डेटा — प्रमाणित सर्ग मजकूर येथे जोडावा]",
-              "meaning": "हा नमुना केवळ डेटा-संरचना आणि UI तपासण्यासाठी आहे. प्रमाणित मूळ साहित्य उपलब्ध झाल्यावर येथे तेच मजकूर ठेवावा.",
-              "sample": true
-            }
-          ]
+          "file": "kalidas/ritusamhara_01.json"
         },
         {
-          "id": "kalidas-1791091813163-4-sarga-2",
+          "id": "ritusamhara-02",
+          "number": 2,
           "title": "सर्ग 2",
           "type": "सर्ग",
-          "days": 1,
-          "entries": [
-            {
-              "text": "[नमुना डेटा — प्रमाणित सर्ग मजकूर येथे जोडावा]",
-              "meaning": "हा नमुना केवळ डेटा-संरचना आणि UI तपासण्यासाठी आहे. प्रमाणित मूळ साहित्य उपलब्ध झाल्यावर येथे तेच मजकूर ठेवावा.",
-              "sample": true
-            }
-          ]
+          "file": "kalidas/ritusamhara_02.json"
         },
         {
-          "id": "kalidas-1791091813163-4-sarga-3",
+          "id": "ritusamhara-03",
+          "number": 3,
           "title": "सर्ग 3",
           "type": "सर्ग",
-          "days": 1,
-          "entries": [
-            {
-              "text": "[नमुना डेटा — प्रमाणित सर्ग मजकूर येथे जोडावा]",
-              "meaning": "हा नमुना केवळ डेटा-संरचना आणि UI तपासण्यासाठी आहे. प्रमाणित मूळ साहित्य उपलब्ध झाल्यावर येथे तेच मजकूर ठेवावा.",
-              "sample": true
-            }
-          ]
+          "file": "kalidas/ritusamhara_03.json"
+        },
+        {
+          "id": "ritusamhara-04",
+          "number": 4,
+          "title": "सर्ग 4",
+          "type": "सर्ग",
+          "file": "kalidas/ritusamhara_04.json"
+        },
+        {
+          "id": "ritusamhara-05",
+          "number": 5,
+          "title": "सर्ग 5",
+          "type": "सर्ग",
+          "file": "kalidas/ritusamhara_05.json"
+        },
+        {
+          "id": "ritusamhara-06",
+          "number": 6,
+          "title": "सर्ग 6",
+          "type": "सर्ग",
+          "file": "kalidas/ritusamhara_06.json"
+        }
+      ]
+    },
+    {
+      "id": "malavikagnimitram",
+      "title": "मालविकाग्निमित्रम्",
+      "type": "नाटक",
+      "sections": [
+        {
+          "id": "malavikagnimitram-01",
+          "number": 1,
+          "title": "अंक 1",
+          "type": "अंक",
+          "file": "kalidas/malavikagnimitram_01.json"
+        },
+        {
+          "id": "malavikagnimitram-02",
+          "number": 2,
+          "title": "अंक 2",
+          "type": "अंक",
+          "file": "kalidas/malavikagnimitram_02.json"
+        },
+        {
+          "id": "malavikagnimitram-03",
+          "number": 3,
+          "title": "अंक 3",
+          "type": "अंक",
+          "file": "kalidas/malavikagnimitram_03.json"
+        },
+        {
+          "id": "malavikagnimitram-04",
+          "number": 4,
+          "title": "अंक 4",
+          "type": "अंक",
+          "file": "kalidas/malavikagnimitram_04.json"
+        },
+        {
+          "id": "malavikagnimitram-05",
+          "number": 5,
+          "title": "अंक 5",
+          "type": "अंक",
+          "file": "kalidas/malavikagnimitram_05.json"
+        }
+      ]
+    },
+    {
+      "id": "vikramorvashiyam",
+      "title": "विक्रमोर्वशीयम्",
+      "type": "नाटक",
+      "sections": [
+        {
+          "id": "vikramorvashiyam-01",
+          "number": 1,
+          "title": "अंक 1",
+          "type": "अंक",
+          "file": "kalidas/vikramorvashiyam_01.json"
+        },
+        {
+          "id": "vikramorvashiyam-02",
+          "number": 2,
+          "title": "अंक 2",
+          "type": "अंक",
+          "file": "kalidas/vikramorvashiyam_02.json"
+        },
+        {
+          "id": "vikramorvashiyam-03",
+          "number": 3,
+          "title": "अंक 3",
+          "type": "अंक",
+          "file": "kalidas/vikramorvashiyam_03.json"
+        },
+        {
+          "id": "vikramorvashiyam-04",
+          "number": 4,
+          "title": "अंक 4",
+          "type": "अंक",
+          "file": "kalidas/vikramorvashiyam_04.json"
+        },
+        {
+          "id": "vikramorvashiyam-05",
+          "number": 5,
+          "title": "अंक 5",
+          "type": "अंक",
+          "file": "kalidas/vikramorvashiyam_05.json"
         }
       ]
     }
-  ],
-  "symbol": "काव्य"
+  ]
 }
