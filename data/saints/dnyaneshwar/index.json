@@ -2,7 +2,7 @@
   "id": "dnyaneshwar",
   "name": "संत ज्ञानेश्वर महाराज",
   "symbol": "ज्ञान",
-  "search": "ज्ञानेश्वर ज्ञानदेव माऊली हरिपाठ ज्ञानेश्वरी पसायदान भावार्थदीपिका",
+  "search": "ज्ञानेश्वर ज्ञानदेव माऊली हरिपाठ ज्ञानेश्वरी अमृतानुभव अभंग गौळणी पसायदान भावार्थदीपिका",
   "works": [
     {
       "id": "haripath",
@@ -112,6 +112,79 @@
       "title": "पसायदान",
       "type": "प्रार्थना • विश्वकल्याण",
       "file": "dnyaneshwar/pasaydan.json"
+    },
+    {
+      "id": "amrutanubhav",
+      "title": "अमृतानुभव",
+      "type": "ग्रंथ",
+      "sections": [
+        {
+          "id": "amrutanubhav-01",
+          "title": "अमृतानुभव — प्रकरण 1",
+          "type": "प्रकरण",
+          "file": "dnyaneshwar/amrutanubhav_01.json"
+        },
+        {
+          "id": "amrutanubhav-02",
+          "title": "अमृतानुभव — प्रकरण 2",
+          "type": "प्रकरण",
+          "file": "dnyaneshwar/amrutanubhav_02.json"
+        },
+        {
+          "id": "amrutanubhav-03",
+          "title": "अमृतानुभव — प्रकरण 3",
+          "type": "प्रकरण",
+          "file": "dnyaneshwar/amrutanubhav_03.json"
+        },
+        {
+          "id": "amrutanubhav-04",
+          "title": "अमृतानुभव — प्रकरण 4",
+          "type": "प्रकरण",
+          "file": "dnyaneshwar/amrutanubhav_04.json"
+        },
+        {
+          "id": "amrutanubhav-05",
+          "title": "अमृतानुभव — प्रकरण 5",
+          "type": "प्रकरण",
+          "file": "dnyaneshwar/amrutanubhav_05.json"
+        },
+        {
+          "id": "amrutanubhav-06",
+          "title": "अमृतानुभव — प्रकरण 6",
+          "type": "प्रकरण",
+          "file": "dnyaneshwar/amrutanubhav_06.json"
+        },
+        {
+          "id": "amrutanubhav-07",
+          "title": "अमृतानुभव — प्रकरण 7",
+          "type": "प्रकरण",
+          "file": "dnyaneshwar/amrutanubhav_07.json"
+        },
+        {
+          "id": "amrutanubhav-08",
+          "title": "अमृतानुभव — प्रकरण 8",
+          "type": "प्रकरण",
+          "file": "dnyaneshwar/amrutanubhav_08.json"
+        },
+        {
+          "id": "amrutanubhav-09",
+          "title": "अमृतानुभव — प्रकरण 9",
+          "type": "प्रकरण",
+          "file": "dnyaneshwar/amrutanubhav_09.json"
+        },
+        {
+          "id": "amrutanubhav-10",
+          "title": "अमृतानुभव — प्रकरण 10",
+          "type": "प्रकरण",
+          "file": "dnyaneshwar/amrutanubhav_10.json"
+        }
+      ]
+    },
+    {
+      "id": "abhang-gaulani",
+      "title": "अभंग / गौळणी",
+      "type": "अभंग • गौळणी",
+      "file": "dnyaneshwar/abhang_gaulani.json"
     }
   ]
 }
