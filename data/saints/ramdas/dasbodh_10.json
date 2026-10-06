@@ -13,9 +13,12 @@
         {
           "id": "dasbodh-10-samas-01-001",
           "number": 1,
-          "text": "[नमुना डेटा — प्रमाणित समास मजकूर येथे जोडावा]",
-          "meaning": "हा नमुना केवळ डेटा-संरचना आणि UI तपासणीसाठी आहे. प्रमाणित मूळ साहित्य उपलब्ध झाल्यावर येथे तेच मजकूर ठेवावा.",
-          "sample": true
+          "text": "सकळांचे अंतःकरण येक । किंवा येक नये अनेक । ऐसे हे निश्चयात्मक । मज निरोपिले ॥१॥",
+          "source": {
+            "url": "https://sanskritdocuments.org/marathi/dndAs/dAsabodh10_unic.html",
+            "kind": "web-source",
+            "verified": "2026-10-06"
+          }
         }
       ]
     },
@@ -154,5 +157,6 @@
         }
       ]
     }
-  ]
+  ],
+  "sourceStatus": "PARTIAL_SOURCE_VERIFIED"
 }
