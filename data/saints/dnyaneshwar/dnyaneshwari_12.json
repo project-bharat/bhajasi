@@ -2,5 +2,19 @@
   "id": "dnyaneshwari-adhyay-12",
   "title": "ज्ञानेश्वरी — अध्याय बारावा",
   "days": 1,
-  "entries": []
+  "type": "अध्याय",
+  "subtitle": "भक्तियोग",
+  "sourceStatus": "PARTIAL_SOURCE_VERIFIED",
+  "entries": [
+    {
+      "id": "dnyaneshwari-adhyay-12-ovi-001",
+      "number": 1,
+      "text": "जय जय वो शुद्धे । उदारे प्रसिद्धे । अनवरत आनंदे । वर्षतिये ॥ १ ॥",
+      "source": {
+        "url": "https://santvani.co.in/pages/granth/dnyaneshwari/adhyay-12.html",
+        "kind": "web-source",
+        "verified": "2026-10-06"
+      }
+    }
+  ]
 }
