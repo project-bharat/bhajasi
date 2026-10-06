@@ -7,9 +7,13 @@
     {
       "id": "001",
       "number": 1,
-      "text": "[नमुना डेटा — प्रमाणित काव्य • ग्रंथ येथे जोडावा]",
-      "meaning": "हा नमुना केवळ डेटा-संरचना आणि UI तपासणीसाठी आहे. प्रमाणित मूळ साहित्य उपलब्ध झाल्यावर येथे तेच मजकूर ठेवावा.",
-      "sample": true
+      "text": "रुक्मिणी म्हणे श्रीकृष्णा । तूं माझा प्राणसखा ।\nतुझिया चरणीं माझी आस्था । येऊनि घे मज प्राणनाथा ।",
+      "source": {
+        "url": "https://www.santsahitya.in/eknath/rukmini-swayamvar/",
+        "kind": "web-source",
+        "verified": "2026-10-06"
+      }
     }
-  ]
+  ],
+  "sourceStatus": "PARTIAL_SOURCE_VERIFIED"
 }
