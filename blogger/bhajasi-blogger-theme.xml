@@ -775,6 +775,172 @@ button {
     color: #94a3b8;
 }
 
+
+/* Pariksha — learning-first exam and certificate UI */
+.bhajasi-exam-card {
+    width: 100%;
+    background: linear-gradient(145deg, #2a3950, #1c2738);
+    border: 1px solid rgba(48,197,173,.38);
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.22);
+}
+.bhajasi-exam-meta {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    margin: 10px 0 13px;
+    color: #94a3b8;
+    font-size: 11px;
+}
+.bhajasi-primary-btn,
+.bhajasi-secondary-btn,
+.bhajasi-study-btn {
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all .18s ease;
+}
+.bhajasi-primary-btn {
+    background: linear-gradient(135deg, #fbd52d, #e98006);
+    color: #151d2a;
+    border-color: #fbd52d;
+}
+.bhajasi-primary-btn:hover:not(:disabled) { transform: translateY(-1px); }
+.bhajasi-primary-btn:disabled,
+.bhajasi-secondary-btn:disabled {
+    opacity: .45;
+    cursor: not-allowed;
+}
+.bhajasi-secondary-btn {
+    background: rgba(65,67,106,.5);
+    color: #e2e8f0;
+    border-color: rgba(148,163,184,.28);
+}
+.bhajasi-exam-question h3 {
+    margin: 18px 2px;
+    color: #fff;
+    font-family: 'Tiro Devanagari Marathi', serif;
+    font-size: 22px;
+    line-height: 1.55;
+}
+.bhajasi-exam-progress {
+    height: 5px;
+    border-radius: 999px;
+    background: #151d2a;
+    overflow: hidden;
+}
+.bhajasi-exam-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg,#30c5ad,#fbd52d,#e98006);
+}
+.bhajasi-exam-options {
+    display: grid;
+    gap: 9px;
+}
+.bhajasi-exam-option {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    width: 100%;
+    padding: 13px 14px;
+    text-align: left;
+    color: #e2e8f0;
+    background: rgba(26,35,50,.72);
+    border: 1px solid rgba(65,67,106,.8);
+    border-radius: 13px;
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 1.5;
+}
+.bhajasi-exam-option.selected {
+    color: #151d2a;
+    background: rgba(251,213,45,.95);
+    border-color: #fbd52d;
+}
+.bhajasi-exam-radio {
+    width: 25px;
+    height: 25px;
+    min-width: 25px;
+    border: 1px solid rgba(203,213,225,.4);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+}
+.bhajasi-study-card,
+.bhajasi-learning-card {
+    margin-top: 18px;
+    padding: 14px;
+    border-radius: 14px;
+    background: rgba(48,197,173,.10);
+    border: 1px solid rgba(48,197,173,.28);
+}
+.bhajasi-study-title { color: #30c5ad; font-weight: 800; font-size: 13px; }
+.bhajasi-study-text { margin-top: 5px; color: #cbd5e1; font-size: 12px; line-height: 1.65; }
+.bhajasi-study-btn {
+    margin-top: 10px;
+    background: transparent;
+    color: #fbd52d;
+    border-color: rgba(251,213,45,.38);
+}
+.bhajasi-exam-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+.bhajasi-result-card {
+    text-align: center;
+    padding: 24px 16px;
+    border-radius: 18px;
+    background: linear-gradient(145deg,#24334a,#172333);
+    border: 1px solid rgba(251,213,45,.35);
+}
+.bhajasi-result-score { color: #fff; font-size: 40px; font-weight: 800; }
+.bhajasi-result-percent { color: #fbd52d; font-size: 25px; font-weight: 800; margin-top: 3px; }
+.bhajasi-result-status { margin-top: 10px; font-weight: 700; font-size: 13px; }
+.bhajasi-result-status.passed { color: #30c5ad; }
+.bhajasi-result-status.failed { color: #e98006; }
+.bhajasi-learning-card strong { color: #fbd52d; }
+.bhajasi-learning-card p { color: #cbd5e1; font-size: 12px; line-height: 1.7; margin: 5px 0 0; }
+.bhajasi-certificate-form {
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 18px;
+    border-radius: 17px;
+    background: rgba(26,35,50,.72);
+    border: 1px solid rgba(251,213,45,.25);
+}
+.bhajasi-certificate-form label { display:block; color:#fbd52d; font-size:13px; font-weight:700; margin-bottom:8px; }
+.bhajasi-certificate-form input {
+    width:100%;
+    padding:13px 14px;
+    border-radius:11px;
+    border:1px solid rgba(65,67,106,.95);
+    background:#111b29;
+    color:#fff;
+    outline:none;
+    font-size:15px;
+}
+.bhajasi-certificate-form input:focus { border-color:#fbd52d; box-shadow:0 0 0 2px rgba(251,213,45,.16); }
+.bhajasi-certificate-form p { color:#94a3b8; font-size:11px; line-height:1.65; margin:10px 0 15px; }
+.bhajasi-certificate-preview { text-align:center; }
+.bhajasi-certificate-image-wrap {
+    width:100%;
+    overflow:hidden;
+    border-radius:14px;
+    border:1px solid rgba(251,213,45,.38);
+    background:#111b29;
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+.bhajasi-certificate-image-wrap img { display:block; width:100%; height:auto; }
+.bhajasi-certificate-id { margin:10px 0; color:#94a3b8; font-size:10px; }
+
 /* Bottom Navigation */
 .bhajasi-bottom {
     position: fixed;
@@ -2741,6 +2907,7 @@ function App() {
                                         <article
                                             key={(entry.id || 'entry') + '-' + index}
                                             className='bhajasi-verse'
+                                            data-entry-id={entry.id || ''}
                                         >
                                             <div className='bhajasi-verse-header'>
                                                 <span className='bhajasi-verse-badge'>
@@ -2880,6 +3047,10 @@ function App() {
                     <button className={view === 'nitya' || view === 'nityaReader' ? 'active' : ''} onClick={openNityaList}>
                         <span className='bhajasi-bottom-icon'><i className='fa-solid fa-book-open'></i></span>
                         नित्य पठण
+                    </button>
+                    <button className={view === 'pariksha' || view === 'exam' || view === 'examResult' || view === 'certificate' ? 'active' : ''} onClick={openParikshaList}>
+                        <span className='bhajasi-bottom-icon'><i className='fa-solid fa-award'></i></span>
+                        परीक्षा
                     </button>
                 </nav>
 
