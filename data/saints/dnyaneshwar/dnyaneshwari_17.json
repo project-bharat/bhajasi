@@ -2,5 +2,19 @@
   "id": "dnyaneshwari-adhyay-17",
   "title": "ज्ञानेश्वरी — अध्याय सतरावा",
   "days": 1,
-  "entries": []
+  "type": "अध्याय",
+  "subtitle": "श्रद्धात्रयविभाग योग",
+  "sourceStatus": "PARTIAL_SOURCE_VERIFIED",
+  "entries": [
+    {
+      "id": "dnyaneshwari-adhyay-17-ovi-001",
+      "number": 1,
+      "text": "विश्वविकासित मुद्रा । जया सोडी तुझी योगमुद्रा । तया नमोजी गणेंद्रा । श्रीगुरुराया ॥ १ ॥",
+      "source": {
+        "url": "https://santvani.co.in/pages/granth/dnyaneshwari/adhyay-17.html",
+        "kind": "web-source",
+        "verified": "2026-10-06"
+      }
+    }
+  ]
 }
