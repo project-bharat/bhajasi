@@ -1526,28 +1526,7 @@ function getTotalDays(work, content) {
 }
 
 function expandHaripath(entries, workTitle) {
-    const isHaripath = String(workTitle || '').indexOf('हरिपाठ') >= 0;
-    if (!isHaripath) return entries || [];
-
-    const expanded = [];
-    (entries || []).forEach(function(entry, entryIndex) {
-        const text = String(entry.text || '').trim();
-        const matches = text.split(/(?=॥\s*[०-९0-9]+\s*॥)/u).map(function(s) { return s.trim(); }).filter(Boolean);
-
-        if (matches.length > 1) {
-            matches.forEach(function(part, partIndex) {
-                const numberMatch = part.match(/॥\s*([०-९0-9]+)\s*॥/u);
-                expanded.push(Object.assign({}, entry, {
-                    id: String(entry.id || 'haripath-' + entryIndex) + '-' + (partIndex + 1),
-                    number: numberMatch ? numberMatch[1] : partIndex + 1,
-                    text: part
-                }));
-            });
-        } else {
-            expanded.push(entry);
-        }
-    });
-    return expanded;
+    return entries || [];
 }
 
 function readNotifySettings() {
