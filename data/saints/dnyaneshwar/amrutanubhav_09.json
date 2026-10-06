@@ -1,14 +1,18 @@
 {
   "id": "amrutanubhav-09",
-  "title": "अमृतानुभव — प्रकरण 9",
+  "title": "अमृतानुभव — प्रकरण ९",
   "type": "प्रकरण",
+  "sourceStatus": "PARTIAL_SOURCE_VERIFIED",
   "entries": [
     {
       "id": "amrutanubhav-09-001",
       "number": 1,
-      "text": "[नमुना डेटा — प्रमाणित मूळ मजकूर येथे जोडावा]",
-      "meaning": "हा नमुना केवळ डेटा-संरचना आणि UI तपासण्यासाठी आहे. प्रमाणित मूळ साहित्य उपलब्ध झाल्यावर येथे तेच मजकूर ठेवावा.",
-      "sample": true
+      "text": "आतां आमोद सुनास जालें । श्रुतीसि श्रवण रिघाले । आरिसे उठले । लोचनेसी ॥ ९-१ ॥",
+      "source": {
+        "url": "https://www.santsahitya.in/dnyaneshwar/amrutanubhav/",
+        "kind": "web-source",
+        "verified": "2026-10-06"
+      }
     }
   ]
 }
