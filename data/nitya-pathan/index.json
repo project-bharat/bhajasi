@@ -188,6 +188,28 @@
       "author": "आद्य शंकराचार्य",
       "description": "माता अन्नपूर्णेश्वरीची स्तुती करणारे प्रसिद्ध अन्नपूर्णाष्टक.",
       "file": "nitya-pathan/annapurna-ashtakam.json"
+    },
+    {
+      "id": "purusha-sukta",
+      "title": "शुक्लयजुर्वेदीय पुरुषसूक्तम्",
+      "type": "सूक्त",
+      "description": "भगवान विष्णू/परम पुरुषाला समर्पित सर्वाधिक लोकप्रिय स्तुत्यांपैकी एक. शुक्लयजुर्वेदीय १६-मन्त्रांचा पाठ.",
+      "file": "nitya-pathan/purusha-sukta.json"
+    },
+    {
+      "id": "narayanopanishad",
+      "title": "नारायणोपनिषत् अथवा नारायण अथर्वशीर्ष",
+      "type": "उपनिषद्",
+      "description": "कृष्णयजुर्वेदीय नारायणोपनिषद् अथवा नारायण अथर्वशीर्ष.",
+      "file": "nitya-pathan/narayanopanishad.json"
+    },
+    {
+      "id": "narayana-sukta",
+      "title": "नारायणसूक्तम्",
+      "type": "सूक्त",
+      "author": "वैदिक परंपरा",
+      "description": "तैत्तिरीय आरण्यकातील नारायणसूक्त; भगवान नारायण/विष्णूचे परम तत्त्व म्हणून स्तवन करणारा वैदिक पाठ.",
+      "file": "nitya-pathan/narayana-sukta.json"
     }
   ]
 }
