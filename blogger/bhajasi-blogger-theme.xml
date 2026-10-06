@@ -1295,6 +1295,8 @@ const DATA_BASE =
     'https://raw.githubusercontent.com/project-bharat/bhajasi/main/data/';
 const NITYA_BASE =
     DATA_BASE + 'nitya-pathan/';
+const PARIKSHA_BASE =
+    DATA_BASE + 'pariksha/';
 const SITE_URL =
     'https://bhajasibharat.blogspot.com/';
 const SITE_LOGO =
@@ -1306,6 +1308,7 @@ const FOOTER_LOGO =
 
 const PROGRESS_KEY = 'bhajasi_reading_progress_v2';
 const NOTIFY_KEY = 'bhajasi_notification_v1';
+const EXAM_RESULT_KEY = 'bhajasi_pariksha_results_v1';
 
 const {
     useState,
@@ -1682,6 +1685,16 @@ function buildMetadataSearch(saints, nitya) {
 
 function App() {
     const [saints, setSaints] = useState([]);
+    const [pariksha, setPariksha] = useState(null);
+    const [selectedExam, setSelectedExam] = useState(null);
+    const [examQuestions, setExamQuestions] = useState([]);
+    const [examQuestionIndex, setExamQuestionIndex] = useState(0);
+    const [examAnswers, setExamAnswers] = useState({});
+    const [examSubmitted, setExamSubmitted] = useState(false);
+    const [examResult, setExamResult] = useState(null);
+    const [certificateName, setCertificateName] = useState('');
+    const [certificatePreview, setCertificatePreview] = useState('');
+    const [certificateId, setCertificateId] = useState('');
     const [nitya, setNitya] = useState(null);
     const [view, setView] = useState('home');
     const [selectedSaint, setSelectedSaint] = useState(null);
@@ -1742,6 +1755,14 @@ function App() {
                 errors.push('nitya-pathan/index.json');
             }
 
+            try {
+                const parikshaIndex = await fetchJSON(PARIKSHA_BASE + 'index.json');
+                setPariksha(parikshaIndex);
+            } catch (error) {
+                console.error('Bhajasi pariksha index error:', error);
+                errors.push('pariksha/index.json');
+            }
+
             setSaints(loadedSaints);
             setLoadErrors(errors);
             setLoading(false);
@@ -1770,7 +1791,7 @@ function App() {
         }
 
         document.title = pageTitle;
-    }, [view, selectedSaint, selectedParentWork, selectedWork, selectedNityaWork, day, theme]);
+    }, [view, selectedSaint, selectedParentWork, selectedWork, selectedNityaWork, day, theme, selectedExam]);
 
     function navigate(nextView) {
         setView(nextView);
@@ -1862,6 +1883,86 @@ function App() {
         setSelectedNityaWork(null);
         setSelectedContent(null);
         navigate('nitya');
+    }
+
+    function openParikshaList() { navigate('pariksha'); }
+
+    async function startExam(examMeta) {
+        if (!examMeta || !examMeta.file) return;
+        try {
+            const bank = await fetchJSON(PARIKSHA_BASE + examMeta.file.replace(/^pariksha\//, ''));
+            setSelectedExam(Object.assign({}, examMeta, bank));
+            setExamQuestions(Array.isArray(bank.questions) ? bank.questions : []);
+            setExamQuestionIndex(0);
+            setExamAnswers({});
+            setExamSubmitted(false);
+            setExamResult(null);
+            setCertificateName('');
+            setCertificatePreview('');
+            setCertificateId('');
+            navigate('exam');
+        } catch (error) {
+            console.error('Bhajasi exam loading error:', error);
+            alert('परीक्षा सध्या लोड करता आली नाही.');
+        }
+    }
+
+    function selectExamAnswer(optionIndex) {
+        if (examSubmitted) return;
+        setExamAnswers(function(old) { return Object.assign({}, old, { [examQuestionIndex]: optionIndex }); });
+    }
+
+    function submitExam() {
+        if (!examQuestions.length) return;
+        const unanswered = examQuestions.some(function(q, index) { return examAnswers[index] === undefined; });
+        if (unanswered) { alert('सर्व प्रश्नांची उत्तरे निवडा.'); return; }
+        let score = 0;
+        examQuestions.forEach(function(q, index) {
+            if (Number(examAnswers[index]) === Number(q.answer)) score += 1;
+        });
+        const percentage = Math.round((score / examQuestions.length) * 100);
+        const passed = percentage >= Number(selectedExam && selectedExam.passingPercentage || 80);
+        const result = { score:score, total:examQuestions.length, percentage:percentage, passed:passed, completedAt:new Date().toISOString() };
+        setExamSubmitted(true);
+        setExamResult(result);
+        const saved = safeJSON(localStorage.getItem(EXAM_RESULT_KEY) || '{}', {});
+        saved[selectedExam.id] = result;
+        localStorage.setItem(EXAM_RESULT_KEY, JSON.stringify(saved));
+        navigate('examResult');
+    }
+
+    function retryExam() {
+        setExamQuestionIndex(0); setExamAnswers({}); setExamSubmitted(false); setExamResult(null); navigate('exam');
+    }
+
+    function makeCertificateId() {
+        return 'BB-PAR-' + localDateKey(new Date()).replace(/-/g, '') + '-' + Math.random().toString(36).slice(2,7).toUpperCase();
+    }
+
+    function findExamSource(source) {
+        if (!source || source.type === 'nitya') return null;
+        const saint = saints.find(function(item){ return item.id === source.saintId; });
+        if (!saint) return null;
+        let found = null;
+        (saint.works || []).some(function(work) {
+            if (work.id === source.workId) { found={saint:saint,work:work,parentWork:null}; return true; }
+            const section=(work.sections || []).find(function(item){ return item.id===source.entryId || item.id===source.workId; });
+            if(section && section.file){ found={saint:saint,work:section,parentWork:work}; return true; }
+            return false;
+        });
+        return found;
+    }
+
+    async function openExamSource(source) {
+        const target=findExamSource(source);
+        if(!target){ alert('संबंधित साहित्य सापडले नाही.'); return; }
+        await openWork(target.saint,target.work,1,target.parentWork,'saint');
+        if(source.entryId){
+            setTimeout(function(){
+                const node=document.querySelector('[data-entry-id="' + source.entryId + '"]');
+                if(node) node.scrollIntoView({behavior:'smooth',block:'center'});
+            },450);
+        }
     }
 
     function goHome() {
@@ -2217,6 +2318,58 @@ function App() {
             document.body.style.overflow = previousOverflow;
         };
     }, [globalSearchOpen]);
+
+    async function createCertificate() {
+        const name=String(certificateName || '').trim();
+        if(!name){alert('प्रमाणपत्रासाठी तुमचे नाव लिहा.');return;}
+        if(!examResult || !examResult.passed || !selectedExam)return;
+        const id=certificateId || makeCertificateId();
+        const canvas=document.createElement('canvas'); canvas.width=1600; canvas.height=1100;
+        const ctx=canvas.getContext('2d'); if(!ctx)return;
+        if(document.fonts && document.fonts.ready){try{await document.fonts.ready;}catch(e){}}
+        const gradient=ctx.createLinearGradient(0,0,1600,1100);
+        gradient.addColorStop(0,'#151d2a');gradient.addColorStop(.52,'#2a3950');gradient.addColorStop(1,'#151d2a');
+        ctx.fillStyle=gradient;ctx.fillRect(0,0,1600,1100);
+        ctx.strokeStyle='#fbd52d';ctx.lineWidth=8;ctx.strokeRect(36,36,1528,1028);
+        ctx.strokeStyle='rgba(233,128,6,.72)';ctx.lineWidth=2;ctx.strokeRect(56,56,1488,988);
+        try{const logo=await loadLogoImage(SITE_LOGO);if(logo)ctx.drawImage(logo,725,82,150,150);}catch(e){}
+        ctx.textAlign='center';
+        ctx.fillStyle='#fbd52d';ctx.font='700 44px "Alkatra", cursive';ctx.fillText('भजसी भारत .com',800,280);
+        ctx.fillStyle='#d8dee8';ctx.font='500 25px "Noto Sans Devanagari", sans-serif';ctx.fillText('संतवाणी • ग्रंथ • हरिनाम • चिंतन • स्तोत्र',800,322);
+        ctx.fillStyle='#fff';ctx.font='700 72px "Tiro Devanagari Marathi", serif';ctx.fillText('डिजिटल ज्ञानपरीक्षा',800,435);
+        ctx.fillStyle='#cbd5e1';ctx.font='500 30px "Noto Sans Devanagari", sans-serif';ctx.fillText('हे प्रमाणित करण्यात येते की',800,505);
+        ctx.fillStyle='#fbd52d';ctx.font='700 66px "Tiro Devanagari Marathi", serif';ctx.fillText(name.length>32?name.slice(0,32):name,800,600);
+        ctx.strokeStyle='rgba(251,213,45,.65)';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(430,625);ctx.lineTo(1170,625);ctx.stroke();
+        ctx.fillStyle='#fff';ctx.font='700 48px "Tiro Devanagari Marathi", serif';ctx.fillText(selectedExam.title || 'ज्ञानपरीक्षा',800,710);
+        ctx.fillStyle='#cbd5e1';ctx.font='500 27px "Noto Sans Devanagari", sans-serif';ctx.fillText((selectedExam.subtitle || '')+(selectedExam.subtitle?' • ':'')+'ज्ञानपरीक्षा यशस्वीरीत्या पूर्ण',800,760);
+        ctx.fillStyle='#30c5ad';ctx.font='700 38px "Noto Sans Devanagari", sans-serif';ctx.fillText('गुण: '+toMarathiDigits(examResult.score)+' / '+toMarathiDigits(examResult.total)+'   •   '+toMarathiDigits(examResult.percentage)+'%',800,835);
+        ctx.fillStyle='#d8dee8';ctx.font='500 24px "Noto Sans Devanagari", sans-serif';ctx.fillText('पूर्णता दिनांक: '+new Date(examResult.completedAt).toLocaleDateString('mr-IN'),800,895);
+        ctx.fillStyle='#94a3b8';ctx.font='500 20px "Noto Sans Devanagari", sans-serif';ctx.fillText('Certificate ID: '+id,800,950);ctx.fillText('भजसी भारत .com — bhajasibharat.blogspot.com',800,1000);
+        setCertificateId(id);setCertificatePreview(canvas.toDataURL('image/png',1));navigate('certificate');
+    }
+
+    function downloadCertificatePNG(){
+        if(!certificatePreview)return;
+        const a=document.createElement('a');a.href=certificatePreview;a.download='bhajasi-certificate-'+(certificateId||'completion')+'.png';document.body.appendChild(a);a.click();a.remove();
+    }
+
+    async function downloadCertificatePDF(){
+        if(!certificatePreview)return;
+        try{
+            if(!window.jspdf){
+                await new Promise(function(resolve,reject){
+                    const script=document.createElement('script');
+                    script.src='https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js';
+                    script.onload=resolve;script.onerror=reject;document.head.appendChild(script);
+                });
+            }
+            const JsPDF=window.jspdf && window.jspdf.jsPDF;
+            if(!JsPDF)throw new Error('jsPDF unavailable');
+            const pdf=new JsPDF({orientation:'landscape',unit:'mm',format:'a4'});
+            pdf.addImage(certificatePreview,'PNG',0,0,297,210);
+            pdf.save('bhajasi-certificate-'+(certificateId||'completion')+'.pdf');
+        }catch(error){alert('PDF तयार करता आला नाही. PNG प्रमाणपत्र जतन करून पुन्हा प्रयत्न करा.');}
+    }
 
     function renderSectionNav(page) {
         if (page !== 'home') return null;
@@ -2654,6 +2807,44 @@ function App() {
                                 )}
                             </section>
                         </>
+                    )}
+
+                    {view === 'pariksha' && (
+                        <section className='bhajasi-section bhajasi-section-themes'>
+                            <div className='bhajasi-reader-head'><div className='bhajasi-title-row'><h2 className='bhajasi-title'>परीक्षा</h2></div><p className='bhajasi-meta'>संतसाहित्य आणि ग्रंथांवर आधारित ज्ञानाचा अभ्यास व सराव करा. प्रत्येक प्रश्नासोबत संबंधित साहित्य वाचण्याची संधी आहे.</p></div>
+                            <div className='bhajasi-grid'>
+                                {!pariksha || !Array.isArray(pariksha.exams) || pariksha.exams.length===0 ? <div className='bhajasi-empty'>सध्या कोणतीही परीक्षा उपलब्ध नाही.</div> : pariksha.exams.map(function(exam){return (
+                                    <article key={exam.id} className='bhajasi-exam-card'><div className='bhajasi-card-title'>{exam.title}</div><div className='bhajasi-card-sub'>{exam.subtitle}</div><div className='bhajasi-exam-meta'>{toMarathiDigits(exam.questionCount||0)} प्रश्न <span>•</span> {toMarathiDigits(exam.passingPercentage||80)}% उत्तीर्ण निकष</div><button className='bhajasi-primary-btn' onClick={function(){startExam(exam);}}>परीक्षा सुरू करा</button></article>
+                                );})}
+                            </div>
+                        </section>
+                    )}
+
+                    {view === 'exam' && selectedExam && (
+                        <section className='bhajasi-section bhajasi-section-works'>
+                            <div className='bhajasi-reader-head'><button className='bhajasi-back' onClick={openParikshaList}>← परीक्षांकडे परत</button><div className='bhajasi-title-row'><h2 className='bhajasi-title'>{selectedExam.title}</h2></div><p className='bhajasi-meta'>प्रश्न {toMarathiDigits(examQuestionIndex+1)} / {toMarathiDigits(examQuestions.length)}</p></div>
+                            {examQuestions.length ? (function(){const question=examQuestions[examQuestionIndex];const selectedOption=examAnswers[examQuestionIndex];return (
+                                <div className='bhajasi-exam-question'><div className='bhajasi-exam-progress'><div className='bhajasi-exam-progress-bar' style={{width:(((examQuestionIndex+1)/examQuestions.length)*100)+'%'}}></div></div><h3>{question.question}</h3>
+                                    <div className='bhajasi-exam-options'>{(question.options||[]).map(function(option,optionIndex){const active=Number(selectedOption)===optionIndex;return <button key={optionIndex} className={'bhajasi-exam-option'+(active?' selected':'')} onClick={function(){selectExamAnswer(optionIndex);}}><span className='bhajasi-exam-radio'>{active?'✓':''}</span><span>{option}</span></button>;})}</div>
+                                    {question.study && <div className='bhajasi-study-card'><div className='bhajasi-study-title'>अभ्यासासाठी</div><div className='bhajasi-study-text'>{question.study.text}</div><button className='bhajasi-study-btn' onClick={function(){openExamSource(question.study.source);}}><i className='fa-solid fa-book-open'></i> संबंधित साहित्य वाचा</button></div>}
+                                    <div className='bhajasi-exam-actions'><button className='bhajasi-secondary-btn' disabled={examQuestionIndex===0} onClick={function(){setExamQuestionIndex(Math.max(0,examQuestionIndex-1));}}>मागील</button>{examQuestionIndex<examQuestions.length-1?<button className='bhajasi-primary-btn' disabled={selectedOption===undefined} onClick={function(){setExamQuestionIndex(examQuestionIndex+1);}}>पुढील प्रश्न</button>:<button className='bhajasi-primary-btn' disabled={selectedOption===undefined} onClick={submitExam}>उत्तर तपासा</button>}</div>
+                                </div>
+                            );})() : <div className='bhajasi-empty'>या परीक्षेसाठी प्रश्न उपलब्ध नाहीत.</div>}
+                        </section>
+                    )}
+
+                    {view === 'examResult' && selectedExam && examResult && (
+                        <section className='bhajasi-section bhajasi-section-themes'><div className='bhajasi-reader-head'><div className='bhajasi-title-row'><h2 className='bhajasi-title'>परीक्षा पूर्ण</h2></div><p className='bhajasi-meta'>{selectedExam.title}</p></div>
+                            <div className='bhajasi-result-card'><div className='bhajasi-result-score'>{toMarathiDigits(examResult.score)} / {toMarathiDigits(examResult.total)}</div><div className='bhajasi-result-percent'>{toMarathiDigits(examResult.percentage)}%</div><div className={'bhajasi-result-status '+(examResult.passed?'passed':'failed')}>{examResult.passed?'परीक्षा यशस्वीरीत्या पूर्ण':'उत्तीर्ण निकष पूर्ण झाला नाही'}</div></div>
+                            <div className='bhajasi-learning-card'><strong>अभ्यास पुढे सुरू ठेवा</strong><p>निकाल हा तुमच्या अभ्यासाचा एक टप्पा आहे. संबंधित साहित्य पुन्हा वाचून ज्ञान अधिक दृढ करा.</p></div>
+                            <div className='bhajasi-exam-actions'><button className='bhajasi-secondary-btn' onClick={retryExam}>पुन्हा परीक्षा द्या</button>{examResult.passed && selectedExam.certificate && selectedExam.certificate.enabled!==false && <button className='bhajasi-primary-btn' onClick={function(){setCertificatePreview('');setCertificateName('');setCertificateId('');navigate('certificate');}}>प्रमाणपत्र मिळवा</button>}</div>
+                        </section>
+                    )}
+
+                    {view === 'certificate' && selectedExam && examResult && examResult.passed && (
+                        <section className='bhajasi-section bhajasi-section-works'><div className='bhajasi-reader-head'><button className='bhajasi-back' onClick={function(){navigate('examResult');}}>← निकालाकडे परत</button><div className='bhajasi-title-row'><h2 className='bhajasi-title'>प्रमाणपत्र</h2></div><p className='bhajasi-meta'>हे डिजिटल पूर्णता प्रमाणपत्र तुमच्या यशस्वी परीक्षेच्या संदर्भासह तयार केले जाईल.</p></div>
+                            {!certificatePreview ? <div className='bhajasi-certificate-form'><label htmlFor='bhajasi-certificate-name'>प्रमाणपत्रावर दिसावे असे पूर्ण नाव</label><input id='bhajasi-certificate-name' value={certificateName} onChange={function(e){setCertificateName(e.target.value);}} placeholder='तुमचे नाव' autoComplete='name'/><p>नाव तपासूनच प्रमाणपत्र तयार करा. हे प्रमाणपत्र भजसी भारत डिजिटल ज्ञानपरीक्षा पूर्ण केल्याची नोंद आहे; ते शैक्षणिक किंवा सरकारी प्रमाणपत्र नाही.</p><button className='bhajasi-primary-btn' onClick={createCertificate}>प्रमाणपत्र तयार करा</button></div> : <div className='bhajasi-certificate-preview'><div className='bhajasi-certificate-image-wrap'><img src={certificatePreview} alt='भजसी भारत डिजिटल ज्ञानपरीक्षा पूर्णता प्रमाणपत्र'/></div><div className='bhajasi-certificate-id'>Certificate ID: {certificateId}</div><div className='bhajasi-exam-actions'><button className='bhajasi-secondary-btn' onClick={downloadCertificatePNG}>PNG जतन करा</button><button className='bhajasi-primary-btn' onClick={downloadCertificatePDF}>PDF मिळवा</button></div><button className='bhajasi-study-btn' onClick={function(){setCertificatePreview('');setCertificateId('');}}>नाव बदलून पुन्हा तयार करा</button></div>}
+                        </section>
                     )}
 
                     {/* SAINTS TAB: Matches exact Nitya Pathan reader head format */}
