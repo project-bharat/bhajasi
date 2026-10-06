@@ -1,14 +1,18 @@
 {
   "id": "amrutanubhav-08",
-  "title": "अमृतानुभव — प्रकरण 8",
+  "title": "अमृतानुभव — प्रकरण ८",
   "type": "प्रकरण",
+  "sourceStatus": "PARTIAL_SOURCE_VERIFIED",
   "entries": [
     {
       "id": "amrutanubhav-08-001",
       "number": 1,
-      "text": "[नमुना डेटा — प्रमाणित मूळ मजकूर येथे जोडावा]",
-      "meaning": "हा नमुना केवळ डेटा-संरचना आणि UI तपासण्यासाठी आहे. प्रमाणित मूळ साहित्य उपलब्ध झाल्यावर येथे तेच मजकूर ठेवावा.",
-      "sample": true
+      "text": "तैसें आमुचेनि नांवें । अज्ञानाचें ज्ञानही नव्हे । आम्हांलागीं गुरुदेवें । आम्हीच केलों ॥ ८-१ ॥",
+      "source": {
+        "url": "https://www.santsahitya.in/dnyaneshwar/amrutanubhav/",
+        "kind": "web-source",
+        "verified": "2026-10-06"
+      }
     }
   ]
 }
