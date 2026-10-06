@@ -57,8 +57,8 @@
       "title": "मनाचे श्लोक",
       "type": "श्लोक",
       "author": "समर्थ रामदास स्वामी",
-      "description": "मनाचे श्लोक नित्य पठणासाठी.",
-      "file": "nitya-pathan/manache-shlok.json"
+      "file": "saints/ramdas/manache-shlok.json",
+      "source": "saints/ramdas/manache-shlok.json"
     },
     {
       "id": "sankatnashan-ganesh",
