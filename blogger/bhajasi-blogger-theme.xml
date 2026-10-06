@@ -9,11 +9,51 @@
 <meta content='#2a3950' name='theme-color'/>
 <meta content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' name='robots'/>
 
+<!-- Robust Adaptive Favicon Script (Executes before all Blogger scripts) -->
+<script>
+//<![CDATA[
+(function() {
+    var darkFavicon = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQsnusVJ6kB8gTAULrKk9JaNddwvwUlw4-6HEZNIiF12IvKnbMAOwdUMrlevN5EKYgnl6LHpKvFZjlDqgZ9WvpNu_rjPzJ473O1rrL9iG_eD4VxA_EZKj2uN_DmIXTzZTKa3kaaB0p821aftNpRXTRZAqZQPqniktfZkVslxDAGMUkP5b3G4cOyAFYpVMn/s1600/dark%20bhajasi%20fevicon192.png';
+    var lightFavicon = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg94LhEYUGaBU0HdY5Cumz3j-nmJ7NdDjBQ5DCKsZd5uBYDTKYFHgQGZ5Iik5cJoBJ2r4pntUVQDJVTI2SvvraMlgW0PVtCOcsx7ebdj2ILBLVEq-nPNy_sfukMA1GE7xfmr28iOBA3JfPy0BJNx08R_DaB6ncp6EFpkJ_o_IyAWZuD6QaTeN4BSMZ_cLkq/s1600/light%20bhajasi%20White%20Spiral%20Logo%20with%20Golden%20Dot.png';
+
+    var matcher = window.matchMedia('(prefers-color-scheme: dark)');
+
+    function applyFavicon() {
+        var isDark = matcher.matches;
+        var chosenIcon = isDark ? lightFavicon : darkFavicon;
+
+        var icons = document.querySelectorAll("link[rel*='icon']");
+        icons.forEach(function(el) {
+            el.parentNode.removeChild(el);
+        });
+
+        var newIcon = document.createElement('link');
+        newIcon.id = 'bhajasi-adaptive-favicon';
+        newIcon.rel = 'icon';
+        newIcon.type = 'image/png';
+        newIcon.href = chosenIcon;
+        document.head.appendChild(newIcon);
+    }
+
+    applyFavicon();
+
+    try {
+        matcher.addEventListener('change', applyFavicon);
+    } catch (e) {
+        matcher.addListener(applyFavicon);
+    }
+
+    document.addEventListener('DOMContentLoaded', applyFavicon);
+    window.addEventListener('load', applyFavicon);
+})();
+//]]>
+</script>
+
 <!-- Comprehensive Meta Description -->
-<meta content='भजसी भारत .com — मराठी संतसाहित्याचे अधिकृत व शांत वाचन व्यासपीठ. ज्ञानेश्वरी (अध्याय १ ते १८ संपूर्ण ओव्या व अर्थ), संपूर्ण २८ अभंग हरिपाठ, पसायदान, तुकाराम गाथा, मनाचे श्लोक, दासबोध, ग्रामगीता व अभंगवाणीचे दिवसानुसार चिंतन. संकलन व संपादन: भरत रासवे (Bharat Rasve).' name='description'/>
+<meta content='भजसी भारत .com — मराठी संतसाहित्याचे अधिकृत व शांत वाचन व्यासपीठ. सार्थ ज्ञानेश्वरी (अध्याय १ ते १८ संपूर्ण ओव्या व अर्थ), संपूर्ण २८ अभंग हरिपाठ, पसायदान, तुकाराम गाथा, मनाचे श्लोक, दासबोध, ग्रामगीता व अभंगवाणीचे दिवसानुसार चिंतन. संकलन व संपादन: भरत रासवे (Bharat Rasve).' name='description'/>
 
 <!-- Exhaustive Long-tail, Entity, Semantic & Voice Search Keywords -->
-<meta content='भजसी भारत, भजसी भारत .com, भजसी, भजसी संतवाणी, भरत रासवे, Bharat Rasve, ज्ञानेश्वरी मराठी, ज्ञानेश्वरी अध्याय १ ते १८ अर्थासह, भावार्थदीपिका, ज्ञानेश्वरी पारायण, संपूर्ण हरिपाठ २८ अभंग, हरिपाठ भावार्थ, पसायदान संपूर्ण अर्थ, संत ज्ञानेश्वर महाराज ओव्या, संत तुकाराम गाथा अर्थासह, तुकाराम महाराज अभंग, समर्थ रामदास मनाचे श्लोक अर्थ, दासबोध दशक समास, संत नामदेव अभंगवाणी, संत एकनाथ भारुड भावार्थ, संत जनाबाई अभंग, संत सावता माळी अभंग, संत गाडगे महाराज विचारवाणी दशसूत्री, राष्ट्रसंत तुकडोजी महाराज ग्रामगीता ओवी, कबीर दोहे मराठी अर्थ, मीराबाई भक्तीपदे, महाकवी कालिदास मेघदूत रघुवंश, वारकरी संप्रदाय नित्य नियम भजन, नित्यनेम पारायण, दिवसानुसार संतसाहित्य, नामस्मरण, भक्ती, आत्मज्ञान, समता, निष्काम सेवा, वैराग्य, सदाचार, मनःशांती' name='keywords'/>
+<meta content='भजसी भारत, भजसी भारत .com, भजसी, भजसी संतवाणी, भरत रासवे, Bharat Rasve, सार्थ ज्ञानेश्वरी मराठी, ज्ञानेश्वरी अध्याय १ ते १८ अर्थासह, भावार्थदीपिका, ज्ञानेश्वरी पारायण, संपूर्ण हरिपाठ २८ अभंग, हरिपाठ भावार्थ, पसायदान संपूर्ण अर्थ, संत ज्ञानेश्वर महाराज ओव्या, संत तुकाराम गाथा अर्थासह, तुकाराम महाराज अभंग, समर्थ रामदास मनाचे श्लोक अर्थ, दासबोध दशक समास, संत नामदेव अभंगवाणी, संत एकनाथ भारुड भावार्थ, संत जनाबाई अभंग, संत सावता माळी अभंग, संत गाडगे महाराज विचारवाणी दशसूत्री, राष्ट्रसंत तुकडोजी महाराज ग्रामगीता ओवी, कबीर दोहे मराठी अर्थ, मीराबाई भक्तीपदे, महाकवी कालिदास मेघदूत रघुवंश, वारकरी संप्रदाय नित्य नियम भजन, नित्यनेम पारायण, दिवसानुसार संतसाहित्य, नामस्मरण, भक्ती, आत्मज्ञान, समता, निष्काम सेवा, वैराग्य, सदाचार, मनःशांती' name='keywords'/>
 
 <meta content='भरत रासवे (Bharat Rasve)' name='author'/>
 <meta content='भरत रासवे (Bharat Rasve)' name='creator'/>
@@ -26,7 +66,7 @@
 <link expr:href='data:blog.canonicalUrl' rel='canonical'/>
 <meta content='website' property='og:type'/>
 <meta content='mr_IN' property='og:locale'/>
-<meta content='भजसी भारत .com | ज्ञानेश्वरी, हरिपाठ, गाथा व दिवसानुसार संतसाहित्य चिंतन' property='og:title'/>
+<meta content='भजसी भारत .com | सार्थ ज्ञानेश्वरी, हरिपाठ, गाथा व दिवसानुसार संतसाहित्य चिंतन' property='og:title'/>
 <meta content='संत ज्ञानेश्वर, संत तुकाराम, समर्थ रामदास, संत नामदेव, संत एकनाथ यांच्या ग्रंथांचे मूळ संहितेसह सुलभ मराठीत अर्थ आणि दिवसानुसार नित्य पारायण. संकलक: भरत रासवे.' property='og:description'/>
 <meta expr:content='data:blog.canonicalUrl' property='og:url'/>
 <meta content='भजसी भारत .com' property='og:site_name'/>
@@ -34,8 +74,8 @@
 
 <!-- Twitter Card -->
 <meta content='summary_large_image' name='twitter:card'/>
-<meta content='भजसी भारत .com | ज्ञानेश्वरी, हरिपाठ व अभंग पारायण' name='twitter:title'/>
-<meta content='मराठी संतसाहित्य, ज्ञानेश्वरी अध्याय १-१८, हरिपाठ २८ अभंग, तुकाराम गाथा, मनाचे श्लोक व ग्रामगीता यांचे दिवसानुसार शांत वाचन.' name='twitter:description'/>
+<meta content='भजसी भारत .com | सार्थ ज्ञानेश्वरी, हरिपाठ व अभंग पारायण' name='twitter:title'/>
+<meta content='मराठी संतसाहित्य, सार्थ ज्ञानेश्वरी अध्याय १-१८, हरिपाठ २८ अभंग, तुकाराम गाथा, मनाचे श्लोक व ग्रामगीता यांचे दिवसानुसार शांत वाचन.' name='twitter:description'/>
 <meta content='भरत रासवे' name='twitter:creator'/>
 <meta content='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg94LhEYUGaBU0HdY5Cumz3j-nmJ7NdDjBQ5DCKsZd5uBYDTKYFHgQGZ5Iik5cJoBJ2r4pntUVQDJVTI2SvvraMlgW0PVtCOcsx7ebdj2ILBLVEq-nPNy_sfukMA1GE7xfmr28iOBA3JfPy0BJNx08R_DaB6ncp6EFpkJ_o_IyAWZuD6QaTeN4BSMZ_cLkq/s1600/light%20bhajasi%20White%20Spiral%20Logo%20with%20Golden%20Dot.png' name='twitter:image'/>
 
@@ -55,7 +95,7 @@
       "name": "भजसी भारत .com",
       "alternateName": ["Bhajasi Bharat", "Bhajasi", "भजसी भारत संतसाहित्य डिजिटल व्यासपीठ"],
       "inLanguage": "mr-IN",
-      "description": "मराठी संतसाहित्याचे अस्सल संहितेसह सुलभ वाचन, संपूर्ण ज्ञानेश्वरी, हरिपाठ, पसायदान, तुकाराम गाथा आणि दिवसानुसार नित्य पारायण.",
+      "description": "मराठी संतसाहित्याचे अस्सल संहितेसह सुलभ वाचन, संपूर्ण सार्थ ज्ञानेश्वरी, हरिपाठ, पसायदान, तुकाराम गाथा आणि दिवसानुसार नित्य पारायण.",
       "publisher": {
         "@id": "https://bhajasibharat.blogspot.com/#author-bharat-rasve"
       }
@@ -74,10 +114,10 @@
 //]]>
 </script>
 
-<!-- Google Devanagari Fonts Selection (Laila 700 Included) -->
+<!-- Google Devanagari Fonts Selection -->
 <link href='https://fonts.googleapis.com' rel='preconnect'/>
 <link crossorigin='crossorigin' href='https://fonts.gstatic.com' rel='preconnect'/>
-<link href='https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&amp;family=Kalam:wght@700&amp;family=Khand:wght@500;600;700&amp;family=Laila:wght@700&amp;family=Noto+Sans+Devanagari:wght@400;500;600;700;800&amp;family=Noto+Serif+Devanagari:wght@400;600;700;800&amp;family=Playpen+Sans:wght@400;500;600;700&amp;family=Alkatra&amp;family=Rozha+One&amp;family=Tiro+Devanagari+Marathi:ital@0;1&amp;display=swap' rel='stylesheet'/>
+<link href='https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;600;700&amp;family=Hind:wght@400;500;600;700&amp;family=Kalam:wght@700&amp;family=Khand:wght@500;600;700&amp;family=Laila:wght@700&amp;family=Noto+Sans+Devanagari:wght@400;500;600;700;800&amp;family=Noto+Serif+Devanagari:wght@400;600;700;800&amp;family=Playpen+Sans:wght@400;500;600;700&amp;family=Rozha+One&amp;family=Tiro+Devanagari+Marathi:ital@0;1&amp;display=swap' rel='stylesheet'/>
 <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css' rel='stylesheet'/>
 
 <!-- React 18, Babel & Tailwind CSS -->
@@ -192,7 +232,7 @@ button {
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border-bottom: 1px solid rgba(233, 128, 6, 0.25);
-    padding: 11px 15px 3px;
+    padding: 6px 15px 5px;
 }
 
 .bhajasi-brandline {
@@ -207,6 +247,7 @@ button {
     align-items: center;
     gap: 10px;
     min-width: 0;
+    padding: 2px 0;
 }
 
 .bhajasi-header-logo {
@@ -219,54 +260,70 @@ button {
     filter: drop-shadow(0 2px 5px rgba(0,0,0,0.3));
 }
 
+/* Brand Group */
 .bhajasi-brand-group {
     display: flex;
     flex-direction: column;
+    min-width: 0;
+    padding-top: 5px;
+    padding-bottom: 1px;
+    margin: 0;
+    overflow: visible;
 }
 
 .bhajasi-brand-wrapper {
     display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    line-height: 1;
+    align-items: baseline;
+    gap: 3px;
+    line-height: 1.4;
+    min-height: auto;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
 }
 
 .bhajasi-brand {
     margin: 0;
+    padding: 3px 2px 2px;
     font-family: 'Alkatra', cursive;
-    font-size: 22px;
-    line-height: 1.12;
-    padding-top: 4px;
-    font-weight: 400;
+    font-size: 17.5px;
+    line-height: 1.4;
+    display: inline-block;
+    overflow: visible;
+    font-weight: 600;
     letter-spacing: 0.5px;
     white-space: nowrap;
     background: linear-gradient(135deg, #fbd52d 0%, #e98006 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
 }
 
 .brand-domain {
-    font-family: 'Noto Sans Devanagari', sans-serif;
-    font-size: 11px;
+    font-family: 'Alkatra', cursive;
+    font-size: 10.5px;
     font-weight: 700;
     color: #ffffff;
     opacity: 0.9;
     letter-spacing: 0.5px;
-    margin-bottom: 2px;
+    margin-bottom: 0;
 }
 
 .bhajasi-tagline {
     color: #cbd5e1;
-    font-size: 10.5px;
-    margin-top: 2px;
+    font-size: 9.5px;
+    margin-top: 0;
+    line-height: 1.15;
     white-space: nowrap;
+    letter-spacing: 0.2px;
 }
 
 .bhajasi-action-group {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 4px;
+    gap: 3px;
 }
 
 .bhajasi-credit {
@@ -316,7 +373,7 @@ button {
 .bhajasi-progress {
     height: 2.5px;
     background: #1a2332;
-    margin: 8px -15px -9px;
+    margin: 6px -15px -6px;
 }
 
 .bhajasi-progress-bar {
@@ -327,7 +384,7 @@ button {
 }
 
 .bhajasi-main {
-    padding: 13px 16px 20px;
+    padding: 10px 16px 20px;
 }
 
 /* Sections */
@@ -369,130 +426,6 @@ button {
     line-height: 1.3;
     font-weight: 700;
     letter-spacing: 0.02em;
-}
-
-/* Search */
-
-/* Page navigation and global search overlay */
-.bhajasi-section-nav-wrap{position:sticky;top:58px;z-index:45;margin:0 -2px 10px;padding:6px 2px 4px;background:rgba(42,57,80,.97);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(233,128,6,.18)}
-.bhajasi-page-nav,.bhajasi-section-nav{display:flex;gap:7px;overflow-x:auto;padding:2px 0 8px;margin:0;scrollbar-width:none;-webkit-overflow-scrolling:touch}
-.bhajasi-page-nav::-webkit-scrollbar,.bhajasi-section-nav::-webkit-scrollbar{display:none}
-.bhajasi-nav-chip,.bhajasi-filter-chip{flex:0 0 auto;border:1px solid rgba(65,67,106,.9);background:rgba(26,35,50,.72);color:#cbd5e1;border-radius:999px;padding:7px 11px;font-size:11px;font-weight:600;cursor:pointer;white-space:nowrap}
-.bhajasi-nav-chip:hover,.bhajasi-nav-chip.active,.bhajasi-filter-chip:hover,.bhajasi-filter-chip.active{color:#1a2332;background:linear-gradient(135deg,#fbd52d,#e98006);border-color:#e98006}
-.bhajasi-floating-search{position:fixed;z-index:95;right:max(16px,calc((100vw - 760px)/2 + 16px));bottom:calc(78px + env(safe-area-inset-bottom) + 16px);width:52px;height:52px;border-radius:50%;border:1px solid rgba(233,128,6,.7);background:linear-gradient(145deg,#2a3950,#172233);color:#fbd52d;box-shadow:0 8px 28px rgba(0,0,0,.45);cursor:pointer;font-size:19px}
-.bhajasi-search-overlay{position:fixed;inset:0;z-index:200;display:flex;align-items:flex-start;justify-content:center;padding:78px 14px 24px;background:rgba(8,13,22,.58);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
-.bhajasi-search-dialog{width:min(680px,100%);max-height:calc(100vh - 110px);overflow:hidden;border:1px solid rgba(233,128,6,.5);border-radius:18px;background:linear-gradient(160deg,#25344a,#141e2c);box-shadow:0 24px 70px rgba(0,0,0,.65)}
-.bhajasi-global-search-head{display:flex;align-items:center;gap:8px;padding:14px;border-bottom:1px solid rgba(65,67,106,.55)}
-.bhajasi-global-search-input{flex:1;min-width:0;background:#121b29;border:1px solid rgba(65,67,106,.95);border-radius:12px;color:#fff;padding:11px 13px;outline:none;font-size:14px}
-.bhajasi-global-search-input:focus{border-color:#e98006;box-shadow:0 0 0 2px rgba(233,128,6,.15)}
-.bhajasi-global-search-close{width:40px;height:40px;border:0;border-radius:10px;background:rgba(65,67,106,.55);color:#fff;cursor:pointer;font-size:17px}
-.bhajasi-global-results{max-height:calc(100vh - 210px);overflow:auto;padding:8px}
-.bhajasi-global-result{width:100%;display:block;text-align:left;border:0;border-bottom:1px solid rgba(65,67,106,.35);background:transparent;color:#fff;padding:11px 10px;cursor:pointer;border-radius:10px}
-.bhajasi-global-result:hover{background:rgba(65,67,106,.38)}
-.bhajasi-global-result-title{font-family:'Khand',sans-serif;font-size:17px;color:#fbd52d;font-weight:600}
-.bhajasi-global-result-sub{font-size:11px;color:#cbd5e1;margin-top:2px;line-height:1.5}
-.bhajasi-global-empty{padding:28px 16px;text-align:center;color:#94a3b8;font-size:13px}
-.bhajasi-meaning{border-top:none!important}
-.bhajasi-notify-bell{display:none!important}
-
-.bhajasi-search-wrapper {
-    position: relative;
-    margin: 4px 0 19px;
-}
-
-.bhajasi-search-box {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.bhajasi-search-box input {
-    width: 100%;
-    background: rgba(26, 35, 50, 0.95);
-    border: 1px solid rgba(65, 67, 106, 0.8);
-    border-radius: 12px;
-    padding: 11px 40px 11px 14px;
-    color: #ffffff;
-    outline: none;
-    font-size: 14px;
-    transition: border-color .2s;
-}
-
-.bhajasi-search-box input:focus {
-    border-color: #e98006;
-    box-shadow: 0 0 0 2px rgba(233, 128, 6, 0.25);
-}
-
-.bhajasi-search-clear {
-    position: absolute;
-    right: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: transparent;
-    border: none;
-    color: #cbd5e1;
-    cursor: pointer;
-    font-size: 15px;
-    padding: 4px;
-    line-height: 1;
-}
-
-.bhajasi-search-clear:hover {
-    color: #e98006;
-}
-
-.bhajasi-search-dropdown {
-    position: absolute;
-    top: calc(100% + 6px);
-    left: 0;
-    right: 0;
-    z-index: 60;
-    background: #1a2332;
-    border: 1px solid #41436A;
-    border-radius: 14px;
-    box-shadow: 0 12px 35px rgba(0,0,0,.8);
-    max-height: 380px;
-    overflow-y: auto;
-    padding: 6px;
-}
-
-.bhajasi-dropdown-item {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    width: 100%;
-    text-align: left;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid rgba(65, 67, 106, 0.4);
-    padding: 10px 12px;
-    color: #ffffff;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: background .2s;
-}
-
-.bhajasi-dropdown-item:last-child {
-    border-bottom: none;
-}
-
-.bhajasi-dropdown-item:hover {
-    background: rgba(65, 67, 106, 0.5);
-}
-
-.bhajasi-dropdown-title {
-    font-family: 'Khand', sans-serif;
-    font-size: 17px;
-    font-weight: 600;
-    color: #e98006;
-    letter-spacing: 0.02em;
-}
-
-.bhajasi-dropdown-match {
-    font-size: 12px;
-    color: #cbd5e1;
-    line-height: 1.5;
-    font-family: 'Hind', sans-serif;
 }
 
 .bhajasi-grid {
@@ -588,7 +521,6 @@ button {
     gap: 12px;
 }
 
-/* Reader Title: Tiro Devanagari Marathi */
 .bhajasi-title {
     margin: 0;
     color: #ffffff;
@@ -602,6 +534,7 @@ button {
 /* Verse Card */
 .bhajasi-verse {
     position: relative;
+    overflow: hidden;
     background: linear-gradient(155deg, #2a3950, #1b2535);
     border: 1px solid rgba(65, 67, 106, 0.7);
     border-radius: 16px;
@@ -609,8 +542,22 @@ button {
     margin: 12px 0;
     box-shadow: 0 4px 18px rgba(0,0,0,0.25);
 }
-.bhajasi-verse::before{content:'';position:absolute;inset:0;background-image:url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg94LhEYUGaBU0HdY5Cumz3j-nmJ7NdDjBQ5DCKsZd5uBYDTKYFHgGQGZ5Iik5cJoBJ2r4pntUVQDJVTI2SvvraMlgW0PVtCOcsx7ebdj2ILBLVEq-nPNy_sfukMA1GE7xfmr28iOBA3JfPy0BJNx08R_DaB6ncp6EFpkJ_o_IyAWZuD6QaTeN4BSMZ_cLkq/s1600/light%20bhajasi%20White%20Spiral%20Logo%20with%20Golden%20Dot.png');background-position:center;background-repeat:no-repeat;background-size:185px auto;opacity:.045;pointer-events:none}
-.bhajasi-verse>*{position:relative;z-index:1}
+
+.bhajasi-verse::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgUkMlQ2VCBA3DRDc8a3Qu89Rj91lhI_IQdYMui5Pik3SYf7exN0DPTHaqnxbHfsYZYVhu5yknjRkgw87QXOfkAOmlVKVge-LUv1JZdBs8MF0HR5Ewp8N26g_FuH7m9m2HzzVj0PVSrjVbBIM5BNZtH4TqR_ybA1VO0vkBHifpF_ftC6TqlLTHOEIlJTniT/s512/light%20bhajasi%20White%20Spiral%20Logo%20with%20Golden%20Dot.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 185px auto;
+    opacity: .045;
+    pointer-events: none;
+}
+.bhajasi-verse > * {
+    position: relative;
+    z-index: 1;
+}
 
 .bhajasi-verse-header {
     display: flex;
@@ -650,7 +597,6 @@ button {
     transform: scale(1.02);
 }
 
-/* Verse text font set to Laila Bold 700 */
 .bhajasi-verse-text {
     color: #ffffff;
     text-align: center;
@@ -804,9 +750,22 @@ button {
     letter-spacing: 0.02em;
 }
 
+.bhajasi-footer-logo-box {
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 8px rgba(0,0,0,.18);
+}
+
 .bhajasi-footer-logo {
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
     object-fit: contain;
     border-radius: 50%;
 }
@@ -849,7 +808,7 @@ button {
 .bhajasi-bottom-icon {
     display: block;
     font-size: 16px;
-    margin-bottom: 2px;
+    margin-bottom: 0;
 }
 
 @media (min-width: 600px) {
@@ -860,85 +819,254 @@ button {
 }
 
 @media (max-width: 520px) {
+    .bhajasi-section-nav-wrap {
+        top: 55px;
+        margin-left: -16px;
+        margin-right: -16px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
     .bhajasi-brandline { gap: 6px; }
-    .bhajasi-brand { font-size: 20px; line-height: 1.08; padding-top: 5px; }
-    .bhajasi-tagline { font-size: 9px; }
+    .bhajasi-brand-group { padding-top: 4px; }
+    .bhajasi-brand { font-size: 16.5px; line-height: 1.4; padding-top: 2px; }
+    .bhajasi-tagline { margin-top: 0; line-height: 1.1; font-size: 9px; }
     .bhajasi-header-logo { width: 34px; height: 34px; min-width: 34px; min-height: 34px; }
-    .bhajasi-section-nav-wrap { top: 55px; }
 }
 
-
-/* =========================================================
-   NOTIFICATION CENTER
-========================================================= */
-.onesignal-bell-launcher-dialog {
-    position: fixed;
-    z-index: 200;
-    inset: auto 14px 82px auto;
-    width: min(360px, calc(100vw - 28px));
-    padding: 18px;
-    border: 1px solid rgba(233, 128, 6, 0.45);
-    border-radius: 18px;
-    background: #1a2332;
-    color: #fff;
-    box-shadow: 0 18px 50px rgba(0,0,0,.55);
-}
-.onesignal-bell-launcher-dialog::backdrop {
-    background: rgba(0,0,0,.28);
-}
-.bhajasi-notify-card {
+/* Page Section Navigation */
+.bhajasi-section[id] { scroll-margin-top: 84px; }
+.bhajasi-section-nav {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-.bhajasi-notify-title {
+    align-items: center;
+    gap: 7px;
+    overflow-x: auto;
+    padding: 0;
     margin: 0;
-    color: #e98006;
-    font-family: 'Tiro Devanagari Marathi', serif;
-    font-size: 20px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
 }
-.bhajasi-notify-text {
-    margin: 0;
+.bhajasi-section-nav::-webkit-scrollbar { display: none; }
+.bhajasi-section-nav-wrap {
+    position: sticky;
+    top: 58px;
+    z-index: 45;
+    margin: 0 -16px 6px;
+    padding: 3px 16px 3px;
+    min-height: 0;
+    background: rgba(42,57,80,.96);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(233,128,6,.16);
+}
+.bhajasi-nav-chip {
+    flex: 0 0 auto;
+    border: 1px solid rgba(65,67,106,.85);
+    border-radius: 999px;
+    background: rgba(26,35,50,.72);
     color: #cbd5e1;
-    font-size: 12.5px;
-    line-height: 1.7;
-}
-.bhajasi-notify-actions {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-}
-.bhajasi-notify-btn {
-    border: 1px solid rgba(233,128,6,.4);
-    border-radius: 10px;
-    padding: 8px 12px;
-    background: #41436A;
-    color: #fff;
-    cursor: pointer;
+    padding: 6px 11px;
+    font-size: 11px;
     font-weight: 600;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all .18s ease;
 }
-.bhajasi-notify-btn.primary {
-    background: #e98006;
-    color: #1a2332;
+.bhajasi-nav-chip:hover,
+.bhajasi-nav-chip:focus-visible,
+.bhajasi-nav-chip.active {
+    color: #151d2a;
+    background: #fbd52d;
+    border-color: #fbd52d;
+    outline: none;
 }
-.bhajasi-notify-btn.ghost {
-    background: transparent;
+.bhajasi-theme-loading {
+    grid-column: 1 / -1;
     color: #cbd5e1;
+    text-align: center;
+    padding: 20px;
 }
-.bhajasi-notify-bell {
+
+/* Floating Global Search */
+.bhajasi-global-search-btn {
     position: fixed;
     right: 14px;
     bottom: 82px;
     z-index: 90;
-    width: 44px;
-    height: 44px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
-    border: 1px solid rgba(233,128,6,.55);
-    background: #1a2332;
+    border: 1px solid rgba(233,128,6,.65);
+    background: rgba(26,35,50,.98);
     color: #fbd52d;
-    box-shadow: 0 8px 24px rgba(0,0,0,.35);
+    box-shadow: 0 8px 24px rgba(0,0,0,.38);
     cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
 }
+.bhajasi-global-search-btn:hover,
+.bhajasi-global-search-btn:focus-visible {
+    transform: translateY(-1px) scale(1.03);
+    border-color: #fbd52d;
+    box-shadow: 0 10px 28px rgba(0,0,0,.48);
+    outline: none;
+}
+.bhajasi-global-search-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 300;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 76px 14px 92px;
+    background: rgba(9,15,24,.52);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    overflow-y: auto;
+}
+.bhajasi-global-search-dialog {
+    width: min(680px, 100%);
+    max-height: min(760px, calc(100vh - 150px));
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(145deg, #24334a, #172333);
+    border: 1px solid rgba(251,213,45,.55);
+    border-radius: 20px;
+    box-shadow: 0 24px 70px rgba(0,0,0,.62);
+    overflow: hidden;
+}
+.bhajasi-global-search-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 16px 18px 12px;
+    border-bottom: 1px solid rgba(148,163,184,.14);
+}
+.bhajasi-global-search-title {
+    margin: 0;
+    color: #fbd52d;
+    font-family: 'Tiro Devanagari Marathi', serif;
+    font-size: 20px;
+}
+.bhajasi-global-search-close {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1px solid rgba(203,213,225,.22);
+    background: rgba(26,35,50,.7);
+    color: #e2e8f0;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.bhajasi-global-search-field {
+    position: relative;
+    padding: 14px 16px 10px;
+}
+.bhajasi-search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.bhajasi-search-clear {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: #cbd5e1;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.bhajasi-search-clear:hover {
+    color: #fbd52d;
+    background: rgba(65,67,106,.45);
+}
+.bhajasi-global-search-field input {
+    width: 100%;
+    box-sizing: border-box;
+    background: #111b29;
+    border: 1px solid rgba(65,67,106,.95);
+    border-radius: 13px;
+    padding: 13px 46px 13px 16px;
+    color: #fff;
+    outline: none;
+    font-size: 15px;
+    line-height: 1.45;
+}
+.bhajasi-global-search-field input:focus {
+    border-color: #e98006;
+    box-shadow: 0 0 0 2px rgba(233,128,6,.2);
+}
+.bhajasi-global-search-field .bhajasi-search-clear {
+    right: 28px;
+}
+.bhajasi-global-search-results {
+    overflow-y: auto;
+    padding: 4px 12px 14px;
+}
+.bhajasi-global-search-hint {
+    padding: 20px 8px 24px;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 13px;
+    line-height: 1.7;
+}
+.bhajasi-global-result {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 4px;
+    text-align: left;
+    background: rgba(26,35,50,.48);
+    border: 1px solid rgba(65,67,106,.52);
+    border-radius: 12px;
+    padding: 11px 13px;
+    margin-bottom: 7px;
+    color: #fff;
+    cursor: pointer;
+    transition: background .18s ease, border-color .18s ease, transform .18s ease;
+}
+.bhajasi-global-result:hover,
+.bhajasi-global-result:focus-visible {
+    background: rgba(65,67,106,.48);
+    border-color: rgba(233,128,6,.55);
+    transform: translateY(-1px);
+    outline: none;
+}
+.bhajasi-global-result-title {
+    font-family: 'Khand', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+}
+.bhajasi-global-result-meta {
+    color: #e98006;
+    font-size: 11px;
+}
+.bhajasi-global-result-match {
+    color: #cbd5e1;
+    font-size: 12px;
+    line-height: 1.55;
+}
+.bhajasi-global-result-loading {
+    padding: 14px 8px;
+    color: #94a3b8;
+    font-size: 12px;
+    text-align: center;
+}
+
 .bhajasi-nitya-card {
     border-color: rgba(251,213,45,.35);
     background: linear-gradient(145deg, #3b3544, #1c2738);
@@ -950,8 +1078,9 @@ button {
 }
 .bhajasi-meta {
     color: #94a3b8;
-    font-size: 11px;
+    font-size: 12px;
     line-height: 1.6;
+    margin: 4px 0 12px;
 }
 .bhajasi-breadcrumb {
     display: flex;
@@ -988,9 +1117,8 @@ button {
     </article>
 </div>
 
-
 <!-- REACT MOUNT ROOT -->
-<div class='bhajasi-root' id='bhajasi-root'></div>
+<div class='bhajasi-root' id='bhajasi-root'/>
 
 <script type='text/babel'>
 //<![CDATA[
@@ -1000,10 +1128,15 @@ const SAINTS_BASE =
 const DATA_BASE =
     'https://raw.githubusercontent.com/project-bharat/bhajasi/main/data/';
 const NITYA_BASE =
-    DATA_BASE + 'nitya-pathan/';const SITE_URL =
+    DATA_BASE + 'nitya-pathan/';
+const SITE_URL =
     'https://bhajasibharat.blogspot.com/';
 const SITE_LOGO =
     'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg94LhEYUGaBU0HdY5Cumz3j-nmJ7NdDjBQ5DCKsZd5uBYDTKYFHgQGZ5Iik5cJoBJ2r4pntUVQDJVTI2SvvraMlgW0PVtCOcsx7ebdj2ILBLVEq-nPNy_sfukMA1GE7xfmr28iOBA3JfPy0BJNx08R_DaB6ncp6EFpkJ_o_IyAWZuD6QaTeN4BSMZ_cLkq/s1600/light%20bhajasi%20White%20Spiral%20Logo%20with%20Golden%20Dot.png';
+
+// Unified Single Constant used for both snap card and UI footer
+const FOOTER_LOGO =
+    'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQsnusVJ6kB8gTAULrKk9JaNddwvwUlw4-6HEZNIiF12IvKnbMAOwdUMrlevN5EKYgnl6LHpKvFZjlDqgZ9WvpNu_rjPzJ473O1rrL9iG_eD4VxA_EZKj2uN_DmIXTzZTKa3kaaB0p821aftNpRXTRZAqZQPqniktfZkVslxDAGMUkP5b3G4cOyAFYpVMn/s1600/dark%20bhajasi%20fevicon192.png';
 
 const PROGRESS_KEY = 'bhajasi_reading_progress_v2';
 const NOTIFY_KEY = 'bhajasi_notification_v1';
@@ -1040,15 +1173,6 @@ function writeProgress(key, value) {
     const old = readProgress();
     old[key] = Object.assign({}, old[key] || {}, value);
     localStorage.setItem(PROGRESS_KEY, JSON.stringify(old));
-}
-
-function slug(value) {
-    return String(value || '')
-        .trim()
-        .toLowerCase()
-        .replace(/\s+/g, '-')
-        .replace(/[^\w\u0900-\u097F-]+/g, '')
-        .replace(/-+/g, '-');
 }
 
 function makeWorkKey(saint, work) {
@@ -1092,91 +1216,36 @@ function getVerseLabel(entry, index, work) {
         ''
     ).toLowerCase();
 
-    if (
-        type.indexOf('अभंग') >= 0 ||
-        type.indexOf('abhang') >= 0
-    ) {
-        return 'अभंग ' + value;
-    }
-
-    if (
-        type.indexOf('श्लोक') >= 0 ||
-        type.indexOf('shlok') >= 0 ||
-        type.indexOf('स्तोत्र') >= 0
-    ) {
-        return 'श्लोक ' + value;
-    }
-
-    if (
-        type.indexOf('पद') >= 0 ||
-        type.indexOf('pad') >= 0
-    ) {
-        return 'पद ' + value;
-    }
-
-    if (
-        type.indexOf('दोहा') >= 0 ||
-        type.indexOf('doha') >= 0
-    ) {
-        return 'दोहा ' + value;
-    }
-
-    if (
-        type.indexOf('ओवी') >= 0 ||
-        type.indexOf('ovi') >= 0 ||
-        type.indexOf('ग्रंथ') >= 0
-    ) {
-        return 'ओवी ' + value;
-    }
+    if (type.indexOf('अभंग') >= 0 || type.indexOf('abhang') >= 0) return 'अभंग ' + value;
+    if (type.indexOf('श्लोक') >= 0 || type.indexOf('shlok') >= 0 || type.indexOf('स्तोत्र') >= 0) return 'श्लोक ' + value;
+    if (type.indexOf('पद') >= 0 || type.indexOf('pad') >= 0) return 'पद ' + value;
+    if (type.indexOf('दोहा') >= 0 || type.indexOf('doha') >= 0) return 'दोहा ' + value;
+    if (type.indexOf('ओवी') >= 0 || type.indexOf('ovi') >= 0 || type.indexOf('ग्रंथ') >= 0) return 'ओवी ' + value;
 
     return 'रचना ' + value;
 }
 
 function splitPoem(text) {
     if (!text) return [];
-    const normalized = String(text)
-        .replace(/\r\n/g, '\n')
-        .trim();
-
+    const normalized = String(text).replace(/\r\n/g, '\n').trim();
     if (!normalized) return [];
 
-    const lines = normalized
-        .split('\n')
-        .map(function(line) { return line.trim(); })
-        .filter(Boolean);
-
+    const lines = normalized.split('\n').map(function(line) { return line.trim(); }).filter(Boolean);
     if (lines.length > 1) return lines;
 
-    const clauses = normalized
-        .split(/(?<=।)\s+/u)
-        .map(function(x) { return x.trim(); })
-        .filter(Boolean);
-
+    const clauses = normalized.split(/(?<=।)\s+/u).map(function(x) { return x.trim(); }).filter(Boolean);
     if (clauses.length <= 2) return clauses;
 
     const grouped = [];
     for (let i = 0; i < clauses.length; i += 2) {
-        grouped.push(
-            clauses.slice(i, i + 2).join(' ')
-        );
+        grouped.push(clauses.slice(i, i + 2).join(' '));
     }
     return grouped;
 }
 
 function normalizeContent(raw) {
-    if (Array.isArray(raw)) {
-        return {
-            entries: raw,
-            days: 1
-        };
-    }
-
-    if (!raw || typeof raw !== 'object') {
-        return {
-            entries: [],
-            days: 1
-        };
-    }
+    if (Array.isArray(raw)) return { entries: raw, days: 1 };
+    if (!raw || typeof raw !== 'object') return { entries: [], days: 1 };
 
     let entries = [];
     CONTENT_KEYS.some(function(key) {
@@ -1205,9 +1274,7 @@ async function fetchJSON(url) {
             headers: { 'Accept': 'application/json' }
         }
     );
-    if (!response.ok) {
-        throw new Error('HTTP ' + response.status + ': ' + url);
-    }
+    if (!response.ok) throw new Error('HTTP ' + response.status + ': ' + url);
     return response.json();
 }
 
@@ -1219,11 +1286,7 @@ function resolveURL(kind, file) {
 }
 
 function workHasSections(work) {
-    return !!(
-        work &&
-        Array.isArray(work.sections) &&
-        work.sections.length
-    );
+    return !!(work && Array.isArray(work.sections) && work.sections.length);
 }
 
 function getWorkSummary(work) {
@@ -1231,25 +1294,17 @@ function getWorkSummary(work) {
     if (work.description) return work.description;
     if (work.type) return work.type;
     if (work.days) return 'दिवस ' + toMarathiDigits(work.days);
-    if (work.sections) {
-        return toMarathiDigits(work.sections.length) + ' विभाग';
-    }
+    if (work.sections) return toMarathiDigits(work.sections.length) + ' विभाग';
     return '';
 }
 
 function formatSubTitle(title, parentTitle) {
     if (!title) return '';
     if (parentTitle && title.indexOf(parentTitle) === 0) {
-        return title
-            .replace(
-                new RegExp(
-                    '^' + parentTitle.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') +
-                    '\\s*[-—–]?\\s*',
-                    'u'
-                ),
-                ''
-            )
-            .trim() || title;
+        return title.replace(
+            new RegExp('^' + parentTitle.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\s*[-—–]?\\s*', 'u'),
+            ''
+        ).trim() || title;
     }
     return title;
 }
@@ -1297,9 +1352,7 @@ function getTotalDays(work, content) {
     const entryDays = data.entries
         .map(function(entry) { return Number(entry.day || 0); })
         .filter(Boolean);
-    const fromEntries = entryDays.length
-        ? Math.max.apply(Math, entryDays)
-        : 1;
+    const fromEntries = entryDays.length ? Math.max.apply(Math, entryDays) : 1;
     return Math.max(1, fromWork, fromContent, fromEntries);
 }
 
@@ -1310,18 +1363,13 @@ function expandHaripath(entries, workTitle) {
     const expanded = [];
     (entries || []).forEach(function(entry, entryIndex) {
         const text = String(entry.text || '').trim();
-        const matches = text.split(
-            /(?=॥\s*[०-९0-9]+\s*॥)/u
-        ).map(function(s) { return s.trim(); }).filter(Boolean);
+        const matches = text.split(/(?=॥\s*[०-९0-9]+\s*॥)/u).map(function(s) { return s.trim(); }).filter(Boolean);
 
         if (matches.length > 1) {
             matches.forEach(function(part, partIndex) {
-                const numberMatch = part.match(
-                    /॥\s*([०-९0-9]+)\s*॥/u
-                );
+                const numberMatch = part.match(/॥\s*([०-९0-9]+)\s*॥/u);
                 expanded.push(Object.assign({}, entry, {
-                    id: String(entry.id || 'haripath-' + entryIndex) +
-                        '-' + (partIndex + 1),
+                    id: String(entry.id || 'haripath-' + entryIndex) + '-' + (partIndex + 1),
                     number: numberMatch ? numberMatch[1] : partIndex + 1,
                     text: part
                 }));
@@ -1338,27 +1386,26 @@ function readNotifySettings() {
 }
 
 function saveNotifySettings(settings) {
-    localStorage.setItem(
-        NOTIFY_KEY,
-        JSON.stringify(settings || {})
-    );
+    localStorage.setItem(NOTIFY_KEY, JSON.stringify(settings || {}));
 }
 
 function notificationSupported() {
     return 'Notification' in window;
 }
 
+function localDateKey(date) {
+    const value = date instanceof Date ? date : new Date();
+    const year = value.getFullYear();
+    const month = String(value.getMonth() + 1).padStart(2, '0');
+    const day = String(value.getDate()).padStart(2, '0');
+    return year + '-' + month + '-' + day;
+}
+
 function getDailyNityaIndex(length) {
     if (!length) return 0;
-    const start = new Date(
-        new Date().getFullYear(),
-        0,
-        0
-    );
+    const start = new Date(new Date().getFullYear(), 0, 0);
     const now = new Date();
-    const dayOfYear = Math.floor(
-        (now - start) / 86400000
-    );
+    const dayOfYear = Math.floor((now - start) / 86400000);
     return (dayOfYear - 1) % length;
 }
 
@@ -1411,6 +1458,15 @@ function topLevelWorks(saints) {
             };
         });
     });
+}
+
+function getSaintCardSummary(saint) {
+    return (saint && Array.isArray(saint.works) ? saint.works : [])
+        .map(function(work) {
+            return work && work.title ? work.title : '';
+        })
+        .filter(Boolean)
+        .join(' • ');
 }
 
 function buildMetadataSearch(saints, nitya) {
@@ -1472,22 +1528,19 @@ function App() {
     const [searchResults, setSearchResults] = useState([]);
     const [searchLoading, setSearchLoading] = useState(false);
     const [theme, setTheme] = useState(null);
+    const [themeMatches, setThemeMatches] = useState([]);
+    const [themeLoading, setThemeLoading] = useState(false);
     const [loading, setLoading] = useState(true);
     const [workLoading, setWorkLoading] = useState(false);
     const [loadErrors, setLoadErrors] = useState([]);
-    const [notifyOpen, setNotifyOpen] = useState(false);
-    const [notifySettings, setNotifyState] = useState(readNotifySettings());
-    const [navMeta, setNavMeta] = useState({ themes: {}, contentTypes: {}, granthGroups: [] });
-    const [saintTypeFilter, setSaintTypeFilter] = useState(null);
-    const [nityaTypeFilter, setNityaTypeFilter] = useState(null);
-    const [granthFilter, setGranthFilter] = useState(null);
-    const [searchOpen, setSearchOpen] = useState(false);
+    const [globalSearchOpen, setGlobalSearchOpen] = useState(false);
     const contentCache = useRef({});
     const touchStart = useRef(null);
 
     useEffect(function() {
         async function loadData() {
             const errors = [];
+            const loadedSaints = [];
 
             try {
                 const index = await fetchJSON(SAINTS_BASE + 'index.json');
@@ -1505,11 +1558,9 @@ function App() {
                     if (result.status === 'fulfilled' &&
                         result.value &&
                         result.value.id) {
-                        saints.push(result.value);
+                        loadedSaints.push(result.value);
                     } else {
-                        errors.push(
-                            String(files[indexPosition] || 'unknown')
-                        );
+                        errors.push(String(files[indexPosition] || 'unknown'));
                     }
                 });
             } catch (error) {
@@ -1518,23 +1569,14 @@ function App() {
             }
 
             try {
-                const nityaIndex = await fetchJSON(
-                    DATA_BASE + 'nitya-pathan/index.json'
-                );
+                const nityaIndex = await fetchJSON(DATA_BASE + 'nitya-pathan/index.json');
                 setNitya(nityaIndex);
             } catch (error) {
                 console.error('Bhajasi nitya index error:', error);
                 errors.push('nitya-pathan/index.json');
             }
 
-            try {
-                const navigation = await fetchJSON(DATA_BASE + 'navigation.json');
-                setNavMeta(navigation || {});
-            } catch (error) {
-                console.error('Bhajasi navigation metadata error:', error);
-            }
-
-            setSaints(saints);
+            setSaints(loadedSaints);
             setLoadErrors(errors);
             setLoading(false);
         }
@@ -1543,48 +1585,26 @@ function App() {
     }, []);
 
     useEffect(function() {
-        let pageTitle =
-            'भजसी भारत .com — संतवाणी | संतसाहित्य, हरिपाठ, ज्ञानेश्वरी व अभंग चिंतन';
+        let pageTitle = 'भजसी भारत .com — संतवाणी | सार्थ संतसाहित्य, हरिपाठ, ज्ञानेश्वरी व अभंग चिंतन';
 
         if (view === 'reader' && selectedWork && selectedSaint) {
-            pageTitle =
-                selectedWork.title +
-                ' — ' +
-                selectedSaint.name +
-                ' | भजसी भारत .com';
+            pageTitle = selectedWork.title + ' — ' + selectedSaint.name + ' | भजसी भारत .com';
         } else if (view === 'nityaReader' && selectedNityaWork) {
-            pageTitle =
-                selectedNityaWork.title +
-                ' — नित्य पठण | भजसी भारत .com';
+            pageTitle = selectedNityaWork.title + ' — नित्य पठण | भजसी भारत .com';
+        } else if (view === 'books') {
+            pageTitle = 'ग्रंथ संग्रह — भजसी भारत .com';
         } else if (view === 'works' && selectedSaint) {
-            pageTitle =
-                selectedSaint.name +
-                ' — ग्रंथसूची | भजसी भारत .com';
+            pageTitle = selectedSaint.name + ' — ग्रंथसूची | भजसी भारत .com';
         } else if (view === 'sections' && selectedParentWork) {
-            pageTitle =
-                selectedParentWork.title +
-                ' — ' +
-                selectedSaint.name +
-                ' | भजसी भारत .com';
+            pageTitle = selectedParentWork.title + ' — ' + selectedSaint.name + ' | भजसी भारत .com';
         } else if (view === 'theme' && theme) {
-            pageTitle =
-                theme.title +
-                ' — संतवाणी चिंतन | भजसी भारत .com';
+            pageTitle = theme.title + ' — संतवाणी चिंतन | भजसी भारत .com';
         } else if (view === 'nitya') {
-            pageTitle =
-                'नित्य पठण स्तोत्रे व मंत्र — भजसी भारत .com';
+            pageTitle = 'नित्य पठण स्तोत्रे व मंत्र — भजसी भारत .com';
         }
 
         document.title = pageTitle;
-    }, [
-        view,
-        selectedSaint,
-        selectedParentWork,
-        selectedWork,
-        selectedNityaWork,
-        day,
-        theme
-    ]);
+    }, [view, selectedSaint, selectedParentWork, selectedWork, selectedNityaWork, day, theme]);
 
     function navigate(nextView) {
         setView(nextView);
@@ -1601,11 +1621,8 @@ function App() {
 
     async function loadWorkContent(work, kind) {
         if (!work) return null;
-
         const file = work.file;
-        if (!file) {
-            return normalizeContent(work);
-        }
+        if (!file) return normalizeContent(work);
 
         const url = resolveURL(kind || 'saint', file);
         if (contentCache.current[url]) {
@@ -1617,13 +1634,7 @@ function App() {
         return data;
     }
 
-    async function openWork(
-        saint,
-        work,
-        initialDay,
-        parentWork,
-        kind
-    ) {
+    async function openWork(saint, work, initialDay, parentWork, kind) {
         if (!work) return;
 
         const targetKind = kind || 'saint';
@@ -1634,15 +1645,8 @@ function App() {
             const total = getTotalDays(work, content);
             const progress = readProgress();
             const saved = progress[makeWorkKey(saint || { id: targetKind }, work)];
-            const requested = Number(
-                initialDay ||
-                (saved && saved.day) ||
-                1
-            );
-            const safeDay = Math.min(
-                Math.max(1, requested),
-                total
-            );
+            const requested = Number(initialDay || (saved && saved.day) || 1);
+            const safeDay = Math.min(Math.max(1, requested), total);
 
             if (targetKind === 'nitya') {
                 setSelectedNityaWork(work);
@@ -1661,10 +1665,7 @@ function App() {
                 setDay(safeDay);
                 writeProgress(
                     makeWorkKey(saint, work),
-                    {
-                        day: safeDay,
-                        updatedAt: Date.now()
-                    }
+                    { day: safeDay, updatedAt: Date.now() }
                 );
                 navigate('reader');
             }
@@ -1676,11 +1677,7 @@ function App() {
         }
     }
 
-    async function handleWorkClick(
-        saint,
-        work,
-        parentWork
-    ) {
+    async function handleWorkClick(saint, work, parentWork) {
         if (!work) return;
 
         if (workHasSections(work)) {
@@ -1692,13 +1689,7 @@ function App() {
             return;
         }
 
-        await openWork(
-            saint,
-            work,
-            1,
-            parentWork || null,
-            'saint'
-        );
+        await openWork(saint, work, 1, parentWork || null, 'saint');
     }
 
     function openNityaList() {
@@ -1722,12 +1713,23 @@ function App() {
         navigate('saints');
     }
 
+    function openBooks() {
+        navigate('books');
+    }
+
+    function jumpHomeSection(id) {
+        setView('home');
+        setTimeout(function() {
+            const target = document.getElementById(id);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }, 30);
+    }
+
     function nextDay() {
         if (!selectedWork && !selectedNityaWork) return;
-        const total = getTotalDays(
-            selectedWork || selectedNityaWork,
-            selectedContent
-        );
+        const total = getTotalDays(selectedWork || selectedNityaWork, selectedContent);
         if (day >= total) return;
 
         const next = day + 1;
@@ -1736,10 +1738,7 @@ function App() {
         if (selectedWork && selectedSaint) {
             writeProgress(
                 makeWorkKey(selectedSaint, selectedWork),
-                {
-                    day: next,
-                    updatedAt: Date.now()
-                }
+                { day: next, updatedAt: Date.now() }
             );
         }
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -1754,31 +1753,19 @@ function App() {
         if (selectedWork && selectedSaint) {
             writeProgress(
                 makeWorkKey(selectedSaint, selectedWork),
-                {
-                    day: previous,
-                    updatedAt: Date.now()
-                }
+                { day: previous, updatedAt: Date.now() }
             );
         }
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     function onTouchStart(event) {
-        if (
-            view !== 'reader' &&
-            view !== 'nityaReader'
-        ) return;
-        touchStart.current =
-            event.changedTouches[0].clientX;
+        if (view !== 'reader' && view !== 'nityaReader') return;
+        touchStart.current = event.changedTouches[0].clientX;
     }
 
     function onTouchEnd(event) {
-        if (
-            (view !== 'reader' &&
-             view !== 'nityaReader') ||
-            touchStart.current === null
-        ) return;
-
+        if ((view !== 'reader' && view !== 'nityaReader') || touchStart.current === null) return;
         const end = event.changedTouches[0].clientX;
         const distance = end - touchStart.current;
 
@@ -1796,8 +1783,7 @@ function App() {
     function handleShare() {
         const shareData = {
             title: 'भजसी भारत .com — संतवाणी',
-            text:
-                'संतसाहित्याचे शांत वाचन, ज्ञानेश्वरी, हरिपाठ, गाथा आणि नित्य पठण.',
+            text: 'संतसाहित्याचे शांत वाचन, सार्थ ज्ञानेश्वरी, हरिपाठ, गाथा आणि नित्य पठण.',
             url: SITE_URL
         };
 
@@ -1808,12 +1794,8 @@ function App() {
 
         if (navigator.clipboard) {
             navigator.clipboard.writeText(SITE_URL)
-                .then(function() {
-                    alert('भजसी भारत लिंक कॉपी झाली आहे.');
-                })
-                .catch(function() {
-                    alert(SITE_URL);
-                });
+                .then(function() { alert('भजसी भारत लिंक कॉपी झाली आहे.'); })
+                .catch(function() { alert(SITE_URL); });
         } else {
             alert(SITE_URL);
         }
@@ -1821,18 +1803,13 @@ function App() {
 
     async function searchContent(query) {
         const q = String(query || '').trim().toLowerCase();
-
         if (q.length < 2) {
             setSearchResults([]);
             setSearchLoading(false);
             return;
         }
 
-        const metadata = buildMetadataSearch(
-            saints,
-            nitya
-        );
-
+        const metadata = buildMetadataSearch(saints, nitya);
         const quick = metadata.filter(function(item) {
             return [
                 item.title,
@@ -1847,11 +1824,7 @@ function App() {
         setSearchLoading(true);
 
         const candidates = metadata.filter(function(item) {
-            return (
-                item.type === 'work' ||
-                item.type === 'section' ||
-                item.type === 'nitya'
-            );
+            return (item.type === 'work' || item.type === 'section' || item.type === 'nitya');
         });
 
         const contentMatches = [];
@@ -1859,63 +1832,32 @@ function App() {
         await Promise.all(
             candidates.map(async function(item) {
                 try {
-                    const work =
-                        item.work || item.nityaWork;
-                    const kind =
-                        item.type === 'nitya'
-                            ? 'nitya'
-                            : 'saint';
+                    const work = item.work || item.nityaWork;
+                    const kind = item.type === 'nitya' ? 'nitya' : 'saint';
+                    const content = await loadWorkContent(work, kind);
 
-                    const content =
-                        await loadWorkContent(
-                            work,
-                            kind
-                        );
-
-                    flattenContentForSearch(content)
-                        .forEach(function(found) {
-                            if (
-                                found.text &&
-                                found.text.toLowerCase().indexOf(q) >= 0
-                            ) {
-                                contentMatches.push({
-                                    type: 'verse',
-                                    title:
-                                        (item.title || work.title) +
-                                        ' • ' +
-                                        getVerseLabel(
-                                            found.entry,
-                                            found.index
-                                        ),
-                                    sub:
-                                        String(found.entry.text || '')
-                                            .replace(/\s+/g, ' ')
-                                            .slice(0, 100),
-                                    saint:
-                                        item.saint || null,
-                                    work: work,
-                                    parentWork:
-                                        item.parentWork || null,
-                                    nityaWork:
-                                        item.nityaWork || null,
-                                    day:
-                                        Number(found.entry.day || 1)
-                                });
-                            }
-                        });
-                } catch (error) {
-                    /* One unavailable content file must not break search. */
-                }
+                    flattenContentForSearch(content).forEach(function(found) {
+                        if (found.text && found.text.toLowerCase().indexOf(q) >= 0) {
+                            contentMatches.push({
+                                type: 'verse',
+                                title: (item.title || work.title) + ' • ' + getVerseLabel(found.entry, found.index, work),
+                                sub: String(found.entry.text || '').replace(/\s+/g, ' ').slice(0, 100),
+                                saint: item.saint || null,
+                                work: work,
+                                parentWork: item.parentWork || null,
+                                nityaWork: item.nityaWork || null,
+                                day: Number(found.entry.day || 1)
+                            });
+                        }
+                    });
+                } catch (error) {}
             })
         );
 
         const combined = quick.concat(contentMatches);
         const seen = {};
         const unique = combined.filter(function(item) {
-            const key =
-                item.type + '::' +
-                item.title + '::' +
-                item.sub;
+            const key = item.type + '::' + item.title + '::' + item.sub;
             if (seen[key]) return false;
             seen[key] = true;
             return true;
@@ -1926,69 +1868,35 @@ function App() {
     }
 
     useEffect(function() {
-        const timer = setTimeout(function() {
-            searchContent(search);
-        }, 350);
-
-        return function() {
-            clearTimeout(timer);
-        };
+        const timer = setTimeout(function() { searchContent(search); }, 350);
+        return function() { clearTimeout(timer); };
     }, [search, saints, nitya]);
 
     function activateSearchResult(item) {
         setSearch('');
+        setGlobalSearchOpen(false);
 
         if (item.type === 'saint') {
             openSaint(item.saint);
             return;
         }
-
         if (item.type === 'work') {
-            handleWorkClick(
-                item.saint,
-                item.work,
-                null
-            );
+            handleWorkClick(item.saint, item.work, null);
             return;
         }
-
         if (item.type === 'section') {
-            handleWorkClick(
-                item.saint,
-                item.work,
-                item.parentWork
-            );
+            handleWorkClick(item.saint, item.work, item.parentWork);
             return;
         }
-
         if (item.type === 'nitya') {
-            openWork(
-                null,
-                item.nityaWork,
-                1,
-                null,
-                'nitya'
-            );
+            openWork(null, item.nityaWork, 1, null, 'nitya');
             return;
         }
-
         if (item.type === 'verse') {
             if (item.nityaWork) {
-                openWork(
-                    null,
-                    item.nityaWork,
-                    item.day,
-                    null,
-                    'nitya'
-                );
+                openWork(null, item.nityaWork, item.day, null, 'nitya');
             } else {
-                openWork(
-                    item.saint,
-                    item.work,
-                    item.day,
-                    item.parentWork || null,
-                    'saint'
-                );
+                openWork(item.saint, item.work, item.day, item.parentWork || null, 'saint');
             }
         }
     }
@@ -1999,373 +1907,161 @@ function App() {
 
         return saints.filter(function(saint) {
             return [
-                saint.name,                saint.search,
+                saint.name,
+                saint.search,
                 (saint.works || []).map(function(work) {
-                    return [
-                        work.title,
-                        work.type,
-                        work.description,
-                        work.search
-                    ].filter(Boolean).join(' ');
+                    return [work.title, work.type, work.description, work.search].filter(Boolean).join(' ');
                 }).join(' ')
             ].filter(Boolean).join(' ').toLowerCase().indexOf(q) >= 0;
         });
     }, [saints, search]);
 
-    const continueItems = useMemo(
-        function() {
-            return getProgressItems(saints);
-        },
-        [saints, selectedContent, view]
-    );
-
-    const themeTitles = Object.keys(navMeta.themes || {});
-    const themes = (themeTitles.length ? themeTitles : ['नामस्मरण', 'भक्ती', 'ज्ञान', 'समता', 'सेवा', 'वैराग्य', 'सदाचार', 'मनःशांती']).map(function(title) {
-        return { title: title, keys: [title] };
-    });
-
-    const saintTypeFilters = ['ओवी', 'अभंग', 'श्लोक', 'पद', 'दोहा', 'रचना'];
-    const nityaTypeFilters = ['स्तोत्र', 'श्लोक', 'सूक्त', 'मंत्र', 'संध्या', 'चालीसा'];
-    const granthGroups = navMeta.granthGroups || [];
-    const granthFilterOptions = [
-        { id: 'warkari', title: 'वारकरी साहित्य', group: true },
-        { id: 'sanskrit', title: 'संस्कृत महाकाव्य', group: true },
-        { id: 'devotional', title: 'अभंग' },
-        { id: 'discourse', title: 'प्रवचन' },
-        { id: 'hindi', title: 'हिंदी काव्य', group: true }
-    ];
-
-    const saintTypeSaints = useMemo(function() {
-        if (!saintTypeFilter) return saints;
-        const mapping = navMeta.contentTypes || {};
-        return saints.filter(function(saint) {
-            return (saint.works || []).some(function(work) {
-                const types = mapping[saint.id] && mapping[saint.id][work.id]
-                    ? mapping[saint.id][work.id]
-                    : (work.contentTypes || []);
-                return types.indexOf(saintTypeFilter) >= 0 || (
-                    saintTypeFilter === 'ओवी' && /ओवी|हरिपाठ|ज्ञानेश्वरी|दासबोध|भागवत|रामायण|ग्रामगीता/.test((work.type || '') + ' ' + (work.title || ''))
-                ) || (
-                    saintTypeFilter === 'अभंग' && /अभंग|गाथा|हरिपाठ/.test((work.type || '') + ' ' + (work.title || ''))
-                ) || (
-                    saintTypeFilter === 'श्लोक' && /श्लोक/.test((work.type || '') + ' ' + (work.title || ''))
-                ) || (
-                    saintTypeFilter === 'पद' && /पद/.test((work.type || '') + ' ' + (work.title || ''))
-                ) || (
-                    saintTypeFilter === 'दोहा' && /दोहा|साखी/.test((work.type || '') + ' ' + (work.title || ''))
-                );
-            });
-        });
-    }, [saints, saintTypeFilter, navMeta.contentTypes]);
-
-    const filteredNityaWorks = useMemo(function() {
-        if (!nityaTypeFilter || !Array.isArray(nityaTypeFilter) || nityaTypeFilter.length === 0) return nityaWorks;
-        return nityaWorks.filter(function(work) {
-            const type = String(work.type || '').toLowerCase();
-            return nityaTypeFilter.some(function(selectedType) {
-                return type.indexOf(String(selectedType).toLowerCase()) >= 0;
-            });
-        });
-    }, [nityaWorks, nityaTypeFilter]);
+    const continueItems = useMemo(function() {
+        return getProgressItems(saints);
+    }, [saints, selectedContent, view]);
 
     const filteredGranthWorks = useMemo(function() {
-        const all = topLevelWorks(saints);
-        if (!granthFilter) return all;
+        return topLevelWorks(saints);
+    }, [saints]);
 
-        const group = granthGroups.find(function(item) { return item.id === granthFilter; });
-        if (group) {
-            return all.filter(function(item) {
-                return group.saints.indexOf(item.saint.id) >= 0;
+    const filteredNityaWorks = useMemo(function() {
+        return nitya && Array.isArray(nitya.works) ? nitya.works : [];
+    }, [nitya]);
+
+    const themes = [
+        { title: 'नामस्मरण', keys: ['नाम', 'हरि', 'हरी', 'राम', 'कृष्ण', 'हरिपाठ'] },
+        { title: 'भक्ती', keys: ['भक्ती', 'भक्ति', 'भक्त', 'देव', 'दैवत', 'विठ्ठल', 'पूजा'] },
+        { title: 'ज्ञान', keys: ['ज्ञान', 'विवेक', 'आत्म', 'तत्त्व', 'बोध', 'ब्रह्म'] },
+        { title: 'समता', keys: ['समता', 'समत्व', 'समदृष्टी', 'सर्वभूती', 'एकत्व', 'भेद', 'पक्षपात', 'समान'] },
+        { title: 'सेवा', keys: ['सेवा', 'सेवक', 'दया', 'करुणा', 'परोपकार', 'समाजसेवा', 'लोकसेवा', 'कर्म'] },
+        { title: 'वैराग्य', keys: ['वैराग्य', 'विरक्त', 'मोह', 'प्रपंच', 'आसक्ति', 'अनासक्त', 'त्याग'] },
+        { title: 'सदाचार', keys: ['सत्य', 'नीती', 'धर्म', 'आचार', 'सदाचार', 'कर्तव्य', 'शुचिता', 'सज्जन'] },
+        { title: 'मनःशांती', keys: ['मनःशांती', 'शांत', 'शांती', 'स्थिर', 'चिंता', 'समाधान', 'चित्तशुद्धी', 'चित्तशुद्धि'] }
+    ];
+
+    useEffect(function() {
+        let cancelled = false;
+
+        async function buildThemeIndex() {
+            if (!theme) {
+                setThemeMatches([]);
+                setThemeLoading(false);
+                return;
+            }
+
+            setThemeLoading(true);
+            const matches = [];
+            const seen = {};
+            const targets = [];
+
+            saints.forEach(function(saint) {
+                (saint.works || []).forEach(function(work) {
+                    if (work.file || !workHasSections(work)) {
+                        targets.push({ saint: saint, work: work, parentWork: null });
+                    }
+                    (work.sections || []).forEach(function(section) {
+                        targets.push({ saint: saint, work: section, parentWork: work });
+                    });
+                });
             });
+
+            const metadataHit = function(target, contentText) {
+                const text = [
+                    target.saint && target.saint.name,
+                    target.saint && target.saint.search,
+                    target.work && target.work.title,
+                    target.work && target.work.type,
+                    target.work && target.work.description,
+                    target.work && target.work.search,
+                    contentText
+                ].filter(Boolean).join(' ').toLowerCase();
+
+                return theme.keys.some(function(key) {
+                    return text.indexOf(key.toLowerCase()) >= 0;
+                });
+            };
+
+            const chunkSize = 8;
+            for (let i = 0; i < targets.length && !cancelled; i += chunkSize) {
+                const chunk = targets.slice(i, i + chunkSize);
+                await Promise.all(chunk.map(async function(target) {
+                    try {
+                        const content = await loadWorkContent(target.work, 'saint');
+                        const flat = flattenContentForSearch(content);
+                        const contentText = flat.map(function(item) { return item.text; }).join(' ');
+
+                        if (!metadataHit(target, contentText)) return;
+
+                        const key = target.saint.id + '::' +
+                            (target.parentWork ? target.parentWork.id || target.parentWork.title + '::' : '') +
+                            (target.work.id || target.work.title || target.work.file);
+                        if (seen[key]) return;
+                        seen[key] = true;
+
+                        matches.push({
+                            saint: target.saint,
+                            work: target.work,
+                            parentWork: target.parentWork,
+                            displayTitle: target.work.title,
+                            displaySub: target.parentWork ? target.parentWork.title + ' • ' + target.saint.name : target.saint.name
+                        });
+                    } catch (error) {}
+                }));
+            }
+
+            if (!cancelled) {
+                setThemeMatches(matches);
+                setThemeLoading(false);
+            }
         }
 
-        const keys = {
-            devotional: ['अभंग','भजन','भक्तीगीत','गौळणी','पदावली'],
-            discourse: ['प्रवचन','कीर्तन','सामाजिक','विचार','संदेश','ग्रामविकास']
-        }[granthFilter] || [];
+        buildThemeIndex();
 
-        return all.filter(function(item) {
-            const mapping = navMeta.contentTypes || {};
-            const mapped = mapping[item.saint.id] && mapping[item.saint.id][item.work.id]
-                ? mapping[item.saint.id][item.work.id]
-                : (item.work.contentTypes || []);
-            const text = [item.work.title, item.work.type, item.work.description].filter(Boolean).join(' ').toLowerCase();
-            if (granthFilter === 'devotional' && mapped.indexOf('अभंग') >= 0) return true;
-            return keys.some(function(key) { return text.indexOf(key.toLowerCase()) >= 0; });
-        });
-    }, [saints, granthFilter, granthGroups, navMeta.contentTypes]);
-
-    const themeMatches = useMemo(function() {
-        if (!theme) return [];
-        const pairs = (navMeta.themes && navMeta.themes[theme.title]) || [];
-        return pairs.map(function(pair) {
-            const saint = saints.find(function(item) { return item.id === pair[0]; });
-            const work = saint && (saint.works || []).find(function(item) { return item.id === pair[1]; });
-            return saint && work ? {
-                saint: saint,
-                work: work,
-                parentWork: null,
-                displayTitle: work.title,
-                displaySub: saint.name
-            } : null;
-        }).filter(Boolean);
-    }, [saints, theme, navMeta.themes]);
-
-    window.__bhajasiSelectedSaint = selectedSaint;
-    window.__bhajasiSelectedWork = selectedWork || selectedNityaWork;
+        return function() { cancelled = true; };
+    }, [theme, saints]);
 
     const currentEntries = useMemo(function() {
         if (!selectedContent) return [];
-
-        const raw = getEntriesForDay(
-            selectedContent,
-            day
-        );
-
+        const raw = getEntriesForDay(selectedContent, day);
         return expandHaripath(
             raw,
-            selectedWork
-                ? selectedWork.title
-                : selectedNityaWork
-                    ? selectedNityaWork.title
-                    : ''
+            selectedWork ? selectedWork.title : selectedNityaWork ? selectedNityaWork.title : ''
         );
-    }, [
-        selectedContent,
-        day,
-        selectedWork,
-        selectedNityaWork
-    ]);
+    }, [selectedContent, day, selectedWork, selectedNityaWork]);
 
-    const totalDays = getTotalDays(
-        selectedWork || selectedNityaWork,
-        selectedContent
-    );
-
-    const progressPercent =
-        totalDays <= 1
-            ? 100
-            : ((day - 1) / (totalDays - 1)) * 100;
-
-    async function requestNotifications() {
-        if (!notificationSupported()) {
-            alert(
-                'या ब्राउझरमध्ये सूचना उपलब्ध नाहीत.'
-            );
-            return;
-        }
-
-        try {
-            const permission =
-                await Notification.requestPermission();
-
-            if (permission === 'granted') {
-                const settings = {
-                    enabled: true,
-                    permission: permission,
-                    lastNotifiedDate:
-                        readNotifySettings().lastNotifiedDate || ''
-                };
-
-                saveNotifySettings(settings);
-                setNotifyState(settings);
-                setNotifyOpen(false);
-
-                maybeSendDailyNotification(
-                    settings,
-                    true
-                );
-            } else {
-                const settings = {
-                    enabled: false,
-                    permission: permission
-                };
-                saveNotifySettings(settings);
-                setNotifyState(settings);
-            }
-        } catch (error) {
-            console.error(
-                'Notification permission error:',
-                error
-            );
-        }
-    }
-
-    function disableNotifications() {
-        const settings = Object.assign(
-            {},
-            readNotifySettings(),
-            { enabled: false }
-        );
-        saveNotifySettings(settings);
-        setNotifyState(settings);
-        setNotifyOpen(false);
-    }
-
-    function notificationMessage() {
-        const progressItems =
-            getProgressItems(saints);
-
-        if (progressItems.length) {
-            const item = progressItems[0];
-            return {
-                title: 'भजसी भारत — वाचन पुढे सुरू ठेवा',
-                body:
-                    item.work.title +
-                    ' — दिवस ' +
-                    toMarathiDigits(item.day) +
-                    ' पासून वाचन पुढे सुरू करा.'
-            };
-        }
-
-        const works =
-            nitya && Array.isArray(nitya.works)
-                ? nitya.works
-                : [];
-
-        if (works.length) {
-            const index =
-                getDailyNityaIndex(works.length);
-            const work = works[index];
-
-            return {
-                title: 'आजचे नित्य पठण',
-                body:
-                    (work.title || 'आजचे पठण') +
-                    ' आजच्या शांत वाचनासाठी उघडा.'
-            };
-        }
-
-        return {
-            title: 'भजसी भारत',
-            body:
-                'आज थोडा वेळ संतसाहित्याच्या शांत वाचनासाठी द्या.'
-        };
-    }
-
-    function maybeSendDailyNotification(
-        settings,
-        force
-    ) {
-        if (
-            !notificationSupported() ||
-            Notification.permission !== 'granted' ||
-            !settings ||
-            !settings.enabled
-        ) return;
-
-        const today =
-            new Date().toISOString().slice(0, 10);
-
-        if (!force && settings.lastNotifiedDate === today) {
-            return;
-        }
-
-        const message = notificationMessage();
-
-        try {
-            new Notification(
-                message.title,
-                {
-                    body: message.body,
-                    icon: SITE_LOGO,
-                    tag: 'bhajasi-daily-reading'
-                }
-            );
-
-            const next = Object.assign(
-                {},
-                settings,
-                { lastNotifiedDate: today }
-            );
-            saveNotifySettings(next);
-            setNotifyState(next);
-        } catch (error) {
-            console.error(
-                'Browser notification error:',
-                error
-            );
-        }
-    }
+    const totalDays = getTotalDays(selectedWork || selectedNityaWork, selectedContent);
+    const progressPercent = totalDays <= 1 ? 100 : ((day - 1) / (totalDays - 1)) * 100;
 
     useEffect(function() {
-        if (!notificationSupported()) return;
+        if (!globalSearchOpen) return;
 
-        const settings =
-            readNotifySettings();
+        const onKeyDown = function(e) {
+            if (e.key === 'Escape') {
+                setGlobalSearchOpen(false);
+                setSearch('');
+            }
+        };
 
-        setNotifyState(settings);
-
-        const timer =
-            setTimeout(function() {
-                maybeSendDailyNotification(
-                    settings,
-                    false
-                );
-            }, 2500);
-
-        const dailyCheck =
-            setInterval(function() {
-                maybeSendDailyNotification(
-                    readNotifySettings(),
-                    false
-                );
-            }, 60000);
+        document.addEventListener('keydown', onKeyDown);
+        const previousOverflow = document.body.style.overflow;
+        document.body.style.overflow = 'hidden';
 
         return function() {
-            clearTimeout(timer);
-            clearInterval(dailyCheck);
+            document.removeEventListener('keydown', onKeyDown);
+            document.body.style.overflow = previousOverflow;
         };
-    }, [saints, nitya]);
+    }, [globalSearchOpen]);
 
-    function renderPageNav(items) {
+    function renderSectionNav(page) {
+        if (page !== 'home') return null;
+
         return (
             <div className='bhajasi-section-nav-wrap'>
                 <div className='bhajasi-section-nav'>
-                    {items.map(function(item) {
-                        return <button key={item.label} className='bhajasi-nav-chip' onClick={item.onClick}>{item.label}</button>;
-                    })}
-                </div>
-            </div>
-        );
-    }
-
-    function renderFilters(items, active, setActive) {
-        return (
-            <div className='bhajasi-section-nav-wrap'>
-                <div className='bhajasi-section-nav'>
-                    {items.map(function(item) {
-                        return (
-                            <button key={item} className={'bhajasi-nav-chip' + (active === item ? ' active' : '')} onClick={function() { setActive(active === item ? null : item); }}>
-                                {item}
-                            </button>
-                        );
-                    })}
-                </div>
-            </div>
-        );
-    }
-
-    function renderMultiFilters(items, selected, setSelected) {
-        return (
-            <div className='bhajasi-section-nav-wrap'>
-                <div className='bhajasi-section-nav'>
-                    {items.map(function(item) {
-                        const active = Array.isArray(selected) && selected.indexOf(item) >= 0;
-                        return (
-                            <button key={item} className={'bhajasi-nav-chip' + (active ? ' active' : '')} onClick={function() {
-                                setSelected(function(current) {
-                                    if (!Array.isArray(current) || current.length === 0) return [item];
-                                    if (current.length === items.length) return [item];
-                                    if (current.indexOf(item) >= 0) {
-                                        const next = current.filter(function(value) { return value !== item; });
-                                        return next.length ? next : null;
-                                    }
-                                    return current.concat(item);
-                                });
-                            }}>{item}</button>
-                        );
-                    })}
+                    <button className='bhajasi-nav-chip' onClick={function(){ jumpHomeSection('home-themes'); }}>शिकवणीनुसार</button>
+                    <button className='bhajasi-nav-chip' onClick={function(){ jumpHomeSection('home-works'); }}>ग्रंथांनुसार</button>
+                    <button className='bhajasi-nav-chip' onClick={function(){ jumpHomeSection('home-nitya'); }}>आजचे नित्य पठण</button>
+                    <button className='bhajasi-nav-chip' onClick={function(){ jumpHomeSection('home-saints'); }}>संतांनुसार</button>
                 </div>
             </div>
         );
@@ -2374,46 +2070,110 @@ function App() {
     function renderGlobalSearchUI() {
         return (
             <>
-                <button className='bhajasi-floating-search' aria-label='संपूर्ण साहित्य शोधा' title='संपूर्ण साहित्य शोधा' onClick={function() { setSearchOpen(true); }}>
+                <button
+                    className='bhajasi-global-search-btn'
+                    type='button'
+                    title='संपूर्ण भजसी भारत शोधा'
+                    aria-label='संपूर्ण भजसी भारत शोधा'
+                    onClick={function() { setGlobalSearchOpen(true); }}
+                >
                     <i className='fa-solid fa-magnifying-glass'></i>
                 </button>
-                {searchOpen && (
-                    <div className='bhajasi-search-overlay' onMouseDown={function(event) {
-                        if (event.target === event.currentTarget) {
-                            setSearchOpen(false);
-                            setSearch('');
-                        }
-                    }}>
-                        <div className='bhajasi-search-dialog'>
+
+                {globalSearchOpen && (
+                    <div
+                        className='bhajasi-global-search-overlay'
+                        role='dialog'
+                        aria-modal='true'
+                        aria-label='भजसी भारत संपूर्ण शोध'
+                        onMouseDown={function(e) {
+                            if (e.target === e.currentTarget) {
+                                setGlobalSearchOpen(false);
+                            }
+                        }}
+                    >
+                        <div className='bhajasi-global-search-dialog'>
                             <div className='bhajasi-global-search-head'>
-                                <input
-                                    autoFocus
-                                    className='bhajasi-global-search-input'
-                                    value={search}
-                                    onChange={function(event) { setSearch(event.target.value); }}
-                                    placeholder='संत, ग्रंथ, अध्याय, ओवी, अभंग, श्लोक, अर्थ किंवा शिकवण शोधा…'
-                                    autoComplete='off'
-                                />
-                                <button className='bhajasi-global-search-close' onClick={function() { setSearchOpen(false); setSearch(''); }}>
+                                <h2 className='bhajasi-global-search-title'>संपूर्ण भजसी भारत शोध</h2>
+                                <button
+                                    className='bhajasi-global-search-close'
+                                    type='button'
+                                    title='बंद करा'
+                                    aria-label='शोध बंद करा'
+                                    onClick={function() {
+                                        setGlobalSearchOpen(false);
+                                        setSearch('');
+                                    }}
+                                >
                                     <i className='fa-solid fa-xmark'></i>
                                 </button>
                             </div>
-                            <div className='bhajasi-global-results'>
-                                {!search.trim() ? (
-                                    <div className='bhajasi-global-empty'>संपूर्ण संतसाहित्य, ग्रंथ आणि नित्य पठण शोधा.</div>
-                                ) : (
-                                    <>
-                                        {searchResults.map(function(item, index) {
-                                            return (
-                                                <button key={item.type + '-' + index} className='bhajasi-global-result' onClick={function() { activateSearchResult(item); setSearchOpen(false); }}>
-                                                    <div className='bhajasi-global-result-title'>{item.title}</div>
-                                                    <div className='bhajasi-global-result-sub'>{item.sub}</div>
-                                                </button>
-                                            );
-                                        })}
-                                        {searchLoading && <div className='bhajasi-global-empty'>संपूर्ण साहित्यामधील शोध सुरू आहे…</div>}
-                                        {!searchLoading && searchResults.length === 0 && <div className='bhajasi-global-empty'>संबंधित साहित्य सापडले नाही.</div>}
-                                    </>
+
+                            <div className='bhajasi-global-search-field'>
+                                <div className='bhajasi-search-box'>
+                                    <input
+                                        autoFocus={true}
+                                        value={search}
+                                        onChange={function(e) { setSearch(e.target.value); }}
+                                        onKeyDown={function(e) {
+                                            if (e.key === 'Escape') {
+                                                setGlobalSearchOpen(false);
+                                                setSearch('');
+                                            }
+                                        }}
+                                        placeholder='संत, ग्रंथ, अध्याय, दशक, समास, ओवी, अभंग, श्लोक, अर्थ किंवा मजकूर शोधा…'
+                                        autoComplete='off'
+                                    />
+                                    {search && (
+                                        <button
+                                            className='bhajasi-search-clear'
+                                            type='button'
+                                            title='शोध पुसा'
+                                            onClick={function() { setSearch(''); }}
+                                        >
+                                            <i className='fa-solid fa-xmark'></i>
+                                        </button>
+                                    )}
+                                </div>
+                            </div>
+
+                            <div className='bhajasi-global-search-results'>
+                                {!search && (
+                                    <div className='bhajasi-global-search-hint'>
+                                        संत, ग्रंथ, अध्याय, दशक, समास, ओवी, अभंग,
+                                        श्लोक, अर्थ किंवा कोणताही उपलब्ध साहित्य मजकूर शोधा.
+                                    </div>
+                                )}
+
+                                {search && searchLoading && (
+                                    <div className='bhajasi-global-result-loading'>
+                                        संपूर्ण साहित्यामध्ये शोध सुरू आहे…
+                                    </div>
+                                )}
+
+                                {search && searchResults.map(function(item, index) {
+                                    return (
+                                        <button
+                                            key={item.type + '-' + item.title + '-' + index}
+                                            className='bhajasi-global-result'
+                                            type='button'
+                                            onClick={function() { activateSearchResult(item); }}
+                                        >
+                                            <div className='bhajasi-global-result-title'>{item.title}</div>
+                                            <div className='bhajasi-global-result-meta'>
+                                                {item.type === 'saint' ? 'संत' : item.type === 'work' ? 'ग्रंथ / साहित्य' : item.type === 'section' ? 'अध्याय / विभाग' : item.type === 'nitya' ? 'नित्य पठण' : 'रचना / साहित्य मजकूर'}
+                                            </div>
+                                            {item.sub && (
+                                                <div className='bhajasi-global-result-match'>{item.sub}</div>
+                                            )}
+                                        </button>
+                                    );
+                                })}
+
+                                {search && !searchLoading && searchResults.length === 0 && (
+                                    <div className='bhajasi-global-search-hint'>
+                                        जुळणारा संत, ग्रंथ, विभाग किंवा साहित्य मजकूर सापडला नाही.
+                                    </div>
                                 )}
                             </div>
                         </div>
@@ -2427,131 +2187,21 @@ function App() {
         return (
             <footer className='bhajasi-page-footer'>
                 <div className='bhajasi-footer-inner'>
-                    <img
-                        src={SITE_LOGO}
-                        alt='भजसी भारत'
-                        className='bhajasi-footer-logo'
-                    />
+                    <span className='bhajasi-footer-logo-box'>
+                        <img
+                            src={FOOTER_LOGO}
+                            alt='भजसी भारत'
+                            className='bhajasi-footer-logo'
+                        />
+                    </span>
                     <span>
                         निर्मिती आणि संकलन: भरत रासवे
                     </span>
                 </div>
                 <span className='bhajasi-footer-sub'>
-                    भजसी भारत .com — मराठी संतसाहित्याचे डिजिटल व्यासपीठ
+                    भजसी भारत .com — (संतवाणी • ग्रंथ • हरिनाम • चिंतन • स्तोत्र)
                 </span>
             </footer>
-        );
-    }
-
-    function renderNotificationUI() {
-        const enabled =
-            notifySettings &&
-            notifySettings.enabled &&
-            notificationSupported() &&
-            Notification.permission === 'granted';
-
-        return (
-            <>
-                <button
-                    className='bhajasi-notify-bell'
-                    title='सूचना व्यवस्थापित करा'
-                    aria-label='सूचना व्यवस्थापित करा'
-                    onClick={function() {
-                        setNotifyOpen(true);
-                    }}
-                >
-                    <i className='fa-regular fa-bell'></i>
-                </button>
-
-                {notifyOpen && (
-                    <div
-                        className='onesignal-bell-launcher-dialog'
-                        id='onesignal-bell-dialog'
-                        popover='auto'
-                    >
-                        <div className='bhajasi-notify-card'>
-                            <h3 className='bhajasi-notify-title'>
-                                वाचन सूचना
-                            </h3>
-
-                            <p className='bhajasi-notify-text'>
-                                तुम्ही जिथे वाचन थांबवले आहे तिथून पुढे सुरू करण्याची
-                                आठवण किंवा दररोज नित्य पठणातील साहित्याची सूचना
-                                ब्राउझरद्वारे मिळवा.
-                            </p>
-
-                            {!notificationSupported() ? (
-                                <p className='bhajasi-notify-text'>
-                                    या ब्राउझरमध्ये Notification API उपलब्ध नाही.
-                                </p>
-                            ) : (
-                                <>
-                                    <p className='bhajasi-notify-text'>
-                                        स्थिती:{' '}
-                                        {enabled
-                                            ? 'सूचना सुरू आहेत'
-                                            : Notification.permission === 'denied'
-                                                ? 'ब्राउझरने सूचना नाकारल्या आहेत'
-                                                : 'सूचना बंद आहेत'}
-                                    </p>
-
-                                    <div className='bhajasi-notify-actions'>
-                                        {!enabled && (
-                                            <button
-                                                className='bhajasi-notify-btn primary'
-                                                onClick={requestNotifications}
-                                            >
-                                                सूचना सुरू करा
-                                            </button>
-                                        )}
-
-                                        {enabled && (
-                                            <button
-                                                className='bhajasi-notify-btn'
-                                                onClick={function() {
-                                                    maybeSendDailyNotification(
-                                                        readNotifySettings(),
-                                                        true
-                                                    );
-                                                    setNotifyOpen(false);
-                                                }}
-                                            >
-                                                आजची सूचना पाठवा
-                                            </button>
-                                        )}
-
-                                        {enabled && (
-                                            <button
-                                                className='bhajasi-notify-btn ghost'
-                                                onClick={disableNotifications}
-                                            >
-                                                बंद करा
-                                            </button>
-                                        )}
-
-                                        <button
-                                            className='bhajasi-notify-btn ghost'
-                                            onClick={function() {
-                                                setNotifyOpen(false);
-                                            }}
-                                        >
-                                            बंद
-                                        </button>
-                                    </div>
-
-                                    <p className='bhajasi-notify-text'>
-                                        टीप: हे browser Notification API वापरते.
-                                        पूर्णपणे बंद असलेल्या ब्राउझरमध्ये हमखास
-                                        दैनिक background push साठी स्वतंत्र
-                                        Web Push / OneSignal service worker
-                                        आवश्यक आहे.
-                                    </p>
-                                </>
-                            )}
-                        </div>
-                    </div>
-                )}
-            </>
         );
     }
 
@@ -2577,7 +2227,7 @@ function App() {
                                         </span>
                                     </div>
                                     <span className='bhajasi-tagline'>
-                                        संतवाणी • अभंग • हरिनाम • चिंतन
+                                        (संतवाणी • ग्रंथ • हरिनाम • चिंतन • स्तोत्र)
                                     </span>
                                 </div>
                             </div>
@@ -2593,10 +2243,7 @@ function App() {
         );
     }
 
-    const nityaWorks =
-        nitya && Array.isArray(nitya.works)
-            ? nitya.works
-            : [];
+    const nityaWorks = nitya && Array.isArray(nitya.works) ? nitya.works : [];
 
     return (
         <div
@@ -2628,7 +2275,7 @@ function App() {
                                     </span>
                                 </div>
                                 <span className='bhajasi-tagline'>
-                                    संतवाणी • अभंग • हरिनाम • चिंतन
+                                    (संतवाणी • ग्रंथ • हरिनाम • चिंतन • स्तोत्र)
                                 </span>
                             </div>
                         </div>
@@ -2664,13 +2311,9 @@ function App() {
                         <div
                             className='bhajasi-progress-bar'
                             style={{
-                                width:
-                                    (
-                                        view === 'reader' ||
-                                        view === 'nityaReader'
-                                    )
-                                        ? progressPercent + '%'
-                                        : '0%'
+                                width: (view === 'reader' || view === 'nityaReader')
+                                    ? progressPercent + '%'
+                                    : '0%'
                             }}
                         ></div>
                     </div>
@@ -2680,12 +2323,7 @@ function App() {
 
                     {view === 'home' && (
                         <>
-                            {renderPageNav([
-                                { label: 'शिकवणीनुसार', onClick: function() { document.getElementById('home-themes').scrollIntoView({ behavior: 'smooth' }); } },
-                                { label: 'ग्रंथांनुसार', onClick: function() { document.getElementById('home-works').scrollIntoView({ behavior: 'smooth' }); } },
-                                { label: 'आजचे नित्य पठण', onClick: openNityaList },
-                                { label: 'संतांनुसार', onClick: function() { document.getElementById('home-saints').scrollIntoView({ behavior: 'smooth' }); } }
-                            ])}
+                            {renderSectionNav('home')}
 
                             {continueItems.length > 0 && (
                                 <section className='bhajasi-section bhajasi-section-works'>
@@ -2693,42 +2331,35 @@ function App() {
                                         <h2>वाचन पुढे सुरू ठेवा</h2>
                                     </div>
                                     <div className='bhajasi-continue-list'>
-                                        {continueItems.slice(0, 5).map(
-                                            function(item, index) {
-                                                return (
-                                                    <button
-                                                        key={
-                                                            makeWorkKey(
-                                                                item.saint,
-                                                                item.work
-                                                            ) + index
-                                                        }
-                                                        className='bhajasi-continue-card'
-                                                        onClick={function() {
-                                                            openWork(
-                                                                item.saint,
-                                                                item.work,
-                                                                item.day,
-                                                                item.parentWork,
-                                                                'saint'
-                                                            );
-                                                        }}
-                                                    >
-                                                        <div className='bhajasi-continue-main'>
-                                                            <div className='bhajasi-continue-saint'>
-                                                                {item.saint.name}
-                                                            </div>
-                                                            <div className='bhajasi-continue-work'>
-                                                                {item.work.title}
-                                                            </div>
+                                        {continueItems.slice(0, 5).map(function(item, index) {
+                                            return (
+                                                <button
+                                                    key={makeWorkKey(item.saint, item.work) + index}
+                                                    className='bhajasi-continue-card'
+                                                    onClick={function() {
+                                                        openWork(
+                                                            item.saint,
+                                                            item.work,
+                                                            item.day,
+                                                            item.parentWork,
+                                                            'saint'
+                                                        );
+                                                    }}
+                                                >
+                                                    <div className='bhajasi-continue-main'>
+                                                        <div className='bhajasi-continue-saint'>
+                                                            {item.saint.name}
                                                         </div>
-                                                        <div className='bhajasi-continue-day'>
-                                                            दिवस {toMarathiDigits(item.day)}
+                                                        <div className='bhajasi-continue-work'>
+                                                            {item.work.title}
                                                         </div>
-                                                    </button>
-                                                );
-                                            }
-                                        )}
+                                                    </div>
+                                                    <div className='bhajasi-continue-day'>
+                                                        दिवस {toMarathiDigits(item.day)}
+                                                    </div>
+                                                </button>
+                                            );
+                                        })}
                                     </div>
                                 </section>
                             )}
@@ -2756,11 +2387,7 @@ function App() {
                                                         {saint.name}
                                                     </div>
                                                     <div className='bhajasi-card-sub'>
-                                                        {(saint.works || [])
-                                                            .map(function(w) {
-                                                                return w.title;
-                                                            })
-                                                            .join(' • ')}
+                                                        {getSaintCardSummary(saint)}
                                                     </div>
                                                 </button>
                                             );
@@ -2774,35 +2401,24 @@ function App() {
                                     <h2>ग्रंथांनुसार</h2>
                                 </div>
                                 <div className='bhajasi-grid'>
-                                    {topLevelWorks(filteredSaints).map(
-                                        function(item) {
-                                            return (
-                                                <button
-                                                    key={
-                                                        item.saint.id +
-                                                        '::' +
-                                                        (item.work.id ||
-                                                            item.work.title)
-                                                    }
-                                                    className='bhajasi-card bhajasi-work-card'
-                                                    onClick={function() {
-                                                        handleWorkClick(
-                                                            item.saint,
-                                                            item.work,
-                                                            null
-                                                        );
-                                                    }}
-                                                >
-                                                    <div className='bhajasi-card-title'>
-                                                        {item.work.title}
-                                                    </div>
-                                                    <div className='bhajasi-card-sub'>
-                                                        {item.saint.name}
-                                                    </div>
-                                                </button>
-                                            );
-                                        }
-                                    )}
+                                    {topLevelWorks(filteredSaints).map(function(item) {
+                                        return (
+                                            <button
+                                                key={item.saint.id + '::' + (item.work.id || item.work.title)}
+                                                className='bhajasi-card bhajasi-work-card'
+                                                onClick={function() {
+                                                    handleWorkClick(item.saint, item.work, null);
+                                                }}
+                                            >
+                                                <div className='bhajasi-card-title'>
+                                                    {item.work.title}
+                                                </div>
+                                                <div className='bhajasi-card-sub'>
+                                                    {item.saint.name}
+                                                </div>
+                                            </button>
+                                        );
+                                    })}
                                 </div>
                             </section>
 
@@ -2833,34 +2449,23 @@ function App() {
                                 </div>
                             </section>
 
-                            <section className='bhajasi-section bhajasi-section-themes'>
+                            <section id='home-nitya' className='bhajasi-section bhajasi-section-themes'>
                                 <div className='bhajasi-section-title'>
                                     <h2>आजचे नित्य पठण</h2>
                                 </div>
 
-                                {nityaWorks.length === 0 ? (
+                                {filteredNityaWorks.length === 0 ? (
                                     <div className='bhajasi-empty'>
                                         नित्य पठणाची माहिती उपलब्ध नाही.
                                     </div>
                                 ) : (
                                     (function() {
-                                        const item =
-                                            nityaWorks[
-                                                getDailyNityaIndex(
-                                                    nityaWorks.length
-                                                )
-                                            ];
+                                        const item = nityaWorks[getDailyNityaIndex(nityaWorks.length)];
                                         return (
                                             <button
                                                 className='bhajasi-continue-card bhajasi-nitya-card'
                                                 onClick={function() {
-                                                    openWork(
-                                                        null,
-                                                        item,
-                                                        1,
-                                                        null,
-                                                        'nitya'
-                                                    );
+                                                    openWork(null, item, 1, null, 'nitya');
                                                 }}
                                             >
                                                 <div className='bhajasi-continue-main'>
@@ -2885,250 +2490,38 @@ function App() {
                         </>
                     )}
 
+                    {/* SAINTS TAB: Matches exact Nitya Pathan reader head format */}
                     {view === 'saints' && (
-                        <section className='bhajasi-section'>
-                            <div className='bhajasi-section-title'>
-                                <h2>संत</h2>
-                            </div>
-                            {renderFilters(saintTypeFilters, saintTypeFilter, setSaintTypeFilter)}
-                            <div className='bhajasi-grid'>
-                                {saintTypeSaints.map(function(saint) {
-                                    return (
-                                        <button
-                                            key={saint.id}
-                                            className='bhajasi-card bhajasi-saint-card'
-                                            onClick={function() {
-                                                openSaint(saint);
-                                            }}
-                                        >
-                                            <div className='bhajasi-card-title'>
-                                                {saint.name}
-                                            </div>
-                                            <div className='bhajasi-card-sub'>
-                                                {(saint.works || [])
-                                                    .map(function(w) {
-                                                        return w.title;
-                                                    })
-                                                    .join(' • ')}
-                                            </div>
-                                        </button>
-                                    );
-                                })}
-                            </div>
-                        </section>
-                    )}
-
-                    {view === 'works' && selectedSaint && (
-                        <section>
-
+                        <section className='bhajasi-section bhajasi-section-saints'>
                             <div className='bhajasi-reader-head'>
-                                <button
-                                    className='bhajasi-back'
-                                    onClick={goSaints}
-                                >
-                                    ← संतांकडे परत
-                                </button>
-                                <div className='bhajasi-breadcrumb'>
-                                    <span>संत</span>
-                                    <span>›</span>
-                                    <span>{selectedSaint.name}</span>
-                                </div>
-                                <div className='bhajasi-title-row'>
-                                    <h2 className='bhajasi-title'>
-                                        {selectedSaint.name}
-                                    </h2>
-                                </div>
-                            </div>
-
-                            <div className='bhajasi-grid'>
-                                {(selectedSaint.works || []).map(
-                                    function(work, index) {
-                                        return (
-                                            <button
-                                                key={
-                                                    work.id ||
-                                                    work.file ||
-                                                    index
-                                                }
-                                                className='bhajasi-card bhajasi-work-card'
-                                                onClick={function() {
-                                                    handleWorkClick(
-                                                        selectedSaint,
-                                                        work,
-                                                        null
-                                                    );
-                                                }}
-                                            >
-                                                <div className='bhajasi-card-title'>
-                                                    {work.title}
-                                                </div>
-                                                <div className='bhajasi-card-sub'>
-                                                    {getWorkSummary(work)}
-                                                </div>
-                                            </button>
-                                        );
-                                    }
-                                )}
-                            </div>
-                        </section>
-                    )}
-
-                    {view === 'sections' &&
-                        selectedSaint &&
-                        selectedParentWork && (
-                        <section>
-
-                            <div className='bhajasi-reader-head'>
-                                <button
-                                    className='bhajasi-back'
-                                    onClick={function() {
-                                        openSaint(selectedSaint);
-                                    }}
-                                >
-                                    ← {selectedSaint.name} कडे परत
-                                </button>
-
-                                <div className='bhajasi-breadcrumb'>
-                                    <span>{selectedSaint.name}</span>
-                                    <span>›</span>
-                                    <span>{selectedParentWork.title}</span>
-                                </div>
-
-                                <div className='bhajasi-title-row'>
-                                    <h2 className='bhajasi-title'>
-                                        {selectedParentWork.title}
-                                    </h2>
-                                </div>
-                            </div>
-
-                            <div className='bhajasi-grid'>
-                                {(selectedParentWork.sections || []).map(
-                                    function(section, index) {
-                                        const count =
-                                            section.entries
-                                                ? section.entries.length
-                                                : section.verses ||
-                                                  section.ovis ||
-                                                  '';
-
-                                        return (
-                                            <button
-                                                key={
-                                                    section.id ||
-                                                    section.file ||
-                                                    index
-                                                }
-                                                className='bhajasi-card bhajasi-work-card'
-                                                onClick={function() {
-                                                    handleWorkClick(
-                                                        selectedSaint,
-                                                        section,
-                                                        selectedParentWork
-                                                    );
-                                                }}
-                                            >
-                                                <div className='bhajasi-card-title'>
-                                                    {formatSubTitle(
-                                                        section.title,
-                                                        selectedParentWork.title
-                                                    )}
-                                                </div>
-                                                <div className='bhajasi-card-sub'>
-                                                    {section.type || 'विभाग'}
-                                                    {count
-                                                        ? ' • ' +
-                                                          toMarathiDigits(count) +
-                                                          ' नोंदी'
-                                                        : ''}
-                                                    {section.days
-                                                        ? ' • दिवस ' +
-                                                          toMarathiDigits(
-                                                              section.days
-                                                          )
-                                                        : ''}
-                                                </div>
-                                            </button>
-                                        );
-                                    }
-                                )}
-                            </div>                        </section>
-                    )}
-
-                    {view === 'granth' && (
-                        <section className='bhajasi-section'>
-                            <div className='bhajasi-section-title'><h2>ग्रंथ</h2></div>
-                            {renderFilters(granthFilterOptions.map(function(item) { return item.title; }), granthFilter ? ((granthFilterOptions.find(function(item) { return item.id === granthFilter; }) || {}).title || null) : null, function(value) {
-                                const found = granthFilterOptions.find(function(item) { return item.title === value; });
-                                setGranthFilter(found ? found.id : null);
-                            })}
-                            <div className='bhajasi-grid'>
-                                {filteredGranthWorks.map(function(item) {
-                                    return (
-                                        <button key={item.saint.id + '::' + (item.work.id || item.work.title)} className='bhajasi-card bhajasi-work-card' onClick={function() { handleWorkClick(item.saint, item.work, null); }}>
-                                            <div className='bhajasi-card-title'>{item.work.title}</div>
-                                            <div className='bhajasi-card-sub'>{item.saint.name} • {item.work.type || 'साहित्य'}</div>
-                                        </button>
-                                    );
-                                })}
-                            </div>
-                        </section>
-                    )}
-
-                    {view === 'nitya' && (
-                        <section className='bhajasi-section bhajasi-section-themes'>
-
-                            <div className='bhajasi-reader-head'>
-                                <button
-                                    className='bhajasi-back'
-                                    onClick={goHome}
-                                >
+                                <button className='bhajasi-back' onClick={goHome}>
                                     ← मुख्य पानावर परत
                                 </button>
                                 <div className='bhajasi-title-row'>
-                                    <h2 className='bhajasi-title'>
-                                        नित्य पठण स्तोत्रे व मंत्र
-                                    </h2>
+                                    <h2 className='bhajasi-title'>संत आणि महाकवी</h2>
                                 </div>
-                                {renderMultiFilters(nityaTypeFilters, nityaTypeFilter, setNityaTypeFilter)}
                                 <p className='bhajasi-meta'>
-                                    रोजच्या पठणासाठी स्तोत्रे, मंत्र आणि
-                                    उपलब्ध स्रोतांनुसार अर्थ.
+                                    महाराष्ट्रातील व भारतातील महान संतांची जीवनगाथा आणि त्यांचे ग्रंथसाहित्य.
                                 </p>
                             </div>
-
                             <div className='bhajasi-grid'>
-                                {nityaWorks.length === 0 ? (
-                                    <div className='bhajasi-empty'>
-                                        नित्य पठणाचे साहित्य उपलब्ध नाही.
-                                    </div>
+                                {filteredSaints.length === 0 ? (
+                                    <div className='bhajasi-empty'>संत माहिती लोड होत आहे…</div>
                                 ) : (
-                                    filteredNityaWorks.map(function(work, index) {
+                                    filteredSaints.map(function(saint) {
                                         return (
                                             <button
-                                                key={
-                                                    work.id ||
-                                                    work.file ||
-                                                    index
-                                                }
-                                                className='bhajasi-card bhajasi-work-card bhajasi-nitya-card'
+                                                key={saint.id}
+                                                className='bhajasi-card bhajasi-saint-card'
                                                 onClick={function() {
-                                                    openWork(
-                                                        null,
-                                                        work,
-                                                        1,
-                                                        null,
-                                                        'nitya'
-                                                    );
+                                                    openSaint(saint);
                                                 }}
                                             >
                                                 <div className='bhajasi-card-title'>
-                                                    {work.title}
+                                                    {saint.name}
                                                 </div>
                                                 <div className='bhajasi-card-sub'>
-                                                    {work.type || 'नित्य पठण'}
-                                                    {work.author
-                                                        ? ' • ' + work.author
-                                                        : ''}
+                                                    {getSaintCardSummary(saint)}
                                                 </div>
                                             </button>
                                         );
@@ -3138,69 +2531,192 @@ function App() {
                         </section>
                     )}
 
-                    {(view === 'reader' ||
-                      view === 'nityaReader') && (
+                    {/* BOOKS TAB: Matches exact Nitya Pathan reader head format */}
+                    {view === 'books' && (
+                        <section className='bhajasi-section bhajasi-section-works'>
+                            <div className='bhajasi-reader-head'>
+                                <button className='bhajasi-back' onClick={goHome}>
+                                    ← मुख्य पानावर परत
+                                </button>
+                                <div className='bhajasi-title-row'>
+                                    <h2 className='bhajasi-title'>ग्रंथ संग्रह</h2>
+                                </div>
+                                <p className='bhajasi-meta'>
+                                    सार्थ ज्ञानेश्वरी, तुकाराम गाथा, दासबोध, हरिपाठ व समग्र संत ग्रंथसाहित्य.
+                                </p>
+                            </div>
+                            <div className='bhajasi-grid'>
+                                {filteredGranthWorks.length === 0 ? (
+                                    <div className='bhajasi-empty'>ग्रंथ साहित्य लोड होत आहे…</div>
+                                ) : (
+                                    filteredGranthWorks.map(function(item) {
+                                        return (
+                                            <button
+                                                key={item.saint.id + '::' + (item.work.id || item.work.title)}
+                                                className='bhajasi-card bhajasi-work-card'
+                                                onClick={function() {
+                                                    handleWorkClick(item.saint, item.work, null);
+                                                }}
+                                            >
+                                                <div className='bhajasi-card-title'>
+                                                    {item.work.title}
+                                                </div>
+                                                <div className='bhajasi-card-sub'>
+                                                    {item.saint.name}
+                                                </div>
+                                            </button>
+                                        );
+                                    })
+                                )}
+                            </div>
+                        </section>
+                    )}
+
+                    {view === 'works' && selectedSaint && (
+                        <section>
+                            <div className='bhajasi-reader-head'>
+                                <button className='bhajasi-back' onClick={goSaints}>
+                                    ← संतांकडे परत
+                                </button>
+                                <div className='bhajasi-breadcrumb'>
+                                    <span>संत</span>
+                                    <span>›</span>
+                                    <span>{selectedSaint.name}</span>
+                                </div>
+                                <div className='bhajasi-title-row'>
+                                    <h2 className='bhajasi-title'>{selectedSaint.name}</h2>
+                                </div>
+                            </div>
+                            <div className='bhajasi-grid'>
+                                {(selectedSaint.works || []).map(function(work, index) {
+                                    return (
+                                        <button
+                                            key={work.id || work.file || index}
+                                            className='bhajasi-card bhajasi-work-card'
+                                            onClick={function() {
+                                                handleWorkClick(selectedSaint, work, null);
+                                            }}
+                                        >
+                                            <div className='bhajasi-card-title'>{work.title}</div>
+                                            <div className='bhajasi-card-sub'>{getWorkSummary(work)}</div>
+                                        </button>
+                                    );
+                                })}
+                            </div>
+                        </section>
+                    )}
+
+                    {view === 'sections' && selectedSaint && selectedParentWork && (
+                        <section>
+                            <div className='bhajasi-reader-head'>
+                                <button className='bhajasi-back' onClick={function() { openSaint(selectedSaint); }}>
+                                    ← {selectedSaint.name} कडे परत
+                                </button>
+                                <div className='bhajasi-breadcrumb'>
+                                    <span>{selectedSaint.name}</span>
+                                    <span>›</span>
+                                    <span>{selectedParentWork.title}</span>
+                                </div>
+                                <div className='bhajasi-title-row'>
+                                    <h2 className='bhajasi-title'>{selectedParentWork.title}</h2>
+                                </div>
+                            </div>
+                            <div className='bhajasi-grid'>
+                                {(selectedParentWork.sections || []).map(function(section, index) {
+                                    const count = section.entries ? section.entries.length : section.verses || section.ovis || '';
+                                    return (
+                                        <button
+                                            key={section.id || section.file || index}
+                                            className='bhajasi-card bhajasi-work-card'
+                                            onClick={function() {
+                                                handleWorkClick(selectedSaint, section, selectedParentWork);
+                                            }}
+                                        >
+                                            <div className='bhajasi-card-title'>
+                                                {formatSubTitle(section.title, selectedParentWork.title)}
+                                            </div>
+                                            <div className='bhajasi-card-sub'>
+                                                {section.type || 'विभाग'}
+                                                {count ? ' • ' + toMarathiDigits(count) + ' नोंदी' : ''}
+                                                {section.days ? ' • दिवस ' + toMarathiDigits(section.days) : ''}
+                                            </div>
+                                        </button>
+                                    );
+                                })}
+                            </div>
+                        </section>
+                    )}
+
+                    {view === 'nitya' && (
+                        <section className='bhajasi-section bhajasi-section-themes'>
+                            <div className='bhajasi-reader-head'>
+                                <button className='bhajasi-back' onClick={goHome}>
+                                    ← मुख्य पानावर परत
+                                </button>
+                                <div className='bhajasi-title-row'>
+                                    <h2 className='bhajasi-title'>नित्य पठण स्तोत्रे व मंत्र</h2>
+                                </div>
+                                <p className='bhajasi-meta'>रोजच्या पठणासाठी स्तोत्रे, मंत्र आणि उपलब्ध स्रोतांनुसार अर्थ.</p>
+                            </div>
+                            <div className='bhajasi-grid'>
+                                {nityaWorks.map(function(work, index) {
+                                    return (
+                                        <button
+                                            key={work.id || work.file || index}
+                                            className='bhajasi-card bhajasi-work-card bhajasi-nitya-card'
+                                            onClick={function() {
+                                                openWork(null, work, 1, null, 'nitya');
+                                            }}
+                                        >
+                                            <div className='bhajasi-card-title'>{work.title}</div>
+                                            <div className='bhajasi-card-sub'>
+                                                {work.type || 'नित्य पठण'}
+                                                {work.author ? ' • ' + work.author : ''}
+                                            </div>
+                                        </button>
+                                    );
+                                })}
+                            </div>
+                        </section>
+                    )}
+
+                    {(view === 'reader' || view === 'nityaReader') && (
                         <section>
                             <div className='bhajasi-reader-head'>
                                 <div className='bhajasi-reader-nav'>
                                     <button
                                         className='bhajasi-back'
                                         onClick={function() {
-                                            if (view === 'nityaReader') {
-                                                openNityaList();
-                                            } else if (selectedParentWork) {
-                                                setSelectedContent(null);
-                                                navigate('sections');
-                                            } else {
-                                                openSaint(selectedSaint);
-                                            }
+                                            if (view === 'nityaReader') openNityaList();
+                                            else if (selectedParentWork) { setSelectedContent(null); navigate('sections'); }
+                                            else openSaint(selectedSaint);
                                         }}
                                     >
                                         ← परत
                                     </button>
-
                                     <span className='bhajasi-day-label'>
-                                        {totalDays > 1
-                                            ? 'दिवस ' +
-                                              toMarathiDigits(day)
-                                            : (
-                                                selectedWork &&
-                                                selectedWork.type
-                                                    ? selectedWork.type
-                                                    : 'वाचन'
-                                              )}
+                                        {totalDays > 1 ? 'दिवस ' + toMarathiDigits(day) : (selectedWork && selectedWork.type ? selectedWork.type : 'वाचन')}
                                     </span>
                                 </div>
 
                                 <div className='bhajasi-breadcrumb'>
                                     {view === 'reader' ? (
                                         <>
-                                            <span>
-                                                {selectedSaint &&
-                                                    selectedSaint.name}
-                                            </span>
+                                            <span>{selectedSaint && selectedSaint.name}</span>
                                             <span>›</span>
                                             {selectedParentWork && (
                                                 <>
-                                                    <span>
-                                                        {selectedParentWork.title}
-                                                    </span>
+                                                    <span>{selectedParentWork.title}</span>
                                                     <span>›</span>
                                                 </>
                                             )}
-                                            <span>
-                                                {selectedWork &&
-                                                    selectedWork.title}
-                                            </span>
+                                            <span>{selectedWork && selectedWork.title}</span>
                                         </>
                                     ) : (
                                         <>
                                             <span>नित्य पठण</span>
                                             <span>›</span>
-                                            <span>
-                                                {selectedNityaWork &&
-                                                    selectedNityaWork.title}
-                                            </span>
+                                            <span>{selectedNityaWork && selectedNityaWork.title}</span>
                                         </>
                                     )}
                                 </div>
@@ -3208,53 +2724,36 @@ function App() {
                                 <div className='bhajasi-title-row'>
                                     <h2 className='bhajasi-title'>
                                         {view === 'reader'
-                                            ? selectedWork &&
-                                              selectedWork.title
-                                            : selectedNityaWork &&
-                                              selectedNityaWork.title}
+                                            ? selectedWork && selectedWork.title
+                                            : selectedNityaWork && selectedNityaWork.title}
                                     </h2>
                                 </div>
                             </div>
 
                             {workLoading ? (
-                                <div className='bhajasi-empty'>
-                                    साहित्य लोड होत आहे…
-                                </div>
+                                <div className='bhajasi-empty'>साहित्य लोड होत आहे…</div>
                             ) : currentEntries.length === 0 ? (
-                                <div className='bhajasi-empty'>
-                                    या विभागासाठी साहित्य उपलब्ध नाही.
-                                </div>
+                                <div className='bhajasi-empty'>या विभागासाठी साहित्य उपलब्ध नाही.</div>
                             ) : (
                                 currentEntries.map(function(entry, index) {
-                                    const text =
-                                        entry.text ||
-                                        entry.original ||
-                                        entry.content ||
-                                        '';
-
+                                    const text = entry.text || entry.original || entry.content || '';
                                     return (
                                         <article
-                                            key={
-                                                (entry.id || 'entry') +
-                                                '-' +
-                                                index
-                                            }
+                                            key={(entry.id || 'entry') + '-' + index}
                                             className='bhajasi-verse'
                                         >
                                             <div className='bhajasi-verse-header'>
                                                 <span className='bhajasi-verse-badge'>
-                                                    {getVerseLabel(
-                                                        entry,
-                                                        index
-                                                    )}
+                                                    {getVerseLabel(entry, index, selectedWork || selectedNityaWork)}
                                                 </span>
-
                                                 <button
                                                     className='bhajasi-verse-wa-btn'
                                                     onClick={function() {
                                                         shareVerseSnap(
                                                             entry,
-                                                            index
+                                                            index,
+                                                            selectedWork || selectedNityaWork,
+                                                            selectedSaint
                                                         );
                                                     }}
                                                     title='या रचनेचा फोटो शेअर करा'
@@ -3265,46 +2764,29 @@ function App() {
                                             </div>
 
                                             <div className='bhajasi-verse-text'>
-                                                {splitPoem(text).map(
-                                                    function(line, lineIndex) {
-                                                        return (
-                                                            <span
-                                                                key={lineIndex}
-                                                                className='bhajasi-verse-line'
-                                                            >
-                                                                {line}
-                                                            </span>
-                                                        );
-                                                    }
-                                                )}
+                                                {splitPoem(text).map(function(line, lineIndex) {
+                                                    return (
+                                                        <span key={lineIndex} className='bhajasi-verse-line'>
+                                                            {line}
+                                                        </span>
+                                                    );
+                                                })}
                                             </div>
 
-                                            {(entry.meaning ||
-                                              entry.arth ||
-                                              entry.translation) && (
+                                            {(entry.meaning || entry.arth || entry.translation) && (
                                                 <div className='bhajasi-meaning'>
-                                                    <div className='bhajasi-meaning-title'>
-                                                        अर्थ
-                                                    </div>
+                                                    <div className='bhajasi-meaning-title'>भावार्थ</div>
                                                     <p className='bhajasi-meaning-text'>
-                                                        {entry.meaning ||
-                                                         entry.arth ||
-                                                         entry.translation}
+                                                        {entry.meaning || entry.arth || entry.translation}
                                                     </p>
                                                 </div>
                                             )}
 
-                                            {(entry.teaching ||
-                                              entry.shikavan ||
-                                              entry.lesson) && (
+                                            {(entry.teaching || entry.shikavan || entry.lesson) && (
                                                 <div className='bhajasi-teaching'>
-                                                    <div className='bhajasi-teaching-title'>
-                                                        शिकवण
-                                                    </div>
+                                                    <div className='bhajasi-teaching-title'>शिकवण</div>
                                                     <p className='bhajasi-teaching-text'>
-                                                        {entry.teaching ||
-                                                         entry.shikavan ||
-                                                         entry.lesson}
+                                                        {entry.teaching || entry.shikavan || entry.lesson}
                                                     </p>
                                                 </div>
                                             )}
@@ -3323,7 +2805,6 @@ function App() {
                                 >
                                     <i className='fa-solid fa-chevron-left'></i>
                                 </button>
-
                                 <button
                                     className='bhajasi-pager'
                                     onClick={nextDay}
@@ -3340,51 +2821,32 @@ function App() {
                     {view === 'theme' && theme && (
                         <section>
                             <div className='bhajasi-reader-head'>
-                                <button
-                                    className='bhajasi-back'
-                                    onClick={goHome}
-                                >
+                                <button className='bhajasi-back' onClick={goHome}>
                                     ← मुख्य पानावर परत
                                 </button>
                                 <div className='bhajasi-title-row'>
-                                    <h2 className='bhajasi-title'>
-                                        {theme.title}
-                                    </h2>
+                                    <h2 className='bhajasi-title'>{theme.title}</h2>
                                 </div>
                             </div>
-
                             <div className='bhajasi-grid'>
-                                {themeMatches.length === 0 ? (
+                                {themeLoading ? (
+                                    <div className='bhajasi-theme-loading'>या विषयाशी संबंधित साहित्य शोधत आहे…</div>
+                                ) : themeMatches.length === 0 ? (
                                     <div className='bhajasi-empty'>
-                                        या विषयाशी संबंधित साहित्य
-                                        उपलब्ध नाही.
+                                        या विषयाशी संबंधित साहित्य उपलब्ध नाही.
                                     </div>
                                 ) : (
                                     themeMatches.map(function(item, index) {
                                         return (
                                             <button
-                                                key={
-                                                    (item.work.id ||
-                                                     item.work.file ||
-                                                     item.displayTitle) +
-                                                    '-' +
-                                                    index
-                                                }
+                                                key={(item.work.id || item.work.file || item.displayTitle) + '-' + index}
                                                 className='bhajasi-card'
                                                 onClick={function() {
-                                                    handleWorkClick(
-                                                        item.saint,
-                                                        item.work,
-                                                        item.parentWork
-                                                    );
+                                                    handleWorkClick(item.saint, item.work, item.parentWork);
                                                 }}
                                             >
-                                                <div className='bhajasi-card-title'>
-                                                    {item.displayTitle}
-                                                </div>
-                                                <div className='bhajasi-card-sub'>
-                                                    {item.displaySub}
-                                                </div>
+                                                <div className='bhajasi-card-title'>{item.displayTitle}</div>
+                                                <div className='bhajasi-card-sub'>{item.displaySub}</div>
                                             </button>
                                         );
                                     })
@@ -3403,54 +2865,20 @@ function App() {
                 </main>
 
                 <nav className='bhajasi-bottom'>
-                    <button
-                        className={
-                            view === 'home' ? 'active' : ''
-                        }
-                        onClick={goHome}
-                    >
-                        <span className='bhajasi-bottom-icon'>
-                            <i className='fa-solid fa-house'></i>
-                        </span>
+                    <button className={view === 'home' ? 'active' : ''} onClick={goHome}>
+                        <span className='bhajasi-bottom-icon'><i className='fa-solid fa-house'></i></span>
                         मुख्य
                     </button>
-
-                    <button
-                        className={
-                            view === 'saints' ||
-                            view === 'works' ||
-                            view === 'sections'
-                                ? 'active'
-                                : ''
-                        }
-                        onClick={goSaints}
-                    >
-                        <span className='bhajasi-bottom-icon'>
-                            <i className='fa-solid fa-hands-praying'></i>
-                        </span>
+                    <button className={view === 'saints' || view === 'works' || view === 'sections' ? 'active' : ''} onClick={goSaints}>
+                        <span className='bhajasi-bottom-icon'><i className='fa-solid fa-hands-praying'></i></span>
                         संत
                     </button>
-
-                    <button
-                        className={view === 'granth' ? 'active' : ''}
-                        onClick={function() { setGranthFilter(null); navigate('granth'); }}
-                    >
+                    <button className={view === 'books' ? 'active' : ''} onClick={function() { openBooks(); }}>
                         <span className='bhajasi-bottom-icon'><i className='fa-solid fa-book'></i></span>
                         ग्रंथ
                     </button>
-
-                    <button
-                        className={
-                            view === 'nitya' ||
-                            view === 'nityaReader'
-                                ? 'active'
-                                : ''
-                        }
-                        onClick={openNityaList}
-                    >
-                        <span className='bhajasi-bottom-icon'>
-                            <i className='fa-solid fa-book-open'></i>
-                        </span>
+                    <button className={view === 'nitya' || view === 'nityaReader' ? 'active' : ''} onClick={openNityaList}>
+                        <span className='bhajasi-bottom-icon'><i className='fa-solid fa-book-open'></i></span>
                         नित्य पठण
                     </button>
                 </nav>
@@ -3462,22 +2890,71 @@ function App() {
 }
 
 /* =========================================================
-   IMAGE SHARE — kept compatible with the previous frontend
+   IMAGE SHARE — Rebuilt with shiny gradient frame & boxes
 ========================================================= */
-async function shareVerseSnap(entry, index) {
-    const saint = window.__bhajasiSelectedSaint || null;
-    const work = window.__bhajasiSelectedWork || null;
+async function loadLogoImage(url) {
+    if (!url) return null;
+
+    try {
+        const response = await fetch(url, {
+            mode: 'cors',
+            cache: 'force-cache',
+            credentials: 'omit'
+        });
+        if (!response.ok) throw new Error('Logo HTTP ' + response.status);
+
+        const blob = await response.blob();
+        const objectUrl = URL.createObjectURL(blob);
+        try {
+            return await new Promise(function(resolve) {
+                const img = new Image();
+                img.onload = function() { resolve(img); };
+                img.onerror = function() { resolve(null); };
+                img.src = objectUrl;
+            });
+        } finally {
+            URL.revokeObjectURL(objectUrl);
+        }
+    } catch (error) {
+        try {
+            return await new Promise(function(resolve) {
+                const img = new Image();
+                img.crossOrigin = 'anonymous';
+                img.onload = function() { resolve(img); };
+                img.onerror = function() { resolve(null); };
+                img.src = url;
+            });
+        } catch (e) {
+            return null;
+        }
+    }
+}
+
+async function shareVerseSnap(entry, index, workContext, saintContext) {
+    const saint = saintContext || null;
+    const work = workContext || null;
+
     const saintTitle = saint && saint.name ? saint.name : 'संतवाणी';
     const workTitle = work && work.title ? work.title : '';
     const label = getVerseLabel(entry, index, work);
     const text = String(entry && (entry.text || entry.original || entry.content) || '').trim();
     const meaningText = String(entry && (entry.meaning || entry.arth || entry.translation) || '').trim();
     const teachingText = String(entry && (entry.teaching || entry.shikavan || entry.lesson) || '').trim();
-    if (!text) { alert('या रचनेसाठी शेअर करण्याजोगा मजकूर उपलब्ध नाही.'); return; }
 
-    const width = 1080, padding = 76, contentWidth = width - padding * 2;
-    const canvas = document.createElement('canvas'), ctx = canvas.getContext('2d');
-    if (!ctx) { alert('फोटो तयार करता आला नाही.'); return; }
+    if (!text) {
+        alert('या रचनेसाठी शेअर करण्याजोगा मजकूर उपलब्ध नाही.');
+        return;
+    }
+
+    const width = 1080;
+    const padding = 76;
+    const contentWidth = width - padding * 2;
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+    if (!ctx) {
+        alert('फोटो तयार करता आला नाही.');
+        return;
+    }
 
     if (document.fonts && document.fonts.ready) {
         try {
@@ -3495,7 +2972,8 @@ async function shareVerseSnap(entry, index) {
     function wrap(textValue, font) {
         if (!textValue) return [];
         ctx.font = font;
-        const words = String(textValue).split(/\s+/u), result = [];
+        const words = String(textValue).split(/\s+/u);
+        const result = [];
         let current = '';
         words.forEach(function(word) {
             if (!word) return;
@@ -3503,7 +2981,9 @@ async function shareVerseSnap(entry, index) {
             if (ctx.measureText(candidate).width > contentWidth) {
                 if (current) result.push(current);
                 current = word;
-            } else current = candidate;
+            } else {
+                current = candidate;
+            }
         });
         if (current) result.push(current);
         return result;
@@ -3511,86 +2991,351 @@ async function shareVerseSnap(entry, index) {
 
     const verseLines = [];
     splitPoem(text).forEach(function(line) {
-        wrap(line, '700 42px "Laila", "Noto Serif Devanagari", serif').forEach(function(item) { verseLines.push(item); });
+        wrap(line, '700 42px "Laila", "Noto Serif Devanagari", serif').forEach(function(item) {
+            verseLines.push(item);
+        });
     });
+
     const meaningLines = wrap(meaningText, '400 29px "Noto Sans Devanagari", sans-serif');
     const teachingLines = wrap(teachingText, '400 29px "Noto Sans Devanagari", sans-serif');
 
-    const topBlock = 350;
+    const topBlock = 280;
     const verseBlock = Math.max(verseLines.length, 1) * 66;
-    const meaningBlock = meaningLines.length ? 98 + meaningLines.length * 48 : 0;
-    const teachingBlock = teachingLines.length ? 98 + teachingLines.length * 48 : 0;
+    const meaningBlock = meaningLines.length ? 115 + meaningLines.length * 48 : 0;
+    const teachingBlock = teachingLines.length ? 115 + teachingLines.length * 48 : 0;
     const footerBlock = 205;
-    const height = Math.max(1200, topBlock + verseBlock + meaningBlock + teachingBlock + footerBlock + 90);
-    canvas.width = width; canvas.height = height;
+    const height = Math.max(
+        1200,
+        topBlock + verseBlock + meaningBlock + teachingBlock + footerBlock + 90
+    );
 
-    const gradient = ctx.createLinearGradient(0,0,width,height);
-    gradient.addColorStop(0,'#2a3950'); gradient.addColorStop(.48,'#1e2838'); gradient.addColorStop(1,'#151d2a');
-    ctx.fillStyle = gradient; ctx.fillRect(0,0,width,height);
+    canvas.width = width;
+    canvas.height = height;
 
-    const frameGradient = ctx.createLinearGradient(0,24,width,height-24);
-    frameGradient.addColorStop(0,'#ffcf33'); frameGradient.addColorStop(.24,'#f59e0b'); frameGradient.addColorStop(.50,'#fff0a3'); frameGradient.addColorStop(.72,'#e98006'); frameGradient.addColorStop(1,'#ffd24a');
-    ctx.strokeStyle = frameGradient; ctx.lineWidth = 4; ctx.beginPath();
-    if (ctx.roundRect) ctx.roundRect(18,18,width-36,height-36,25); else ctx.rect(18,18,width-36,height-36);
+    /* Background */
+    const gradient = ctx.createLinearGradient(0, 0, width, height);
+    gradient.addColorStop(0, '#2a3950');
+    gradient.addColorStop(0.48, '#1e2838');
+    gradient.addColorStop(1, '#151d2a');
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, width, height);
+
+    /* Shiny Gold Gradient Frame */
+    const frameGradient = ctx.createLinearGradient(0, 24, width, height - 24);
+    frameGradient.addColorStop(0, '#ffcf33');
+    frameGradient.addColorStop(0.24, '#f59e0b');
+    frameGradient.addColorStop(0.50, '#fff0a3');
+    frameGradient.addColorStop(0.72, '#e98006');
+    frameGradient.addColorStop(1, '#ffd24a');
+    ctx.strokeStyle = frameGradient;
+    ctx.lineWidth = 4;
+    ctx.beginPath();
+    if (ctx.roundRect) {
+        ctx.roundRect(18, 18, width - 36, height - 36, 25);
+    } else {
+        ctx.rect(18, 18, width - 36, height - 36);
+    }
     ctx.stroke();
 
-    ctx.save(); ctx.globalAlpha=.32; ctx.strokeStyle='#fff'; ctx.lineWidth=1; ctx.beginPath();
-    if (ctx.roundRect) ctx.roundRect(21,21,width-42,height-42,22); else ctx.rect(21,21,width-42,height-42);
-    ctx.stroke(); ctx.restore();
+    /* Subtle Inner Border Glow */
+    ctx.save();
+    ctx.globalAlpha = 0.32;
+    ctx.strokeStyle = '#ffffff';
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    if (ctx.roundRect) {
+        ctx.roundRect(21, 21, width - 42, height - 42, 22);
+    } else {
+        ctx.rect(21, 21, width - 42, height - 42);
+    }
+    ctx.stroke();
+    ctx.restore();
 
-    const logoImg = await loadLogoImage(SITE_LOGO);
+    /* Load Watermark & Snap Footer Logo using the single FOOTER_LOGO constant */
+    const logoImg = await loadLogoImage(FOOTER_LOGO);
+
+    /* Faint Watermark */
     if (logoImg && logoImg.naturalWidth) {
-        const wmSize = 440, ratio = logoImg.naturalWidth / Math.max(1,logoImg.naturalHeight);
-        const wmW = wmSize, wmH = wmSize / Math.max(.1,ratio);
-        ctx.save(); ctx.globalAlpha=.075; ctx.globalCompositeOperation='screen';
-        ctx.drawImage(logoImg,(width-wmW)/2,(height-wmH)/2-35,wmW,wmH); ctx.restore();
+        const wmSize = 440;
+        const ratio = logoImg.naturalWidth / Math.max(1, logoImg.naturalHeight);
+        const wmW = wmSize;
+        const wmH = wmSize / Math.max(0.1, ratio);
+        ctx.save();
+        ctx.globalAlpha = 0.075;
+        ctx.globalCompositeOperation = 'screen';
+        ctx.drawImage(
+            logoImg,
+            (width - wmW) / 2,
+            (height - wmH) / 2 - 35,
+            wmW,
+            wmH
+        );
+        ctx.restore();
     }
 
-    ctx.textAlign='center'; ctx.textBaseline='alphabetic';
-    ctx.fillStyle=frameGradient; ctx.font='700 38px "Tiro Devanagari Marathi", serif';
-    ctx.fillText(saintTitle+(workTitle?' • '+workTitle:''),width/2,108);
+    /* 1. Header (Saint • Work) */
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'alphabetic';
+    ctx.fillStyle = '#e98006';
+    ctx.font = '700 38px "Tiro Devanagari Marathi", serif';
+    ctx.fillText(
+        saintTitle + (workTitle ? ' • ' + workTitle : ''),
+        width / 2,
+        105
+    );
 
-    const labelText=label||'रचना'; ctx.font='700 28px "Noto Sans Devanagari", sans-serif';
-    const labelWidth=Math.min(520,Math.max(250,ctx.measureText(labelText).width+70)), labelX=(width-labelWidth)/2, labelY=142, labelH=58;
-    const labelGradient=ctx.createLinearGradient(labelX,labelY,labelX+labelWidth,labelY+labelH);
-    labelGradient.addColorStop(0,'#f6a80b'); labelGradient.addColorStop(.5,'#ffd45a'); labelGradient.addColorStop(1,'#e98006');
-    ctx.strokeStyle=labelGradient; ctx.lineWidth=3; ctx.beginPath();
-    if (ctx.roundRect) ctx.roundRect(labelX,labelY,labelWidth,labelH,15); else ctx.rect(labelX,labelY,labelWidth,labelH);
-    ctx.stroke(); ctx.fillStyle='#fff'; ctx.fillText(labelText,width/2,labelY+39);
+    /* 2. Generic Type Label in Rounded Outlined Box */
+    const subLabelText = (workTitle ? workTitle + ' - ' : '') + (label || 'रचना');
+    ctx.font = '700 27px "Noto Sans Devanagari", sans-serif';
+    const subLabelW = ctx.measureText(subLabelText).width;
+    const subBoxW = Math.min(contentWidth - 60, subLabelW + 64);
+    const subBoxH = 56;
+    const subBoxX = (width - subBoxW) / 2;
+    const subBoxY = 130;
 
-    let y=258; ctx.fillStyle='#fff'; ctx.font='700 42px "Laila", "Noto Serif Devanagari", serif';
-    verseLines.forEach(function(line){ctx.fillText(line,width/2,y);y+=66;});
-
-    function drawSection(title,sectionLines,color){
-        if(!sectionLines.length)return;
-        y+=26;ctx.textAlign='center';ctx.font='700 25px "Noto Serif Devanagari", serif';
-        const sectionWidth=Math.min(360,Math.max(150,ctx.measureText(title).width+56)), sectionX=(width-sectionWidth)/2, sectionY=y-4, sectionH=52;
-        ctx.strokeStyle=color;ctx.lineWidth=2.5;ctx.beginPath();
-        if(ctx.roundRect)ctx.roundRect(sectionX,sectionY,sectionWidth,sectionH,14);else ctx.rect(sectionX,sectionY,sectionWidth,sectionH);
-        ctx.stroke();ctx.fillStyle=color;ctx.fillText(title,width/2,sectionY+35);
-        y=sectionY+sectionH+50;ctx.textAlign='left';ctx.fillStyle='#e8edf4';ctx.font='400 29px "Noto Sans Devanagari", sans-serif';
-        sectionLines.forEach(function(line){ctx.fillText(line,padding,y);y+=48;});ctx.textAlign='center';
+    const labelGradient = ctx.createLinearGradient(subBoxX, subBoxY, subBoxX + subBoxW, subBoxY + subBoxH);
+    labelGradient.addColorStop(0, '#f6a80b');
+    labelGradient.addColorStop(0.5, '#ffd45a');
+    labelGradient.addColorStop(1, '#e98006');
+    ctx.strokeStyle = labelGradient;
+    ctx.lineWidth = 2.5;
+    ctx.fillStyle = 'rgba(65,67,106,.45)';
+    ctx.beginPath();
+    if (ctx.roundRect) {
+        ctx.roundRect(subBoxX, subBoxY, subBoxW, subBoxH, 15);
+    } else {
+        ctx.rect(subBoxX, subBoxY, subBoxW, subBoxH);
     }
-    drawSection('भावार्थ',meaningLines,'#63d6b5'); drawSection('शिकवण',teachingLines,'#30c5ad');
+    ctx.fill();
+    ctx.stroke();
 
-    const footerStripY=height-196;ctx.fillStyle='#0d1624';ctx.fillRect(24,footerStripY,width-48,172);
-    const footerY=height-176;ctx.strokeStyle='rgba(148,163,184,.25)';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(padding,footerY);ctx.lineTo(width-padding,footerY);ctx.stroke();
+    ctx.fillStyle = '#ffffff';
+    ctx.fillText(subLabelText, width / 2, subBoxY + 38);
 
-    const footerLogoSize=68, footerLogoX=padding, footerLogoY=height-143;
-    if(logoImg&&logoImg.naturalWidth){const ratio=logoImg.naturalWidth/Math.max(1,logoImg.naturalHeight);ctx.save();ctx.globalAlpha=1;ctx.drawImage(logoImg,footerLogoX,footerLogoY,footerLogoSize,footerLogoSize/Math.max(.1,ratio));ctx.restore();}
-    ctx.textAlign='left';ctx.fillStyle='#e98006';ctx.font='700 30px "Alkatra", cursive';ctx.fillText('भजसी भारत .com',footerLogoX+82,height-108);
-    ctx.fillStyle='#d8dee8';ctx.font='400 22px "Noto Sans Devanagari", sans-serif';ctx.fillText('(संतवाणी • ग्रंथ • हरिनाम • चिंतन • स्तोत्र)',footerLogoX+82,height-76);
-    ctx.textAlign='right';ctx.fillStyle='#f1f5f9';ctx.font='500 21px "Noto Sans Devanagari", sans-serif';ctx.fillText('निर्मिती आणि संकलन: भरत रासवे',width-padding,height-108);
-    ctx.fillStyle='#30c5ad';ctx.font='400 20px "Noto Sans Devanagari", sans-serif';ctx.fillText('वेबसाईटला भेट द्या: bhajasibharat.blogspot.com',width-padding,height-76);
+    let y = 250;
 
-    let blob=null;try{blob=await new Promise(function(resolve){canvas.toBlob(resolve,'image/png',1);});}catch(error){console.error('Bhajasi share image export error:',error);alert('फोटो तयार करता आला नाही. कृपया पुन्हा प्रयत्न करा.');return;}
-    if(!blob){alert('फोटो तयार करता आला नाही. कृपया पुन्हा प्रयत्न करा.');return;}
-    const safeLabel=String(label||'rachana').replace(/[^\u0900-\u097F\w-]+/g,'-').replace(/-+/g,'-').slice(0,50);
-    const file=new File([blob],'bhajasi-'+safeLabel+'.png',{type:'image/png'});
-    const shareCaption='भजसी भारत .com (संतवाणी • ग्रंथ • हरिनाम • चिंतन • स्तोत्र)\n'+saintTitle+(workTitle?' • '+workTitle:'')+'\n'+label+'\n\nनिर्मिती आणि संकलन: भरत रासवे\nवेबसाईटला भेट द्या: bhajasibharat.blogspot.com';
+    /* 3. Main Verse (Laila Bold 700) */
+    ctx.fillStyle = '#ffffff';
+    ctx.font = '700 42px "Laila", "Noto Serif Devanagari", serif';
+    verseLines.forEach(function(line) {
+        ctx.fillText(line, width / 2, y);
+        y += 66;
+    });
 
-    if(navigator.share&&navigator.canShare&&navigator.canShare({files:[file]})){try{await navigator.share({title:saintTitle+(workTitle?' • '+workTitle:''),text:shareCaption,files:[file]});return;}catch(error){if(error&&error.name==='AbortError')return;}}
-    const url=URL.createObjectURL(blob),anchor=document.createElement('a');anchor.href=url;anchor.download=file.name;document.body.appendChild(anchor);anchor.click();anchor.remove();setTimeout(function(){URL.revokeObjectURL(url);},1500);
+    /* 4. Section Render (Pill Box on Left for भावार्थ & शिकवण) */
+    function drawSectionBox(titleText, sectionLines, color) {
+        if (!sectionLines.length) return;
+
+        y += 32;
+
+        ctx.font = '700 24px "Noto Sans Devanagari", sans-serif';
+        const tW = ctx.measureText(titleText).width;
+        const bW = tW + 42;
+        const bH = 46;
+        const bX = padding;
+        const bY = y - 32;
+
+        ctx.strokeStyle = color;
+        ctx.lineWidth = 2;
+        ctx.fillStyle = 'rgba(42,57,80,0.7)';
+        ctx.beginPath();
+        if (ctx.roundRect) {
+            ctx.roundRect(bX, bY, bW, bH, 15);
+        } else {
+            ctx.rect(bX, bY, bW, bH);
+        }
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.textAlign = 'left';
+        ctx.fillStyle = color;
+        ctx.fillText(titleText, bX + 21, bY + 32);
+
+        y = bY + bH + 42;
+
+        ctx.fillStyle = '#e8edf4';
+        ctx.font = '400 29px "Noto Sans Devanagari", sans-serif';
+        sectionLines.forEach(function(line) {
+            ctx.fillText(line, padding, y);
+            y += 48;
+        });
+        ctx.textAlign = 'center';
+    }
+
+    drawSectionBox('भावार्थ', meaningLines, '#63d6b5');
+    drawSectionBox('शिकवण', teachingLines, '#30c5ad');
+
+    /* 5. Footer Strip & Logo Container */
+    const footerStripY = height - 196;
+    ctx.fillStyle = '#0d1624';
+    ctx.fillRect(24, footerStripY, width - 48, 172);
+
+    const footerY = height - 176;
+    ctx.strokeStyle = 'rgba(148,163,184,.25)';
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(padding, footerY);
+    ctx.lineTo(width - padding, footerY);
+    ctx.stroke();
+
+    const footerLogoSize = 58;
+    const footerLogoBoxSize = 82;
+    const footerLogoX = padding;
+    const footerLogoBoxY = height - 151;
+    const footerLogoY = footerLogoBoxY + (footerLogoBoxSize - footerLogoSize) / 2;
+
+    ctx.save();
+    ctx.fillStyle = '#ffffff';
+    if (ctx.roundRect) {
+        ctx.beginPath();
+        ctx.roundRect(
+            footerLogoX - 5,
+            footerLogoBoxY,
+            footerLogoBoxSize,
+            footerLogoBoxSize,
+            12
+        );
+        ctx.fill();
+    } else {
+        ctx.fillRect(
+            footerLogoX - 5,
+            footerLogoBoxY,
+            footerLogoBoxSize,
+            footerLogoBoxSize
+        );
+    }
+    ctx.restore();
+
+    if (logoImg && logoImg.naturalWidth) {
+        const ratio = logoImg.naturalWidth / Math.max(1, logoImg.naturalHeight);
+        const footerLogoW = footerLogoSize;
+        const footerLogoH = footerLogoSize / Math.max(0.1, ratio);
+        ctx.save();
+        ctx.globalAlpha = 1;
+        ctx.drawImage(
+            logoImg,
+            footerLogoX + 7,
+            footerLogoY,
+            footerLogoW,
+            footerLogoH
+        );
+        ctx.restore();
+    }
+
+    ctx.textAlign = 'left';
+    ctx.fillStyle = '#e98006';
+    ctx.font = '700 30px "Alkatra", cursive';
+    ctx.fillText('भजसी भारत .com', footerLogoX + 98, height - 108);
+
+    ctx.fillStyle = '#d8dee8';
+    ctx.font = '400 22px "Noto Sans Devanagari", sans-serif';
+    ctx.fillText(
+        '(संतवाणी • ग्रंथ • हरिनाम • चिंतन • स्तोत्र)',
+        footerLogoX + 98,
+        height - 76
+    );
+
+    ctx.textAlign = 'right';
+    ctx.fillStyle = '#f1f5f9';
+    ctx.font = '500 21px "Noto Sans Devanagari", sans-serif';
+    ctx.fillText(
+        'निर्मिती आणि संकलन: भरत रासवे',
+        width - padding,
+        height - 108
+    );
+
+    ctx.fillStyle = '#30c5ad';
+    ctx.font = '400 20px "Noto Sans Devanagari", sans-serif';
+    ctx.fillText(
+        'वेबसाईटला भेट द्या: bhajasibharat.blogspot.com',
+        width - padding,
+        height - 76
+    );
+
+    let blob = null;
+    try {
+        blob = await new Promise(function(resolve) {
+            canvas.toBlob(resolve, 'image/png', 1);
+        });
+    } catch (error) {
+        console.error('Bhajasi share image export error:', error);
+        alert('फोटो तयार करता आला नाही. कृपया पुन्हा प्रयत्न करा.');
+        return;
+    }
+
+    if (!blob) {
+        alert('फोटो तयार करता आला नाही. कृपया पुन्हा प्रयत्न करा.');
+        return;
+    }
+
+    const safeLabel = String(label || 'rachana')
+        .replace(/[^\u0900-\u097F\w-]+/g, '-')
+        .replace(/-+/g, '-')
+        .slice(0, 50);
+
+    const file = new File(
+        [blob],
+        'bhajasi-' + safeLabel + '.png',
+        { type: 'image/png' }
+    );
+
+    const shareCaption =
+        'भजसी भारत .com (संतवाणी • ग्रंथ • हरिनाम • चिंतन • स्तोत्र)\n' +
+        saintTitle + (workTitle ? ' • ' + workTitle : '') + '\n' +
+        label + '\n\n' +
+        'निर्मिती आणि संकलन: भरत रासवे\n' +
+        'वेबसाईटला भेट द्या: bhajasibharat.blogspot.com';
+
+    let sharedSuccess = false;
+    if (
+        navigator.share &&
+        navigator.canShare &&
+        navigator.canShare({ files: [file] })
+    ) {
+        try {
+            await navigator.share({
+                title: saintTitle + (workTitle ? ' • ' + workTitle : ''),
+                text: shareCaption,
+                files: [file]
+            });
+            sharedSuccess = true;
+            return;
+        } catch (error) {
+            if (error && error.name === 'AbortError') return;
+            try {
+                await navigator.share({
+                    files: [file],
+                    title: 'भजसी भारत .com'
+                });
+                sharedSuccess = true;
+                return;
+            } catch (e2) {}
+        }
+    }
+
+    if (!sharedSuccess) {
+        const url = URL.createObjectURL(blob);
+        const anchor = document.createElement('a');
+        anchor.href = url;
+        anchor.download = file.name;
+        document.body.appendChild(anchor);
+        anchor.click();
+        anchor.remove();
+        setTimeout(function() {
+            URL.revokeObjectURL(url);
+        }, 1500);
+
+        const whatsappText = encodeURIComponent(shareCaption);
+        setTimeout(function() {
+            if (window.confirm('फोटो सेव्ह झाला आहे. कॅप्शन WhatsApp वर पाठवायचे का?')) {
+                window.open(
+                    'https://wa.me/?text=' + whatsappText,
+                    '_blank',
+                    'noopener,noreferrer'
+                );
+            }
+        }, 300);
+    }
 }
 
 ReactDOM.createRoot(
@@ -3600,6 +3345,6 @@ ReactDOM.createRoot(
 //]]>
 </script>
 
-<b:section id='bhajasi_blogger_section' showaddelement='no'></b:section>
+<b:section id='bhajasi_blogger_section' showaddelement='no'/>
 </body>
 </html>
