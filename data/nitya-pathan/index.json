@@ -164,6 +164,30 @@
       "type": "स्तोत्र",
       "description": "भगवान शिवाला बिल्वपत्र अर्पण करताना पठण केले जाणारे स्तोत्र.",
       "file": "nitya-pathan/bilvashtakam.json"
+    },
+    {
+      "id": "pandurangashtakam",
+      "title": "पाण्डुरङ्गाष्टकम्",
+      "type": "स्तोत्र",
+      "author": "आद्य शंकराचार्य",
+      "description": "श्री पाण्डुरंग विठ्ठलाचे स्तवन करणारे प्रसिद्ध अष्टक.",
+      "file": "nitya-pathan/pandurangashtakam.json"
+    },
+    {
+      "id": "aditya-hridayam",
+      "title": "आदित्यहृदयम्",
+      "type": "स्तोत्र",
+      "author": "महर्षी अगस्त्य",
+      "description": "वाल्मीकि रामायणातील सूर्यदेवाच्या स्तुतीचे प्रसिद्ध आदित्यहृदय स्तोत्र.",
+      "file": "nitya-pathan/aditya-hridayam.json"
+    },
+    {
+      "id": "annapurna-ashtakam",
+      "title": "श्रीअन्नपूर्णास्तोत्रम्",
+      "type": "स्तोत्र",
+      "author": "आद्य शंकराचार्य",
+      "description": "माता अन्नपूर्णेश्वरीची स्तुती करणारे प्रसिद्ध अन्नपूर्णाष्टक.",
+      "file": "nitya-pathan/annapurna-ashtakam.json"
     }
   ]
 }
