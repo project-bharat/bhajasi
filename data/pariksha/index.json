@@ -1,0 +1,26 @@
+{
+  "id": "pariksha",
+  "title": "परीक्षा",
+  "description": "संतसाहित्य आणि ग्रंथांवर आधारित ज्ञानाचा अभ्यास व सराव.",
+  "exams": [
+    {
+      "id": "manache-shlok",
+      "title": "मनाचे श्लोक",
+      "subtitle": "समर्थ रामदास स्वामी",
+      "type": "ग्रंथाधारित ज्ञानपरीक्षा",
+      "questionCount": 10,
+      "passingPercentage": 80,
+      "certificate": {
+        "enabled": true,
+        "title": "मनाचे श्लोक ज्ञानपरीक्षा",
+        "completionText": "मनाचे श्लोकावरील ज्ञानपरीक्षा यशस्वीरीत्या पूर्ण केल्याबद्दल हे डिजिटल पूर्णता प्रमाणपत्र प्रदान करण्यात येत आहे."
+      },
+      "source": {
+        "type": "saint-work",
+        "saintId": "ramdas",
+        "workId": "manache-shlok"
+      },
+      "file": "pariksha/manache-shlok.json"
+    }
+  ]
+}
