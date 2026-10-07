@@ -4301,7 +4301,7 @@ async function shareVerseSnap(entry, index, workContext, saintContext) {
     ctx.restore();
 
     /* Load Watermark & Snap Footer Logo using the single FOOTER_LOGO constant */
-    const logoImg = await loadLogoImage(FOOTER_LOGO);
+    const logoImg = await loadLogoImage(SITE_LOGO);
 
     /* Faint Watermark */
     if (logoImg && logoImg.naturalWidth) {
