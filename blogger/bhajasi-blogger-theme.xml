@@ -2608,13 +2608,10 @@ function App() {
         drawInfoBox(leftX,'गुण',toMarathiDigits(examResult.score)+' / '+toMarathiDigits(examResult.total)+'  •  '+toMarathiDigits(examResult.percentage)+'%');
         drawInfoBox(rightX,'पूर्णता दिनांक',new Date(examResult.completedAt).toLocaleDateString('mr-IN'));
 
-        ctx.fillStyle='#6c7378';
-        ctx.font='500 21px "Noto Sans Devanagari",sans-serif';
         ctx.textAlign='left';
-        ctx.fillText('भजसी भारत .com',170,885);
-        ctx.fillStyle='#2e7f73';
-        ctx.font='500 19px "Noto Sans Devanagari",sans-serif';
-        ctx.fillText('https://bhajasibharat.blogspot.com/',170,918);
+        ctx.fillStyle='#6c7378';
+        ctx.font='500 20px "Noto Sans Devanagari",sans-serif';
+        ctx.fillText('भजसी भारत .com  •  https://bhajasibharat.blogspot.com/',170,900);
 
         ctx.textAlign='right';
         ctx.fillStyle='#6c7378';
@@ -2649,6 +2646,7 @@ function App() {
                     text:caption,
                     files:[file]
                 });
+                navigate('examResult');
                 return;
             }catch(error){
                 if(error && error.name==='AbortError')return;
