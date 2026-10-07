@@ -2233,21 +2233,23 @@ function App() {
                     ctx.roundRect(28, 28, 1144, 704, 28);
                     ctx.stroke();
                 }
-                const logoImage = new Image();
-                logoImage.crossOrigin = 'anonymous';
-                logoImage.onload = function() {
+                const logoImage = await new Promise(function(resolve) {
+                    try {
+                        const image = new Image();
+                        image.crossOrigin = 'anonymous';
+                        image.onload = function(){ resolve(image); };
+                        image.onerror = function(){ resolve(null); };
+                        image.src = FOOTER_LOGO;
+                    } catch (e) { resolve(null); }
+                });
+                if (logoImage) {
                     try {
                         ctx.save();
-                        ctx.globalAlpha = 0.12;
+                        ctx.globalAlpha = 0.13;
                         ctx.drawImage(logoImage, 760, 250, 330, 330);
                         ctx.restore();
                     } catch (e) {}
-                };
-                logoImage.src = FOOTER_LOGO;
-                ctx.save();
-                ctx.globalAlpha = 0.11;
-                ctx.drawImage(logoImage, 760, 250, 330, 330);
-                ctx.restore();
+                }
 
                 ctx.fillStyle = '#62e6cc';
                 ctx.font = '700 30px "Noto Sans Devanagari", sans-serif';
