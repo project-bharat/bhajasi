@@ -2773,6 +2773,59 @@ function App() {
         return function() { clearTimeout(timer); };
     }, [search, saints, nitya]);
 
+    /*
+     * The main page is the default landing state.
+     * An unfinished exam is represented by the home-page "परीक्षा पूर्ण करा"
+     * badge; it must not automatically reopen the question screen after a
+     * browser refresh/back-forward restoration. Only an explicit shared-question
+     * URL is allowed to open the exam view on load.
+     */
+    useEffect(function() {
+        const hasSharedExamURL = (function() {
+            try {
+                const params = new URLSearchParams(window.location.search || '');
+                return !!(params.get('bhajasiExam') && params.get('bhajasiQuestion') !== null);
+            } catch (e) {
+                return false;
+            }
+        })();
+
+        if (!hasSharedExamURL) {
+            setView('home');
+            setSelectedExam(null);
+            setExamQuestions([]);
+            setExamQuestionIndex(0);
+            setExamAnswers({});
+            setExamSubmitted(false);
+            setExamResult(null);
+            setCertificateName('');
+            setCertificatePreview('');
+            setCertificateId('');
+            setExamSourceReturn(false);
+        }
+
+        function handlePageShow(event) {
+            if (!event.persisted || hasSharedExamURL) return;
+            setView('home');
+            setSelectedExam(null);
+            setExamQuestions([]);
+            setExamQuestionIndex(0);
+            setExamAnswers({});
+            setExamSubmitted(false);
+            setExamResult(null);
+            setCertificateName('');
+            setCertificatePreview('');
+            setCertificateId('');
+            setExamSourceReturn(false);
+            window.scrollTo({ top: 0, behavior: 'auto' });
+        }
+
+        window.addEventListener('pageshow', handlePageShow);
+        return function() {
+            window.removeEventListener('pageshow', handlePageShow);
+        };
+    }, []);
+
     useEffect(function() {
         if (!pariksha || !Array.isArray(pariksha.exams)) return;
         const params = new URLSearchParams(window.location.search || '');
