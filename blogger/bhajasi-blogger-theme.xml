@@ -2754,19 +2754,32 @@ function App() {
 
     function renderGlobalSearchUI() {
         const examProgress = readExamProgress();
+        const examResults = safeJSON(localStorage.getItem(EXAM_RESULT_KEY) || '{}', {});
         const incompleteExamCount = Object.keys(examProgress || {}).filter(function(id){
             return examProgress[id] && examProgress[id].examId;
         }).length;
+        const completedExamCount = Object.keys(examResults || {}).filter(function(id){
+            return examResults[id] && examResults[id].completedAt;
+        }).length;
         return (
             <>
-                {view === 'home' && incompleteExamCount > 0 && (
+                {view === 'home' && (incompleteExamCount > 0 || completedExamCount > 0) && (
                     <button
                         className='bhajasi-exam-resume-badge'
                         type='button'
                         onClick={function(){openParikshaList();}}
-                        aria-label='चालू परीक्षा पूर्ण करा'
+                        aria-label='परीक्षा प्रगती आणि पूर्ण केलेल्या परीक्षा'
                     >
-                        {toMarathiDigits(incompleteExamCount)} परीक्षा पूर्ण करा
+                        {incompleteExamCount > 0 && (
+                            <span style={{ display: 'block' }}>
+                                {toMarathiDigits(incompleteExamCount)} परीक्षा पूर्ण करा
+                            </span>
+                        )}
+                        {completedExamCount > 0 && (
+                            <span style={{ display: 'block', marginTop: incompleteExamCount > 0 ? '3px' : '0', color: '#a7f3d0' }}>
+                                {toMarathiDigits(completedExamCount)} परीक्षा पूर्ण
+                            </span>
+                        )}
                     </button>
                 )}
                 <button
