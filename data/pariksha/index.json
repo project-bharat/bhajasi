@@ -1,6 +1,330 @@
 {
-  "version": 1,
+  "id": "pariksha",
   "title": "परीक्षा",
-  "description": "परीक्षा विभागातील उपलब्ध प्रश्नसंचांची अनुक्रमणिका.",
-  "exams": []
+  "description": "संतसाहित्य आणि ग्रंथांवर आधारित ज्ञानाचा अभ्यास व सराव.",
+  "exams": [
+    {
+      "id": "manache-shlok",
+      "title": "मनाचे श्लोक",
+      "subtitle": "समर्थ रामदास स्वामी",
+      "type": "ग्रंथाधारित ज्ञानपरीक्षा",
+      "questionCount": 10,
+      "passingPercentage": 80,
+      "certificate": {
+        "enabled": true,
+        "title": "मनाचे श्लोक ज्ञानपरीक्षा",
+        "completionText": "मनाचे श्लोकावरील ज्ञानपरीक्षा यशस्वीरीत्या पूर्ण केल्याबद्दल हे डिजिटल पूर्णता प्रमाणपत्र प्रदान करण्यात येत आहे."
+      },
+      "source": {
+        "type": "saint-work",
+        "saintId": "ramdas",
+        "workId": "manache-shlok"
+      },
+      "file": "pariksha/manache-shlok.json"
+    },
+    {
+      "id": "dnyaneshwar-haripath",
+      "title": "ज्ञानेश्वर हरिपाठ",
+      "subtitle": "संत ज्ञानेश्वर महाराज",
+      "type": "ग्रंथाधारित ज्ञानपरीक्षा",
+      "questionCount": 13,
+      "passingPercentage": 80,
+      "certificate": {
+        "enabled": true,
+        "title": "ज्ञानेश्वर हरिपाठ ज्ञानपरीक्षा",
+        "completionText": "ज्ञानेश्वर हरिपाठ यावरील ज्ञानपरीक्षा यशस्वीरीत्या पूर्ण केल्याबद्दल हे डिजिटल पूर्णता प्रमाणपत्र प्रदान करण्यात येत आहे."
+      },
+      "source": {
+        "type": "saint-work",
+        "saintId": "dnyaneshwar",
+        "workId": "haripath"
+      },
+      "file": "pariksha/dnyaneshwar-haripath.json"
+    },
+    {
+      "id": "tukaram-haripath",
+      "title": "संत तुकाराम हरिपाठ",
+      "subtitle": "संत तुकाराम महाराज",
+      "type": "ग्रंथाधारित ज्ञानपरीक्षा",
+      "questionCount": 12,
+      "passingPercentage": 80,
+      "certificate": {
+        "enabled": true,
+        "title": "संत तुकाराम हरिपाठ ज्ञानपरीक्षा",
+        "completionText": "संत तुकाराम हरिपाठ यावरील ज्ञानपरीक्षा यशस्वीरीत्या पूर्ण केल्याबद्दल हे डिजिटल पूर्णता प्रमाणपत्र प्रदान करण्यात येत आहे."
+      },
+      "source": {
+        "type": "saint-work",
+        "saintId": "tukaram",
+        "workId": "haripath"
+      },
+      "file": "pariksha/tukaram-haripath.json"
+    },
+    {
+      "id": "namdev-haripath",
+      "title": "संत नामदेव हरिपाठ",
+      "subtitle": "संत नामदेव महाराज",
+      "type": "ग्रंथाधारित ज्ञानपरीक्षा",
+      "questionCount": 12,
+      "passingPercentage": 80,
+      "certificate": {
+        "enabled": true,
+        "title": "संत नामदेव हरिपाठ ज्ञानपरीक्षा",
+        "completionText": "संत नामदेव हरिपाठ यावरील ज्ञानपरीक्षा यशस्वीरीत्या पूर्ण केल्याबद्दल हे डिजिटल पूर्णता प्रमाणपत्र प्रदान करण्यात येत आहे."
+      },
+      "source": {
+        "type": "saint-work",
+        "saintId": "namdev",
+        "workId": "haripath"
+      },
+      "file": "pariksha/namdev-haripath.json"
+    },
+    {
+      "id": "eknath-haripath",
+      "title": "संत एकनाथ हरिपाठ",
+      "subtitle": "संत एकनाथ महाराज",
+      "type": "ग्रंथाधारित ज्ञानपरीक्षा",
+      "questionCount": 12,
+      "passingPercentage": 80,
+      "certificate": {
+        "enabled": true,
+        "title": "संत एकनाथ हरिपाठ ज्ञानपरीक्षा",
+        "completionText": "संत एकनाथ हरिपाठ यावरील ज्ञानपरीक्षा यशस्वीरीत्या पूर्ण केल्याबद्दल हे डिजिटल पूर्णता प्रमाणपत्र प्रदान करण्यात येत आहे."
+      },
+      "source": {
+        "type": "saint-work",
+        "saintId": "eknath",
+        "workId": "haripath"
+      },
+      "file": "pariksha/eknath-haripath.json"
+    },
+    {
+      "id": "pasaydan",
+      "title": "पसायदान",
+      "subtitle": "संत ज्ञानेश्वर महाराज",
+      "type": "ग्रंथाधारित ज्ञानपरीक्षा",
+      "questionCount": 10,
+      "passingPercentage": 80,
+      "certificate": {
+        "enabled": true,
+        "title": "पसायदान ज्ञानपरीक्षा",
+        "completionText": "पसायदान यावरील ज्ञानपरीक्षा यशस्वीरीत्या पूर्ण केल्याबद्दल हे डिजिटल पूर्णता प्रमाणपत्र प्रदान करण्यात येत आहे."
+      },
+      "source": {
+        "type": "saint-work",
+        "saintId": "dnyaneshwar",
+        "workId": "pasaydan"
+      },
+      "file": "pariksha/pasaydan.json"
+    },
+    {
+      "id": "dnyaneshwari-adhyay-01",
+      "title": "ज्ञानेश्वरी अध्याय १",
+      "subtitle": "संत ज्ञानेश्वर महाराज",
+      "type": "ग्रंथाधारित ज्ञानपरीक्षा",
+      "questionCount": 10,
+      "passingPercentage": 80,
+      "certificate": {
+        "enabled": true,
+        "title": "ज्ञानेश्वरी अध्याय १ ज्ञानपरीक्षा",
+        "completionText": "ज्ञानेश्वरी अध्याय १ यावरील ज्ञानपरीक्षा यशस्वीरीत्या पूर्ण केल्याबद्दल हे डिजिटल पूर्णता प्रमाणपत्र प्रदान करण्यात येत आहे."
+      },
+      "source": {
+        "type": "saint-work",
+        "saintId": "dnyaneshwar",
+        "workId": "dnyaneshwari-adhyay-01"
+      },
+      "file": "pariksha/dnyaneshwari-adhyay-01.json"
+    },
+    {
+      "id": "dnyaneshwari-adhyay-02",
+      "title": "ज्ञानेश्वरी अध्याय २",
+      "subtitle": "संत ज्ञानेश्वर महाराज",
+      "type": "ग्रंथाधारित ज्ञानपरीक्षा",
+      "questionCount": 12,
+      "passingPercentage": 80,
+      "certificate": {
+        "enabled": true,
+        "title": "ज्ञानेश्वरी अध्याय २ ज्ञानपरीक्षा",
+        "completionText": "ज्ञानेश्वरी अध्याय २ यावरील ज्ञानपरीक्षा यशस्वीरीत्या पूर्ण केल्याबद्दल हे डिजिटल पूर्णता प्रमाणपत्र प्रदान करण्यात येत आहे."
+      },
+      "source": {
+        "type": "saint-work",
+        "saintId": "dnyaneshwar",
+        "workId": "dnyaneshwari-adhyay-02"
+      },
+      "file": "pariksha/dnyaneshwari-adhyay-02.json"
+    },
+    {
+      "id": "dnyaneshwari-adhyay-03",
+      "title": "ज्ञानेश्वरी अध्याय ३ — कर्मयोग",
+      "subtitle": "संत ज्ञानेश्वर महाराज • कर्मयोग",
+      "type": "ग्रंथाधारित ज्ञानपरीक्षा",
+      "questionCount": 10,
+      "passingPercentage": 80,
+      "certificate": {
+        "enabled": true,
+        "title": "ज्ञानेश्वरी अध्याय ३ ज्ञानपरीक्षा",
+        "completionText": "ज्ञानेश्वरी अध्याय ३ यावरील ज्ञानपरीक्षा यशस्वीरीत्या पूर्ण केल्याबद्दल हे डिजिटल पूर्णता प्रमाणपत्र प्रदान करण्यात येत आहे."
+      },
+      "source": {
+        "type": "saint-work",
+        "saintId": "dnyaneshwar",
+        "workId": "dnyaneshwari-adhyay-03"
+      },
+      "file": "pariksha/dnyaneshwari-adhyay-03.json"
+    },
+    {
+      "id": "dnyaneshwari-adhyay-04",
+      "title": "ज्ञानेश्वरी अध्याय ४ — ज्ञानकर्मसंन्यास योग",
+      "subtitle": "संत ज्ञानेश्वर महाराज • ज्ञानकर्मसंन्यास योग",
+      "type": "ग्रंथाधारित ज्ञानपरीक्षा",
+      "questionCount": 11,
+      "passingPercentage": 80,
+      "certificate": {
+        "enabled": true,
+        "title": "ज्ञानेश्वरी अध्याय ४ ज्ञानपरीक्षा",
+        "completionText": "ज्ञानेश्वरी अध्याय ४ यावरील ज्ञानपरीक्षा यशस्वीरीत्या पूर्ण केल्याबद्दल हे डिजिटल पूर्णता प्रमाणपत्र प्रदान करण्यात येत आहे."
+      },
+      "source": {
+        "type": "saint-work",
+        "saintId": "dnyaneshwar",
+        "workId": "dnyaneshwari-adhyay-04"
+      },
+      "file": "pariksha/dnyaneshwari-adhyay-04.json"
+    },
+    {
+      "id": "dnyaneshwari-adhyay-05",
+      "title": "ज्ञानेश्वरी अध्याय ५ — कर्मसंन्यास योग",
+      "subtitle": "संत ज्ञानेश्वर महाराज • कर्मसंन्यास योग",
+      "type": "ग्रंथाधारित ज्ञानपरीक्षा",
+      "questionCount": 10,
+      "passingPercentage": 80,
+      "certificate": {
+        "enabled": true,
+        "title": "ज्ञानेश्वरी अध्याय ५ ज्ञानपरीक्षा",
+        "completionText": "ज्ञानेश्वरी अध्याय ५ यावरील ज्ञानपरीक्षा यशस्वीरीत्या पूर्ण केल्याबद्दल हे डिजिटल पूर्णता प्रमाणपत्र प्रदान करण्यात येत आहे."
+      },
+      "source": {
+        "type": "saint-work",
+        "saintId": "dnyaneshwar",
+        "workId": "dnyaneshwari-adhyay-05"
+      },
+      "file": "pariksha/dnyaneshwari-adhyay-05.json"
+    },
+    {
+      "id": "dnyaneshwari-adhyay-06",
+      "title": "ज्ञानेश्वरी अध्याय ६ — आत्मसंयम योग",
+      "subtitle": "संत ज्ञानेश्वर महाराज • आत्मसंयम योग",
+      "type": "ग्रंथाधारित ज्ञानपरीक्षा",
+      "questionCount": 10,
+      "passingPercentage": 80,
+      "certificate": {
+        "enabled": true,
+        "title": "ज्ञानेश्वरी अध्याय ६ ज्ञानपरीक्षा",
+        "completionText": "ज्ञानेश्वरी अध्याय ६ यावरील ज्ञानपरीक्षा यशस्वीरीत्या पूर्ण केल्याबद्दल हे डिजिटल पूर्णता प्रमाणपत्र प्रदान करण्यात येत आहे."
+      },
+      "source": {
+        "type": "saint-work",
+        "saintId": "dnyaneshwar",
+        "workId": "dnyaneshwari-adhyay-06"
+      },
+      "file": "pariksha/dnyaneshwari-adhyay-06.json"
+    },
+    {
+      "id": "dnyaneshwari-adhyay-07",
+      "title": "ज्ञानेश्वरी अध्याय ७ — ज्ञानविज्ञान योग",
+      "subtitle": "संत ज्ञानेश्वर महाराज • ज्ञानविज्ञान योग",
+      "type": "ग्रंथाधारित ज्ञानपरीक्षा",
+      "questionCount": 10,
+      "passingPercentage": 80,
+      "certificate": {
+        "enabled": true,
+        "title": "ज्ञानेश्वरी अध्याय ७ ज्ञानपरीक्षा",
+        "completionText": "ज्ञानेश्वरी अध्याय ७ यावरील ज्ञानपरीक्षा यशस्वीरीत्या पूर्ण केल्याबद्दल हे डिजिटल पूर्णता प्रमाणपत्र प्रदान करण्यात येत आहे."
+      },
+      "source": {
+        "type": "saint-work",
+        "saintId": "dnyaneshwar",
+        "workId": "dnyaneshwari-adhyay-07"
+      },
+      "file": "pariksha/dnyaneshwari-adhyay-07.json"
+    },
+    {
+      "id": "dnyaneshwari-adhyay-08",
+      "title": "ज्ञानेश्वरी अध्याय ८ — अक्षरब्रह्म योग",
+      "subtitle": "संत ज्ञानेश्वर महाराज • अक्षरब्रह्म योग",
+      "type": "ग्रंथाधारित ज्ञानपरीक्षा",
+      "questionCount": 10,
+      "passingPercentage": 80,
+      "certificate": {
+        "enabled": true,
+        "title": "ज्ञानेश्वरी अध्याय ८ ज्ञानपरीक्षा",
+        "completionText": "ज्ञानेश्वरी अध्याय ८ यावरील ज्ञानपरीक्षा यशस्वीरीत्या पूर्ण केल्याबद्दल हे डिजिटल पूर्णता प्रमाणपत्र प्रदान करण्यात येत आहे."
+      },
+      "source": {
+        "type": "saint-work",
+        "saintId": "dnyaneshwar",
+        "workId": "dnyaneshwari-adhyay-08"
+      },
+      "file": "pariksha/dnyaneshwari-adhyay-08.json"
+    },
+    {
+      "id": "amrutanubhav-01",
+      "title": "अमृतानुभव प्रकरण १",
+      "subtitle": "संत ज्ञानेश्वर महाराज",
+      "type": "ग्रंथाधारित ज्ञानपरीक्षा",
+      "questionCount": 10,
+      "passingPercentage": 80,
+      "certificate": {
+        "enabled": true,
+        "title": "अमृतानुभव प्रकरण १ ज्ञानपरीक्षा",
+        "completionText": "अमृतानुभव प्रकरण १ यावरील ज्ञानपरीक्षा यशस्वीरीत्या पूर्ण केल्याबद्दल हे डिजिटल पूर्णता प्रमाणपत्र प्रदान करण्यात येत आहे."
+      },
+      "source": {
+        "type": "saint-work",
+        "saintId": "dnyaneshwar",
+        "workId": "amrutanubhav-01"
+      },
+      "file": "pariksha/amrutanubhav-01.json"
+    },
+    {
+      "id": "amrutanubhav-08",
+      "title": "अमृतानुभव प्रकरण ८",
+      "subtitle": "संत ज्ञानेश्वर महाराज",
+      "type": "ग्रंथाधारित ज्ञानपरीक्षा",
+      "questionCount": 10,
+      "passingPercentage": 80,
+      "certificate": {
+        "enabled": true,
+        "title": "अमृतानुभव प्रकरण ८ ज्ञानपरीक्षा",
+        "completionText": "अमृतानुभव प्रकरण ८ यावरील ज्ञानपरीक्षा यशस्वीरीत्या पूर्ण केल्याबद्दल हे डिजिटल पूर्णता प्रमाणपत्र प्रदान करण्यात येत आहे."
+      },
+      "source": {
+        "type": "saint-work",
+        "saintId": "dnyaneshwar",
+        "workId": "amrutanubhav-08"
+      },
+      "file": "pariksha/amrutanubhav-08.json"
+    },
+    {
+      "id": "amrutanubhav-10",
+      "title": "अमृतानुभव प्रकरण १०",
+      "subtitle": "संत ज्ञानेश्वर महाराज",
+      "type": "ग्रंथाधारित ज्ञानपरीक्षा",
+      "questionCount": 10,
+      "passingPercentage": 80,
+      "certificate": {
+        "enabled": true,
+        "title": "अमृतानुभव प्रकरण १० ज्ञानपरीक्षा",
+        "completionText": "अमृतानुभव प्रकरण १० यावरील ज्ञानपरीक्षा यशस्वीरीत्या पूर्ण केल्याबद्दल हे डिजिटल पूर्णता प्रमाणपत्र प्रदान करण्यात येत आहे."
+      },
+      "source": {
+        "type": "saint-work",
+        "saintId": "dnyaneshwar",
+        "workId": "amrutanubhav-10"
+      },
+      "file": "pariksha/amrutanubhav-10.json"
+    }
+  ]
 }
