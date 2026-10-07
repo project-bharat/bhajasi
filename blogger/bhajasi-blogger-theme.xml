@@ -2754,32 +2754,19 @@ function App() {
 
     function renderGlobalSearchUI() {
         const examProgress = readExamProgress();
-        const examResults = safeJSON(localStorage.getItem(EXAM_RESULT_KEY) || '{}', {});
         const incompleteExamCount = Object.keys(examProgress || {}).filter(function(id){
             return examProgress[id] && examProgress[id].examId;
         }).length;
-        const completedExamCount = Object.keys(examResults || {}).filter(function(id){
-            return examResults[id] && examResults[id].completedAt;
-        }).length;
         return (
             <>
-                {view === 'home' && (incompleteExamCount > 0 || completedExamCount > 0) && (
+                {view === 'home' && incompleteExamCount > 0 && (
                     <button
                         className='bhajasi-exam-resume-badge'
                         type='button'
                         onClick={function(){openParikshaList();}}
-                        aria-label='परीक्षा प्रगती आणि पूर्ण केलेल्या परीक्षा'
+                        aria-label='चालू परीक्षा पूर्ण करा'
                     >
-                        {incompleteExamCount > 0 && (
-                            <span style={{ display: 'block' }}>
-                                {toMarathiDigits(incompleteExamCount)} परीक्षा पूर्ण करा
-                            </span>
-                        )}
-                        {completedExamCount > 0 && (
-                            <span style={{ display: 'block', marginTop: incompleteExamCount > 0 ? '3px' : '0', color: '#a7f3d0' }}>
-                                {toMarathiDigits(completedExamCount)} परीक्षा पूर्ण
-                            </span>
-                        )}
+                        {toMarathiDigits(incompleteExamCount)} परीक्षा पूर्ण करा
                     </button>
                 )}
                 <button
@@ -3208,15 +3195,18 @@ function App() {
                             <div className='bhajasi-grid'>
                                 {!pariksha || !Array.isArray(pariksha.exams) || pariksha.exams.length===0 ? <div className='bhajasi-empty'>सध्या कोणतीही परीक्षा उपलब्ध नाही.</div> : pariksha.exams.map(function(exam){
                                     const savedExamProgress = readExamProgress()[exam.id];
+                                    const savedExamResult = safeJSON(localStorage.getItem(EXAM_RESULT_KEY) || '{}', {})[exam.id];
                                     const solvedCount = savedExamProgress && savedExamProgress.answers ? Object.keys(savedExamProgress.answers).length : 0;
                                     const hasResume = !!savedExamProgress;
+                                    const hasCompleted = !!(savedExamResult && savedExamResult.completedAt);
                                     return (
                                         <article key={exam.id} className='bhajasi-exam-card'>
                                             <div className='bhajasi-card-title'>{exam.title}</div>
                                             <div className='bhajasi-card-sub'>{exam.subtitle}</div>
                                             <div className='bhajasi-exam-meta'>{toMarathiDigits(exam.questionCount||0)} प्रश्न</div>
                                             {hasResume && <div className='bhajasi-meta' style={{color:'#fbd52d',margin:'7px 0 8px'}}>परीक्षा सुरू आहे • {toMarathiDigits(solvedCount)} उत्तरे जतन केली आहेत</div>}
-                                            <button className={'bhajasi-primary-btn'+(hasResume?' bhajasi-resume-btn':'')} onClick={function(){startExam(exam);}}>{hasResume ? 'पुन्हा सुरू करा' : 'परीक्षा सुरू करा'}</button>
+                                            {hasCompleted && <div className='bhajasi-meta' style={{color:'#a7f3d0',margin:'7px 0 8px'}}>परीक्षा पूर्ण • {toMarathiDigits(savedExamResult.score)} / {toMarathiDigits(savedExamResult.total)} • {toMarathiDigits(savedExamResult.percentage)}%</div>}
+                                            <button className={'bhajasi-primary-btn'+(hasResume?' bhajasi-resume-btn':'')} onClick={function(){startExam(exam);}}>{hasResume ? 'पुन्हा सुरू करा' : (hasCompleted ? 'पुन्हा परीक्षा द्या' : 'परीक्षा सुरू करा')}</button>
                                         </article>
                                     );
                                 })}
