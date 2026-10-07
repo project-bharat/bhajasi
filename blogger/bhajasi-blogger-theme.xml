@@ -2964,6 +2964,42 @@ function App() {
         };
     }, [globalSearchOpen]);
 
+    async function loadCertificateQrImage(url) {
+        try {
+            if (!window.qrcode) {
+                await new Promise(function(resolve,reject){
+                    const existing=document.querySelector('script[data-bhajasi-qrcode="1"]');
+                    if(existing){
+                        if(window.qrcode){resolve();return;}
+                        existing.addEventListener('load',resolve,{once:true});
+                        existing.addEventListener('error',reject,{once:true});
+                        return;
+                    }
+                    const script=document.createElement('script');
+                    script.dataset.bhajasiQrcode='1';
+                    script.src='https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js';
+                    script.onload=resolve;
+                    script.onerror=reject;
+                    document.head.appendChild(script);
+                });
+            }
+            if(!window.qrcode) return null;
+            const qr=window.qrcode(0,'M');
+            qr.addData(String(url));
+            qr.make();
+            const dataUrl=qr.createDataURL(6,4);
+            return await new Promise(function(resolve){
+                const img=new Image();
+                img.onload=function(){resolve(img);};
+                img.onerror=function(){resolve(null);};
+                img.src=dataUrl;
+            });
+        }catch(e){
+            console.warn('Certificate QR unavailable:',e);
+            return null;
+        }
+    }
+
     async function createCertificate() {
         const name=String(certificateName || '').trim().replace(/\\s+/g,' ');
         if(!name){alert('प्रमाणपत्रासाठी तुमचे नाव लिहा.');return;}
@@ -2993,7 +3029,7 @@ function App() {
 
         const NAME_FONT='700 82px "Kalam", cursive';
         const TITLE_FONT='700 104px "Teko", sans-serif';
-        const HEADER_FONT='700 52px "Alkatra", cursive';
+        const HEADER_FONT='700 48px "Hind", sans-serif';
         const SUBJECT_FONT='600 43px "Tiro Devanagari Marathi", serif';
         const BODY_FONT='500 29px "Hind", sans-serif';
         const INFO_LABEL_FONT='600 22px "Noto Serif Devanagari", serif';
@@ -3081,34 +3117,60 @@ function App() {
             ctx.restore();
         }
 
-        // Header: logo at LEFT, horizontally aligned with the heading.
-        const headerText='ज्ञान अभ्यास परीक्षा';
-        ctx.textBaseline='middle';
-        ctx.textAlign='left';
-        ctx.fillStyle='#7b5a10';
-        ctx.font=HEADER_FONT;
-        const headerTextW=ctx.measureText(headerText).width;
-        const headerLogoSize=78;
-        const headerGap=22;
-        const headerGroupW=headerLogoSize+headerGap+headerTextW;
-        const headerStart=(1600-headerGroupW)/2;
-        if(logoImg && logoImg.naturalWidth){
-            const ratio=logoImg.naturalWidth/Math.max(1,logoImg.naturalHeight);
-            const logoW=headerLogoSize;
-            const logoH=headerLogoSize/Math.max(.1,ratio);
-            ctx.drawImage(logoImg,headerStart,91,logoW,logoH);
+        // Header: QR at top-left; centered Bhajasi Bharat courtesy line; exam line below.
+        const qrImg=await loadCertificateQrImage('https://bhajasibharat.blogspot.com/');
+        if(qrImg && qrImg.naturalWidth){
+            const qrBoxX=88, qrBoxY=76, qrBoxSize=126;
+            ctx.save();
+            ctx.fillStyle='#ffffff';
+            roundedRect(qrBoxX,qrBoxY,qrBoxSize,qrBoxSize,14);ctx.fill();
+            ctx.strokeStyle='rgba(203,145,30,.72)';ctx.lineWidth=2;ctx.stroke();
+            const qrPad=10;
+            ctx.drawImage(qrImg,qrBoxX+qrPad,qrBoxY+qrPad,qrBoxSize-qrPad*2,qrBoxSize-qrPad*2);
+            ctx.restore();
         }
-        ctx.fillText(headerText,headerStart+headerLogoSize+headerGap,128);
+
+        ctx.textAlign='center';
+        ctx.textBaseline='alphabetic';
+
+        const courtesy='भजसी भारत .com';
+        const courtesyNote='सौजन्य';
+        ctx.fillStyle='#7b5a10';
+        ctx.font='700 44px "Alkatra", cursive';
+        ctx.fillText(courtesy,800,108);
+        ctx.fillStyle='#59636b';
+        ctx.font='600 23px "Hind", sans-serif';
+        ctx.fillText(courtesyNote,800,140);
+
+        const headerText='ज्ञान अभ्यास परीक्षा';
+        ctx.fillStyle='#26333d';
+        ctx.font=HEADER_FONT;
+        ctx.fillText(headerText,800,181);
 
         // Subject of the examination.
-        ctx.textAlign='center';
         ctx.fillStyle='#26333d';
-        ctx.font=SUBJECT_FONT;
-        ctx.textBaseline='alphabetic';
-        ctx.fillText(certificateSubject,800,214);
+        ctx.font='700 58px "Hind", sans-serif';
+        const subjectY=244;
+        const subjectText=certificateSubject;
+        const subjectW=Math.min(900,ctx.measureText(subjectText).width+170);
+        const subjectX=800-subjectW/2;
+        const subjectGrad=ctx.createLinearGradient(subjectX,subjectY-42,subjectX+subjectW,subjectY+18);
+        subjectGrad.addColorStop(0,'#e5a928');
+        subjectGrad.addColorStop(.5,'#fff0a3');
+        subjectGrad.addColorStop(1,'#c98613');
+        ctx.save();
+        ctx.fillStyle=subjectGrad;
+        ctx.globalAlpha=.95;
+        ctx.beginPath();
+        ctx.arc(subjectX+22,subjectY-17,10,0,Math.PI*2);
+        ctx.arc(subjectX+subjectW-22,subjectY-17,10,0,Math.PI*2);
+        ctx.fill();
+        ctx.restore();
+        ctx.fillStyle='#26333d';
+        ctx.fillText('विषय: '+subjectText,800,subjectY);
 
         // Main title: Teko inside an elegant rounded box.
-        const titleBoxX=505, titleBoxY=260, titleBoxW=590, titleBoxH=142;
+        const titleBoxX=505, titleBoxY=276, titleBoxW=590, titleBoxH=142;
         const titleGrad=ctx.createLinearGradient(titleBoxX,titleBoxY,titleBoxX+titleBoxW,titleBoxY+titleBoxH);
         titleGrad.addColorStop(0,'rgba(255,255,255,.88)');
         titleGrad.addColorStop(.5,'rgba(255,250,230,.96)');
@@ -3122,18 +3184,18 @@ function App() {
         ctx.fillStyle='#765311';
         ctx.font=TITLE_FONT;
         ctx.textBaseline='middle';
-        ctx.fillText('प्रमाणपत्र',800,331);
+        ctx.fillText('प्रमाणपत्र',800,349);
 
         // Certificate body.
         ctx.fillStyle='#58636c';
         ctx.font=BODY_FONT;
         ctx.textBaseline='alphabetic';
-        ctx.fillText('प्रमाणित करण्यात येते की,',800,464);
+        ctx.fillText('प्रमाणित करण्यात येते की,',800,482);
 
         // Recipient name is always Kalam in PNG/share/PDF.
         ctx.fillStyle='#352b24';
         ctx.font=fitText(name,NAME_FONT,1120,34);
-        ctx.fillText(name,800,560);
+        ctx.fillText(name,800,578);
 
         const nameWidth=Math.min(900,ctx.measureText(name).width+100);
         const nameLine=ctx.createLinearGradient(800-nameWidth/2,0,800+nameWidth/2,0);
@@ -3141,23 +3203,23 @@ function App() {
         nameLine.addColorStop(.5,'rgba(233,128,6,.72)');
         nameLine.addColorStop(1,'rgba(233,128,6,0)');
         ctx.strokeStyle=nameLine;ctx.lineWidth=2;
-        ctx.beginPath();ctx.moveTo(800-nameWidth/2,578);ctx.lineTo(800+nameWidth/2,578);ctx.stroke();
+        ctx.beginPath();ctx.moveTo(800-nameWidth/2,596);ctx.lineTo(800+nameWidth/2,596);ctx.stroke();
 
         // Achievement text is derived from the selected exam; never hard-code a saint or subject.
         ctx.fillStyle='#4f5961';
         ctx.font=BODY_FONT;
-        ctx.fillText(certificateAchievement,800,645);
-        ctx.fillText('करिता हे डिजिटल प्रमाणपत्र प्रदान करण्यात येत आहे.',800,690);
+        ctx.fillText(certificateAchievement,800,663);
+        ctx.fillText('करिता हे डिजिटल प्रमाणपत्र प्रदान करण्यात येत आहे.',800,708);
 
         // Score/date boxes.
-        const boxY=748, boxW=520, boxH=118;
-        const leftX=170, rightX=910;
+        const boxY=756, boxW=330, boxH=126;
+        const leftX=285, rightX=985;
         function drawInfoBox(x,title,value){
             const g=ctx.createLinearGradient(x,boxY,x+boxW,boxY+boxH);
             g.addColorStop(0,'rgba(255,255,255,.82)');
             g.addColorStop(.5,'rgba(255,249,226,.92)');
             g.addColorStop(1,'rgba(238,249,245,.88)');
-            ctx.fillStyle=g;roundedRect(x,boxY,boxW,boxH,22);ctx.fill();
+            ctx.fillStyle=g;roundedRect(x,boxY,boxW,boxH,18);ctx.fill();
             ctx.strokeStyle='rgba(203,145,30,.78)';ctx.lineWidth=2;ctx.stroke();
             ctx.fillStyle='#8b6418';ctx.font=INFO_LABEL_FONT;ctx.fillText(title,x+boxW/2,boxY+37);
             ctx.fillStyle='#27343d';ctx.font=INFO_VALUE_FONT;ctx.fillText(value,x+boxW/2,boxY+84);
@@ -3239,7 +3301,7 @@ function App() {
         try{
             const file=await getCertificateFile();
             const shareSubject=String(selectedExam && selectedExam.title || 'ज्ञान परीक्षा').trim();
-            const caption='मी भजसी भारत .com वरील '+shareSubject+' विषयावरील ज्ञान परीक्षा यशस्वीरीत्या उत्तीर्ण केली.\\n\\nभजसी भारत .com\\nhttps://bhajasibharat.blogspot.com/\\nनिर्मिती व संकलन: भरत रासवे';
+            const caption='मी भजसी भारत .com वरील '+shareSubject+' विषयावरील ज्ञान परीक्षा यशस्वीरीत्या उत्तीर्ण केली.\n\nभजसी भारत .com\nhttps://bhajasibharat.blogspot.com/\nनिर्मिती व संकलन: भरत रासवे';
             if(navigator.share && navigator.canShare && file && navigator.canShare({files:[file]})){
                 await navigator.share({
                     title:'भजसी भारत .com — '+shareSubject+' ज्ञान परीक्षा प्रमाणपत्र',
@@ -3316,7 +3378,7 @@ function App() {
             const y=(pageH-imageH)/2;
             pdf.addImage(img,'PNG',0,y,imageW,imageH,undefined,'FAST');
             pdf.setProperties({
-                title:'भजसी भारत .com — पसायदान ज्ञान परीक्षा प्रमाणपत्र',
+                title:'भजसी भारत .com — '+String(selectedExam && selectedExam.title || 'ज्ञान परीक्षा')+' ज्ञान परीक्षा प्रमाणपत्र',
                 subject:'डिजिटल प्रमाणपत्र',
                 author:'भरत रासवे'
             });
