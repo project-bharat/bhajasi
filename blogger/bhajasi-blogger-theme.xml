@@ -2980,6 +2980,11 @@ function App() {
         }
 
         const id=(existing && existing.id) || certificateId || makeCertificateId();
+        // Certificate content follows the exam currently being taken.
+        const certificateSaint=String(selectedExam.subtitle || selectedExam.saint || 'संतवाणी').trim();
+        const certificateSubject=String(selectedExam.title || 'ज्ञान परीक्षा').trim();
+        const certificateAchievement='यांनी '+certificateSaint+' कृत '+certificateSubject+' विषयावरील ज्ञान परीक्षा उत्तीर्ण केली आहे.';
+        const certificateCaption='मी भजसी भारत .com वरील '+certificateSubject+' विषयावरील ज्ञान परीक्षा यशस्वीरीत्या उत्तीर्ण केली.';
         const canvas=document.createElement('canvas');
         canvas.width=1600;
         canvas.height=1100;
@@ -2988,17 +2993,23 @@ function App() {
 
         const NAME_FONT='700 82px "Kalam", cursive';
         const TITLE_FONT='700 104px "Teko", sans-serif';
+        const HEADER_FONT='700 52px "Alkatra", cursive';
+        const SUBJECT_FONT='600 43px "Tiro Devanagari Marathi", serif';
+        const BODY_FONT='500 29px "Hind", sans-serif';
+        const INFO_LABEL_FONT='600 22px "Noto Serif Devanagari", serif';
+        const INFO_VALUE_FONT='700 35px "Teko", sans-serif';
 
         if(document.fonts && document.fonts.ready){
             try{
                 await document.fonts.ready;
                 await Promise.all([
-                    document.fonts.load('700 104px "Teko"'),
+                    document.fonts.load(TITLE_FONT),
                     document.fonts.load(NAME_FONT),
-                    document.fonts.load('700 52px "Alkatra"'),
-                    document.fonts.load('600 43px "Tiro Devanagari Marathi"'),
-                    document.fonts.load('500 29px "Noto Sans Devanagari"'),
-                    document.fonts.load('600 29px "Noto Sans Devanagari"')
+                    document.fonts.load(HEADER_FONT),
+                    document.fonts.load(SUBJECT_FONT),
+                    document.fonts.load(BODY_FONT),
+                    document.fonts.load(INFO_LABEL_FONT),
+                    document.fonts.load(INFO_VALUE_FONT)
                 ]);
             }catch(e){}
         }
@@ -3057,12 +3068,25 @@ function App() {
         let logoImg=null;
         try{ logoImg=await loadLogoImage(FOOTER_LOGO); }catch(e){}
 
+        // Faint branded watermark behind the certificate content.
+        if(logoImg && logoImg.naturalWidth){
+            const ratio=logoImg.naturalWidth/Math.max(1,logoImg.naturalHeight);
+            const wmSize=500;
+            const wmW=wmSize;
+            const wmH=wmSize/Math.max(.1,ratio);
+            ctx.save();
+            ctx.globalAlpha=0.095;
+            ctx.globalCompositeOperation='multiply';
+            ctx.drawImage(logoImg,(1600-wmW)/2,555,wmW,wmH);
+            ctx.restore();
+        }
+
         // Header: logo at LEFT, horizontally aligned with the heading.
         const headerText='ज्ञान अभ्यास परीक्षा';
         ctx.textBaseline='middle';
         ctx.textAlign='left';
         ctx.fillStyle='#7b5a10';
-        ctx.font='700 52px "Alkatra", cursive';
+        ctx.font=HEADER_FONT;
         const headerTextW=ctx.measureText(headerText).width;
         const headerLogoSize=78;
         const headerGap=22;
@@ -3079,7 +3103,7 @@ function App() {
         // Subject of the examination.
         ctx.textAlign='center';
         ctx.fillStyle='#26333d';
-        ctx.font='600 43px "Tiro Devanagari Marathi", serif';
+        ctx.font=SUBJECT_FONT;
         ctx.textBaseline='alphabetic';
         ctx.fillText(String(selectedExam.title || 'पसायदान'),800,214);
 
@@ -3102,7 +3126,7 @@ function App() {
 
         // Certificate body.
         ctx.fillStyle='#58636c';
-        ctx.font='500 29px "Noto Sans Devanagari", sans-serif';
+        ctx.font=BODY_FONT;
         ctx.textBaseline='alphabetic';
         ctx.fillText('प्रमाणित करण्यात येते की,',800,464);
 
@@ -3119,10 +3143,10 @@ function App() {
         ctx.strokeStyle=nameLine;ctx.lineWidth=2;
         ctx.beginPath();ctx.moveTo(800-nameWidth/2,578);ctx.lineTo(800+nameWidth/2,578);ctx.stroke();
 
-        // Required body text: exactly two separate lines.
+        // Achievement text is derived from the selected exam; never hard-code a saint or subject.
         ctx.fillStyle='#4f5961';
-        ctx.font='500 29px "Noto Sans Devanagari", sans-serif';
-        ctx.fillText('यांनी संत ज्ञानेश्वर महाराज कृत पसायदान विषयावरील ज्ञान परीक्षा उत्तीर्ण केली आहे.',800,645);
+        ctx.font=BODY_FONT;
+        ctx.fillText(certificateAchievement,800,645);
         ctx.fillText('करिता हे डिजिटल प्रमाणपत्र प्रदान करण्यात येत आहे.',800,690);
 
         // Score/date boxes.
@@ -3135,8 +3159,8 @@ function App() {
             g.addColorStop(1,'rgba(238,249,245,.88)');
             ctx.fillStyle=g;roundedRect(x,boxY,boxW,boxH,22);ctx.fill();
             ctx.strokeStyle='rgba(203,145,30,.78)';ctx.lineWidth=2;ctx.stroke();
-            ctx.fillStyle='#8b6418';ctx.font='700 22px "Noto Sans Devanagari",sans-serif';ctx.fillText(title,x+boxW/2,boxY+37);
-            ctx.fillStyle='#27343d';ctx.font='700 35px "Noto Sans Devanagari",sans-serif';ctx.fillText(value,x+boxW/2,boxY+84);
+            ctx.fillStyle='#8b6418';ctx.font=INFO_LABEL_FONT;ctx.fillText(title,x+boxW/2,boxY+37);
+            ctx.fillStyle='#27343d';ctx.font=INFO_VALUE_FONT;ctx.fillText(value,x+boxW/2,boxY+84);
         }
         drawInfoBox(leftX,'गुण',toMarathiDigits(examResult.score)+' / '+toMarathiDigits(examResult.total)+'  •  '+toMarathiDigits(examResult.percentage)+'%');
         drawInfoBox(rightX,'पूर्णता दिनांक',new Date(examResult.completedAt).toLocaleDateString('mr-IN'));
@@ -3154,27 +3178,40 @@ function App() {
         ctx.fillText('https://bhajasibharat.blogspot.com/',110,973);
         ctx.fillText('निर्मिती आणि संकलन: भरत रासवे',110,1003);
 
-        // Center footer branding: logo + site title + subtitle.
+        // Right-aligned footer branding: logo + site title + subtitle.
         const footerLogoSize=72;
-        const footerBrandX=670;
+        const footerLogoBoxSize=84;
+        const footerRight=1490;
+        const footerTitle='भजसी भारत .com';
+        const footerSubtitle='संतवाणी • ग्रंथ • हरिनाम • चिंतन • स्तोत्र';
+        ctx.textAlign='left';
+        ctx.font='700 46px "Alkatra", cursive';
+        const footerTitleW=ctx.measureText(footerTitle).width;
+        ctx.font='500 20px "Hind", sans-serif';
+        const footerSubtitleW=ctx.measureText(footerSubtitle).width;
+        const footerTextW=Math.max(footerTitleW,footerSubtitleW);
+        const footerBrandW=footerLogoBoxSize+22+footerTextW;
+        const footerBrandX=footerRight-footerBrandW;
+        const footerLogoBoxY=934;
         if(logoImg && logoImg.naturalWidth){
             const ratio=logoImg.naturalWidth/Math.max(1,logoImg.naturalHeight);
             const footerW=footerLogoSize;
             const footerH=footerLogoSize/Math.max(.1,ratio);
             ctx.save();
             ctx.fillStyle='#ffffff';
-            roundedRect(footerBrandX,934,84,84,13);ctx.fill();
-            ctx.drawImage(logoImg,footerBrandX+9,943,footerW,footerH);
+            roundedRect(footerBrandX,footerLogoBoxY,footerLogoBoxSize,footerLogoBoxSize,13);ctx.fill();
+            ctx.drawImage(logoImg,footerBrandX+6,footerLogoBoxY+6,footerW,footerH);
             ctx.restore();
         }
 
-        ctx.textAlign='left';
+        const footerTextX=footerBrandX+footerLogoBoxSize+22;
+        ctx.textAlign='right';
         ctx.fillStyle='#7b5a10';
         ctx.font='700 46px "Alkatra", cursive';
-        ctx.fillText('भजसी भारत .com',footerBrandX+105,967);
+        ctx.fillText(footerTitle,footerRight,967);
         ctx.fillStyle='#5d6570';
-        ctx.font='500 20px "Noto Sans Devanagari",sans-serif';
-        ctx.fillText('संतवाणी • ग्रंथ • हरिनाम • चिंतन • स्तोत्र',footerBrandX+105,997);
+        ctx.font='500 20px "Hind", sans-serif';
+        ctx.fillText(footerSubtitle,footerRight,997);
 
         registry[nameKey]={
             id:id,
@@ -3201,10 +3238,10 @@ function App() {
         if(!certificatePreview)return;
         try{
             const file=await getCertificateFile();
-            const caption='मी भजसी भारत .com वरील पसायदान विषयावरील ज्ञान परीक्षा यशस्वीरीत्या उत्तीर्ण केली.\\n\\nभजसी भारत .com\\nhttps://bhajasibharat.blogspot.com/\\nनिर्मिती व संकलन: भरत रासवे';
+            const caption=certificateCaption+'\\n\\nभजसी भारत .com\\nhttps://bhajasibharat.blogspot.com/\\nनिर्मिती व संकलन: भरत रासवे';
             if(navigator.share && navigator.canShare && file && navigator.canShare({files:[file]})){
                 await navigator.share({
-                    title:'भजसी भारत .com — पसायदान ज्ञान परीक्षा प्रमाणपत्र',
+                    title:'भजसी भारत .com — '+certificateSubject+' ज्ञान परीक्षा प्रमाणपत्र',
                     text:caption,
                     files:[file]
                 });
