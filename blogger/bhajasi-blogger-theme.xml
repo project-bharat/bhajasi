@@ -2205,6 +2205,7 @@ function App() {
             '',
             'प्रश्न: ' + questionText,
             '',
+            'पर्याय:',
             options.join('\n'),
             '',
             'तुमचे उत्तर काय आहे? प्रश्न सोडवा आणि उत्तर तपासा:',
@@ -2217,27 +2218,29 @@ function App() {
             try {
                 const canvas = document.createElement('canvas');
                 canvas.width = 1200;
-                canvas.height = 760;
+                canvas.height = 800;
                 const ctx = canvas.getContext('2d');
                 if (!ctx) { resolve(null); return; }
-                const bg = ctx.createLinearGradient(0, 0, 1200, 760);
+
+                const bg = ctx.createLinearGradient(0, 0, 1200, 800);
                 bg.addColorStop(0, '#101a2b');
                 bg.addColorStop(0.55, '#17283a');
                 bg.addColorStop(1, '#0c3440');
                 ctx.fillStyle = bg;
-                ctx.fillRect(0, 0, 1200, 760);
+                ctx.fillRect(0, 0, 1200, 800);
+
                 ctx.strokeStyle = 'rgba(251,213,45,.55)';
                 ctx.lineWidth = 4;
                 if (ctx.roundRect) {
                     ctx.beginPath();
-                    ctx.roundRect(28, 28, 1144, 704, 28);
+                    ctx.roundRect(28, 28, 1144, 744, 28);
                     ctx.stroke();
                 }
-                /* Dark Bhajasi footer logo watermark — load the actual FOOTER_LOGO
-                   as a blob first so the image is fully decoded before canvas export. */
+
+                /* Load the actual site branding asset before PNG export. */
                 let logoImage = null;
                 try {
-                    const logoResponse = await fetch(FOOTER_LOGO, {
+                    const logoResponse = await fetch(SITE_LOGO, {
                         mode: 'cors',
                         cache: 'force-cache',
                         credentials: 'omit'
@@ -2262,81 +2265,174 @@ function App() {
                     logoImage = null;
                 }
 
-                if (logoImage && logoImage.naturalWidth) {
-                    try {
-                        const wmX = 760;
-                        const wmY = 218;
-                        const wmSize = 360;
+                /* Dark footer-logo watermark: kept subtle and awaited before export. */
+                let watermarkImage = null;
+                try {
+                    const watermarkResponse = await fetch(FOOTER_LOGO, {
+                        mode: 'cors',
+                        cache: 'force-cache',
+                        credentials: 'omit'
+                    });
+                    if (watermarkResponse.ok) {
+                        const watermarkBlob = await watermarkResponse.blob();
+                        const watermarkObjectURL = URL.createObjectURL(watermarkBlob);
+                        watermarkImage = await new Promise(function(resolve) {
+                            const image = new Image();
+                            image.onload = function() {
+                                URL.revokeObjectURL(watermarkObjectURL);
+                                resolve(image);
+                            };
+                            image.onerror = function() {
+                                URL.revokeObjectURL(watermarkObjectURL);
+                                resolve(null);
+                            };
+                            image.src = watermarkObjectURL;
+                        });
+                    }
+                } catch (e) {
+                    watermarkImage = null;
+                }
 
-                        /* Soft translucent light field makes the dark logo visible
-                           without turning it into a prominent foreground element. */
+                /* Header: site logo + exam branding. */
+                if (logoImage && logoImage.naturalWidth) {
+                    const ratio = logoImage.naturalWidth / Math.max(1, logoImage.naturalHeight);
+                    const logoH = 58;
+                    const logoW = logoH * ratio;
+                    ctx.save();
+                    ctx.globalAlpha = 1;
+                    ctx.drawImage(logoImage, 68, 55, logoW, logoH);
+                    ctx.restore();
+                }
+
+                const headerTextX = logoImage && logoImage.naturalWidth ? 68 + 58 * (logoImage.naturalWidth / Math.max(1, logoImage.naturalHeight)) + 24 : 68;
+                ctx.textAlign = 'left';
+                ctx.fillStyle = '#62e6cc';
+                ctx.font = '700 30px "Noto Sans Devanagari", sans-serif';
+                ctx.fillText('भजसी भारत  •  ज्ञान प्रमाणपत्र परीक्षा', headerTextX, 76);
+                ctx.fillStyle = '#fbd52d';
+                ctx.font = '700 32px "Tiro Devanagari Marathi", "Noto Sans Devanagari", sans-serif';
+                const title = String(selectedExam.title || '');
+                ctx.fillText(title.length > 43 ? title.slice(0, 42) + '…' : title, headerTextX, 117);
+
+                /* Header separator. */
+                ctx.strokeStyle = 'rgba(251,213,45,.35)';
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.moveTo(68, 145);
+                ctx.lineTo(1132, 145);
+                ctx.stroke();
+
+                /* Dark watermark behind the lower card content. */
+                if (watermarkImage && watermarkImage.naturalWidth) {
+                    try {
+                        const wmSize = 360;
+                        const ratio = watermarkImage.naturalWidth / Math.max(1, watermarkImage.naturalHeight);
+                        const wmW = wmSize;
+                        const wmH = wmSize / Math.max(0.1, ratio);
                         ctx.save();
-                        ctx.globalAlpha = 0.13;
+                        ctx.globalAlpha = 0.12;
                         ctx.fillStyle = '#ffffff';
                         if (ctx.roundRect) {
                             ctx.beginPath();
-                            ctx.roundRect(wmX - 22, wmY - 22, wmSize + 44, wmSize + 44, 34);
+                            ctx.roundRect(720, 275, wmW + 32, wmH + 32, 28);
                             ctx.fill();
-                        } else {
-                            ctx.fillRect(wmX - 22, wmY - 22, wmSize + 44, wmSize + 44);
                         }
-                        ctx.restore();
-
-                        const ratio = logoImage.naturalWidth / Math.max(1, logoImage.naturalHeight);
-                        const wmW = wmSize;
-                        const wmH = wmSize / Math.max(0.1, ratio);
-
-                        ctx.save();
-                        ctx.globalAlpha = 0.24;
-                        ctx.drawImage(logoImage, wmX, wmY, wmW, wmH);
+                        ctx.globalAlpha = 0.20;
+                        ctx.drawImage(watermarkImage, 736, 291, wmW, wmH);
                         ctx.restore();
                     } catch (e) {
                         console.error('Bhajasi exam watermark render error:', e);
                     }
                 }
 
-                ctx.fillStyle = '#62e6cc';
-                ctx.font = '700 30px "Noto Sans Devanagari", sans-serif';
-                ctx.fillText('भजसी भारत  •  ज्ञान प्रमाणपत्र परीक्षा', 68, 78);
+                /* Question label and question. */
+                ctx.textAlign = 'left';
                 ctx.fillStyle = '#fbd52d';
-                ctx.font = '700 34px "Tiro Devanagari Marathi", "Noto Sans Devanagari", sans-serif';
-                const title = String(selectedExam.title || '');
-                ctx.fillText(title.length > 46 ? title.slice(0, 45) + '…' : title, 68, 128);
+                ctx.font = '800 27px "Noto Sans Devanagari", sans-serif';
+                ctx.fillText('प्रश्न:', 68, 190);
+
                 ctx.fillStyle = '#ffffff';
                 ctx.font = '700 31px "Tiro Devanagari Marathi", "Noto Sans Devanagari", sans-serif';
                 const questionLines = [];
                 let current = '';
                 questionText.split(/\s+/).forEach(function(word) {
                     const test = current ? current + ' ' + word : word;
-                    if (ctx.measureText(test).width > 1050 && current) {
+                    if (ctx.measureText(test).width > 1030 && current) {
                         questionLines.push(current);
                         current = word;
-                    } else current = test;
+                    } else {
+                        current = test;
+                    }
                 });
                 if (current) questionLines.push(current);
-                questionLines.slice(0, 3).forEach(function(line, i) { ctx.fillText(line, 68, 182 + i * 43); });
-                const optionStartY = 330;
-                ctx.font = '500 25px "Noto Sans Devanagari", sans-serif';
+                questionLines.slice(0, 3).forEach(function(line, i) {
+                    ctx.fillText(line, 68, 232 + i * 42);
+                });
+
+                const questionBottom = 232 + Math.max(1, Math.min(3, questionLines.length)) * 42;
+
+                /* Separator before answer choices. */
+                ctx.strokeStyle = 'rgba(148,163,184,.24)';
+                ctx.lineWidth = 1;
+                ctx.beginPath();
+                ctx.moveTo(68, questionBottom + 22);
+                ctx.lineTo(1132, questionBottom + 22);
+                ctx.stroke();
+
+                /* Answer choices. */
+                const optionLabelY = questionBottom + 62;
+                ctx.fillStyle = '#62e6cc';
+                ctx.font = '800 27px "Noto Sans Devanagari", sans-serif';
+                ctx.fillText('पर्याय:', 68, optionLabelY);
+
+                const optionStartY = optionLabelY + 45;
+                ctx.font = '500 24px "Noto Sans Devanagari", sans-serif';
                 options.slice(0, 6).forEach(function(option, i) {
                     const x = i % 2 === 0 ? 68 : 620;
-                    const y = optionStartY + Math.floor(i / 2) * 62;
+                    const y = optionStartY + Math.floor(i / 2) * 58;
                     ctx.fillStyle = 'rgba(255,255,255,.07)';
-                    if (ctx.roundRect) { ctx.beginPath(); ctx.roundRect(x, y - 34, 500, 48, 12); ctx.fill(); }
-                    else ctx.fillRect(x, y - 34, 500, 48);
+                    if (ctx.roundRect) {
+                        ctx.beginPath();
+                        ctx.roundRect(x, y - 31, 500, 46, 11);
+                        ctx.fill();
+                    } else {
+                        ctx.fillRect(x, y - 31, 500, 46);
+                    }
                     ctx.fillStyle = '#e7edf5';
                     const opt = option.length > 34 ? option.slice(0, 33) + '…' : option;
                     ctx.fillText(opt, x + 16, y);
                 });
+
+                /* Footer separator. */
+                ctx.strokeStyle = 'rgba(251,213,45,.35)';
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.moveTo(68, 650);
+                ctx.lineTo(1132, 650);
+                ctx.stroke();
+
                 ctx.fillStyle = '#62e6cc';
-                ctx.font = '800 27px "Noto Sans Devanagari", sans-serif';
-                ctx.fillText('हा प्रश्न भजसी भारतवर सोडवा  →', 68, 665);
+                ctx.font = '800 25px "Noto Sans Devanagari", sans-serif';
+                ctx.fillText('हा प्रश्न भजसी भारतवर सोडवा  →', 68, 692);
+
                 ctx.fillStyle = '#cbd5e1';
-                ctx.font = '500 18px sans-serif';
-                ctx.fillText(shareURL.length > 92 ? shareURL.slice(0, 91) + '…' : shareURL, 68, 698);
+                ctx.font = '500 17px sans-serif';
+                ctx.fillText(shareURL.length > 96 ? shareURL.slice(0, 95) + '…' : shareURL, 68, 724);
+
+                ctx.textAlign = 'right';
+                ctx.fillStyle = '#f1f5f9';
+                ctx.font = '600 20px "Noto Sans Devanagari", sans-serif';
+                ctx.fillText('भजसी भारत .com', 1132, 692);
+                ctx.fillStyle = '#94a3b8';
+                ctx.font = '400 17px "Noto Sans Devanagari", sans-serif';
+                ctx.fillText('ज्ञान • भक्ती • चिंतन', 1132, 724);
+
                 canvas.toBlob(function(blob) {
                     resolve(blob ? new File([blob], 'bhajasi-prashna.png', {type:'image/png'}) : null);
                 }, 'image/png');
-            } catch (error) { resolve(null); }
+            } catch (error) {
+                resolve(null);
+            }
         });
 
         try {
@@ -2356,7 +2452,6 @@ function App() {
             window.prompt('प्रश्नाची लिंक कॉपी करा:', shareURL);
         }
     }
-
     async function openExamSource(source) {
         const target=findExamSource(source);
         if(!target){ alert('संबंधित साहित्य सापडले नाही.'); return; }
