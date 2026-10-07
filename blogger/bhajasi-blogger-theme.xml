@@ -1780,10 +1780,34 @@ function App() {
 
             try {
                 const parikshaIndex = await fetchJSON(PARIKSHA_BASE + 'index.json');
-                setPariksha(parikshaIndex);
+                const examList = Array.isArray(parikshaIndex)
+                    ? parikshaIndex
+                    : ((parikshaIndex && parikshaIndex.exams) ||
+                       (parikshaIndex && parikshaIndex.tests) ||
+                       (parikshaIndex && parikshaIndex.items) || []);
+                const fallbackExams = [["manache-shlok","मनाचे श्लोक","समर्थ रामदास स्वामी","manache-shlok.json",10],["dnyaneshwar-haripath","ज्ञानेश्वर हरिपाठ","संत ज्ञानेश्वर महाराज","dnyaneshwar-haripath.json",13],["tukaram-haripath","संत तुकाराम हरिपाठ","संत तुकाराम महाराज","tukaram-haripath.json",12],["namdev-haripath","संत नामदेव हरिपाठ","संत नामदेव महाराज","namdev-haripath.json",12],["eknath-haripath","संत एकनाथ हरिपाठ","संत एकनाथ महाराज","eknath-haripath.json",12],["pasaydan","पसायदान","संत ज्ञानेश्वर महाराज","pasaydan.json",10],["dnyaneshwari-adhyay-01","ज्ञानेश्वरी अध्याय १","संत ज्ञानेश्वर महाराज","dnyaneshwari-adhyay-01.json",10],["dnyaneshwari-adhyay-02","ज्ञानेश्वरी अध्याय २","संत ज्ञानेश्वर महाराज","dnyaneshwari-adhyay-02.json",12],["dnyaneshwari-adhyay-03","ज्ञानेश्वरी अध्याय ३ — कर्मयोग","संत ज्ञानेश्वर महाराज","dnyaneshwari-adhyay-03.json",10],["dnyaneshwari-adhyay-04","ज्ञानेश्वरी अध्याय ४ — ज्ञानकर्मसंन्यास योग","संत ज्ञानेश्वर महाराज","dnyaneshwari-adhyay-04.json",11],["dnyaneshwari-adhyay-05","ज्ञानेश्वरी अध्याय ५ — कर्मसंन्यास योग","संत ज्ञानेश्वर महाराज","dnyaneshwari-adhyay-05.json",10],["dnyaneshwari-adhyay-06","ज्ञानेश्वरी अध्याय ६ — आत्मसंयम योग","संत ज्ञानेश्वर महाराज","dnyaneshwari-adhyay-06.json",10],["dnyaneshwari-adhyay-07","ज्ञानेश्वरी अध्याय ७ — ज्ञानविज्ञान योग","संत ज्ञानेश्वर महाराज","dnyaneshwari-adhyay-07.json",10],["dnyaneshwari-adhyay-08","ज्ञानेश्वरी अध्याय ८ — अक्षरब्रह्म योग","संत ज्ञानेश्वर महाराज","dnyaneshwari-adhyay-08.json",10],["amrutanubhav-01","अमृतानुभव प्रकरण १","संत ज्ञानेश्वर महाराज","amrutanubhav-01.json",10],["amrutanubhav-08","अमृतानुभव प्रकरण ८","संत ज्ञानेश्वर महाराज","amrutanubhav-08.json",10],["amrutanubhav-10","अमृतानुभव प्रकरण १०","संत ज्ञानेश्वर महाराज","amrutanubhav-10.json",10]].map(function(item) {
+                    return { id:item[0], title:item[1], subtitle:item[2],
+                        type:'ग्रंथाधारित ज्ञानपरीक्षा', questionCount:item[4],
+                        passingPercentage:80, file:item[3] };
+                });
+                setPariksha({
+                    id:(parikshaIndex && parikshaIndex.id) || 'pariksha',
+                    title:(parikshaIndex && parikshaIndex.title) || 'परीक्षा',
+                    description:(parikshaIndex && parikshaIndex.description) || 'संतसाहित्य आणि ग्रंथांवर आधारित ज्ञानाचा अभ्यास व सराव.',
+                    exams:examList.length ? examList : fallbackExams
+                });
             } catch (error) {
                 console.error('Bhajasi pariksha index error:', error);
-                errors.push('pariksha/index.json');
+                setPariksha({
+                    id:'pariksha',
+                    title:'परीक्षा',
+                    description:'संतसाहित्य आणि ग्रंथांवर आधारित ज्ञानाचा अभ्यास व सराव.',
+                    exams:[["manache-shlok","मनाचे श्लोक","समर्थ रामदास स्वामी","manache-shlok.json",10],["dnyaneshwar-haripath","ज्ञानेश्वर हरिपाठ","संत ज्ञानेश्वर महाराज","dnyaneshwar-haripath.json",13],["tukaram-haripath","संत तुकाराम हरिपाठ","संत तुकाराम महाराज","tukaram-haripath.json",12],["namdev-haripath","संत नामदेव हरिपाठ","संत नामदेव महाराज","namdev-haripath.json",12],["eknath-haripath","संत एकनाथ हरिपाठ","संत एकनाथ महाराज","eknath-haripath.json",12],["pasaydan","पसायदान","संत ज्ञानेश्वर महाराज","pasaydan.json",10],["dnyaneshwari-adhyay-01","ज्ञानेश्वरी अध्याय १","संत ज्ञानेश्वर महाराज","dnyaneshwari-adhyay-01.json",10],["dnyaneshwari-adhyay-02","ज्ञानेश्वरी अध्याय २","संत ज्ञानेश्वर महाराज","dnyaneshwari-adhyay-02.json",12],["dnyaneshwari-adhyay-03","ज्ञानेश्वरी अध्याय ३ — कर्मयोग","संत ज्ञानेश्वर महाराज","dnyaneshwari-adhyay-03.json",10],["dnyaneshwari-adhyay-04","ज्ञानेश्वरी अध्याय ४ — ज्ञानकर्मसंन्यास योग","संत ज्ञानेश्वर महाराज","dnyaneshwari-adhyay-04.json",11],["dnyaneshwari-adhyay-05","ज्ञानेश्वरी अध्याय ५ — कर्मसंन्यास योग","संत ज्ञानेश्वर महाराज","dnyaneshwari-adhyay-05.json",10],["dnyaneshwari-adhyay-06","ज्ञानेश्वरी अध्याय ६ — आत्मसंयम योग","संत ज्ञानेश्वर महाराज","dnyaneshwari-adhyay-06.json",10],["dnyaneshwari-adhyay-07","ज्ञानेश्वरी अध्याय ७ — ज्ञानविज्ञान योग","संत ज्ञानेश्वर महाराज","dnyaneshwari-adhyay-07.json",10],["dnyaneshwari-adhyay-08","ज्ञानेश्वरी अध्याय ८ — अक्षरब्रह्म योग","संत ज्ञानेश्वर महाराज","dnyaneshwari-adhyay-08.json",10],["amrutanubhav-01","अमृतानुभव प्रकरण १","संत ज्ञानेश्वर महाराज","amrutanubhav-01.json",10],["amrutanubhav-08","अमृतानुभव प्रकरण ८","संत ज्ञानेश्वर महाराज","amrutanubhav-08.json",10],["amrutanubhav-10","अमृतानुभव प्रकरण १०","संत ज्ञानेश्वर महाराज","amrutanubhav-10.json",10]].map(function(item) {
+                        return { id:item[0], title:item[1], subtitle:item[2],
+                            type:'ग्रंथाधारित ज्ञानपरीक्षा', questionCount:item[4],
+                            passingPercentage:80, file:item[3] };
+                    })
+                });
             }
 
             setSaints(loadedSaints);
