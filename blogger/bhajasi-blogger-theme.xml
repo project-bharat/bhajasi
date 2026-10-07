@@ -3105,7 +3105,7 @@ function App() {
         ctx.fillStyle='#26333d';
         ctx.font=SUBJECT_FONT;
         ctx.textBaseline='alphabetic';
-        ctx.fillText(String(selectedExam.title || 'पसायदान'),800,214);
+        ctx.fillText(certificateSubject,800,214);
 
         // Main title: Teko inside an elegant rounded box.
         const titleBoxX=505, titleBoxY=260, titleBoxW=590, titleBoxH=142;
@@ -3238,10 +3238,11 @@ function App() {
         if(!certificatePreview)return;
         try{
             const file=await getCertificateFile();
-            const caption=certificateCaption+'\\n\\nभजसी भारत .com\\nhttps://bhajasibharat.blogspot.com/\\nनिर्मिती व संकलन: भरत रासवे';
+            const shareSubject=String(selectedExam && selectedExam.title || 'ज्ञान परीक्षा').trim();
+            const caption='मी भजसी भारत .com वरील '+shareSubject+' विषयावरील ज्ञान परीक्षा यशस्वीरीत्या उत्तीर्ण केली.\\n\\nभजसी भारत .com\\nhttps://bhajasibharat.blogspot.com/\\nनिर्मिती व संकलन: भरत रासवे';
             if(navigator.share && navigator.canShare && file && navigator.canShare({files:[file]})){
                 await navigator.share({
-                    title:'भजसी भारत .com — '+certificateSubject+' ज्ञान परीक्षा प्रमाणपत्र',
+                    title:'भजसी भारत .com — '+shareSubject+' ज्ञान परीक्षा प्रमाणपत्र',
                     text:caption,
                     files:[file]
                 });
