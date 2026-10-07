@@ -117,7 +117,7 @@
 <!-- Google Devanagari Fonts Selection -->
 <link href='https://fonts.googleapis.com' rel='preconnect'/>
 <link crossorigin='crossorigin' href='https://fonts.gstatic.com' rel='preconnect'/>
-<link href='https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;600;700&amp;family=Hind:wght@400;500;600;700&amp;family=Kalam:wght@700&amp;family=Khand:wght@500;600;700&amp;family=Laila:wght@700&amp;family=Noto+Sans+Devanagari:wght@400;500;600;700;800&amp;family=Noto+Serif+Devanagari:wght@400;600;700;800&amp;family=Playpen+Sans:wght@400;500;600;700&amp;family=Rozha+One&amp;family=Tiro+Devanagari+Marathi:ital@0;1&amp;display=swap' rel='stylesheet'/>
+<link href='https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;600;700&amp;family=Hind:wght@400;500;600;700&amp;family=Kalam:wght@700&amp;family=Teko:wght@500;600;700&amp;family=Khand:wght@500;600;700&amp;family=Laila:wght@700&amp;family=Noto+Sans+Devanagari:wght@400;500;600;700;800&amp;family=Noto+Serif+Devanagari:wght@400;600;700;800&amp;family=Playpen+Sans:wght@400;500;600;700&amp;family=Rozha+One&amp;family=Tiro+Devanagari+Marathi:ital@0;1&amp;display=swap' rel='stylesheet'/>
 <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css' rel='stylesheet'/>
 
 <!-- React 18, Babel & Tailwind CSS -->
@@ -2969,8 +2969,6 @@ function App() {
         if(!name){alert('प्रमाणपत्रासाठी तुमचे नाव लिहा.');return;}
         if(!examResult || !examResult.passed || !selectedExam)return;
 
-        // One certificate per person: keep the issued certificate ID stable for
-        // the same normalized name on this device.
         const CERTIFICATE_REGISTRY_KEY='bhajasi_certificate_registry_v1';
         const nameKey=name.normalize('NFC').toLocaleLowerCase('mr-IN');
         const registry=safeJSON(localStorage.getItem(CERTIFICATE_REGISTRY_KEY) || '{}',{});
@@ -2988,17 +2986,18 @@ function App() {
         const ctx=canvas.getContext('2d');
         if(!ctx)return;
 
-        const NAME_FONT_FAMILY='Kalam';
-        const NAME_FONT='700 70px "Kalam", cursive';
+        const NAME_FONT='700 82px "Kalam", cursive';
+        const TITLE_FONT='700 104px "Teko", sans-serif';
 
         if(document.fonts && document.fonts.ready){
             try{
                 await document.fonts.ready;
                 await Promise.all([
-                    document.fonts.load('700 76px "Tiro Devanagari Marathi"'),
+                    document.fonts.load('700 104px "Teko"'),
                     document.fonts.load(NAME_FONT),
-                    document.fonts.load('700 54px "Alkatra"'),
-                    document.fonts.load('500 28px "Noto Sans Devanagari"'),
+                    document.fonts.load('700 52px "Alkatra"'),
+                    document.fonts.load('600 43px "Tiro Devanagari Marathi"'),
+                    document.fonts.load('500 29px "Noto Sans Devanagari"'),
                     document.fonts.load('600 29px "Noto Sans Devanagari"')
                 ]);
             }catch(e){}
@@ -3022,24 +3021,6 @@ function App() {
             return font.replace(/\\d+px/,size+'px');
         }
 
-        function wrapCentered(text,font,maxWidth){
-            ctx.font=font;
-            const words=String(text || '').trim().split(/\\s+/u).filter(Boolean);
-            const lines=[];
-            let current='';
-            words.forEach(function(word){
-                const candidate=current ? current+' '+word : word;
-                if(current && ctx.measureText(candidate).width>maxWidth){
-                    lines.push(current);
-                    current=word;
-                }else{
-                    current=candidate;
-                }
-            });
-            if(current)lines.push(current);
-            return lines;
-        }
-
         function drawSplash(x,y,r,alpha){
             const g=ctx.createRadialGradient(x,y,0,x,y,r);
             g.addColorStop(0,'rgba(251,213,45,'+alpha+')');
@@ -3049,7 +3030,6 @@ function App() {
             ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2);ctx.fill();
         }
 
-        // Soft splash-gradient background.
         const bg=ctx.createLinearGradient(0,0,1600,1100);
         bg.addColorStop(0,'#fffaf0');
         bg.addColorStop(.46,'#f7f4ea');
@@ -3060,7 +3040,6 @@ function App() {
         drawSplash(1340,920,320,.14);
         drawSplash(230,920,280,.12);
 
-        // Elegant rounded double gradient border.
         const frame=ctx.createLinearGradient(70,40,1530,1060);
         frame.addColorStop(0,'#e5a928');
         frame.addColorStop(.24,'#fff1a3');
@@ -3075,62 +3054,62 @@ function App() {
         inner.addColorStop(1,'#d79a21');
         ctx.strokeStyle=inner;ctx.lineWidth=3;roundedRect(52,52,1496,996,31);ctx.stroke();
 
-        // Use the same dark logo asset for visible header, watermark and footer.
         let logoImg=null;
         try{ logoImg=await loadLogoImage(FOOTER_LOGO); }catch(e){}
 
-        // Visible header logo.
-        if(logoImg && logoImg.naturalWidth){
-            const headerSize=72;
-            const ratio=logoImg.naturalWidth/Math.max(1,logoImg.naturalHeight);
-            const headerW=headerSize;
-            const headerH=headerSize/Math.max(.1,ratio);
-            ctx.save();
-            ctx.globalAlpha=1;
-            ctx.drawImage(logoImg,(1600-headerW)/2,58,headerW,headerH);
-            ctx.restore();
-        }
-
-        // Large, visible-enough watermark.
-        if(logoImg && logoImg.naturalWidth){
-            const ratio=logoImg.naturalWidth/Math.max(1,logoImg.naturalHeight);
-            const wmW=700;
-            const wmH=wmW/Math.max(.1,ratio);
-            ctx.save();
-            ctx.globalAlpha=.075;
-            ctx.globalCompositeOperation='multiply';
-            ctx.drawImage(logoImg,(1600-wmW)/2,(1100-wmH)/2+5,wmW,wmH);
-            ctx.restore();
-        }
-
-        ctx.textAlign='center';
-        ctx.textBaseline='alphabetic';
-
+        // Header: logo at LEFT, horizontally aligned with the heading.
+        const headerText='ज्ञान अभ्यास परीक्षा';
+        ctx.textBaseline='middle';
+        ctx.textAlign='left';
         ctx.fillStyle='#7b5a10';
-        ctx.font='700 54px "Alkatra", cursive';
-        ctx.fillText('भजसी भारत .com',800,150);
+        ctx.font='700 52px "Alkatra", cursive';
+        const headerTextW=ctx.measureText(headerText).width;
+        const headerLogoSize=78;
+        const headerGap=22;
+        const headerGroupW=headerLogoSize+headerGap+headerTextW;
+        const headerStart=(1600-headerGroupW)/2;
+        if(logoImg && logoImg.naturalWidth){
+            const ratio=logoImg.naturalWidth/Math.max(1,logoImg.naturalHeight);
+            const logoW=headerLogoSize;
+            const logoH=headerLogoSize/Math.max(.1,ratio);
+            ctx.drawImage(logoImg,headerStart,91,logoW,logoH);
+        }
+        ctx.fillText(headerText,headerStart+headerLogoSize+headerGap,128);
 
-        ctx.fillStyle='#5d6570';
-        ctx.font='500 25px "Noto Sans Devanagari", sans-serif';
-        ctx.fillText('संतवाणी • ग्रंथ • हरिनाम • चिंतन • स्तोत्र',800,184);
-
-        ctx.fillStyle='#765311';
-        ctx.font='700 78px "Tiro Devanagari Marathi", serif';
-        ctx.fillText('प्रमाणपत्र',800,280);
-
+        // Subject of the examination.
+        ctx.textAlign='center';
         ctx.fillStyle='#26333d';
         ctx.font='600 43px "Tiro Devanagari Marathi", serif';
-        ctx.fillText('पसायदान',800,340);
+        ctx.textBaseline='alphabetic';
+        ctx.fillText(String(selectedExam.title || 'पसायदान'),800,214);
 
-        // Exact certificate body requested by the user.
+        // Main title: Teko inside an elegant rounded box.
+        const titleBoxX=505, titleBoxY=260, titleBoxW=590, titleBoxH=142;
+        const titleGrad=ctx.createLinearGradient(titleBoxX,titleBoxY,titleBoxX+titleBoxW,titleBoxY+titleBoxH);
+        titleGrad.addColorStop(0,'rgba(255,255,255,.88)');
+        titleGrad.addColorStop(.5,'rgba(255,250,230,.96)');
+        titleGrad.addColorStop(1,'rgba(245,250,246,.92)');
+        ctx.fillStyle=titleGrad;
+        roundedRect(titleBoxX,titleBoxY,titleBoxW,titleBoxH,38);ctx.fill();
+        ctx.strokeStyle='#d39b24';ctx.lineWidth=4;ctx.stroke();
+        ctx.strokeStyle='rgba(229,169,40,.55)';ctx.lineWidth=2;
+        roundedRect(titleBoxX+11,titleBoxY+11,titleBoxW-22,titleBoxH-22,29);ctx.stroke();
+
+        ctx.fillStyle='#765311';
+        ctx.font=TITLE_FONT;
+        ctx.textBaseline='middle';
+        ctx.fillText('प्रमाणपत्र',800,331);
+
+        // Certificate body.
         ctx.fillStyle='#58636c';
-        ctx.font='500 28px "Noto Sans Devanagari", sans-serif';
-        ctx.fillText('प्रमाणित करण्यात येते की,',800,400);
+        ctx.font='500 29px "Noto Sans Devanagari", sans-serif';
+        ctx.textBaseline='alphabetic';
+        ctx.fillText('प्रमाणित करण्यात येते की,',800,464);
 
-        // The person's name is ALWAYS rendered with Kalam, including PNG/share/PDF.
+        // Recipient name is always Kalam in PNG/share/PDF.
         ctx.fillStyle='#352b24';
-        ctx.font=fitText(name,NAME_FONT,1120,28);
-        ctx.fillText(name,800,505);
+        ctx.font=fitText(name,NAME_FONT,1120,34);
+        ctx.fillText(name,800,560);
 
         const nameWidth=Math.min(900,ctx.measureText(name).width+100);
         const nameLine=ctx.createLinearGradient(800-nameWidth/2,0,800+nameWidth/2,0);
@@ -3138,23 +3117,16 @@ function App() {
         nameLine.addColorStop(.5,'rgba(233,128,6,.72)');
         nameLine.addColorStop(1,'rgba(233,128,6,0)');
         ctx.strokeStyle=nameLine;ctx.lineWidth=2;
-        ctx.beginPath();ctx.moveTo(800-nameWidth/2,525);ctx.lineTo(800+nameWidth/2,525);ctx.stroke();
+        ctx.beginPath();ctx.moveTo(800-nameWidth/2,578);ctx.lineTo(800+nameWidth/2,578);ctx.stroke();
 
+        // Required body text: exactly two separate lines.
         ctx.fillStyle='#4f5961';
         ctx.font='500 29px "Noto Sans Devanagari", sans-serif';
-        const bodyLines=wrapCentered(
-            'यांनी संत ज्ञानेश्वर महाराज कृत पसायदान विषयावरील ज्ञान परीक्षा उत्तीर्ण केली आहे. करिता हे डिजिटल प्रमाणपत्र प्रदान करण्यात येत आहे.',
-            '500 29px "Noto Sans Devanagari", sans-serif',
-            1180
-        );
-        let bodyY=590;
-        bodyLines.forEach(function(line){
-            ctx.fillText(line,800,bodyY);
-            bodyY+=48;
-        });
+        ctx.fillText('यांनी संत ज्ञानेश्वर महाराज कृत पसायदान विषयावरील ज्ञान परीक्षा उत्तीर्ण केली आहे.',800,645);
+        ctx.fillText('करिता हे डिजिटल प्रमाणपत्र प्रदान करण्यात येत आहे.',800,690);
 
         // Score/date boxes.
-        const boxY=700, boxW=520, boxH=130;
+        const boxY=748, boxW=520, boxH=118;
         const leftX=170, rightX=910;
         function drawInfoBox(x,title,value){
             const g=ctx.createLinearGradient(x,boxY,x+boxW,boxY+boxH);
@@ -3163,42 +3135,47 @@ function App() {
             g.addColorStop(1,'rgba(238,249,245,.88)');
             ctx.fillStyle=g;roundedRect(x,boxY,boxW,boxH,22);ctx.fill();
             ctx.strokeStyle='rgba(203,145,30,.78)';ctx.lineWidth=2;ctx.stroke();
-            ctx.fillStyle='#8b6418';ctx.font='700 22px "Noto Sans Devanagari",sans-serif';ctx.fillText(title,x+boxW/2,boxY+39);
-            ctx.fillStyle='#27343d';ctx.font='700 35px "Noto Sans Devanagari",sans-serif';ctx.fillText(value,x+boxW/2,boxY+91);
+            ctx.fillStyle='#8b6418';ctx.font='700 22px "Noto Sans Devanagari",sans-serif';ctx.fillText(title,x+boxW/2,boxY+37);
+            ctx.fillStyle='#27343d';ctx.font='700 35px "Noto Sans Devanagari",sans-serif';ctx.fillText(value,x+boxW/2,boxY+84);
         }
         drawInfoBox(leftX,'गुण',toMarathiDigits(examResult.score)+' / '+toMarathiDigits(examResult.total)+'  •  '+toMarathiDigits(examResult.percentage)+'%');
         drawInfoBox(rightX,'पूर्णता दिनांक',new Date(examResult.completedAt).toLocaleDateString('mr-IN'));
 
-        // Footer with the actual logo.
+        // Footer: left information column + horizontally aligned central branding.
+        const footerTop=900;
+        ctx.strokeStyle='rgba(203,145,30,.42)';ctx.lineWidth=2;
+        ctx.beginPath();ctx.moveTo(92,footerTop);ctx.lineTo(1508,footerTop);ctx.stroke();
+
         ctx.textAlign='left';
-        ctx.fillStyle='#6c7378';
-        ctx.font='500 20px "Noto Sans Devanagari",sans-serif';
-        ctx.fillText('भजसी भारत .com  •  https://bhajasibharat.blogspot.com/',170,915);
+        ctx.fillStyle='#4f5961';
+        ctx.font='600 18px "Noto Sans Devanagari",sans-serif';
+        ctx.fillText('Certificate ID: '+id,110,943);
+        ctx.font='500 17px "Noto Sans Devanagari",sans-serif';
+        ctx.fillText('https://bhajasibharat.blogspot.com/',110,973);
+        ctx.fillText('निर्मिती आणि संकलन: भरत रासवे',110,1003);
 
-        ctx.textAlign='right';
-        ctx.fillStyle='#6c7378';
-        ctx.font='500 20px "Noto Sans Devanagari",sans-serif';
-        ctx.fillText('Certificate ID: '+id,1430,915);
-
+        // Center footer branding: logo + site title + subtitle.
+        const footerLogoSize=72;
+        const footerBrandX=670;
         if(logoImg && logoImg.naturalWidth){
-            const footerSize=66;
             const ratio=logoImg.naturalWidth/Math.max(1,logoImg.naturalHeight);
-            const footerW=footerSize;
-            const footerH=footerSize/Math.max(.1,ratio);
+            const footerW=footerLogoSize;
+            const footerH=footerLogoSize/Math.max(.1,ratio);
             ctx.save();
             ctx.fillStyle='#ffffff';
-            roundedRect(88,950,84,84,13);ctx.fill();
-            ctx.drawImage(logoImg,97,959,footerW,footerH);
+            roundedRect(footerBrandX,934,84,84,13);ctx.fill();
+            ctx.drawImage(logoImg,footerBrandX+9,943,footerW,footerH);
             ctx.restore();
         }
 
-        ctx.textAlign='center';
-        ctx.fillStyle='#6d757b';
-        ctx.font='500 19px "Noto Sans Devanagari",sans-serif';
-        ctx.fillText('निर्मिती व संकलन: भरत रासवे',800,1000);
+        ctx.textAlign='left';
+        ctx.fillStyle='#7b5a10';
+        ctx.font='700 46px "Alkatra", cursive';
+        ctx.fillText('भजसी भारत .com',footerBrandX+105,967);
+        ctx.fillStyle='#5d6570';
+        ctx.font='500 20px "Noto Sans Devanagari",sans-serif';
+        ctx.fillText('संतवाणी • ग्रंथ • हरिनाम • चिंतन • स्तोत्र',footerBrandX+105,997);
 
-        // Persist only metadata, not the large PNG. Re-generating for the same
-        // person keeps the same certificate ID and therefore remains one certificate.
         registry[nameKey]={
             id:id,
             name:name,
