@@ -3130,19 +3130,36 @@ function App() {
             ctx.restore();
         }
 
-        ctx.textAlign='center';
         ctx.textBaseline='alphabetic';
 
+        // Centered courtesy row: [logo] भजसी भारत .com  सौजन्य
         const courtesy='भजसी भारत .com';
         const courtesyNote='सौजन्य';
+        const courtesyLogoSize=62;
+        const courtesyGap=18;
+        ctx.font='700 44px "Alkatra", cursive';
+        const courtesyW=ctx.measureText(courtesy).width;
+        ctx.font='600 23px "Hind", sans-serif';
+        const noteW=ctx.measureText(courtesyNote).width;
+        const courtesyTextW=courtesyW+22+noteW;
+        const courtesyGroupW=courtesyLogoSize+courtesyGap+courtesyTextW;
+        const courtesyStart=800-courtesyGroupW/2;
+        if(logoImg && logoImg.naturalWidth){
+            const ratio=logoImg.naturalWidth/Math.max(1,logoImg.naturalHeight);
+            const logoW=courtesyLogoSize;
+            const logoH=courtesyLogoSize/Math.max(.1,ratio);
+            ctx.drawImage(logoImg,courtesyStart,78,logoW,logoH);
+        }
+        ctx.textAlign='left';
         ctx.fillStyle='#7b5a10';
         ctx.font='700 44px "Alkatra", cursive';
-        ctx.fillText(courtesy,800,108);
+        ctx.fillText(courtesy,courtesyStart+courtesyLogoSize+courtesyGap,108);
         ctx.fillStyle='#59636b';
         ctx.font='600 23px "Hind", sans-serif';
-        ctx.fillText(courtesyNote,800,140);
+        ctx.fillText(courtesyNote,courtesyStart+courtesyLogoSize+courtesyGap+courtesyW+22,108);
 
         const headerText='ज्ञान अभ्यास परीक्षा';
+        ctx.textAlign='center';
         ctx.fillStyle='#26333d';
         ctx.font=HEADER_FONT;
         ctx.fillText(headerText,800,181);
