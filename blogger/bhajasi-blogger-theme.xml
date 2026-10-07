@@ -1624,7 +1624,7 @@ function getReaderTitle(work, parentWork) {
     if (!work) return '';
     const baseTitle = String(work.title || '').trim();
     const subtitle = String(work.subtitle || '').trim();
-    if (parentWork && subtitle) return baseTitle + ' – ' + subtitle;
+    if (subtitle) return baseTitle + ' – ' + subtitle;
     return baseTitle;
 }
 
@@ -3101,6 +3101,8 @@ function App() {
 
         let logoImg=null;
         try{ logoImg=await loadLogoImage(FOOTER_LOGO); }catch(e){}
+        // Use the same verified dark UI logo for the certificate watermark, courtesy header and footer.
+        // All three are rendered from the canvas-safe decoded image above.
 
         // Faint branded watermark behind the certificate content.
         if(logoImg && logoImg.naturalWidth){
@@ -3158,34 +3160,31 @@ function App() {
 
         const headerText='ज्ञान अभ्यास परीक्षा';
         ctx.textAlign='center';
-        ctx.fillStyle='#26333d';
+        ctx.fillStyle='#7b5a10';
         ctx.font=HEADER_FONT;
         ctx.fillText(headerText,800,181);
 
-        // Subject of the examination.
-        ctx.fillStyle='#26333d';
-        ctx.font='700 58px "Hind", sans-serif';
-        const subjectY=244;
+        // Subject: white text on a solid Bhajasi brand-gradient box, with no decorative circles.
         const subjectText=certificateSubject;
-        const subjectW=Math.min(900,ctx.measureText(subjectText).width+170);
+        ctx.font='700 48px "Hind", sans-serif';
+        const subjectW=Math.min(980,Math.max(650,ctx.measureText('विषय: '+subjectText).width+110));
+        const subjectH=78;
         const subjectX=800-subjectW/2;
-        const subjectGrad=ctx.createLinearGradient(subjectX,subjectY-42,subjectX+subjectW,subjectY+18);
-        subjectGrad.addColorStop(0,'#e5a928');
-        subjectGrad.addColorStop(.5,'#fff0a3');
-        subjectGrad.addColorStop(1,'#c98613');
+        const subjectY=207;
+        const subjectGrad=ctx.createLinearGradient(subjectX,subjectY,subjectX+subjectW,subjectY+subjectH);
+        subjectGrad.addColorStop(0,'#41436A');
+        subjectGrad.addColorStop(.48,'#984063');
+        subjectGrad.addColorStop(1,'#30c5ad');
         ctx.save();
         ctx.fillStyle=subjectGrad;
-        ctx.globalAlpha=.95;
-        ctx.beginPath();
-        ctx.arc(subjectX+22,subjectY-17,10,0,Math.PI*2);
-        ctx.arc(subjectX+subjectW-22,subjectY-17,10,0,Math.PI*2);
+        roundedRect(subjectX,subjectY,subjectW,subjectH,20);
         ctx.fill();
         ctx.restore();
-        ctx.fillStyle='#26333d';
-        ctx.fillText('विषय: '+subjectText,800,subjectY);
+        ctx.fillStyle='#ffffff';
+        ctx.fillText('विषय: '+subjectText,800,subjectY+52);
 
-        // Main title: Teko inside an elegant rounded box.
-        const titleBoxX=505, titleBoxY=276, titleBoxW=590, titleBoxH=142;
+        // Main title: Teko inside an elegant rounded box, moved below the subject with clear spacing.
+        const titleBoxX=505, titleBoxY=314, titleBoxW=590, titleBoxH=132;
         const titleGrad=ctx.createLinearGradient(titleBoxX,titleBoxY,titleBoxX+titleBoxW,titleBoxY+titleBoxH);
         titleGrad.addColorStop(0,'rgba(255,255,255,.88)');
         titleGrad.addColorStop(.5,'rgba(255,250,230,.96)');
@@ -3199,18 +3198,18 @@ function App() {
         ctx.fillStyle='#765311';
         ctx.font=TITLE_FONT;
         ctx.textBaseline='middle';
-        ctx.fillText('प्रमाणपत्र',800,349);
+        ctx.fillText('प्रमाणपत्र',800,380);
 
         // Certificate body.
         ctx.fillStyle='#58636c';
         ctx.font=BODY_FONT;
         ctx.textBaseline='alphabetic';
-        ctx.fillText('प्रमाणित करण्यात येते की,',800,482);
+        ctx.fillText('प्रमाणित करण्यात येते की,',800,490);
 
         // Recipient name is always Kalam in PNG/share/PDF.
         ctx.fillStyle='#352b24';
         ctx.font=fitText(name,NAME_FONT,1120,34);
-        ctx.fillText(name,800,578);
+        ctx.fillText(name,800,582);
 
         const nameWidth=Math.min(900,ctx.measureText(name).width+100);
         const nameLine=ctx.createLinearGradient(800-nameWidth/2,0,800+nameWidth/2,0);
@@ -3218,16 +3217,16 @@ function App() {
         nameLine.addColorStop(.5,'rgba(233,128,6,.72)');
         nameLine.addColorStop(1,'rgba(233,128,6,0)');
         ctx.strokeStyle=nameLine;ctx.lineWidth=2;
-        ctx.beginPath();ctx.moveTo(800-nameWidth/2,596);ctx.lineTo(800+nameWidth/2,596);ctx.stroke();
+        ctx.beginPath();ctx.moveTo(800-nameWidth/2,600);ctx.lineTo(800+nameWidth/2,600);ctx.stroke();
 
         // Achievement text is derived from the selected exam; never hard-code a saint or subject.
         ctx.fillStyle='#4f5961';
         ctx.font=BODY_FONT;
-        ctx.fillText(certificateAchievement,800,663);
+        ctx.fillText(certificateAchievement,800,667);
         ctx.fillText('करिता हे डिजिटल प्रमाणपत्र प्रदान करण्यात येत आहे.',800,708);
 
         // Score/date boxes.
-        const boxY=756, boxW=330, boxH=126;
+        const boxY=760, boxW=330, boxH=126;
         const leftX=285, rightX=985;
         function drawInfoBox(x,title,value){
             const g=ctx.createLinearGradient(x,boxY,x+boxW,boxY+boxH);
@@ -4361,23 +4360,25 @@ async function loadLogoImage(url) {
     try {
         const response = await fetch(url, {
             mode: 'cors',
-            cache: 'force-cache',
+            cache: 'no-store',
             credentials: 'omit'
         });
         if (!response.ok) throw new Error('Logo HTTP ' + response.status);
 
         const blob = await response.blob();
-        const objectUrl = URL.createObjectURL(blob);
-        try {
-            return await new Promise(function(resolve) {
-                const img = new Image();
-                img.onload = function() { resolve(img); };
-                img.onerror = function() { resolve(null); };
-                img.src = objectUrl;
-            });
-        } finally {
-            URL.revokeObjectURL(objectUrl);
-        }
+        const dataUrl = await new Promise(function(resolve, reject) {
+            const reader = new FileReader();
+            reader.onload = function() { resolve(reader.result); };
+            reader.onerror = reject;
+            reader.readAsDataURL(blob);
+        });
+
+        return await new Promise(function(resolve) {
+            const img = new Image();
+            img.onload = function() { resolve(img); };
+            img.onerror = function() { resolve(null); };
+            img.src = dataUrl;
+        });
     } catch (error) {
         try {
             return await new Promise(function(resolve) {
@@ -4465,7 +4466,7 @@ async function shareVerseSnap(entry, index, workContext, saintContext, parentWor
     const meaningLines = wrap(meaningText, '400 29px "Noto Sans Devanagari", sans-serif');
     const teachingLines = wrap(teachingText, '400 29px "Noto Sans Devanagari", sans-serif');
 
-    const topBlock = 280;
+    const topBlock = 335;
     const verseBlock = Math.max(verseLines.length, 1) * 66;
     const meaningBlock = meaningLines.length ? 115 + meaningLines.length * 48 : 0;
     const teachingBlock = teachingLines.length ? 115 + teachingLines.length * 48 : 0;
@@ -4553,16 +4554,16 @@ async function shareVerseSnap(entry, index, workContext, saintContext, parentWor
         105
     );
 
-    /* 2. Section title/subtitle in the outlined box */
+    /* 2. Metadata title: use title/subtitle exactly as supplied by the saint index. */
     const sectionContextText = parentWorkTitle && workTitle
         ? workTitle + ': ' + (sectionSubtitle || '')
-        : (workTitle || 'वाचन');
-    const subLabelText = '[ ' + sectionContextText + (sectionSubtitle ? '.' : '') + ' ]';
+        : getReaderTitle(work, parentWork);
+    ctx.textAlign = 'left';
     ctx.font = '700 27px "Noto Sans Devanagari", sans-serif';
-    const subLabelW = ctx.measureText(subLabelText).width;
-    const subBoxW = Math.min(contentWidth - 60, subLabelW + 64);
-    const subBoxH = 56;
-    const subBoxX = (width - subBoxW) / 2;
+    const subLabelW = ctx.measureText(sectionContextText || 'वाचन').width;
+    const subBoxW = Math.min(contentWidth, Math.max(360, subLabelW + 52));
+    const subBoxH = 58;
+    const subBoxX = padding;
     const subBoxY = 130;
 
     const labelGradient = ctx.createLinearGradient(subBoxX, subBoxY, subBoxX + subBoxW, subBoxY + subBoxH);
@@ -4582,13 +4583,29 @@ async function shareVerseSnap(entry, index, workContext, saintContext, parentWor
     ctx.stroke();
 
     ctx.fillStyle = '#ffffff';
-    ctx.fillText(subLabelText, width / 2, subBoxY + 38);
+    ctx.fillText(sectionContextText || 'वाचन', subBoxX + 22, subBoxY + 38);
+
+    /* 3. Rचना label in a left-aligned box matching the meaning/teaching treatment. */
+    const labelText = label || 'रचना';
+    ctx.font = '700 24px "Noto Sans Devanagari", sans-serif';
+    const labelW = Math.max(150, ctx.measureText(labelText).width + 42);
+    const labelBoxY = 210;
+    ctx.strokeStyle = '#e98006';
+    ctx.lineWidth = 2;
+    ctx.fillStyle = 'rgba(42,57,80,0.7)';
+    ctx.beginPath();
+    if (ctx.roundRect) {
+        ctx.roundRect(padding, labelBoxY, labelW, 46, 15);
+    } else {
+        ctx.rect(padding, labelBoxY, labelW, 46);
+    }
+    ctx.fill();
+    ctx.stroke();
 
     ctx.fillStyle = '#e98006';
-    ctx.font = '700 27px "Noto Sans Devanagari", sans-serif';
-    ctx.fillText(label || 'रचना', width / 2, 225);
+    ctx.fillText(labelText, padding + 21, labelBoxY + 32);
 
-    let y = 275;
+    let y = 300;
 
     /* 3. Main Verse (Laila Bold 700) */
     ctx.fillStyle = '#ffffff';
@@ -4760,7 +4777,7 @@ async function shareVerseSnap(entry, index, workContext, saintContext, parentWor
         saintTitle +
         ((parentWorkTitle || workTitle) ? ' • ' + (parentWorkTitle || workTitle) : '') +
         (parentWorkTitle && workTitle
-            ? ' • [ ' + workTitle + ': ' + (sectionSubtitle || '') + (sectionSubtitle ? '.' : '') + ' ]'
+            ? ' • ' + workTitle + ': ' + (sectionSubtitle || '') + (sectionSubtitle ? '.' : '')
             : '');
 
     const shareCaption =
