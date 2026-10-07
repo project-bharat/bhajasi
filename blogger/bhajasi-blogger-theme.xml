@@ -1309,6 +1309,7 @@ const FOOTER_LOGO =
 const PROGRESS_KEY = 'bhajasi_reading_progress_v2';
 const NOTIFY_KEY = 'bhajasi_notification_v1';
 const EXAM_RESULT_KEY = 'bhajasi_pariksha_results_v1';
+const EXAM_PROGRESS_KEY = 'bhajasi_pariksha_progress_v1';
 
 const {
     useState,
@@ -1336,6 +1337,48 @@ function safeJSON(value, fallback) {
 
 function readProgress() {
     return safeJSON(localStorage.getItem(PROGRESS_KEY) || '{}', {});
+}
+
+function readExamProgress() {
+    return safeJSON(localStorage.getItem(EXAM_PROGRESS_KEY) || '{}', {});
+}
+
+function getExamQuestionKey(question, index) {
+    if (question && question.id !== undefined && question.id !== null && String(question.id).trim()) {
+        return String(question.id);
+    }
+    if (question && question.questionId !== undefined && question.questionId !== null && String(question.questionId).trim()) {
+        return String(question.questionId);
+    }
+    return 'index:' + String(index);
+}
+
+function persistExamProgress(exam, questions, questionIndex, answers, startedAt) {
+    if (!exam || !exam.id) return;
+    const progress = readExamProgress();
+    const questionIds = (questions || []).map(function(question, index) {
+        return getExamQuestionKey(question, index);
+    });
+    progress[exam.id] = {
+        examId: exam.id,
+        title: exam.title || '',
+        file: exam.file || '',
+        questionIds: questionIds,
+        currentQuestionIndex: Math.max(0, Math.min(Number(questionIndex || 0), Math.max(0, questionIds.length - 1))),
+        answers: Object.assign({}, answers || {}),
+        startedAt: startedAt || new Date().toISOString(),
+        updatedAt: new Date().toISOString()
+    };
+    localStorage.setItem(EXAM_PROGRESS_KEY, JSON.stringify(progress));
+}
+
+function clearExamProgress(examId) {
+    if (!examId) return;
+    const progress = readExamProgress();
+    if (progress[examId]) {
+        delete progress[examId];
+        localStorage.setItem(EXAM_PROGRESS_KEY, JSON.stringify(progress));
+    }
 }
 
 function writeProgress(key, value) {
@@ -1870,15 +1913,44 @@ function App() {
         if (!examMeta || !examMeta.file) return;
         try {
             const bank = await fetchJSON(PARIKSHA_BASE + examMeta.file.replace(/^pariksha\//, ''));
-            setSelectedExam(Object.assign({}, examMeta, bank));
-            setExamQuestions(Array.isArray(bank.questions) ? bank.questions : []);
-            setExamQuestionIndex(0);
-            setExamAnswers({});
+            const questions = Array.isArray(bank.questions) ? bank.questions : [];
+            const fullExam = Object.assign({}, examMeta, bank);
+            const allProgress = readExamProgress();
+            const savedProgress = allProgress[examMeta.id] || null;
+            const validAnswers = {};
+
+            if (savedProgress && savedProgress.answers && Array.isArray(savedProgress.questionIds)) {
+                questions.forEach(function(question, index) {
+                    const key = getExamQuestionKey(question, index);
+                    if (savedProgress.answers[key] !== undefined) {
+                        validAnswers[key] = savedProgress.answers[key];
+                    }
+                });
+            }
+
+            const restoredIndex = savedProgress && Number.isFinite(Number(savedProgress.currentQuestionIndex))
+                ? Number(savedProgress.currentQuestionIndex)
+                : 0;
+            const safeIndex = questions.length
+                ? Math.max(0, Math.min(restoredIndex, questions.length - 1))
+                : 0;
+            const startedAt = savedProgress && savedProgress.startedAt
+                ? savedProgress.startedAt
+                : new Date().toISOString();
+
+            setSelectedExam(fullExam);
+            setExamQuestions(questions);
+            setExamQuestionIndex(safeIndex);
+            setExamAnswers(validAnswers);
             setExamSubmitted(false);
             setExamResult(null);
             setCertificateName('');
             setCertificatePreview('');
             setCertificateId('');
+
+            if (questions.length) {
+                persistExamProgress(fullExam, questions, safeIndex, validAnswers, startedAt);
+            }
             navigate('exam');
         } catch (error) {
             console.error('Bhajasi exam loading error:', error);
@@ -1887,17 +1959,31 @@ function App() {
     }
 
     function selectExamAnswer(optionIndex) {
-        if (examSubmitted) return;
-        setExamAnswers(function(old) { return Object.assign({}, old, { [examQuestionIndex]: optionIndex }); });
+        if (examSubmitted || !examQuestions.length || !selectedExam) return;
+        const question = examQuestions[examQuestionIndex];
+        const key = getExamQuestionKey(question, examQuestionIndex);
+        const nextAnswers = Object.assign({}, examAnswers, { [key]: optionIndex });
+        setExamAnswers(nextAnswers);
+        persistExamProgress(selectedExam, examQuestions, examQuestionIndex, nextAnswers, null);
+    }
+
+    function changeExamQuestion(nextIndex) {
+        if (!examQuestions.length || !selectedExam) return;
+        const safeIndex = Math.max(0, Math.min(Number(nextIndex), examQuestions.length - 1));
+        setExamQuestionIndex(safeIndex);
+        persistExamProgress(selectedExam, examQuestions, safeIndex, examAnswers, null);
     }
 
     function submitExam() {
-        if (!examQuestions.length) return;
-        const unanswered = examQuestions.some(function(q, index) { return examAnswers[index] === undefined; });
+        if (!examQuestions.length || !selectedExam) return;
+        const unanswered = examQuestions.some(function(q, index) {
+            return examAnswers[getExamQuestionKey(q, index)] === undefined;
+        });
         if (unanswered) { alert('सर्व प्रश्नांची उत्तरे निवडा.'); return; }
         let score = 0;
         examQuestions.forEach(function(q, index) {
-            if (Number(examAnswers[index]) === Number(q.answer)) score += 1;
+            const key = getExamQuestionKey(q, index);
+            if (Number(examAnswers[key]) === Number(q.answer)) score += 1;
         });
         const percentage = Math.round((score / examQuestions.length) * 100);
         const passed = percentage >= Number(selectedExam && selectedExam.passingPercentage || 80);
@@ -1907,11 +1993,20 @@ function App() {
         const saved = safeJSON(localStorage.getItem(EXAM_RESULT_KEY) || '{}', {});
         saved[selectedExam.id] = result;
         localStorage.setItem(EXAM_RESULT_KEY, JSON.stringify(saved));
+        clearExamProgress(selectedExam.id);
         navigate('examResult');
     }
 
     function retryExam() {
-        setExamQuestionIndex(0); setExamAnswers({}); setExamSubmitted(false); setExamResult(null); navigate('exam');
+        if (selectedExam) clearExamProgress(selectedExam.id);
+        setExamQuestionIndex(0);
+        setExamAnswers({});
+        setExamSubmitted(false);
+        setExamResult(null);
+        if (selectedExam && examQuestions.length) {
+            persistExamProgress(selectedExam, examQuestions, 0, {}, new Date().toISOString());
+        }
+        navigate('exam');
     }
 
     function makeCertificateId() {
@@ -2792,21 +2887,32 @@ function App() {
                         <section className='bhajasi-section bhajasi-section-themes'>
                             <div className='bhajasi-reader-head'><div className='bhajasi-title-row'><h2 className='bhajasi-title'>परीक्षा</h2></div><p className='bhajasi-meta'>संतसाहित्य आणि ग्रंथांवर आधारित ज्ञानाचा अभ्यास व सराव करा. प्रत्येक प्रश्नासोबत संबंधित साहित्य वाचण्याची संधी आहे.</p></div>
                             <div className='bhajasi-grid'>
-                                {!pariksha || !Array.isArray(pariksha.exams) || pariksha.exams.length===0 ? <div className='bhajasi-empty'>सध्या कोणतीही परीक्षा उपलब्ध नाही.</div> : pariksha.exams.map(function(exam){return (
-                                    <article key={exam.id} className='bhajasi-exam-card'><div className='bhajasi-card-title'>{exam.title}</div><div className='bhajasi-card-sub'>{exam.subtitle}</div><div className='bhajasi-exam-meta'>{toMarathiDigits(exam.questionCount||0)} प्रश्न <span>•</span> {toMarathiDigits(exam.passingPercentage||80)}% उत्तीर्ण निकष</div><button className='bhajasi-primary-btn' onClick={function(){startExam(exam);}}>परीक्षा सुरू करा</button></article>
-                                );})}
+                                {!pariksha || !Array.isArray(pariksha.exams) || pariksha.exams.length===0 ? <div className='bhajasi-empty'>सध्या कोणतीही परीक्षा उपलब्ध नाही.</div> : pariksha.exams.map(function(exam){
+                                    const savedExamProgress = readExamProgress()[exam.id];
+                                    const solvedCount = savedExamProgress && savedExamProgress.answers ? Object.keys(savedExamProgress.answers).length : 0;
+                                    const hasResume = solvedCount > 0 || (savedExamProgress && Number(savedExamProgress.currentQuestionIndex || 0) > 0);
+                                    return (
+                                        <article key={exam.id} className='bhajasi-exam-card'>
+                                            <div className='bhajasi-card-title'>{exam.title}</div>
+                                            <div className='bhajasi-card-sub'>{exam.subtitle}</div>
+                                            <div className='bhajasi-exam-meta'>{toMarathiDigits(exam.questionCount||0)} प्रश्न <span>•</span> {toMarathiDigits(exam.passingPercentage||80)}% उत्तीर्ण निकष</div>
+                                            {hasResume && <div className='bhajasi-meta' style={{color:'#fbd52d',margin:'7px 0 8px'}}>परीक्षा सुरू आहे • {toMarathiDigits(solvedCount)} उत्तरे जतन केली आहेत</div>}
+                                            <button className='bhajasi-primary-btn' onClick={function(){startExam(exam);}}>{hasResume ? 'पुन्हा सुरू करा' : 'परीक्षा सुरू करा'}</button>
+                                        </article>
+                                    );
+                                })}
                             </div>
                         </section>
                     )}
 
                     {view === 'exam' && selectedExam && (
                         <section className='bhajasi-section bhajasi-section-works'>
-                            <div className='bhajasi-reader-head'><button className='bhajasi-back' onClick={openParikshaList}>← परीक्षांकडे परत</button><div className='bhajasi-title-row'><h2 className='bhajasi-title'>{selectedExam.title}</h2></div><p className='bhajasi-meta'>प्रश्न {toMarathiDigits(examQuestionIndex+1)} / {toMarathiDigits(examQuestions.length)}</p></div>
-                            {examQuestions.length ? (function(){const question=examQuestions[examQuestionIndex];const selectedOption=examAnswers[examQuestionIndex];return (
+                            <div className='bhajasi-reader-head'><button className='bhajasi-back' onClick={openParikshaList}>← परीक्षांकडे परत</button><div className='bhajasi-title-row'><h2 className='bhajasi-title'>{selectedExam.title}</h2></div><p className='bhajasi-meta'>प्रश्न {toMarathiDigits(examQuestionIndex+1)} / {toMarathiDigits(examQuestions.length)}</p><p className='bhajasi-meta' style={{color:'#fbd52d'}}>उत्तरे आपोआप जतन होत आहेत. परत आल्यावर ही परीक्षा याच ठिकाणाहून सुरू होईल.</p></div>
+                            {examQuestions.length ? (function(){const question=examQuestions[examQuestionIndex];const questionKey=getExamQuestionKey(question,examQuestionIndex);const selectedOption=examAnswers[questionKey];return (
                                 <div className='bhajasi-exam-question'><div className='bhajasi-exam-progress'><div className='bhajasi-exam-progress-bar' style={{width:(((examQuestionIndex+1)/examQuestions.length)*100)+'%'}}></div></div><h3>{question.question}</h3>
                                     <div className='bhajasi-exam-options'>{(question.options||[]).map(function(option,optionIndex){const active=Number(selectedOption)===optionIndex;return <button key={optionIndex} className={'bhajasi-exam-option'+(active?' selected':'')} onClick={function(){selectExamAnswer(optionIndex);}}><span className='bhajasi-exam-radio'>{active?'✓':''}</span><span>{option}</span></button>;})}</div>
                                     {question.study && <div className='bhajasi-study-card'><div className='bhajasi-study-title'>अभ्यासासाठी</div><div className='bhajasi-study-text'>{question.study.text}</div><button className='bhajasi-study-btn' onClick={function(){openExamSource(question.study.source);}}><i className='fa-solid fa-book-open'></i> संबंधित साहित्य वाचा</button></div>}
-                                    <div className='bhajasi-exam-actions'><button className='bhajasi-secondary-btn' disabled={examQuestionIndex===0} onClick={function(){setExamQuestionIndex(Math.max(0,examQuestionIndex-1));}}>मागील</button>{examQuestionIndex<examQuestions.length-1?<button className='bhajasi-primary-btn' disabled={selectedOption===undefined} onClick={function(){setExamQuestionIndex(examQuestionIndex+1);}}>पुढील प्रश्न</button>:<button className='bhajasi-primary-btn' disabled={selectedOption===undefined} onClick={submitExam}>उत्तर तपासा</button>}</div>
+                                    <div className='bhajasi-exam-actions'><button className='bhajasi-secondary-btn' disabled={examQuestionIndex===0} onClick={function(){changeExamQuestion(examQuestionIndex-1);}}>मागील</button>{examQuestionIndex<examQuestions.length-1?<button className='bhajasi-primary-btn' disabled={selectedOption===undefined} onClick={function(){changeExamQuestion(examQuestionIndex+1);}}>पुढील प्रश्न</button>:<button className='bhajasi-primary-btn' disabled={selectedOption===undefined} onClick={submitExam}>उत्तर तपासा</button>}</div>
                                 </div>
                             );})() : <div className='bhajasi-empty'>या परीक्षेसाठी प्रश्न उपलब्ध नाहीत.</div>}
                         </section>
