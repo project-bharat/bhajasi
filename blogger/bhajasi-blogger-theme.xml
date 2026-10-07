@@ -2965,24 +2965,41 @@ function App() {
     }, [globalSearchOpen]);
 
     async function createCertificate() {
-        const name=String(certificateName || '').trim();
+        const name=String(certificateName || '').trim().replace(/\\s+/g,' ');
         if(!name){alert('प्रमाणपत्रासाठी तुमचे नाव लिहा.');return;}
         if(!examResult || !examResult.passed || !selectedExam)return;
 
-        const id=certificateId || makeCertificateId();
+        // One certificate per person: keep the issued certificate ID stable for
+        // the same normalized name on this device.
+        const CERTIFICATE_REGISTRY_KEY='bhajasi_certificate_registry_v1';
+        const nameKey=name.normalize('NFC').toLocaleLowerCase('mr-IN');
+        const registry=safeJSON(localStorage.getItem(CERTIFICATE_REGISTRY_KEY) || '{}',{});
+        const existing=registry[nameKey];
+
+        if(existing && existing.examId && existing.examId!==selectedExam.id){
+            alert('या नावासाठी एकच डिजिटल प्रमाणपत्र दिले जाऊ शकते. या नावाचे प्रमाणपत्र आधीच उपलब्ध आहे.');
+            return;
+        }
+
+        const id=(existing && existing.id) || certificateId || makeCertificateId();
         const canvas=document.createElement('canvas');
         canvas.width=1600;
         canvas.height=1100;
         const ctx=canvas.getContext('2d');
         if(!ctx)return;
+
+        const NAME_FONT_FAMILY='Kalam';
+        const NAME_FONT='700 70px "Kalam", cursive';
+
         if(document.fonts && document.fonts.ready){
             try{
                 await document.fonts.ready;
                 await Promise.all([
                     document.fonts.load('700 76px "Tiro Devanagari Marathi"'),
-                    document.fonts.load('700 70px "Kalam"'),
+                    document.fonts.load(NAME_FONT),
                     document.fonts.load('700 54px "Alkatra"'),
-                    document.fonts.load('500 28px "Noto Sans Devanagari"')
+                    document.fonts.load('500 28px "Noto Sans Devanagari"'),
+                    document.fonts.load('600 29px "Noto Sans Devanagari"')
                 ]);
             }catch(e){}
         }
@@ -2992,17 +3009,37 @@ function App() {
             if(ctx.roundRect) ctx.roundRect(x,y,w,h,r);
             else ctx.rect(x,y,w,h);
         }
-        function fitText(text,font,maxWidth){
+
+        function fitText(text,font,maxWidth,minSize){
             ctx.font=font;
-            let size=parseInt(font.match(/(\d+)px/)?.[1] || '40',10);
-            const family=font.replace(/^.*?\d+px\\s*/, '');
-            while(size>24){
-                ctx.font=font.replace(/\d+px/,size+'px');
+            let size=parseInt(font.match(/(\\d+)px/)?.[1] || '40',10);
+            const floor=minSize || 24;
+            while(size>floor){
+                ctx.font=font.replace(/\\d+px/,size+'px');
                 if(ctx.measureText(text).width<=maxWidth) return ctx.font;
                 size-=2;
             }
-            return font.replace(/\d+px/,size+'px');
+            return font.replace(/\\d+px/,size+'px');
         }
+
+        function wrapCentered(text,font,maxWidth){
+            ctx.font=font;
+            const words=String(text || '').trim().split(/\\s+/u).filter(Boolean);
+            const lines=[];
+            let current='';
+            words.forEach(function(word){
+                const candidate=current ? current+' '+word : word;
+                if(current && ctx.measureText(candidate).width>maxWidth){
+                    lines.push(current);
+                    current=word;
+                }else{
+                    current=candidate;
+                }
+            });
+            if(current)lines.push(current);
+            return lines;
+        }
+
         function drawSplash(x,y,r,alpha){
             const g=ctx.createRadialGradient(x,y,0,x,y,r);
             g.addColorStop(0,'rgba(251,213,45,'+alpha+')');
@@ -3012,7 +3049,7 @@ function App() {
             ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2);ctx.fill();
         }
 
-        // Soft splash-gradient background
+        // Soft splash-gradient background.
         const bg=ctx.createLinearGradient(0,0,1600,1100);
         bg.addColorStop(0,'#fffaf0');
         bg.addColorStop(.46,'#f7f4ea');
@@ -3023,7 +3060,7 @@ function App() {
         drawSplash(1340,920,320,.14);
         drawSplash(230,920,280,.12);
 
-        // Elegant rounded double gradient border
+        // Elegant rounded double gradient border.
         const frame=ctx.createLinearGradient(70,40,1530,1060);
         frame.addColorStop(0,'#e5a928');
         frame.addColorStop(.24,'#fff1a3');
@@ -3031,71 +3068,93 @@ function App() {
         frame.addColorStop(.70,'#fff5bd');
         frame.addColorStop(1,'#c98613');
         ctx.strokeStyle=frame;ctx.lineWidth=12;roundedRect(34,34,1532,1032,42);ctx.stroke();
+
         const inner=ctx.createLinearGradient(80,70,1510,1030);
         inner.addColorStop(0,'#f6d56a');
         inner.addColorStop(.5,'#ffffff');
         inner.addColorStop(1,'#d79a21');
         ctx.strokeStyle=inner;ctx.lineWidth=3;roundedRect(52,52,1496,996,31);ctx.stroke();
 
-        // Large faint watermark across the page
-        try{
-            const logo=await loadLogoImage(SITE_LOGO);
-            if(logo){
-                const ratio=logo.naturalWidth/Math.max(1,logo.naturalHeight);
-                const wmW=720;
-                const wmH=wmW/Math.max(.1,ratio);
-                ctx.save();
-                ctx.globalAlpha=.065;
-                ctx.globalCompositeOperation='multiply';
-                ctx.drawImage(logo,(1600-wmW)/2,(1100-wmH)/2-5,wmW,wmH);
-                ctx.restore();
-            }
-        }catch(e){}
+        // Use the same dark logo asset for visible header, watermark and footer.
+        let logoImg=null;
+        try{ logoImg=await loadLogoImage(FOOTER_LOGO); }catch(e){}
+
+        // Visible header logo.
+        if(logoImg && logoImg.naturalWidth){
+            const headerSize=72;
+            const ratio=logoImg.naturalWidth/Math.max(1,logoImg.naturalHeight);
+            const headerW=headerSize;
+            const headerH=headerSize/Math.max(.1,ratio);
+            ctx.save();
+            ctx.globalAlpha=1;
+            ctx.drawImage(logoImg,(1600-headerW)/2,58,headerW,headerH);
+            ctx.restore();
+        }
+
+        // Large, visible-enough watermark.
+        if(logoImg && logoImg.naturalWidth){
+            const ratio=logoImg.naturalWidth/Math.max(1,logoImg.naturalHeight);
+            const wmW=700;
+            const wmH=wmW/Math.max(.1,ratio);
+            ctx.save();
+            ctx.globalAlpha=.075;
+            ctx.globalCompositeOperation='multiply';
+            ctx.drawImage(logoImg,(1600-wmW)/2,(1100-wmH)/2+5,wmW,wmH);
+            ctx.restore();
+        }
 
         ctx.textAlign='center';
         ctx.textBaseline='alphabetic';
 
         ctx.fillStyle='#7b5a10';
         ctx.font='700 54px "Alkatra", cursive';
-        ctx.fillText('भजसी भारत .com',800,125);
+        ctx.fillText('भजसी भारत .com',800,150);
 
         ctx.fillStyle='#5d6570';
         ctx.font='500 25px "Noto Sans Devanagari", sans-serif';
-        ctx.fillText('संतवाणी • ग्रंथ • हरिनाम • चिंतन • स्तोत्र',800,162);
+        ctx.fillText('संतवाणी • ग्रंथ • हरिनाम • चिंतन • स्तोत्र',800,184);
 
         ctx.fillStyle='#765311';
         ctx.font='700 78px "Tiro Devanagari Marathi", serif';
-        ctx.fillText('प्रमाणपत्र',800,260);
+        ctx.fillText('प्रमाणपत्र',800,280);
 
         ctx.fillStyle='#26333d';
         ctx.font='600 43px "Tiro Devanagari Marathi", serif';
-        const certTitle=selectedExam.title || 'डिजिटल ज्ञानपरीक्षा';
-        ctx.fillText(certTitle,800,325);
+        ctx.fillText('पसायदान',800,340);
 
+        // Exact certificate body requested by the user.
         ctx.fillStyle='#58636c';
         ctx.font='500 28px "Noto Sans Devanagari", sans-serif';
-        ctx.fillText('ही प्रमाणित नोंद यशस्वीपणे पूर्ण केलेल्या परीक्षेसाठी प्रदान करण्यात येते',800,385);
+        ctx.fillText('प्रमाणित करण्यात येते की,',800,400);
 
-        // Handwritten Devanagari name
+        // The person's name is ALWAYS rendered with Kalam, including PNG/share/PDF.
         ctx.fillStyle='#352b24';
-        ctx.font=fitText(name,'700 70px "Kalam", cursive',1120);
-        ctx.fillText(name,800,510);
+        ctx.font=fitText(name,NAME_FONT,1120,28);
+        ctx.fillText(name,800,505);
 
-        const nameWidth=Math.min(560,ctx.measureText(name).width+90);
+        const nameWidth=Math.min(900,ctx.measureText(name).width+100);
         const nameLine=ctx.createLinearGradient(800-nameWidth/2,0,800+nameWidth/2,0);
         nameLine.addColorStop(0,'rgba(233,128,6,0)');
         nameLine.addColorStop(.5,'rgba(233,128,6,.72)');
         nameLine.addColorStop(1,'rgba(233,128,6,0)');
         ctx.strokeStyle=nameLine;ctx.lineWidth=2;
-        ctx.beginPath();ctx.moveTo(800-nameWidth/2,530);ctx.lineTo(800+nameWidth/2,530);ctx.stroke();
+        ctx.beginPath();ctx.moveTo(800-nameWidth/2,525);ctx.lineTo(800+nameWidth/2,525);ctx.stroke();
 
         ctx.fillStyle='#4f5961';
         ctx.font='500 29px "Noto Sans Devanagari", sans-serif';
-        const body=selectedExam.subtitle || 'ज्ञानपरीक्षा यशस्वीरीत्या पूर्ण';
-        ctx.fillText(body,800,585);
+        const bodyLines=wrapCentered(
+            'यांनी संत ज्ञानेश्वर महाराज कृत पसायदान विषयावरील ज्ञान परीक्षा उत्तीर्ण केली आहे. करिता हे डिजिटल प्रमाणपत्र प्रदान करण्यात येत आहे.',
+            '500 29px "Noto Sans Devanagari", sans-serif',
+            1180
+        );
+        let bodyY=590;
+        bodyLines.forEach(function(line){
+            ctx.fillText(line,800,bodyY);
+            bodyY+=48;
+        });
 
-        // Score/date boxes
-        const boxY=665, boxW=520, boxH=130;
+        // Score/date boxes.
+        const boxY=700, boxW=520, boxH=130;
         const leftX=170, rightX=910;
         function drawInfoBox(x,title,value){
             const g=ctx.createLinearGradient(x,boxY,x+boxW,boxY+boxH);
@@ -3110,22 +3169,46 @@ function App() {
         drawInfoBox(leftX,'गुण',toMarathiDigits(examResult.score)+' / '+toMarathiDigits(examResult.total)+'  •  '+toMarathiDigits(examResult.percentage)+'%');
         drawInfoBox(rightX,'पूर्णता दिनांक',new Date(examResult.completedAt).toLocaleDateString('mr-IN'));
 
+        // Footer with the actual logo.
         ctx.textAlign='left';
         ctx.fillStyle='#6c7378';
         ctx.font='500 20px "Noto Sans Devanagari",sans-serif';
-        ctx.fillText('भजसी भारत .com  •  https://bhajasibharat.blogspot.com/',170,900);
+        ctx.fillText('भजसी भारत .com  •  https://bhajasibharat.blogspot.com/',170,915);
 
         ctx.textAlign='right';
         ctx.fillStyle='#6c7378';
         ctx.font='500 20px "Noto Sans Devanagari",sans-serif';
-        ctx.fillText('Certificate ID: '+id,1430,900);
+        ctx.fillText('Certificate ID: '+id,1430,915);
+
+        if(logoImg && logoImg.naturalWidth){
+            const footerSize=66;
+            const ratio=logoImg.naturalWidth/Math.max(1,logoImg.naturalHeight);
+            const footerW=footerSize;
+            const footerH=footerSize/Math.max(.1,ratio);
+            ctx.save();
+            ctx.fillStyle='#ffffff';
+            roundedRect(88,950,84,84,13);ctx.fill();
+            ctx.drawImage(logoImg,97,959,footerW,footerH);
+            ctx.restore();
+        }
 
         ctx.textAlign='center';
         ctx.fillStyle='#6d757b';
         ctx.font='500 19px "Noto Sans Devanagari",sans-serif';
         ctx.fillText('निर्मिती व संकलन: भरत रासवे',800,1000);
 
+        // Persist only metadata, not the large PNG. Re-generating for the same
+        // person keeps the same certificate ID and therefore remains one certificate.
+        registry[nameKey]={
+            id:id,
+            name:name,
+            examId:selectedExam.id,
+            completedAt:examResult.completedAt || new Date().toISOString()
+        };
+        try{localStorage.setItem(CERTIFICATE_REGISTRY_KEY,JSON.stringify(registry));}catch(e){}
+
         setCertificateId(id);
+        setCertificateName(name);
         setCertificatePreview(canvas.toDataURL('image/png',1));
         navigate('certificate');
     }
@@ -3139,35 +3222,35 @@ function App() {
 
     async function shareCertificate(){
         if(!certificatePreview)return;
-        const file=await getCertificateFile();
-        const caption='मी भजसी भारत .com वरील '+(selectedExam ? selectedExam.title : 'ज्ञानपरीक्षा')+' यशस्वीरीत्या पूर्ण केली.\n\nभजसी भारत .com\nhttps://bhajasibharat.blogspot.com/\nनिर्मिती व संकलन: भरत रासवे';
-        if(navigator.share && navigator.canShare && file && navigator.canShare({files:[file]})){
-            try{
+        try{
+            const file=await getCertificateFile();
+            const caption='मी भजसी भारत .com वरील पसायदान विषयावरील ज्ञान परीक्षा यशस्वीरीत्या उत्तीर्ण केली.\\n\\nभजसी भारत .com\\nhttps://bhajasibharat.blogspot.com/\\nनिर्मिती व संकलन: भरत रासवे';
+            if(navigator.share && navigator.canShare && file && navigator.canShare({files:[file]})){
                 await navigator.share({
-                    title:'भजसी भारत .com — '+(selectedExam ? selectedExam.title : 'परीक्षा पूर्ण'),
+                    title:'भजसी भारत .com — पसायदान ज्ञान परीक्षा प्रमाणपत्र',
                     text:caption,
                     files:[file]
                 });
                 navigate('examResult');
                 return;
-            }catch(error){
-                if(error && error.name==='AbortError')return;
             }
-        }
-        try{
             if(navigator.clipboard) await navigator.clipboard.writeText(caption);
-        }catch(e){}
-        const url=URL.createObjectURL(file);
-        const a=document.createElement('a');a.href=url;a.download=file.name;document.body.appendChild(a);a.click();a.remove();
-        setTimeout(function(){URL.revokeObjectURL(url);},1500);
-        alert('प्रमाणपत्राची प्रतिमा जतन झाली. कॅप्शन कॉपी केले आहे.');
-        navigate('examResult');
+            const url=URL.createObjectURL(file);
+            const a=document.createElement('a');a.href=url;a.download=file.name;document.body.appendChild(a);a.click();a.remove();
+            setTimeout(function(){URL.revokeObjectURL(url);},1500);
+            alert('प्रमाणपत्राची प्रतिमा जतन झाली. कॅप्शन कॉपी केले आहे.');
+            navigate('examResult');
+        }catch(error){
+            console.error('Certificate share error:',error);
+            alert('प्रमाणपत्र शेअर करता आले नाही. कृपया प्रतिमा जतन करून शेअर करा.');
+        }
     }
 
     async function downloadCertificateImage(){
         if(!certificatePreview)return;
         try{
             const file=await getCertificateFile();
+            if(!file)throw new Error('certificate file unavailable');
             const url=URL.createObjectURL(file);
             const a=document.createElement('a');a.href=url;a.download=file.name;document.body.appendChild(a);a.click();a.remove();
             setTimeout(function(){URL.revokeObjectURL(url);},1500);
@@ -3178,20 +3261,56 @@ function App() {
     async function downloadCertificatePDF(){
         if(!certificatePreview)return;
         try{
-            if(!window.jspdf){
+            // Load jsPDF exactly once and wait for the global to be available.
+            if(!window.jspdf || !window.jspdf.jsPDF){
                 await new Promise(function(resolve,reject){
+                    const existing=document.querySelector('script[data-bhajasi-jspdf="1"]');
+                    if(existing){
+                        if(window.jspdf && window.jspdf.jsPDF){resolve();return;}
+                        existing.addEventListener('load',resolve,{once:true});
+                        existing.addEventListener('error',reject,{once:true});
+                        return;
+                    }
                     const script=document.createElement('script');
+                    script.dataset.bhajasiJspdf='1';
                     script.src='https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js';
-                    script.onload=resolve;script.onerror=reject;document.head.appendChild(script);
+                    script.onload=resolve;
+                    script.onerror=reject;
+                    document.head.appendChild(script);
                 });
             }
+
             const JsPDF=window.jspdf && window.jspdf.jsPDF;
             if(!JsPDF)throw new Error('jsPDF unavailable');
+
+            // Use the exact same certificate PNG for PDF so the Kalam name and logo
+            // cannot change between PNG, share and PDF.
+            const img=await new Promise(function(resolve,reject){
+                const image=new Image();
+                image.onload=function(){resolve(image);};
+                image.onerror=reject;
+                image.src=certificatePreview;
+            });
+
             const pdf=new JsPDF({orientation:'landscape',unit:'mm',format:'a4'});
-            pdf.addImage(certificatePreview,'PNG',0,0,297,210);
+            const pageW=297;
+            const pageH=210;
+            const imageRatio=img.naturalWidth/Math.max(1,img.naturalHeight);
+            const imageW=pageW;
+            const imageH=imageW/imageRatio;
+            const y=(pageH-imageH)/2;
+            pdf.addImage(img,'PNG',0,y,imageW,imageH,undefined,'FAST');
+            pdf.setProperties({
+                title:'भजसी भारत .com — पसायदान ज्ञान परीक्षा प्रमाणपत्र',
+                subject:'डिजिटल प्रमाणपत्र',
+                author:'भरत रासवे'
+            });
             pdf.save('bhajasi-certificate-'+(certificateId||'completion')+'.pdf');
             setTimeout(function(){navigate('examResult');},250);
-        }catch(error){alert('PDF तयार करता आला नाही. कृपया पुन्हा प्रयत्न करा.');}
+        }catch(error){
+            console.error('Certificate PDF error:',error);
+            alert('PDF तयार करता आला नाही. कृपया पुन्हा प्रयत्न करा.');
+        }
     }
 
     function renderSectionNav(page) {
@@ -3702,13 +3821,13 @@ function App() {
                                 <div className='bhajasi-certificate-form'>
                                     <label htmlFor='bhajasi-certificate-name'>प्रमाणपत्रावर दिसावे असे पूर्ण नाव</label>
                                     <input id='bhajasi-certificate-name' value={certificateName} onChange={function(e){setCertificateName(e.target.value);}} placeholder='तुमचे नाव' autoComplete='name'/>
-                                    <p>नाव तपासून प्रमाणपत्र तयार करा. हे भजसी भारत डिजिटल ज्ञानपरीक्षा पूर्ण केल्याची नोंद आहे.</p>
-                                    <button className='bhajasi-primary-btn' onClick={createCertificate}>प्रमाणपत्र तयार करा</button>
+                                    <p>नाव तपासून प्रमाणपत्र घ्या. एका व्यक्तीला एकच प्रमाणपत्र मिळेल.</p>
+                                    <button className='bhajasi-primary-btn' onClick={createCertificate}>प्रमाणपत्र घ्या</button>
                                 </div>
                             ) : (
                                 <div className='bhajasi-certificate-preview'>
                                     <div className='bhajasi-certificate-image-wrap bhajasi-certificate-watermark-preview'>
-                                        <img src={certificatePreview} alt='भजसी भारत प्रमाणपत्र'/>
+                                        <img src={certificatePreview} alt='भजसी भारत डिजिटल प्रमाणपत्र'/>
                                     </div>
                                     <div className='bhajasi-certificate-id'>Certificate ID: {certificateId}</div>
                                     <div className='bhajasi-certificate-share-row'>
