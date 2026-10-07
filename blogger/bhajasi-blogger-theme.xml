@@ -2525,12 +2525,9 @@ function App() {
             { type: 'image/png' }
         );
 
+        /* Primary path: native/device share sheet with both image and caption. */
         let sharedSuccess = false;
-        if (
-            navigator.share &&
-            navigator.canShare &&
-            navigator.canShare({ files: [file] })
-        ) {
+        if (navigator.share) {
             try {
                 await navigator.share({
                     title: 'भजसी भारत .com — प्रश्न',
@@ -2541,14 +2538,6 @@ function App() {
                 return;
             } catch (error) {
                 if (error && error.name === 'AbortError') return;
-                try {
-                    await navigator.share({
-                        files: [file],
-                        title: 'भजसी भारत .com'
-                    });
-                    sharedSuccess = true;
-                    return;
-                } catch (e2) {}
             }
         }
 
@@ -3319,15 +3308,23 @@ function App() {
             const file=await getCertificateFile();
             const shareSubject=String(selectedExam && selectedExam.title || 'ज्ञान परीक्षा').trim();
             const caption='मी भजसी भारत .com वरील '+shareSubject+' विषयावरील ज्ञान परीक्षा यशस्वीरीत्या उत्तीर्ण केली.\n\nभजसी भारत .com\nhttps://bhajasibharat.blogspot.com/\nनिर्मिती व संकलन: भरत रासवे';
-            if(navigator.share && navigator.canShare && file && navigator.canShare({files:[file]})){
-                await navigator.share({
-                    title:'भजसी भारत .com — '+shareSubject+' ज्ञान परीक्षा प्रमाणपत्र',
-                    text:caption,
-                    files:[file]
-                });
-                navigate('examResult');
-                return;
+            /* Primary path: native/device share sheet with certificate image + caption.
+               Do not require navigator.canShare({files}) because Android browsers can
+               report false even when navigator.share() can successfully accept the file. */
+            if(navigator.share && file){
+                try{
+                    await navigator.share({
+                        title:'भजसी भारत .com — '+shareSubject+' ज्ञान परीक्षा प्रमाणपत्र',
+                        text:caption,
+                        files:[file]
+                    });
+                    navigate('examResult');
+                    return;
+                }catch(error){
+                    if(error && error.name === 'AbortError') return;
+                }
             }
+
             if(navigator.clipboard) await navigator.clipboard.writeText(caption);
             const url=URL.createObjectURL(file);
             const a=document.createElement('a');a.href=url;a.download=file.name;document.body.appendChild(a);a.click();a.remove();
@@ -4507,20 +4504,23 @@ async function shareVerseSnap(entry, index, workContext, saintContext) {
     ctx.stroke();
     ctx.restore();
 
-    /* Load Watermark & Snap Footer Logo using the single FOOTER_LOGO constant */
-    const logoImg = await loadLogoImage(SITE_LOGO);
+    /* Load the same two logo assets used by the working Question Snap:
+       SITE_LOGO = faint white/light watermark
+       FOOTER_LOGO = visible footer logo */
+    const watermarkImg = await loadLogoImage(SITE_LOGO);
+    const footerLogoImg = await loadLogoImage(FOOTER_LOGO);
 
     /* Faint Watermark */
-    if (logoImg && logoImg.naturalWidth) {
+    if (watermarkImg && watermarkImg.naturalWidth) {
         const wmSize = 440;
-        const ratio = logoImg.naturalWidth / Math.max(1, logoImg.naturalHeight);
+        const ratio = watermarkImg.naturalWidth / Math.max(1, watermarkImg.naturalHeight);
         const wmW = wmSize;
         const wmH = wmSize / Math.max(0.1, ratio);
         ctx.save();
         ctx.globalAlpha = 0.075;
         ctx.globalCompositeOperation = 'screen';
         ctx.drawImage(
-            logoImg,
+            watermarkImg,
             (width - wmW) / 2,
             (height - wmH) / 2 - 35,
             wmW,
@@ -4662,14 +4662,14 @@ async function shareVerseSnap(entry, index, workContext, saintContext) {
     }
     ctx.restore();
 
-    if (logoImg && logoImg.naturalWidth) {
-        const ratio = logoImg.naturalWidth / Math.max(1, logoImg.naturalHeight);
+    if (footerLogoImg && footerLogoImg.naturalWidth) {
+        const ratio = footerLogoImg.naturalWidth / Math.max(1, footerLogoImg.naturalHeight);
         const footerLogoW = footerLogoSize;
         const footerLogoH = footerLogoSize / Math.max(0.1, ratio);
         ctx.save();
         ctx.globalAlpha = 1;
         ctx.drawImage(
-            logoImg,
+            footerLogoImg,
             footerLogoX + 7,
             footerLogoY,
             footerLogoW,
@@ -4742,12 +4742,11 @@ async function shareVerseSnap(entry, index, workContext, saintContext) {
         'निर्मिती आणि संकलन: भरत रासवे\n' +
         'वेबसाईटला भेट द्या: bhajasibharat.blogspot.com';
 
+    /* Use the native/device share sheet whenever Web Share is available.
+       Do not gate the first attempt on navigator.canShare(): some Android browsers
+       expose share() and canShare() inconsistently for File objects. */
     let sharedSuccess = false;
-    if (
-        navigator.share &&
-        navigator.canShare &&
-        navigator.canShare({ files: [file] })
-    ) {
+    if (navigator.share) {
         try {
             await navigator.share({
                 title: saintTitle + (workTitle ? ' • ' + workTitle : ''),
@@ -4758,14 +4757,6 @@ async function shareVerseSnap(entry, index, workContext, saintContext) {
             return;
         } catch (error) {
             if (error && error.name === 'AbortError') return;
-            try {
-                await navigator.share({
-                    files: [file],
-                    title: 'भजसी भारत .com'
-                });
-                sharedSuccess = true;
-                return;
-            } catch (e2) {}
         }
     }
 
