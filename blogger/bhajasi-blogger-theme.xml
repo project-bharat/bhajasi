@@ -2213,7 +2213,7 @@ function App() {
             'भजसी भारत .com'
         ].join('\n');
 
-        const file = await new Promise(function(resolve) {
+        const file = await new Promise(async function(resolve) {
             try {
                 const canvas = document.createElement('canvas');
                 canvas.width = 1200;
