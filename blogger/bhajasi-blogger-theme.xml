@@ -2233,22 +2233,66 @@ function App() {
                     ctx.roundRect(28, 28, 1144, 704, 28);
                     ctx.stroke();
                 }
-                const logoImage = await new Promise(function(resolve) {
+                /* Dark Bhajasi footer logo watermark — load the actual FOOTER_LOGO
+                   as a blob first so the image is fully decoded before canvas export. */
+                let logoImage = null;
+                try {
+                    const logoResponse = await fetch(FOOTER_LOGO, {
+                        mode: 'cors',
+                        cache: 'force-cache',
+                        credentials: 'omit'
+                    });
+                    if (logoResponse.ok) {
+                        const logoBlob = await logoResponse.blob();
+                        const logoObjectURL = URL.createObjectURL(logoBlob);
+                        logoImage = await new Promise(function(resolve) {
+                            const image = new Image();
+                            image.onload = function() {
+                                URL.revokeObjectURL(logoObjectURL);
+                                resolve(image);
+                            };
+                            image.onerror = function() {
+                                URL.revokeObjectURL(logoObjectURL);
+                                resolve(null);
+                            };
+                            image.src = logoObjectURL;
+                        });
+                    }
+                } catch (e) {
+                    logoImage = null;
+                }
+
+                if (logoImage && logoImage.naturalWidth) {
                     try {
-                        const image = new Image();
-                        image.crossOrigin = 'anonymous';
-                        image.onload = function(){ resolve(image); };
-                        image.onerror = function(){ resolve(null); };
-                        image.src = FOOTER_LOGO;
-                    } catch (e) { resolve(null); }
-                });
-                if (logoImage) {
-                    try {
+                        const wmX = 760;
+                        const wmY = 218;
+                        const wmSize = 360;
+
+                        /* Soft translucent light field makes the dark logo visible
+                           without turning it into a prominent foreground element. */
                         ctx.save();
                         ctx.globalAlpha = 0.13;
-                        ctx.drawImage(logoImage, 760, 250, 330, 330);
+                        ctx.fillStyle = '#ffffff';
+                        if (ctx.roundRect) {
+                            ctx.beginPath();
+                            ctx.roundRect(wmX - 22, wmY - 22, wmSize + 44, wmSize + 44, 34);
+                            ctx.fill();
+                        } else {
+                            ctx.fillRect(wmX - 22, wmY - 22, wmSize + 44, wmSize + 44);
+                        }
                         ctx.restore();
-                    } catch (e) {}
+
+                        const ratio = logoImage.naturalWidth / Math.max(1, logoImage.naturalHeight);
+                        const wmW = wmSize;
+                        const wmH = wmSize / Math.max(0.1, ratio);
+
+                        ctx.save();
+                        ctx.globalAlpha = 0.24;
+                        ctx.drawImage(logoImage, wmX, wmY, wmW, wmH);
+                        ctx.restore();
+                    } catch (e) {
+                        console.error('Bhajasi exam watermark render error:', e);
+                    }
                 }
 
                 ctx.fillStyle = '#62e6cc';
