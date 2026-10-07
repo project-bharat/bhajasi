@@ -1619,6 +1619,15 @@ function formatSubTitle(title, parentTitle) {
     return title;
 }
 
+/* Metadata-aware title used by the reader and image shares. */
+function getReaderTitle(work, parentWork) {
+    if (!work) return '';
+    const baseTitle = String(work.title || '').trim();
+    const subtitle = String(work.subtitle || '').trim();
+    if (parentWork && subtitle) return baseTitle + ' – ' + subtitle;
+    return baseTitle;
+}
+
 function flattenContentForSearch(content) {
     const data = normalizeContent(content);
     return data.entries.map(function(entry, index) {
@@ -2271,7 +2280,7 @@ function App() {
         const questionBlock = Math.max(questionLines.length, 1) * 66;
         const optionBlock = Math.max(optionLines.length, 1) * 56;
         const footerBlock = 205;
-        const topBlock = 280;
+        const topBlock = 335;
         const height = Math.max(
             1200,
             topBlock + questionBlock + 120 + optionBlock + footerBlock + 90
@@ -3102,7 +3111,7 @@ function App() {
             ctx.save();
             ctx.globalAlpha=0.095;
             ctx.globalCompositeOperation='multiply';
-            ctx.drawImage(logoImg,(1600-wmW)/2,555,wmW,wmH);
+            ctx.drawImage(logoImg,(1600-wmW)/2,300,wmW,wmH);
             ctx.restore();
         }
 
@@ -4166,7 +4175,7 @@ function App() {
                                 <div className='bhajasi-title-row'>
                                     <h2 className='bhajasi-title'>
                                         {view === 'reader'
-                                            ? selectedWork && selectedWork.title
+                                            ? getReaderTitle(selectedWork, selectedParentWork)
                                             : selectedNityaWork && selectedNityaWork.title}
                                     </h2>
                                 </div>
@@ -4196,7 +4205,8 @@ function App() {
                                                             entry,
                                                             index,
                                                             selectedWork || selectedNityaWork,
-                                                            selectedSaint
+                                                            selectedSaint,
+                                                            selectedParentWork
                                                         );
                                                     }}
                                                     title='या रचनेचा फोटो शेअर करा'
@@ -4383,12 +4393,15 @@ async function loadLogoImage(url) {
     }
 }
 
-async function shareVerseSnap(entry, index, workContext, saintContext) {
+async function shareVerseSnap(entry, index, workContext, saintContext, parentWorkContext) {
     const saint = saintContext || null;
     const work = workContext || null;
+    const parentWork = parentWorkContext || null;
 
     const saintTitle = saint && saint.name ? saint.name : 'संतवाणी';
     const workTitle = work && work.title ? work.title : '';
+    const parentWorkTitle = parentWork && parentWork.title ? String(parentWork.title).trim() : '';
+    const sectionSubtitle = work && work.subtitle ? String(work.subtitle).trim() : '';
     const label = getVerseLabel(entry, index, work);
     const text = String(entry && (entry.text || entry.original || entry.content) || '').trim();
     const meaningText = String(entry && (entry.meaning || entry.arth || entry.translation) || '').trim();
@@ -4529,19 +4542,22 @@ async function shareVerseSnap(entry, index, workContext, saintContext) {
         ctx.restore();
     }
 
-    /* 1. Header (Saint • Work) */
+    /* 1. Metadata-aware header: Saint • parent work */
     ctx.textAlign = 'center';
     ctx.textBaseline = 'alphabetic';
     ctx.fillStyle = '#e98006';
     ctx.font = '700 38px "Tiro Devanagari Marathi", serif';
     ctx.fillText(
-        saintTitle + (workTitle ? ' • ' + workTitle : ''),
+        saintTitle + ((parentWorkTitle || workTitle) ? ' • ' + (parentWorkTitle || workTitle) : ''),
         width / 2,
         105
     );
 
-    /* 2. Generic Type Label in Rounded Outlined Box */
-    const subLabelText = (workTitle ? workTitle + ' - ' : '') + (label || 'रचना');
+    /* 2. Section title/subtitle in the outlined box */
+    const sectionContextText = parentWorkTitle && workTitle
+        ? workTitle + ': ' + (sectionSubtitle || '')
+        : (workTitle || 'वाचन');
+    const subLabelText = '[ ' + sectionContextText + (sectionSubtitle ? '.' : '') + ' ]';
     ctx.font = '700 27px "Noto Sans Devanagari", sans-serif';
     const subLabelW = ctx.measureText(subLabelText).width;
     const subBoxW = Math.min(contentWidth - 60, subLabelW + 64);
@@ -4568,7 +4584,11 @@ async function shareVerseSnap(entry, index, workContext, saintContext) {
     ctx.fillStyle = '#ffffff';
     ctx.fillText(subLabelText, width / 2, subBoxY + 38);
 
-    let y = 250;
+    ctx.fillStyle = '#e98006';
+    ctx.font = '700 27px "Noto Sans Devanagari", sans-serif';
+    ctx.fillText(label || 'रचना', width / 2, 225);
+
+    let y = 275;
 
     /* 3. Main Verse (Laila Bold 700) */
     ctx.fillStyle = '#ffffff';
@@ -4668,6 +4688,7 @@ async function shareVerseSnap(entry, index, workContext, saintContext) {
         const footerLogoH = footerLogoSize / Math.max(0.1, ratio);
         ctx.save();
         ctx.globalAlpha = 1;
+        ctx.globalCompositeOperation = 'source-over';
         ctx.drawImage(
             footerLogoImg,
             footerLogoX + 7,
@@ -4735,10 +4756,17 @@ async function shareVerseSnap(entry, index, workContext, saintContext) {
         { type: 'image/png' }
     );
 
+    const shareHeader =
+        saintTitle +
+        ((parentWorkTitle || workTitle) ? ' • ' + (parentWorkTitle || workTitle) : '') +
+        (parentWorkTitle && workTitle
+            ? ' • [ ' + workTitle + ': ' + (sectionSubtitle || '') + (sectionSubtitle ? '.' : '') + ' ]'
+            : '');
+
     const shareCaption =
-        'भजसी भारत .com (संतवाणी • ग्रंथ • हरिनाम • चिंतन • स्तोत्र)\n' +
-        saintTitle + (workTitle ? ' • ' + workTitle : '') + '\n' +
-        label + '\n\n' +
+        shareHeader + '\n' +
+        (label || 'रचना') + '\n\n' +
+        'भजसी भारत .com (संतवाणी • ग्रंथ • हरिनाम • चिंतन • स्तोत्र)\n\n' +
         'निर्मिती आणि संकलन: भरत रासवे\n' +
         'वेबसाईटला भेट द्या: bhajasibharat.blogspot.com';
 
