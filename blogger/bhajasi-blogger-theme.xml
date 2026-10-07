@@ -2261,7 +2261,7 @@ function App() {
         options.forEach(function(option) {
             wrap(
                 option,
-                '400 29px "Noto Sans Devanagari", sans-serif',
+                '400 34px "Noto Sans Devanagari", sans-serif',
                 contentWidth - 38
             ).forEach(function(line, lineIndex) {
                 optionLines.push((lineIndex === 0 ? '' : '   ') + line);
@@ -2269,7 +2269,7 @@ function App() {
         });
 
         const questionBlock = Math.max(questionLines.length, 1) * 66;
-        const optionBlock = Math.max(optionLines.length, 1) * 48;
+        const optionBlock = Math.max(optionLines.length, 1) * 56;
         const footerBlock = 205;
         const topBlock = 280;
         const height = Math.max(
@@ -2340,27 +2340,21 @@ function App() {
         /* Same header hierarchy as the literature share card. */
         ctx.textAlign = 'center';
         ctx.textBaseline = 'alphabetic';
+        /* Main title */
+        ctx.textAlign = 'center';
         ctx.fillStyle = '#e98006';
         ctx.font = '700 38px "Tiro Devanagari Marathi", serif';
-        ctx.fillText('भजसी भारत .com', width / 2, 92);
+        ctx.fillText('ज्ञान प्रमाणपत्र परीक्षा', width / 2, 105);
 
-        ctx.fillStyle = '#ffffff';
-        ctx.font = '700 30px "Noto Sans Devanagari", sans-serif';
-        const examTitle = String(selectedExam.title || 'ज्ञान प्रमाणपत्र परीक्षा');
-        ctx.fillText(
-            examTitle.length > 55 ? examTitle.slice(0, 54) + '…' : examTitle,
-            width / 2,
-            132
-        );
-
-        /* Question-card type label in the same outlined-pill treatment. */
-        const subLabelText = 'ज्ञान प्रमाणपत्र परीक्षा • प्रश्न';
+        /* Exam + question label in the same outlined-pill treatment. */
+        const examTitle = String(selectedExam.title || 'परीक्षा');
+        const subLabelText = examTitle + ' • प्रश्न';
         ctx.font = '700 27px "Noto Sans Devanagari", sans-serif';
         const subLabelW = ctx.measureText(subLabelText).width;
         const subBoxW = Math.min(contentWidth - 60, subLabelW + 64);
         const subBoxH = 56;
         const subBoxX = (width - subBoxW) / 2;
-        const subBoxY = 155;
+        const subBoxY = 130;
         const labelGradient = ctx.createLinearGradient(
             subBoxX, subBoxY, subBoxX + subBoxW, subBoxY + subBoxH
         );
@@ -2382,7 +2376,7 @@ function App() {
         ctx.fillStyle = '#ffffff';
         ctx.fillText(subLabelText, width / 2, subBoxY + 38);
 
-        let y = 270;
+        let y = 250;
 
         /* Question — the only content replacing the literature verse. */
         ctx.textAlign = 'left';
@@ -2414,10 +2408,10 @@ function App() {
         y += 52;
 
         ctx.fillStyle = '#e8edf4';
-        ctx.font = '400 29px "Noto Sans Devanagari", sans-serif';
+        ctx.font = '400 34px "Noto Sans Devanagari", sans-serif';
         optionLines.slice(0, 12).forEach(function(line) {
             ctx.fillText(line, padding + (line.indexOf('   ') === 0 ? 30 : 0), y);
-            y += 48;
+            y += 56;
         });
 
         /* Same footer strip and footer branding as the literature content snap. */
