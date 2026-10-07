@@ -809,6 +809,14 @@ button {
     color: #151d2a;
     border-color: #fbd52d;
 }
+.bhajasi-resume-btn {
+    background: linear-gradient(135deg, #34d399, #0f9f78);
+    color: #071b16;
+    border-color: #52e0b7;
+}
+.bhajasi-resume-btn:hover:not(:disabled) {
+    background: linear-gradient(135deg, #52e0b7, #18b887);
+}
 .bhajasi-primary-btn:hover:not(:disabled) { transform: translateY(-1px); }
 .bhajasi-primary-btn:disabled,
 .bhajasi-secondary-btn:disabled {
@@ -874,11 +882,18 @@ button {
 }
 .bhajasi-study-card,
 .bhajasi-learning-card {
-    margin-top: 13px;
-    padding: 11px 12px;
-    border-radius: 13px;
-    background: rgba(48,197,173,.08);
-    border: 1px solid rgba(48,197,173,.22);
+    margin-top: 12px;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+    border: 0;
+}
+.bhajasi-study-inline {
+    margin-top: 12px;
+    padding: 0 2px 2px;
+}
+.bhajasi-study-inline .bhajasi-study-text {
+    margin-top: 0;
 }
 .bhajasi-study-title { color: #30c5ad; font-weight: 800; font-size: 12px; }
 .bhajasi-study-text { margin-top: 4px; color: #cbd5e1; font-size: 11px; line-height: 1.5; }
@@ -943,11 +958,11 @@ button {
 .bhajasi-exam-return-float {
     position: fixed;
     z-index: 75;
-    right: max(14px, calc((100vw - 760px) / 2 + 14px));
+    left: max(14px, calc((100vw - 760px) / 2 + 14px));
     bottom: calc(74px + env(safe-area-inset-bottom));
-    border: 1px solid rgba(251,213,45,.62);
-    background: linear-gradient(135deg, rgba(42,57,80,.97), rgba(21,29,42,.97));
-    color: #fbd52d;
+    border: 1px solid rgba(82,224,183,.72);
+    background: linear-gradient(135deg, rgba(15,159,120,.98), rgba(18,112,91,.98));
+    color: #f0fff9;
     box-shadow: 0 8px 24px rgba(0,0,0,.35);
     border-radius: 999px;
     padding: 9px 13px;
@@ -956,6 +971,24 @@ button {
     cursor: pointer;
 }
 .bhajasi-exam-return-float i { margin-left: 4px; }
+.bhajasi-exam-resume-badge {
+    position: fixed;
+    right: 14px;
+    bottom: calc(137px + env(safe-area-inset-bottom));
+    z-index: 89;
+    max-width: min(230px, calc(100vw - 28px));
+    padding: 9px 13px;
+    border: 1px solid rgba(82,224,183,.55);
+    border-radius: 13px;
+    background: linear-gradient(135deg, rgba(22,83,72,.98), rgba(15,59,53,.98));
+    color: #eafff8;
+    box-shadow: 0 8px 24px rgba(0,0,0,.38);
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 1.35;
+    cursor: pointer;
+    text-align: center;
+}
 .bhajasi-certificate-share-row {
     display:flex;
     justify-content:center;
@@ -2099,7 +2132,19 @@ function App() {
         const target=findExamSource(source);
         if(!target){ alert('संबंधित साहित्य सापडले नाही.'); return; }
         setExamSourceReturn(true);
-        await openWork(target.saint,target.work,1,target.parentWork,'saint');
+        let sourceDay = 1;
+        if (source.entryId) {
+            try {
+                const sourceContent = await loadWorkContent(target.work, 'saint');
+                const sourceEntry = (normalizeContent(sourceContent).entries || []).find(function(entry){
+                    return String(entry && entry.id || '') === String(source.entryId);
+                });
+                if (sourceEntry && sourceEntry.day !== undefined && sourceEntry.day !== null) {
+                    sourceDay = Number(sourceEntry.day) || 1;
+                }
+            } catch (error) {}
+        }
+        await openWork(target.saint,target.work,sourceDay,target.parentWork,'saint');
         if(source.entryId){
             setTimeout(function(){
                 const node=document.querySelector('[data-entry-id="' + source.entryId + '"]');
@@ -2708,8 +2753,22 @@ function App() {
     }
 
     function renderGlobalSearchUI() {
+        const examProgress = readExamProgress();
+        const incompleteExamCount = Object.keys(examProgress || {}).filter(function(id){
+            return examProgress[id] && examProgress[id].examId;
+        }).length;
         return (
             <>
+                {view === 'home' && incompleteExamCount > 0 && (
+                    <button
+                        className='bhajasi-exam-resume-badge'
+                        type='button'
+                        onClick={function(){openParikshaList();}}
+                        aria-label='चालू परीक्षा पूर्ण करा'
+                    >
+                        {toMarathiDigits(incompleteExamCount)} परीक्षा पूर्ण करा
+                    </button>
+                )}
                 <button
                     className='bhajasi-global-search-btn'
                     type='button'
@@ -3132,7 +3191,7 @@ function App() {
 
                     {view === 'pariksha' && (
                         <section className='bhajasi-section bhajasi-section-themes'>
-                            <div className='bhajasi-reader-head'><div className='bhajasi-title-row'><h2 className='bhajasi-title'>परीक्षा</h2></div><p className='bhajasi-meta'>संतसाहित्य आणि ग्रंथांवर आधारित ज्ञानाचा अभ्यास व सराव करा. प्रत्येक प्रश्नासोबत संबंधित साहित्य वाचण्याची संधी आहे.</p></div>
+                            <div className='bhajasi-reader-head'><div className='bhajasi-title-row'><h2 className='bhajasi-title'>ज्ञान प्रमाणपत्र परीक्षा</h2></div><p className='bhajasi-meta'>संतसाहित्य आणि ग्रंथांवर आधारित ज्ञानाचा अभ्यास व सराव करा. प्रत्येक प्रश्नासोबत संबंधित साहित्य वाचण्याची संधी आहे. ८०% उत्तीर्ण निकष.</p></div>
                             <div className='bhajasi-grid'>
                                 {!pariksha || !Array.isArray(pariksha.exams) || pariksha.exams.length===0 ? <div className='bhajasi-empty'>सध्या कोणतीही परीक्षा उपलब्ध नाही.</div> : pariksha.exams.map(function(exam){
                                     const savedExamProgress = readExamProgress()[exam.id];
@@ -3142,9 +3201,9 @@ function App() {
                                         <article key={exam.id} className='bhajasi-exam-card'>
                                             <div className='bhajasi-card-title'>{exam.title}</div>
                                             <div className='bhajasi-card-sub'>{exam.subtitle}</div>
-                                            <div className='bhajasi-exam-meta'>{toMarathiDigits(exam.questionCount||0)} प्रश्न <span>•</span> {toMarathiDigits(exam.passingPercentage||80)}% उत्तीर्ण निकष</div>
+                                            <div className='bhajasi-exam-meta'>{toMarathiDigits(exam.questionCount||0)} प्रश्न</div>
                                             {hasResume && <div className='bhajasi-meta' style={{color:'#fbd52d',margin:'7px 0 8px'}}>परीक्षा सुरू आहे • {toMarathiDigits(solvedCount)} उत्तरे जतन केली आहेत</div>}
-                                            <button className='bhajasi-primary-btn' onClick={function(){startExam(exam);}}>{hasResume ? 'पुन्हा सुरू करा' : 'परीक्षा सुरू करा'}</button>
+                                            <button className={'bhajasi-primary-btn'+(hasResume?' bhajasi-resume-btn':'')} onClick={function(){startExam(exam);}}>{hasResume ? 'पुन्हा सुरू करा' : 'परीक्षा सुरू करा'}</button>
                                         </article>
                                     );
                                 })}
@@ -3158,8 +3217,8 @@ function App() {
                             {examQuestions.length ? (function(){const question=examQuestions[examQuestionIndex];const questionKey=getExamQuestionKey(question,examQuestionIndex);const selectedOption=examAnswers[questionKey];return (
                                 <div className='bhajasi-exam-question'><div className='bhajasi-exam-progress'><div className='bhajasi-exam-progress-bar' style={{width:(((examQuestionIndex+1)/examQuestions.length)*100)+'%'}}></div></div><h3>{question.question}</h3>
                                     <div className='bhajasi-exam-options'>{(question.options||[]).map(function(option,optionIndex){const active=Number(selectedOption)===optionIndex;return <button key={optionIndex} className={'bhajasi-exam-option'+(active?' selected':'')} onClick={function(){selectExamAnswer(optionIndex);}}><span className='bhajasi-exam-radio'>{active?'✓':''}</span><span>{option}</span></button>;})}</div>
-                                    {question.study && <div className='bhajasi-study-card'>{question.study.text && <div className='bhajasi-study-text'>{question.study.text}</div>}<button className='bhajasi-study-btn' onClick={function(){openExamSource(question.study.source);}}><i className='fa-solid fa-book-open'></i> संबंधित साहित्य वाचा</button></div>}
                                     <div className='bhajasi-exam-actions'><button className='bhajasi-secondary-btn' disabled={examQuestionIndex===0} onClick={function(){changeExamQuestion(examQuestionIndex-1);}}>मागील</button>{examQuestionIndex<examQuestions.length-1?<button className='bhajasi-primary-btn' disabled={selectedOption===undefined} onClick={function(){changeExamQuestion(examQuestionIndex+1);}}>पुढील प्रश्न</button>:<button className='bhajasi-primary-btn' disabled={selectedOption===undefined} onClick={submitExam}>उत्तर तपासा</button>}</div>
+                                    {question.study && <div className='bhajasi-study-inline'>{question.study.text && <div className='bhajasi-study-text'>{question.study.text}</div>}<button className='bhajasi-study-btn' onClick={function(){openExamSource(question.study.source);}}><i className='fa-solid fa-book-open'></i> संबंधित साहित्य वाचा</button></div>}
                                 </div>
                             );})() : <div className='bhajasi-empty'>या परीक्षेसाठी प्रश्न उपलब्ध नाहीत.</div>}
                         </section>
