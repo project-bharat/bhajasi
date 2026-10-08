@@ -4681,26 +4681,36 @@ async function shareVerseSnap(entry, index, workContext, saintContext, parentWor
     ctx.textAlign = 'center';
     ctx.fillText(sectionContextText || 'वाचन', width / 2, subBoxY + 38);
 
-    /* 3. Rचना label in a left-aligned box matching the meaning/teaching treatment. */
-    const labelText = label || 'रचना';
-    ctx.font = '700 24px "Noto Sans Devanagari", sans-serif';
-    const labelW = Math.max(150, ctx.measureText(labelText).width + 42);
-    const labelBoxY = 210;
-    ctx.strokeStyle = '#e98006';
-    ctx.lineWidth = 2;
-    ctx.fillStyle = 'rgba(42,57,80,0.7)';
-    ctx.beginPath();
-    if (ctx.roundRect) {
-        ctx.roundRect(padding, labelBoxY, labelW, 46, 15);
-    } else {
-        ctx.rect(padding, labelBoxY, labelW, 46);
+    /* 3. Rचना label: use the exact same pill treatment as भावार्थ/शिकवण. */
+    function drawLabelPill(titleText, color, topY) {
+        const safeTitle = titleText || '';
+        ctx.font = '700 24px "Noto Sans Devanagari", sans-serif';
+        const tW = ctx.measureText(safeTitle).width;
+        const bW = tW + 42;
+        const bH = 46;
+        const bX = padding;
+
+        ctx.strokeStyle = color;
+        ctx.lineWidth = 2;
+        ctx.fillStyle = 'rgba(42,57,80,0.7)';
+        ctx.beginPath();
+        if (ctx.roundRect) {
+            ctx.roundRect(bX, topY, bW, bH, 15);
+        } else {
+            ctx.rect(bX, topY, bW, bH);
+        }
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.textAlign = 'left';
+        ctx.textBaseline = 'alphabetic';
+        ctx.fillStyle = color;
+        ctx.fillText(safeTitle, bX + 21, topY + 32);
     }
-    ctx.fill();
-    ctx.stroke();
 
-    ctx.fillStyle = '#e98006';
-    ctx.fillText(labelText, padding + 21, labelBoxY + 32);
+    drawLabelPill(label || 'रचना', '#e98006', 210);
 
+    ctx.textAlign = 'center';
     let y = 300;
 
     /* 3. Main Verse (Laila Bold 700) */
