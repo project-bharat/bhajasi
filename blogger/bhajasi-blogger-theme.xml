@@ -2534,45 +2534,12 @@ function App() {
             { type: 'image/png' }
         );
 
-        /* Primary path: native/device share sheet with both image and caption. */
-        let sharedSuccess = false;
-        if (navigator.share) {
-            try {
-                await navigator.share({
-                    title: 'भजसी भारत .com — प्रश्न',
-                    text: shareText,
-                    files: [file]
-                });
-                sharedSuccess = true;
-                return;
-            } catch (error) {
-                if (error && error.name === 'AbortError') return;
-            }
-        }
-
-        if (!sharedSuccess) {
-            const url = URL.createObjectURL(blob);
-            const anchor = document.createElement('a');
-            anchor.href = url;
-            anchor.download = file.name;
-            document.body.appendChild(anchor);
-            anchor.click();
-            anchor.remove();
-            setTimeout(function() {
-                URL.revokeObjectURL(url);
-            }, 1500);
-
-            const whatsappText = encodeURIComponent(shareText);
-            setTimeout(function() {
-                if (window.confirm('फोटो सेव्ह झाला आहे. कॅप्शन WhatsApp वर पाठवायचे का?')) {
-                    window.open(
-                        'https://wa.me/?text=' + whatsappText,
-                        '_blank',
-                        'noopener,noreferrer'
-                    );
-                }
-            }, 300);
-        }
+        /* Native/device share sheet only. Never download or open WhatsApp as a fallback. */
+        await shareImageFileNative(
+            file,
+            'भजसी भारत .com — प्रश्न',
+            shareText
+        );
     }
     async function openExamSource(source) {
         const target=findExamSource(source);
@@ -2784,7 +2751,17 @@ function App() {
         const hasSharedExamURL = (function() {
             try {
                 const params = new URLSearchParams(window.location.search || '');
-                return !!(params.get('bhajasiExam') && params.get('bhajasiQuestion') !== null);
+                const hasQuestionURL = !!(params.get('bhajasiExam') && params.get('bhajasiQuestion') !== null);
+                const navigationEntry = window.performance &&
+                    typeof window.performance.getEntriesByType === 'function'
+                    ? window.performance.getEntriesByType('navigation')[0]
+                    : null;
+                const isBrowserReload = !!(navigationEntry && navigationEntry.type === 'reload');
+
+                /* A refresh/new browser load must always land on मुख्य.
+                   A shared-question link opened as a normal navigation may still
+                   intentionally open the shared question. */
+                return hasQuestionURL && !isBrowserReload;
             } catch (e) {
                 return false;
             }
@@ -2828,6 +2805,14 @@ function App() {
 
     useEffect(function() {
         if (!pariksha || !Array.isArray(pariksha.exams)) return;
+
+        const navigationEntry = window.performance &&
+            typeof window.performance.getEntriesByType === 'function'
+            ? window.performance.getEntriesByType('navigation')[0]
+            : null;
+        const isBrowserReload = !!(navigationEntry && navigationEntry.type === 'reload');
+        if (isBrowserReload) return;
+
         const params = new URLSearchParams(window.location.search || '');
         const examId = params.get('bhajasiExam');
         const questionIndex = params.get('bhajasiQuestion');
@@ -3369,29 +3354,12 @@ function App() {
             const file=await getCertificateFile();
             const shareSubject=String(selectedExam && selectedExam.title || 'ज्ञान परीक्षा').trim();
             const caption='मी भजसी भारत .com वरील '+shareSubject+' विषयावरील ज्ञान परीक्षा यशस्वीरीत्या उत्तीर्ण केली.\n\nभजसी भारत .com\nhttps://bhajasibharat.blogspot.com/\nनिर्मिती व संकलन: भरत रासवे';
-            /* Primary path: native/device share sheet with certificate image + caption.
-               Do not require navigator.canShare({files}) because Android browsers can
-               report false even when navigator.share() can successfully accept the file. */
-            if(navigator.share && file){
-                try{
-                    await navigator.share({
-                        title:'भजसी भारत .com — '+shareSubject+' ज्ञान परीक्षा प्रमाणपत्र',
-                        text:caption,
-                        files:[file]
-                    });
-                    navigate('examResult');
-                    return;
-                }catch(error){
-                    if(error && error.name === 'AbortError') return;
-                }
-            }
-
-            if(navigator.clipboard) await navigator.clipboard.writeText(caption);
-            const url=URL.createObjectURL(file);
-            const a=document.createElement('a');a.href=url;a.download=file.name;document.body.appendChild(a);a.click();a.remove();
-            setTimeout(function(){URL.revokeObjectURL(url);},1500);
-            alert('प्रमाणपत्राची प्रतिमा जतन झाली. कॅप्शन कॉपी केले आहे.');
-            navigate('examResult');
+            const shared = await shareImageFileNative(
+                file,
+                'भजसी भारत .com — '+shareSubject+' ज्ञान परीक्षा प्रमाणपत्र',
+                caption
+            );
+            if(shared) navigate('examResult');
         }catch(error){
             console.error('Certificate share error:',error);
             alert('प्रमाणपत्र शेअर करता आले नाही. कृपया प्रतिमा जतन करून शेअर करा.');
@@ -4447,6 +4415,46 @@ async function loadLogoImage(url) {
     }
 }
 
+async function shareImageFileNative(file, title, text) {
+    if (!file) return false;
+
+    if (!navigator.share) {
+        alert('या ब्राउझरमध्ये डिव्हाइस शेअर सुविधा उपलब्ध नाही. कृपया Android Chrome किंवा समर्थ ब्राउझर वापरा.');
+        return false;
+    }
+
+    const shareData = {
+        title: title || 'भजसी भारत .com',
+        text: text || '',
+        files: [file]
+    };
+
+    /* File sharing must be validated before navigator.share().
+       If the browser cannot share the image file, do not silently download it
+       or open a WhatsApp URL: the requested action is the native share sheet. */
+    if (navigator.canShare) {
+        try {
+            if (!navigator.canShare({ files: [file] })) {
+                alert('या ब्राउझरमध्ये प्रतिमा थेट शेअर करता येत नाही. कृपया Android Chrome मधून प्रयत्न करा.');
+                return false;
+            }
+        } catch (error) {
+            console.warn('Bhajasi native file-share validation failed:', error);
+            return false;
+        }
+    }
+
+    try {
+        await navigator.share(shareData);
+        return true;
+    } catch (error) {
+        if (error && error.name === 'AbortError') return false;
+        console.error('Bhajasi native share error:', error);
+        alert('शेअर विंडो उघडता आली नाही. कृपया पुन्हा प्रयत्न करा.');
+        return false;
+    }
+}
+
 async function shareVerseSnap(entry, index, workContext, saintContext, parentWorkContext) {
     const saint = saintContext || null;
     const work = workContext || null;
@@ -4492,20 +4500,43 @@ async function shareVerseSnap(entry, index, workContext, saintContext, parentWor
     function wrap(textValue, font) {
         if (!textValue) return [];
         ctx.font = font;
-        const words = String(textValue).split(/\s+/u);
+
         const result = [];
-        let current = '';
-        words.forEach(function(word) {
-            if (!word) return;
-            const candidate = current ? current + ' ' + word : word;
-            if (ctx.measureText(candidate).width > contentWidth) {
-                if (current) result.push(current);
-                current = word;
-            } else {
-                current = candidate;
-            }
+        String(textValue).split(/\r?\n/u).forEach(function(paragraph) {
+            const words = paragraph.trim().split(/\s+/u).filter(Boolean);
+            let current = '';
+
+            words.forEach(function(word) {
+                const candidate = current ? current + ' ' + word : word;
+
+                if (ctx.measureText(candidate).width <= contentWidth) {
+                    current = candidate;
+                    return;
+                }
+
+                if (current) {
+                    result.push(current);
+                    current = '';
+                }
+
+                /* Marathi/Devanagari source can contain long unbreakable runs.
+                   Break those by Unicode code point so no canvas line can clip. */
+                let chunk = '';
+                Array.from(word).forEach(function(char) {
+                    const next = chunk + char;
+                    if (chunk && ctx.measureText(next).width > contentWidth) {
+                        result.push(chunk);
+                        chunk = char;
+                    } else {
+                        chunk = next;
+                    }
+                });
+                current = chunk;
+            });
+
+            if (current) result.push(current);
         });
-        if (current) result.push(current);
+
         return result;
     }
 
@@ -4616,7 +4647,7 @@ async function shareVerseSnap(entry, index, workContext, saintContext, parentWor
     const subLabelW = ctx.measureText(sectionContextText || 'वाचन').width;
     const subBoxW = Math.min(contentWidth, Math.max(360, subLabelW + 52));
     const subBoxH = 58;
-    const subBoxX = padding;
+    const subBoxX = (width - subBoxW) / 2;
     const subBoxY = 130;
 
     const labelGradient = ctx.createLinearGradient(subBoxX, subBoxY, subBoxX + subBoxW, subBoxY + subBoxH);
@@ -4636,7 +4667,8 @@ async function shareVerseSnap(entry, index, workContext, saintContext, parentWor
     ctx.stroke();
 
     ctx.fillStyle = '#ffffff';
-    ctx.fillText(sectionContextText || 'वाचन', subBoxX + 22, subBoxY + 38);
+    ctx.textAlign = 'center';
+    ctx.fillText(sectionContextText || 'वाचन', width / 2, subBoxY + 38);
 
     /* 3. Rचना label in a left-aligned box matching the meaning/teaching treatment. */
     const labelText = label || 'रचना';
@@ -4840,47 +4872,12 @@ async function shareVerseSnap(entry, index, workContext, saintContext, parentWor
         'निर्मिती आणि संकलन: भरत रासवे\n' +
         'वेबसाईटला भेट द्या: bhajasibharat.blogspot.com';
 
-    /* Use the native/device share sheet whenever Web Share is available.
-       Do not gate the first attempt on navigator.canShare(): some Android browsers
-       expose share() and canShare() inconsistently for File objects. */
-    let sharedSuccess = false;
-    if (navigator.share) {
-        try {
-            await navigator.share({
-                title: saintTitle + (workTitle ? ' • ' + workTitle : ''),
-                text: shareCaption,
-                files: [file]
-            });
-            sharedSuccess = true;
-            return;
-        } catch (error) {
-            if (error && error.name === 'AbortError') return;
-        }
-    }
-
-    if (!sharedSuccess) {
-        const url = URL.createObjectURL(blob);
-        const anchor = document.createElement('a');
-        anchor.href = url;
-        anchor.download = file.name;
-        document.body.appendChild(anchor);
-        anchor.click();
-        anchor.remove();
-        setTimeout(function() {
-            URL.revokeObjectURL(url);
-        }, 1500);
-
-        const whatsappText = encodeURIComponent(shareCaption);
-        setTimeout(function() {
-            if (window.confirm('फोटो सेव्ह झाला आहे. कॅप्शन WhatsApp वर पाठवायचे का?')) {
-                window.open(
-                    'https://wa.me/?text=' + whatsappText,
-                    '_blank',
-                    'noopener,noreferrer'
-                );
-            }
-        }, 300);
-    }
+    /* Native/device share sheet only. Never download or open WhatsApp as a fallback. */
+    await shareImageFileNative(
+        file,
+        saintTitle + (workTitle ? ' • ' + workTitle : ''),
+        shareCaption
+    );
 }
 
 ReactDOM.createRoot(
