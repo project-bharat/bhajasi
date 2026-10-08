@@ -1919,6 +1919,30 @@ function buildMetadataSearch(saints, nitya) {
                 work: work
             });
 
+            if (work.themeIndex && Array.isArray(work.themeIndex.themes)) {
+                results.push({
+                    type: 'themeIndex',
+                    title: work.themeIndex.title || 'विषयानुसार गाथा',
+                    sub: [work.themeIndex.type, work.title].filter(Boolean).join(' • '),
+                    searchText: [work.themeIndex.title, work.themeIndex.description, work.title, work.type, saintSearchText].filter(Boolean).join(' '),
+                    saint: saint,
+                    work: work,
+                    themeIndex: work.themeIndex
+                });
+                work.themeIndex.themes.forEach(function(theme) {
+                    results.push({
+                        type: 'theme',
+                        title: theme.title || theme.id,
+                        sub: [theme.type, work.themeIndex.title, work.title].filter(Boolean).join(' • '),
+                        searchText: [theme.title, theme.type, theme.description, work.themeIndex.title, work.title, saintSearchText].filter(Boolean).join(' '),
+                        saint: saint,
+                        work: work,
+                        themeIndex: work.themeIndex,
+                        theme: theme
+                    });
+                });
+            }
+
             (work.sections || []).forEach(function(section) {
                 /* Section titles are searchable metadata too.
                    This includes subtitle/name/description/topic so searches such as
@@ -3010,6 +3034,10 @@ function App() {
             handleWorkClick(item.saint, item.work, null);
             return;
         }
+        if (item.type === 'themeIndex' || item.type === 'theme') {
+            openThemeIndex(item.saint, item.work);
+            return;
+        }
         if (item.type === 'section') {
             handleWorkClick(item.saint, item.work, item.parentWork);
             return;
@@ -3733,7 +3761,7 @@ function App() {
                                         >
                                             <div className='bhajasi-global-result-title'>{item.title}</div>
                                             <div className='bhajasi-global-result-meta'>
-                                                {item.type === 'saint' ? 'संत' : item.type === 'work' ? 'ग्रंथ / साहित्य' : item.type === 'section' ? 'अध्याय / विभाग' : item.type === 'nitya' ? 'नित्य पठण' : 'रचना / साहित्य मजकूर'}
+                                                {item.type === 'saint' ? 'संत' : item.type === 'work' ? 'ग्रंथ / साहित्य' : item.type === 'section' ? 'अध्याय / विभाग' : item.type === 'themeIndex' ? 'विषयानुसार गाथा' : item.type === 'theme' ? 'गाथा विषय' : item.type === 'nitya' ? 'नित्य पठण' : 'रचना / साहित्य मजकूर'}
                                             </div>
                                             {item.sub && (
                                                 <div className='bhajasi-global-result-match'>{item.sub}</div>
