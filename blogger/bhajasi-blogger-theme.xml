@@ -2276,11 +2276,11 @@ function App() {
         });
 
         const shareText =
-            'भजसी भारत .com (संतवाणी • ग्रंथ • हरिनाम • चिंतन • स्तोत्र)\n' +
-            (selectedExam.title || 'ज्ञान प्रमाणपत्र परीक्षा') + '\n' +
+            'ज्ञान प्रमाणपत्र परीक्षा > ' + (selectedExam.title || 'परीक्षा') + '\n' +
             'प्रश्न: ' + questionText + '\n\n' +
             'पर्याय:\n' + options.join('\n') + '\n\n' +
-            'प्रश्न सोडवा: ' + shareURL;
+            'प्रश्न सोडवा: ' + shareURL + '\n\n' +
+            'भजसी भारत .com (संतवाणी • ग्रंथ • हरिनाम • चिंतन • स्तोत्र)';
 
         const width = 1080;
         const padding = 76;
