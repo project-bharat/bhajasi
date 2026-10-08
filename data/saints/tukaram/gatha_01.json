@@ -18,7 +18,12 @@
         "url": "https://www.santsahitya.in/tukaram/tukaram-gatha/",
         "kind": "web-source",
         "verified": "2026-10-06"
-      }
+      },
+      "themeIds": [
+        "vitthal-bhakti",
+        "pandurang-alavani",
+        "nama-mahatmya"
+      ]
     }
   ],
   "source": {
