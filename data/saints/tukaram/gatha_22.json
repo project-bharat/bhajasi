@@ -1,19 +1,19 @@
 {
   "id": "gatha-22",
   "title": "तुकाराम गाथा — भाग 22",
-  "subtitle": "अभंग 2101 ते 2200",
+  "subtitle": "अभंग 3151 ते 3300",
   "type": "अभंग",
   "days": 1,
   "range": {
-    "start": 2101,
-    "end": 2200,
-    "count": 100
+    "start": 3151,
+    "end": 3300,
+    "count": 150
   },
   "entries": [],
   "source": {
-    "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_२१०१_ते_२४००",
+    "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_३००१_ते_undefined",
     "kind": "Wikisource",
-    "scope": "गाथा 2101-2400"
+    "scope": "गाथा 3151-3300"
   },
   "sourceStatus": "SOURCE_INDEXED_NOT_YET_IMPORTED"
 }
