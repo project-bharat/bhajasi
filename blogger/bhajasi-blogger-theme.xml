@@ -4270,7 +4270,7 @@ function App() {
                             </div>
 
                             {workLoading ? (
-                                <div className='bhajasi-empty'>साहित्य लोड होत आहे…</div>
+                                <div className='bhajasi-loading-screen' role='status' aria-live='polite'><div className='bhajasi-loading-content'><img className='bhajasi-loading-logo' src={SITE_LOGO} alt='भजसी भारत'/><h1 className='bhajasi-loading-title'>भजसी भारत .com</h1><p className='bhajasi-loading-tagline'>संतवाणी • ग्रंथ • हरिनाम • चिंतन • स्तोत्र</p><p className='bhajasi-loading-message'>संतसाहित्य आणि नित्य पठण लोड होत आहे<span className='bhajasi-loading-dots'>…</span></p></div><div className='bhajasi-loading-developer'>निर्मिती आणि संकलन: भरत रासवे</div></div>
                             ) : currentEntries.length === 0 ? (
                                 <div className='bhajasi-empty'>या विभागासाठी साहित्य उपलब्ध नाही.</div>
                             ) : (
