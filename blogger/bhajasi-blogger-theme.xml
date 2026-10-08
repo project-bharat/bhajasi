@@ -2021,6 +2021,9 @@ function App() {
     const [selectedSaint, setSelectedSaint] = useState(null);
     const [selectedParentWork, setSelectedParentWork] = useState(null);
     const [selectedThemeIndex, setSelectedThemeIndex] = useState(null);
+    const [selectedGathaTheme, setSelectedGathaTheme] = useState(null);
+    const [gathaThemeEntries, setGathaThemeEntries] = useState([]);
+    const [gathaThemeLoading, setGathaThemeLoading] = useState(false);
     const [selectedWork, setSelectedWork] = useState(null);
     const [selectedNityaWork, setSelectedNityaWork] = useState(null);
     const [selectedContent, setSelectedContent] = useState(null);
@@ -2131,6 +2134,8 @@ function App() {
             pageTitle = selectedParentWork.title + ' — ' + selectedSaint.name + ' | भजसी भारत .com';
         } else if (view === 'theme' && theme) {
             pageTitle = theme.title + ' — संतवाणी चिंतन | भजसी भारत .com';
+        } else if (view === 'gathaTheme' && selectedGathaTheme) {
+            pageTitle = selectedGathaTheme.title + ' — ' + (selectedParentWork ? selectedParentWork.title : 'तुकाराम गाथा') + ' | भजसी भारत .com';
         } else if (view === 'nitya') {
             pageTitle = 'नित्य पठण स्तोत्रे व मंत्र — भजसी भारत .com';
         }
@@ -2230,6 +2235,55 @@ function App() {
         setSelectedParentWork(work);
         setSelectedThemeIndex(work.themeIndex);
         navigate('themeIndex');
+    }
+
+    async function openGathaTheme(saint, work, themeItem) {
+        if (!saint || !work || !themeItem) return;
+        setSelectedSaint(saint);
+        setSelectedParentWork(work);
+        setSelectedGathaTheme(themeItem);
+        setGathaThemeEntries([]);
+        setGathaThemeLoading(true);
+        navigate('gathaTheme');
+
+        const sections = Array.isArray(work.sections) ? work.sections : [];
+        const matches = [];
+        try {
+            const chunkSize = 6;
+            for (let i = 0; i < sections.length; i += chunkSize) {
+                const chunk = sections.slice(i, i + chunkSize);
+                const loaded = await Promise.all(chunk.map(async function(section) {
+                    try {
+                        const content = await loadWorkContent(section, 'saint');
+                        return { section: section, content: content };
+                    } catch (error) {
+                        return { section: section, content: null };
+                    }
+                }));
+
+                loaded.forEach(function(item) {
+                    const entries = item.content && Array.isArray(item.content.entries)
+                        ? item.content.entries
+                        : [];
+                    entries.forEach(function(entry) {
+                        const ids = Array.isArray(entry.themeIds) ? entry.themeIds : [];
+                        if (ids.indexOf(themeItem.id) >= 0) {
+                            matches.push({
+                                entry: entry,
+                                section: item.section
+                            });
+                        }
+                    });
+                });
+
+                if (view === 'gathaTheme') {
+                    setGathaThemeEntries(matches.slice());
+                }
+            }
+            setGathaThemeEntries(matches);
+        } finally {
+            setGathaThemeLoading(false);
+        }
     }
 
     function openNityaList() {
@@ -4329,14 +4383,80 @@ function App() {
                             <div className='bhajasi-grid'>
                                 {(selectedThemeIndex.themes || []).map(function(theme, index) {
                                     return (
-                                        <div key={theme.id || index} className='bhajasi-card bhajasi-work-card'>
+                                        <button
+                                            key={theme.id || index}
+                                            className='bhajasi-card bhajasi-work-card'
+                                            onClick={function() {
+                                                openGathaTheme(selectedSaint, selectedParentWork, theme);
+                                            }}
+                                        >
                                             <div className='bhajasi-card-title'>{theme.title}</div>
                                             <div className='bhajasi-card-sub'>{theme.type || 'विषय'}</div>
                                             <div className='bhajasi-card-sub'>{theme.description}</div>
-                                        </div>
+                                        </button>
                                     );
                                 })}
                             </div>
+                        </section>
+                    )}
+
+                    {view === 'gathaTheme' && selectedSaint && selectedParentWork && selectedGathaTheme && (
+                        <section>
+                            <div className='bhajasi-reader-head'>
+                                <button className='bhajasi-back' onClick={function() { navigate('themeIndex'); }}>
+                                    ← विषयांकडे परत
+                                </button>
+                                <div className='bhajasi-breadcrumb'>
+                                    <span>{selectedSaint.name}</span><span>›</span>
+                                    <span>{selectedParentWork.title}</span><span>›</span>
+                                    <span>विषयानुसार गाथा</span><span>›</span>
+                                    <span>{selectedGathaTheme.title}</span>
+                                </div>
+                                <div className='bhajasi-title-row'>
+                                    <h2 className='bhajasi-title'>{selectedGathaTheme.title}</h2>
+                                </div>
+                                <p className='bhajasi-meta'>{selectedGathaTheme.description}</p>
+                            </div>
+
+                            {gathaThemeLoading && (
+                                <div className='bhajasi-empty-state'>संबंधित अभंग शोधत आहे…</div>
+                            )}
+
+                            {!gathaThemeLoading && !gathaThemeEntries.length && (
+                                <div className='bhajasi-empty-state'>
+                                    या विषयासाठी अद्याप वर्गीकृत अभंग उपलब्ध नाहीत.
+                                </div>
+                            )}
+
+                            {!gathaThemeLoading && gathaThemeEntries.length > 0 && (
+                                <div className='space-y-3'>
+                                    <div className='bhajasi-meta'>
+                                        {toMarathiDigits(gathaThemeEntries.length)} संबंधित अभंग
+                                    </div>
+                                    {gathaThemeEntries.map(function(item, index) {
+                                        const entry = item.entry || {};
+                                        return (
+                                            <button
+                                                key={(entry.id || index) + '-' + (item.section && item.section.id || '')}
+                                                className='bhajasi-card w-full'
+                                                onClick={function() {
+                                                    openWork(selectedSaint, item.section, 1, selectedParentWork, 'saint');
+                                                }}
+                                            >
+                                                <div className='bhajasi-card-title'>
+                                                    अभंग {toMarathiDigits(entry.number || index + 1)}
+                                                </div>
+                                                <div className='bhajasi-card-sub' style={{whiteSpace:'pre-line'}}>
+                                                    {entry.text || entry.original || entry.content || ''}
+                                                </div>
+                                                <div className='bhajasi-card-sub'>
+                                                    {item.section && item.section.title ? item.section.title : 'गाथा'}
+                                                </div>
+                                            </button>
+                                        );
+                                    })}
+                                </div>
+                            )}
                         </section>
                     )}
 
