@@ -1,19 +1,19 @@
 {
   "id": "gatha-10",
   "title": "तुकाराम गाथा — भाग 10",
-  "subtitle": "अभंग 901 ते 1000",
+  "subtitle": "अभंग 1351 ते 1500",
   "type": "अभंग",
   "days": 1,
   "range": {
-    "start": 901,
-    "end": 1000,
-    "count": 100
+    "start": 1351,
+    "end": 1500,
+    "count": 150
   },
   "entries": [],
   "source": {
-    "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_९०१_ते_१२००",
+    "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_१२०१_ते_undefined",
     "kind": "Wikisource",
-    "scope": "गाथा 901-1200"
+    "scope": "गाथा 1351-1500"
   },
   "sourceStatus": "SOURCE_INDEXED_NOT_YET_IMPORTED"
 }
