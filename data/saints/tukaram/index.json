@@ -8,14 +8,14 @@
       "id": "gatha",
       "title": "तुकाराम गाथा",
       "type": "गाथा",
-      "subtitle": "४५८३ अभंग • १००-१०० अभंगांचे ४६ भाग",
+      "subtitle": "४५८३ अभंग • १५०-१५० अभंगांचे ३१ भाग",
       "indexFile": "tukaram/gatha-index.json",
       "sections": [
         {
           "id": "gatha-01",
           "number": 1,
           "title": "भाग 1",
-          "subtitle": "अभंग 1 ते 100",
+          "subtitle": "अभंग 1 ते 150",
           "type": "अभंग",
           "file": "tukaram/gatha_01.json"
         },
@@ -23,7 +23,7 @@
           "id": "gatha-02",
           "number": 2,
           "title": "भाग 2",
-          "subtitle": "अभंग 101 ते 200",
+          "subtitle": "अभंग 151 ते 300",
           "type": "अभंग",
           "file": "tukaram/gatha_02.json"
         },
@@ -31,7 +31,7 @@
           "id": "gatha-03",
           "number": 3,
           "title": "भाग 3",
-          "subtitle": "अभंग 201 ते 300",
+          "subtitle": "अभंग 301 ते 450",
           "type": "अभंग",
           "file": "tukaram/gatha_03.json"
         },
@@ -39,7 +39,7 @@
           "id": "gatha-04",
           "number": 4,
           "title": "भाग 4",
-          "subtitle": "अभंग 301 ते 400",
+          "subtitle": "अभंग 451 ते 600",
           "type": "अभंग",
           "file": "tukaram/gatha_04.json"
         },
@@ -47,7 +47,7 @@
           "id": "gatha-05",
           "number": 5,
           "title": "भाग 5",
-          "subtitle": "अभंग 401 ते 500",
+          "subtitle": "अभंग 601 ते 750",
           "type": "अभंग",
           "file": "tukaram/gatha_05.json"
         },
@@ -55,7 +55,7 @@
           "id": "gatha-06",
           "number": 6,
           "title": "भाग 6",
-          "subtitle": "अभंग 501 ते 600",
+          "subtitle": "अभंग 751 ते 900",
           "type": "अभंग",
           "file": "tukaram/gatha_06.json"
         },
@@ -63,7 +63,7 @@
           "id": "gatha-07",
           "number": 7,
           "title": "भाग 7",
-          "subtitle": "अभंग 601 ते 700",
+          "subtitle": "अभंग 901 ते 1050",
           "type": "अभंग",
           "file": "tukaram/gatha_07.json"
         },
@@ -71,7 +71,7 @@
           "id": "gatha-08",
           "number": 8,
           "title": "भाग 8",
-          "subtitle": "अभंग 701 ते 800",
+          "subtitle": "अभंग 1051 ते 1200",
           "type": "अभंग",
           "file": "tukaram/gatha_08.json"
         },
@@ -79,7 +79,7 @@
           "id": "gatha-09",
           "number": 9,
           "title": "भाग 9",
-          "subtitle": "अभंग 801 ते 900",
+          "subtitle": "अभंग 1201 ते 1350",
           "type": "अभंग",
           "file": "tukaram/gatha_09.json"
         },
@@ -87,7 +87,7 @@
           "id": "gatha-10",
           "number": 10,
           "title": "भाग 10",
-          "subtitle": "अभंग 901 ते 1000",
+          "subtitle": "अभंग 1351 ते 1500",
           "type": "अभंग",
           "file": "tukaram/gatha_10.json"
         },
@@ -95,7 +95,7 @@
           "id": "gatha-11",
           "number": 11,
           "title": "भाग 11",
-          "subtitle": "अभंग 1001 ते 1100",
+          "subtitle": "अभंग 1501 ते 1650",
           "type": "अभंग",
           "file": "tukaram/gatha_11.json"
         },
@@ -103,7 +103,7 @@
           "id": "gatha-12",
           "number": 12,
           "title": "भाग 12",
-          "subtitle": "अभंग 1101 ते 1200",
+          "subtitle": "अभंग 1651 ते 1800",
           "type": "अभंग",
           "file": "tukaram/gatha_12.json"
         },
@@ -111,7 +111,7 @@
           "id": "gatha-13",
           "number": 13,
           "title": "भाग 13",
-          "subtitle": "अभंग 1201 ते 1300",
+          "subtitle": "अभंग 1801 ते 1950",
           "type": "अभंग",
           "file": "tukaram/gatha_13.json"
         },
@@ -119,7 +119,7 @@
           "id": "gatha-14",
           "number": 14,
           "title": "भाग 14",
-          "subtitle": "अभंग 1301 ते 1400",
+          "subtitle": "अभंग 1951 ते 2100",
           "type": "अभंग",
           "file": "tukaram/gatha_14.json"
         },
@@ -127,7 +127,7 @@
           "id": "gatha-15",
           "number": 15,
           "title": "भाग 15",
-          "subtitle": "अभंग 1401 ते 1500",
+          "subtitle": "अभंग 2101 ते 2250",
           "type": "अभंग",
           "file": "tukaram/gatha_15.json"
         },
@@ -135,7 +135,7 @@
           "id": "gatha-16",
           "number": 16,
           "title": "भाग 16",
-          "subtitle": "अभंग 1501 ते 1600",
+          "subtitle": "अभंग 2251 ते 2400",
           "type": "अभंग",
           "file": "tukaram/gatha_16.json"
         },
@@ -143,7 +143,7 @@
           "id": "gatha-17",
           "number": 17,
           "title": "भाग 17",
-          "subtitle": "अभंग 1601 ते 1700",
+          "subtitle": "अभंग 2401 ते 2550",
           "type": "अभंग",
           "file": "tukaram/gatha_17.json"
         },
@@ -151,7 +151,7 @@
           "id": "gatha-18",
           "number": 18,
           "title": "भाग 18",
-          "subtitle": "अभंग 1701 ते 1800",
+          "subtitle": "अभंग 2551 ते 2700",
           "type": "अभंग",
           "file": "tukaram/gatha_18.json"
         },
@@ -159,7 +159,7 @@
           "id": "gatha-19",
           "number": 19,
           "title": "भाग 19",
-          "subtitle": "अभंग 1801 ते 1900",
+          "subtitle": "अभंग 2701 ते 2850",
           "type": "अभंग",
           "file": "tukaram/gatha_19.json"
         },
@@ -167,7 +167,7 @@
           "id": "gatha-20",
           "number": 20,
           "title": "भाग 20",
-          "subtitle": "अभंग 1901 ते 2000",
+          "subtitle": "अभंग 2851 ते 3000",
           "type": "अभंग",
           "file": "tukaram/gatha_20.json"
         },
@@ -175,7 +175,7 @@
           "id": "gatha-21",
           "number": 21,
           "title": "भाग 21",
-          "subtitle": "अभंग 2001 ते 2100",
+          "subtitle": "अभंग 3001 ते 3150",
           "type": "अभंग",
           "file": "tukaram/gatha_21.json"
         },
@@ -183,7 +183,7 @@
           "id": "gatha-22",
           "number": 22,
           "title": "भाग 22",
-          "subtitle": "अभंग 2101 ते 2200",
+          "subtitle": "अभंग 3151 ते 3300",
           "type": "अभंग",
           "file": "tukaram/gatha_22.json"
         },
@@ -191,7 +191,7 @@
           "id": "gatha-23",
           "number": 23,
           "title": "भाग 23",
-          "subtitle": "अभंग 2201 ते 2300",
+          "subtitle": "अभंग 3301 ते 3450",
           "type": "अभंग",
           "file": "tukaram/gatha_23.json"
         },
@@ -199,7 +199,7 @@
           "id": "gatha-24",
           "number": 24,
           "title": "भाग 24",
-          "subtitle": "अभंग 2301 ते 2400",
+          "subtitle": "अभंग 3451 ते 3600",
           "type": "अभंग",
           "file": "tukaram/gatha_24.json"
         },
@@ -207,7 +207,7 @@
           "id": "gatha-25",
           "number": 25,
           "title": "भाग 25",
-          "subtitle": "अभंग 2401 ते 2500",
+          "subtitle": "अभंग 3601 ते 3750",
           "type": "अभंग",
           "file": "tukaram/gatha_25.json"
         },
@@ -215,7 +215,7 @@
           "id": "gatha-26",
           "number": 26,
           "title": "भाग 26",
-          "subtitle": "अभंग 2501 ते 2600",
+          "subtitle": "अभंग 3751 ते 3900",
           "type": "अभंग",
           "file": "tukaram/gatha_26.json"
         },
@@ -223,7 +223,7 @@
           "id": "gatha-27",
           "number": 27,
           "title": "भाग 27",
-          "subtitle": "अभंग 2601 ते 2700",
+          "subtitle": "अभंग 3901 ते 4050",
           "type": "अभंग",
           "file": "tukaram/gatha_27.json"
         },
@@ -231,7 +231,7 @@
           "id": "gatha-28",
           "number": 28,
           "title": "भाग 28",
-          "subtitle": "अभंग 2701 ते 2800",
+          "subtitle": "अभंग 4051 ते 4200",
           "type": "अभंग",
           "file": "tukaram/gatha_28.json"
         },
@@ -239,7 +239,7 @@
           "id": "gatha-29",
           "number": 29,
           "title": "भाग 29",
-          "subtitle": "अभंग 2801 ते 2900",
+          "subtitle": "अभंग 4201 ते 4350",
           "type": "अभंग",
           "file": "tukaram/gatha_29.json"
         },
@@ -247,7 +247,7 @@
           "id": "gatha-30",
           "number": 30,
           "title": "भाग 30",
-          "subtitle": "अभंग 2901 ते 3000",
+          "subtitle": "अभंग 4351 ते 4500",
           "type": "अभंग",
           "file": "tukaram/gatha_30.json"
         },
@@ -255,131 +255,86 @@
           "id": "gatha-31",
           "number": 31,
           "title": "भाग 31",
-          "subtitle": "अभंग 3001 ते 3100",
-          "type": "अभंग",
-          "file": "tukaram/gatha_31.json"
-        },
-        {
-          "id": "gatha-32",
-          "number": 32,
-          "title": "भाग 32",
-          "subtitle": "अभंग 3101 ते 3200",
-          "type": "अभंग",
-          "file": "tukaram/gatha_32.json"
-        },
-        {
-          "id": "gatha-33",
-          "number": 33,
-          "title": "भाग 33",
-          "subtitle": "अभंग 3201 ते 3300",
-          "type": "अभंग",
-          "file": "tukaram/gatha_33.json"
-        },
-        {
-          "id": "gatha-34",
-          "number": 34,
-          "title": "भाग 34",
-          "subtitle": "अभंग 3301 ते 3400",
-          "type": "अभंग",
-          "file": "tukaram/gatha_34.json"
-        },
-        {
-          "id": "gatha-35",
-          "number": 35,
-          "title": "भाग 35",
-          "subtitle": "अभंग 3401 ते 3500",
-          "type": "अभंग",
-          "file": "tukaram/gatha_35.json"
-        },
-        {
-          "id": "gatha-36",
-          "number": 36,
-          "title": "भाग 36",
-          "subtitle": "अभंग 3501 ते 3600",
-          "type": "अभंग",
-          "file": "tukaram/gatha_36.json"
-        },
-        {
-          "id": "gatha-37",
-          "number": 37,
-          "title": "भाग 37",
-          "subtitle": "अभंग 3601 ते 3700",
-          "type": "अभंग",
-          "file": "tukaram/gatha_37.json"
-        },
-        {
-          "id": "gatha-38",
-          "number": 38,
-          "title": "भाग 38",
-          "subtitle": "अभंग 3701 ते 3800",
-          "type": "अभंग",
-          "file": "tukaram/gatha_38.json"
-        },
-        {
-          "id": "gatha-39",
-          "number": 39,
-          "title": "भाग 39",
-          "subtitle": "अभंग 3801 ते 3900",
-          "type": "अभंग",
-          "file": "tukaram/gatha_39.json"
-        },
-        {
-          "id": "gatha-40",
-          "number": 40,
-          "title": "भाग 40",
-          "subtitle": "अभंग 3901 ते 4000",
-          "type": "अभंग",
-          "file": "tukaram/gatha_40.json"
-        },
-        {
-          "id": "gatha-41",
-          "number": 41,
-          "title": "भाग 41",
-          "subtitle": "अभंग 4001 ते 4100",
-          "type": "अभंग",
-          "file": "tukaram/gatha_41.json"
-        },
-        {
-          "id": "gatha-42",
-          "number": 42,
-          "title": "भाग 42",
-          "subtitle": "अभंग 4101 ते 4200",
-          "type": "अभंग",
-          "file": "tukaram/gatha_42.json"
-        },
-        {
-          "id": "gatha-43",
-          "number": 43,
-          "title": "भाग 43",
-          "subtitle": "अभंग 4201 ते 4300",
-          "type": "अभंग",
-          "file": "tukaram/gatha_43.json"
-        },
-        {
-          "id": "gatha-44",
-          "number": 44,
-          "title": "भाग 44",
-          "subtitle": "अभंग 4301 ते 4400",
-          "type": "अभंग",
-          "file": "tukaram/gatha_44.json"
-        },
-        {
-          "id": "gatha-45",
-          "number": 45,
-          "title": "भाग 45",
-          "subtitle": "अभंग 4401 ते 4500",
-          "type": "अभंग",
-          "file": "tukaram/gatha_45.json"
-        },
-        {
-          "id": "gatha-46",
-          "number": 46,
-          "title": "भाग 46",
           "subtitle": "अभंग 4501 ते 4583",
           "type": "अभंग",
-          "file": "tukaram/gatha_46.json"
+          "file": "tukaram/gatha_31.json"
         }
-      ]
+      ],
+      "themeIndexFile": "tukaram/gatha-index.json",
+      "themeIndex": {
+        "id": "gatha-themes",
+        "title": "विषयानुसार गाथा",
+        "type": "विषयवार अनुक्रमणिका",
+        "description": "विषय निवडा आणि त्या विषयाशी संबंधित गाथेतील अभंगांचा स्वतंत्र संग्रह पाहा.",
+        "themes": [
+          {
+            "id": "karuna-rasa",
+            "title": "करुणा रसाचे अभंग",
+            "type": "करुणा",
+            "description": "दीनता, आर्तता, दुःख, विरह आणि भगवंताविषयीची करुण आळवणी व्यक्त करणारे अभंग."
+          },
+          {
+            "id": "upadesh",
+            "title": "उपदेशपर वचने",
+            "type": "उपदेश",
+            "description": "नीती, सदाचार, आत्मशुद्धी, भक्ती आणि जीवनविषयक मार्गदर्शन करणारे अभंग."
+          },
+          {
+            "id": "vitthal-bhakti",
+            "title": "विठ्ठल भक्ती",
+            "type": "भक्ती",
+            "description": "विठ्ठलावरील प्रेम, भक्ती, नामस्मरण आणि भक्त-भगवंत संबंध व्यक्त करणारे अभंग."
+          },
+          {
+            "id": "pandurang-alavani",
+            "title": "पांडुरंग आळवणी",
+            "type": "आळवणी",
+            "description": "पांडुरंगाला हाक मारणारे, दर्शनाची आस व्यक्त करणारे आणि भगवंताचे स्मरण करणारे अभंग."
+          },
+          {
+            "id": "namamahatmya",
+            "title": "नाममाहात्म्य पर अभंग",
+            "type": "नाममाहात्म्य",
+            "description": "भगवंताच्या नामाचे महत्त्व, नामस्मरणाची साधना आणि नामाची फलश्रुती सांगणारे अभंग."
+          },
+          {
+            "id": "sant-mahima",
+            "title": "संत महिमा व साधुसंगती",
+            "type": "संत महिमा",
+            "description": "संतांचे महत्त्व, संतसंग, साधुसंगती आणि संतांच्या मार्गदर्शनाचे महत्त्व सांगणारे अभंग."
+          },
+          {
+            "id": "pakhand-khandan",
+            "title": "पाखंड खंडन व ढोंग विदारण",
+            "type": "पाखंड खंडन",
+            "description": "ढोंग, दांभिकपणा, पाखंड, कर्मकांडातील दिखावा आणि खोट्या आध्यात्मिकतेवर प्रहार करणारे अभंग."
+          },
+          {
+            "id": "gaulani-krishna",
+            "title": "गौळणी व कृष्णलीला",
+            "type": "गौळणी • कृष्णलीला",
+            "description": "कृष्णलीला, गोपिका, गोकुळ, बालकृष्ण आणि कृष्णभक्तीशी संबंधित अभंग."
+          },
+          {
+            "id": "samsar-vairagya",
+            "title": "संसार-वैराग्य व नश्वरता",
+            "type": "वैराग्य",
+            "description": "संसाराचे क्षणभंगुर स्वरूप, मोह-माया, वैराग्य आणि जगाच्या नश्वरतेचे चिंतन करणारे अभंग."
+          },
+          {
+            "id": "atmanivedan",
+            "title": "आत्मनिवेदन व स्वानुभव",
+            "type": "आत्मनिवेदन",
+            "description": "स्वतःचे आध्यात्मिक अनुभव, आत्मपरीक्षण, आत्मनिवेदन आणि अंतर्मुख चिंतन व्यक्त करणारे अभंग."
+          },
+          {
+            "id": "prarthana-kritajnata",
+            "title": "प्रार्थना व कृतज्ञता",
+            "type": "कृतज्ञता",
+            "description": "भगवंताकडे केलेली प्रार्थना, शरणागती, कृपेसाठी विनंती आणि प्राप्त कृपेबद्दलची कृतज्ञता व्यक्त करणारे अभंग."
+          }
+        ]
+      }
     },
     {
       "id": "haripath",
@@ -393,19 +348,6 @@
       "title": "काकड आरती / भक्तिगीते",
       "type": "आरती • भक्तिगीते",
       "file": "tukaram/kakad-aarti.json"
-    },
-    {
-      "id": "vitthal-bhaktigeete",
-      "title": "विठ्ठल भक्तीगीते",
-      "type": "भक्तिगीते",
-      "file": "tukaram/vitthal-bhaktigeete.json"
-    },
-    {
-      "id": "nivadak-abhang-arthasahit",
-      "title": "निवडक अभंग अर्थासह",
-      "type": "अभंग • अर्थ",
-      "file": "tukaram/nivadak-abhang-arthasahit.json",
-      "note": "गाथेतील अभंगांची पुनरावृत्ती न करता निवडक, विषयानुसार संपादित संग्रह म्हणून ठेवायचा."
     }
   ]
 }
