@@ -1996,6 +1996,7 @@ function App() {
     const [view, setView] = useState('home');
     const [selectedSaint, setSelectedSaint] = useState(null);
     const [selectedParentWork, setSelectedParentWork] = useState(null);
+    const [selectedThemeIndex, setSelectedThemeIndex] = useState(null);
     const [selectedWork, setSelectedWork] = useState(null);
     const [selectedNityaWork, setSelectedNityaWork] = useState(null);
     const [selectedContent, setSelectedContent] = useState(null);
@@ -2197,6 +2198,14 @@ function App() {
         }
 
         await openWork(saint, work, 1, parentWork || null, 'saint');
+    }
+
+    function openThemeIndex(saint, work) {
+        if (!work || !work.themeIndex) return;
+        setSelectedSaint(saint);
+        setSelectedParentWork(work);
+        setSelectedThemeIndex(work.themeIndex);
+        navigate('themeIndex');
     }
 
     function openNityaList() {
@@ -4241,6 +4250,16 @@ function App() {
                                     <h2 className='bhajasi-title'>{selectedParentWork.title}</h2>
                                 </div>
                             </div>
+                            {selectedParentWork.themeIndex && selectedParentWork.themeIndex.themes && selectedParentWork.themeIndex.themes.length && (
+                                <button
+                                    className='bhajasi-card bhajasi-work-card'
+                                    style={{ width: '100%', marginBottom: '14px' }}
+                                    onClick={function() { openThemeIndex(selectedSaint, selectedParentWork); }}
+                                >
+                                    <div className='bhajasi-card-title'>📿 {selectedParentWork.themeIndex.title || 'विषयानुसार गाथा'}</div>
+                                    <div className='bhajasi-card-sub'>{selectedParentWork.themeIndex.description || 'गाथेतील अभंग विषयानुसार पाहा.'} • {toMarathiDigits(selectedParentWork.themeIndex.themes.length)} विषय</div>
+                                </button>
+                            )}
                             <div className='bhajasi-grid'>
                                 {(selectedParentWork.sections || []).map(function(section, index) {
                                     const count = section.entries ? section.entries.length : section.verses || section.ovis || '';
@@ -4261,6 +4280,32 @@ function App() {
                                                 {section.days ? ' • दिवस ' + toMarathiDigits(section.days) : ''}
                                             </div>
                                         </button>
+                                    );
+                                })}
+                            </div>
+                        </section>
+                    )}
+
+                    {view === 'themeIndex' && selectedSaint && selectedParentWork && selectedThemeIndex && (
+                        <section>
+                            <div className='bhajasi-reader-head'>
+                                <button className='bhajasi-back' onClick={function() { navigate('sections'); }}>
+                                    ← {selectedParentWork.title} कडे परत
+                                </button>
+                                <div className='bhajasi-breadcrumb'>
+                                    <span>{selectedSaint.name}</span><span>›</span><span>{selectedParentWork.title}</span><span>›</span><span>{selectedThemeIndex.title}</span>
+                                </div>
+                                <div className='bhajasi-title-row'><h2 className='bhajasi-title'>{selectedThemeIndex.title}</h2></div>
+                                <p className='bhajasi-meta'>{selectedThemeIndex.description}</p>
+                            </div>
+                            <div className='bhajasi-grid'>
+                                {(selectedThemeIndex.themes || []).map(function(theme, index) {
+                                    return (
+                                        <div key={theme.id || index} className='bhajasi-card bhajasi-work-card'>
+                                            <div className='bhajasi-card-title'>{theme.title}</div>
+                                            <div className='bhajasi-card-sub'>{theme.type || 'विषय'}</div>
+                                            <div className='bhajasi-card-sub'>{theme.description}</div>
+                                        </div>
                                     );
                                 })}
                             </div>
