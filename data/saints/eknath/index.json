@@ -238,49 +238,56 @@
           "number": 1,
           "title": "कांड 1",
           "type": "कांड",
-          "file": "eknath/bhavarth_ramayan_01.json"
+          "file": "eknath/bhavarth_ramayan_01.json",
+          "subtitle": "बालकांड"
         },
         {
           "id": "bhavarth-ramayan-02",
           "number": 2,
           "title": "कांड 2",
           "type": "कांड",
-          "file": "eknath/bhavarth_ramayan_02.json"
+          "file": "eknath/bhavarth_ramayan_02.json",
+          "subtitle": "अयोध्याकांड"
         },
         {
           "id": "bhavarth-ramayan-03",
           "number": 3,
           "title": "कांड 3",
           "type": "कांड",
-          "file": "eknath/bhavarth_ramayan_03.json"
+          "file": "eknath/bhavarth_ramayan_03.json",
+          "subtitle": "अरण्यकांड"
         },
         {
           "id": "bhavarth-ramayan-04",
           "number": 4,
           "title": "कांड 4",
           "type": "कांड",
-          "file": "eknath/bhavarth_ramayan_04.json"
+          "file": "eknath/bhavarth_ramayan_04.json",
+          "subtitle": "किष्किंधाकांड"
         },
         {
           "id": "bhavarth-ramayan-05",
           "number": 5,
           "title": "कांड 5",
           "type": "कांड",
-          "file": "eknath/bhavarth_ramayan_05.json"
+          "file": "eknath/bhavarth_ramayan_05.json",
+          "subtitle": "सुंदरकांड"
         },
         {
           "id": "bhavarth-ramayan-06",
           "number": 6,
           "title": "कांड 6",
           "type": "कांड",
-          "file": "eknath/bhavarth_ramayan_06.json"
+          "file": "eknath/bhavarth_ramayan_06.json",
+          "subtitle": "युद्धकांड"
         },
         {
           "id": "bhavarth-ramayan-07",
           "number": 7,
           "title": "कांड 7",
           "type": "कांड",
-          "file": "eknath/bhavarth_ramayan_07.json"
+          "file": "eknath/bhavarth_ramayan_07.json",
+          "subtitle": "उत्तरकांड"
         }
       ]
     },
