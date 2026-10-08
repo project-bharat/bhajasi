@@ -1,19 +1,19 @@
 {
   "id": "gatha-07",
   "title": "तुकाराम गाथा — भाग 7",
-  "subtitle": "अभंग 601 ते 700",
+  "subtitle": "अभंग 901 ते 1050",
   "type": "अभंग",
   "days": 1,
   "range": {
-    "start": 601,
-    "end": 700,
-    "count": 100
+    "start": 901,
+    "end": 1050,
+    "count": 150
   },
   "entries": [],
   "source": {
-    "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_६०१_ते_९००",
+    "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_९०१_ते_undefined",
     "kind": "Wikisource",
-    "scope": "गाथा 601-900"
+    "scope": "गाथा 901-1050"
   },
   "sourceStatus": "SOURCE_INDEXED_NOT_YET_IMPORTED"
 }
