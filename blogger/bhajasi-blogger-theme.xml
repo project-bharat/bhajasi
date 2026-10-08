@@ -1599,6 +1599,17 @@ function workHasSections(work) {
     return !!(work && Array.isArray(work.sections) && work.sections.length);
 }
 
+function getSectionDisplaySubtitle(section) {
+    if (!section) return '';
+    return String(
+        section.subtitle ||
+        section.name ||
+        section.description ||
+        section.topic ||
+        ''
+    ).trim();
+}
+
 function getWorkSummary(work) {
     if (!work) return '';
     if (work.description) return work.description;
@@ -4107,8 +4118,8 @@ function App() {
                                                 {formatSubTitle(section.title, selectedParentWork.title)}
                                             </div>
                                             <div className='bhajasi-card-sub'>
-                                                {section.type || 'विभाग'}
-                                                {count ? ' • ' + toMarathiDigits(count) + ' नोंदी' : ''}
+                                                {getSectionDisplaySubtitle(section)}
+                                                {count ? (getSectionDisplaySubtitle(section) ? ' • ' : '') + toMarathiDigits(count) + ' नोंदी' : ''}
                                                 {section.days ? ' • दिवस ' + toMarathiDigits(section.days) : ''}
                                             </div>
                                         </button>
