@@ -20,140 +20,160 @@
           "number": 1,
           "title": "दासबोध — दशक 1",
           "type": "दशक",
-          "file": "ramdas/dasbodh_01.json"
+          "file": "ramdas/dasbodh_01.json",
+          "subtitle": "स्तवनांचा"
         },
         {
           "id": "dasbodh-02",
           "number": 2,
           "title": "दासबोध — दशक 2",
           "type": "दशक",
-          "file": "ramdas/dasbodh_02.json"
+          "file": "ramdas/dasbodh_02.json",
+          "subtitle": "मूर्खलक्षणांचा"
         },
         {
           "id": "dasbodh-03",
           "number": 3,
           "title": "दासबोध — दशक 3",
           "type": "दशक",
-          "file": "ramdas/dasbodh_03.json"
+          "file": "ramdas/dasbodh_03.json",
+          "subtitle": "सगुणपरीक्षा"
         },
         {
           "id": "dasbodh-04",
           "number": 4,
           "title": "दासबोध — दशक 4",
           "type": "दशक",
-          "file": "ramdas/dasbodh_04.json"
+          "file": "ramdas/dasbodh_04.json",
+          "subtitle": "नवविधाभक्तीचा"
         },
         {
           "id": "dasbodh-05",
           "number": 5,
           "title": "दासबोध — दशक 5",
           "type": "दशक",
-          "file": "ramdas/dasbodh_05.json"
+          "file": "ramdas/dasbodh_05.json",
+          "subtitle": "मंत्रांचा"
         },
         {
           "id": "dasbodh-06",
           "number": 6,
           "title": "दासबोध — दशक 6",
           "type": "दशक",
-          "file": "ramdas/dasbodh_06.json"
+          "file": "ramdas/dasbodh_06.json",
+          "subtitle": "देवशोधनाचा"
         },
         {
           "id": "dasbodh-07",
           "number": 7,
           "title": "दासबोध — दशक 7",
           "type": "दशक",
-          "file": "ramdas/dasbodh_07.json"
+          "file": "ramdas/dasbodh_07.json",
+          "subtitle": "चौदा ब्रह्मांचा"
         },
         {
           "id": "dasbodh-08",
           "number": 8,
           "title": "दासबोध — दशक 8",
           "type": "दशक",
-          "file": "ramdas/dasbodh_08.json"
+          "file": "ramdas/dasbodh_08.json",
+          "subtitle": "मायोद्भवाचा"
         },
         {
           "id": "dasbodh-09",
           "number": 9,
           "title": "दासबोध — दशक 9",
           "type": "दशक",
-          "file": "ramdas/dasbodh_09.json"
+          "file": "ramdas/dasbodh_09.json",
+          "subtitle": "गुणरूपाचा"
         },
         {
           "id": "dasbodh-10",
           "number": 10,
           "title": "दासबोध — दशक 10",
           "type": "दशक",
-          "file": "ramdas/dasbodh_10.json"
+          "file": "ramdas/dasbodh_10.json",
+          "subtitle": "जगज्योतीचा"
         },
         {
           "id": "dasbodh-11",
           "number": 11,
           "title": "दासबोध — दशक 11",
           "type": "दशक",
-          "file": "ramdas/dasbodh_11.json"
+          "file": "ramdas/dasbodh_11.json",
+          "subtitle": "भीमदशक"
         },
         {
           "id": "dasbodh-12",
           "number": 12,
           "title": "दासबोध — दशक 12",
           "type": "दशक",
-          "file": "ramdas/dasbodh_12.json"
+          "file": "ramdas/dasbodh_12.json",
+          "subtitle": "विवेकवैराग्यनाम"
         },
         {
           "id": "dasbodh-13",
           "number": 13,
           "title": "दासबोध — दशक 13",
           "type": "दशक",
-          "file": "ramdas/dasbodh_13.json"
+          "file": "ramdas/dasbodh_13.json",
+          "subtitle": "नामरूप"
         },
         {
           "id": "dasbodh-14",
           "number": 14,
           "title": "दासबोध — दशक 14",
           "type": "दशक",
-          "file": "ramdas/dasbodh_14.json"
+          "file": "ramdas/dasbodh_14.json",
+          "subtitle": "अखंडध्याननाम"
         },
         {
           "id": "dasbodh-15",
           "number": 15,
           "title": "दासबोध — दशक 15",
           "type": "दशक",
-          "file": "ramdas/dasbodh_15.json"
+          "file": "ramdas/dasbodh_15.json",
+          "subtitle": "आत्मदशक"
         },
         {
           "id": "dasbodh-16",
           "number": 16,
           "title": "दासबोध — दशक 16",
           "type": "दशक",
-          "file": "ramdas/dasbodh_16.json"
+          "file": "ramdas/dasbodh_16.json",
+          "subtitle": "सप्ततिन्वयाचा"
         },
         {
           "id": "dasbodh-17",
           "number": 17,
           "title": "दासबोध — दशक 17",
           "type": "दशक",
-          "file": "ramdas/dasbodh_17.json"
+          "file": "ramdas/dasbodh_17.json",
+          "subtitle": "प्रकृतिपुरुषाचा"
         },
         {
           "id": "dasbodh-18",
           "number": 18,
           "title": "दासबोध — दशक 18",
           "type": "दशक",
-          "file": "ramdas/dasbodh_18.json"
+          "file": "ramdas/dasbodh_18.json",
+          "subtitle": "बहुजिनसी"
         },
         {
           "id": "dasbodh-19",
           "number": 19,
           "title": "दासबोध — दशक 19",
           "type": "दशक",
-          "file": "ramdas/dasbodh_19.json"
+          "file": "ramdas/dasbodh_19.json",
+          "subtitle": "शिकवणनाम"
         },
         {
           "id": "dasbodh-20",
           "number": 20,
           "title": "दासबोध — दशक 20",
           "type": "दशक",
-          "file": "ramdas/dasbodh_20.json"
+          "file": "ramdas/dasbodh_20.json",
+          "subtitle": "पूर्णदशक"
         }
       ]
     },
@@ -185,49 +205,56 @@
           "number": 1,
           "title": "कांड 1",
           "type": "कांड",
-          "file": "ramdas/ramayan_01.json"
+          "file": "ramdas/ramayan_01.json",
+          "subtitle": "बालकांड"
         },
         {
           "id": "ramayan-02",
           "number": 2,
           "title": "कांड 2",
           "type": "कांड",
-          "file": "ramdas/ramayan_02.json"
+          "file": "ramdas/ramayan_02.json",
+          "subtitle": "अयोध्याकांड"
         },
         {
           "id": "ramayan-03",
           "number": 3,
           "title": "कांड 3",
           "type": "कांड",
-          "file": "ramdas/ramayan_03.json"
+          "file": "ramdas/ramayan_03.json",
+          "subtitle": "अरण्यकांड"
         },
         {
           "id": "ramayan-04",
           "number": 4,
           "title": "कांड 4",
           "type": "कांड",
-          "file": "ramdas/ramayan_04.json"
+          "file": "ramdas/ramayan_04.json",
+          "subtitle": "किष्किंधाकांड"
         },
         {
           "id": "ramayan-05",
           "number": 5,
           "title": "कांड 5",
           "type": "कांड",
-          "file": "ramdas/ramayan_05.json"
+          "file": "ramdas/ramayan_05.json",
+          "subtitle": "सुंदरकांड"
         },
         {
           "id": "ramayan-06",
           "number": 6,
           "title": "कांड 6",
           "type": "कांड",
-          "file": "ramdas/ramayan_06.json"
+          "file": "ramdas/ramayan_06.json",
+          "subtitle": "युद्धकांड"
         },
         {
           "id": "ramayan-07",
           "number": 7,
           "title": "कांड 7",
           "type": "कांड",
-          "file": "ramdas/ramayan_07.json"
+          "file": "ramdas/ramayan_07.json",
+          "subtitle": "उत्तरकांड"
         }
       ]
     }
