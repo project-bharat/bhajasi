@@ -1782,27 +1782,70 @@ function buildMetadataSearch(saints, nitya) {
     const results = [];
 
     (saints || []).forEach(function(saint) {
+        const saintSearchText = [
+            saint.name,
+            saint.search,
+            saint.description
+        ].filter(Boolean).join(' ');
+
         results.push({
             type: 'saint',
             title: saint.name || saint.id,
             sub: 'संत • ग्रंथसूची',
+            searchText: saintSearchText,
             saint: saint
         });
 
         (saint.works || []).forEach(function(work) {
+            const workSearchText = [
+                work.title,
+                work.subtitle,
+                work.name,
+                work.description,
+                work.topic,
+                work.type,
+                work.search,
+                saintSearchText
+            ].filter(Boolean).join(' ');
+
             results.push({
                 type: 'work',
                 title: work.title || work.id,
                 sub: [saint.name, work.type].filter(Boolean).join(' • '),
+                searchText: workSearchText,
                 saint: saint,
                 work: work
             });
 
             (work.sections || []).forEach(function(section) {
+                /* Section titles are searchable metadata too.
+                   This includes subtitle/name/description/topic so searches such as
+                   "स्तवनांचा", "मूर्खलक्षणांचा", "सगुणपरीक्षा",
+                   "अर्जुनविषाद योग", "कर्म योग", "बालकांड", "अयोध्याकांड", etc.
+                   resolve directly to the corresponding section. */
+                const sectionSubtitle = getSectionDisplaySubtitle(section);
+                const sectionSearchText = [
+                    section.title,
+                    section.subtitle,
+                    section.name,
+                    section.description,
+                    section.topic,
+                    section.type,
+                    section.search,
+                    work.title,
+                    work.subtitle,
+                    work.name,
+                    work.description,
+                    work.topic,
+                    work.search,
+                    saintSearchText
+                ].filter(Boolean).join(' ');
+
                 results.push({
                     type: 'section',
                     title: section.title || section.id,
-                    sub: [work.title, saint.name].filter(Boolean).join(' • '),
+                    sub: [sectionSubtitle, work.title, saint.name].filter(Boolean).join(' • '),
+                    searchText: sectionSearchText,
                     saint: saint,
                     work: section,
                     parentWork: work
@@ -1812,10 +1855,21 @@ function buildMetadataSearch(saints, nitya) {
     });
 
     ((nitya && nitya.works) || []).forEach(function(work) {
+        const nityaSearchText = [
+            work.title,
+            work.subtitle,
+            work.name,
+            work.description,
+            work.topic,
+            work.type,
+            work.search
+        ].filter(Boolean).join(' ');
+
         results.push({
             type: 'nitya',
             title: work.title || work.id,
             sub: ['नित्य पठण', work.type].filter(Boolean).join(' • '),
+            searchText: nityaSearchText,
             nityaWork: work
         });
     });
@@ -2690,13 +2744,16 @@ function App() {
 
         const metadata = buildMetadataSearch(saints, nitya);
         const quick = metadata.filter(function(item) {
-            return [
-                item.title,
-                item.sub,
-                item.saint && item.saint.search,
-                item.work && item.work.search,
-                item.nityaWork && item.nityaWork.search
-            ].filter(Boolean).join(' ').toLowerCase().indexOf(q) >= 0;
+            return String(
+                item.searchText ||
+                [
+                    item.title,
+                    item.sub,
+                    item.saint && item.saint.search,
+                    item.work && item.work.search,
+                    item.nityaWork && item.nityaWork.search
+                ].filter(Boolean).join(' ')
+            ).toLowerCase().indexOf(q) >= 0;
         }).slice(0, 20);
 
         setSearchResults(quick);
