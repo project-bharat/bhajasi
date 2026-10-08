@@ -1,19 +1,19 @@
 {
   "id": "gatha-17",
   "title": "तुकाराम गाथा — भाग 17",
-  "subtitle": "अभंग 1601 ते 1700",
+  "subtitle": "अभंग 2401 ते 2550",
   "type": "अभंग",
   "days": 1,
   "range": {
-    "start": 1601,
-    "end": 1700,
-    "count": 100
+    "start": 2401,
+    "end": 2550,
+    "count": 150
   },
   "entries": [],
   "source": {
-    "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_१५०१_ते_१८००",
+    "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_२४०१_ते_undefined",
     "kind": "Wikisource",
-    "scope": "गाथा 1501-1800"
+    "scope": "गाथा 2401-2550"
   },
   "sourceStatus": "SOURCE_INDEXED_NOT_YET_IMPORTED"
 }
