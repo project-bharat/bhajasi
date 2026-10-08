@@ -2,14 +2,3070 @@
   "id": "swatmasukh",
   "title": "स्वात्मसुख",
   "type": "ग्रंथ",
-  "days": 1,
+  "author": "संत एकनाथ महाराज",
+  "description": "संत एकनाथ महाराज विरचित ५११ ओव्यांचा आत्मसुख व अद्वैत तत्त्वज्ञान निरूपक महान ग्रंथ.",
+  "total_verses": 511,
   "entries": [
     {
-      "id": "001",
+      "id": "swatmasukh-001",
       "number": 1,
-      "text": "[नमुना डेटा — प्रमाणित ग्रंथ येथे जोडावा]",
-      "meaning": "हा नमुना केवळ डेटा-संरचना आणि UI तपासणीसाठी आहे. प्रमाणित मूळ साहित्य उपलब्ध झाल्यावर येथे तेच मजकूर ठेवावा.",
-      "sample": true
+      "text": "श्रीगणेशाय नमः ॥ ॐ नमो श्रीसद्गुरुनाथा । जो आदिमध्यावसानापरता ।\nसकळ मंगळ मंगळरूपा समस्तां । नमिला आतां म्यां देवो ॥ १ ॥",
+      "meaning": "श्रीगणेशाय नमः. जो उत्पत्ती, स्थिती आणि लयापलीकडचा आहे, सर्व मंगळांचे मूळ मंगल रूप आहे, त्या सर्वांचे अधिष्ठान असणाऱ्या श्रीसद्गुरुनाथाला मी नमस्कार करतो."
+    },
+    {
+      "id": "swatmasukh-002",
+      "number": 2,
+      "text": "जयाचेनि स्मरणें साचार । नासे अज्ञानाचा अंधकार ।\nप्रगटे ज्ञानाचा भास्कर । अंतरीं थोर स्वयेंचि ॥ २ ॥",
+      "meaning": "ज्याच्या केवळ स्मरणाने अज्ञानाचा अंधकार नष्ट होतो आणि अंतःकरणात आत्मज्ञानाचा महान सूर्य स्वयंप्रकाशी उजळून निघतो."
+    },
+    {
+      "id": "swatmasukh-003",
+      "number": 3,
+      "text": "तोचि हा सद्गुरु जनार्दन । जयाचें केलें मीं नमन ।\nजेणें दाविलें निजस्थान । स्वात्मसुख जाण अलभ्य हें ॥ ३ ॥",
+      "meaning": "तेच हे माझे सद्गुरू जनार्दन स्वामी आहेत, ज्यांना मी नमन केले आहे; ज्यांनी मला हे अत्यंत दुर्मिळ असे स्वात्मसुखाचे निजस्थान दाखवून दिले."
+    },
+    {
+      "id": "swatmasukh-004",
+      "number": 4,
+      "text": "आतां स्वात्मसुखाचें निरूपण । सांगेन ऐका सावधान ।\nजेणें फिटे भवबंधन । क्षणार्धें जाण प्राण्यांसी ॥ ४ ॥",
+      "meaning": "आता मी या स्वात्मसुखाचे यथार्थ निरूपण सांगतो ते सावध चित्ताने ऐका; ज्यामुळे जीवाचे संसारबंधन क्षणार्धात नष्ट होते."
+    },
+    {
+      "id": "swatmasukh-005",
+      "number": 5,
+      "text": "सुख सुख म्हणती सकळ । परी तें नश्वर केवळ ।\nविषयसुख हें मलीन मळ । दुःखमूळ शेवटीं ॥ ५ ॥",
+      "meaning": "सर्व लोक ज्याला 'सुख' म्हणतात, ते केवळ नश्वर आहे. विषयसुख हे मलीन मळासारखे असून शेवटी दुःखाचेच मूळ ठरते."
+    },
+    {
+      "id": "swatmasukh-006",
+      "number": 6,
+      "text": "इंद्रियांचें जें जें सुख । तें तें परिणामीं महादुःख ।\nजैसा विषाचा मोदक । भक्षितां देख नाशी प्राण ॥ ६ ॥",
+      "meaning": "इंद्रियांपासून मिळणारे जे जे सुख आहे ते शेवटी महादुःखालाच कारण होते; जसा विष मिसळलेला मोदक खाताना गोड लागतो पण शेवटी प्राण घेतो."
+    },
+    {
+      "id": "swatmasukh-007",
+      "number": 7,
+      "text": "तैसें हें संसारसुख जाण । पुढें करी अधःपतन ।\nम्हणोनि स्वात्मसुख पूर्ण । शोधावें शरण सद्गुरुंसी ॥ ७ ॥",
+      "meaning": "तसेच हे सांसारिक सुख जिवाला अधोगतीला नेते; म्हणून सद्गुरूंना शरण जाऊन परिपूर्ण स्वात्मसुखाचा शोध घेतला पाहिजे."
+    },
+    {
+      "id": "swatmasukh-008",
+      "number": 8,
+      "text": "स्वात्मसुख तें कैसें असें । जें सर्वदा स्वयें प्रकाशे ।\nनाहीं काळ देश लेश । जयासी भासे सर्वथा ॥ ८ ॥",
+      "meaning": "ते स्वात्मसुख कसे आहे? जे नेहमी स्वतःच्याच प्रकाशाने तळपत असते आणि ज्याला देश, काळ किंवा परिस्थितीची कसलीही मर्यादा नसते."
+    },
+    {
+      "id": "swatmasukh-009",
+      "number": 9,
+      "text": "जें नाहीं दृश्य ना अदृश्य । जें नव्हे व्यक्त ना अव्यक्त ।\nकेवळ सच्चिदानंद साक्षात । नित्यमुक्त स्वरूप ॥ ९ ॥",
+      "meaning": "जे डोळ्यांना दिसणारे दृश्य नाही किंवा न दिसणारे अदृश्यही नाही; जे व्यक्त किंवा अव्यक्तही नाही, ते केवळ साक्षात सच्चिदानंद नित्यमुक्त स्वरूप आहे."
+    },
+    {
+      "id": "swatmasukh-010",
+      "number": 10,
+      "text": "जीव शिवाचा भेद जेथें । मावळोनि जाय निभ्रांतें ।\nस्वात्मसुख म्हणती त्यातें । संत समस्तें मानिती ॥ १० ॥",
+      "meaning": "जीव आणि शिव यांमधील द्वैतभाव जिथे निःसंशय विरून जातो, त्या अवस्थेला सर्व संत 'स्वात्मसुख' म्हणतात."
+    },
+    {
+      "id": "swatmasukh-011",
+      "number": 11,
+      "text": "देह मी हाचि अहंकार । हाचि अज्ञानाचा संसार ।\nयाचा करावा संहार । विवेकें साचार साधकें ॥ ११ ॥",
+      "meaning": "'हा देह म्हणजेच मी' ही भावना हाच खरा अहंकार आणि अज्ञानाचा संसार आहे; साधकाने विवेकाच्या बळाने याचा समूळ नाश करावा."
+    },
+    {
+      "id": "swatmasukh-012",
+      "number": 12,
+      "text": "देह तो पांचाभौतिक जड । आत्मा तो चिन्मय उघड ।\nदोहींचा मेळ हा अवघड । अज्ञानें गूढ भासतसे ॥ १२ ॥",
+      "meaning": "देह हा पंचमहाभूतांचा बनलेला जड पदार्थ आहे आणि आत्मा प्रत्यक्ष चैतन्यस्वरूप आहे; अज्ञानामुळे या दोन्हींचे एकत्र असणे गूढ भासते."
+    },
+    {
+      "id": "swatmasukh-013",
+      "number": 13,
+      "text": "जैसा अग्नी आणि लोखंड । एकवट दिसती अखंड ।\nपरी लोखंड जड थंड । अग्नी प्रचंड प्रकाशक ॥ १३ ॥",
+      "meaning": "अग्नी आणि तप्त लोखंड एकत्र आल्यावर एकच भासतात; परंतु लोखंड हे जड असते आणि अग्नी प्रखर प्रकाशक असतो."
+    },
+    {
+      "id": "swatmasukh-014",
+      "number": 14,
+      "text": "तैसें देह आणि चैतन्य । मिळोनि भासे एकपण ।\nविचारें पाहतां भिन्न । आत्मा चैतन्य केवळ ॥ १४ ॥",
+      "meaning": "तसेच देह आणि चैतन्य एकत्र मिळून एक असल्यासारखे भासतात; परंतु विवेकाने पाहिल्यास देह जड असून आत्मा हा केवळ शुद्ध चैतन्य आहे."
+    },
+    {
+      "id": "swatmasukh-015",
+      "number": 15,
+      "text": "आत्मा तो अकर्ता साक्षी । देह हा कर्मे नाना रची ।\nभ्रांती पडली अज्ञानाची । जीवाच्या ठायीं ॥ १५ ॥",
+      "meaning": "आत्मा अकर्ता आणि साक्षीस्वरूप आहे, तर देह सर्व प्रकारची कर्मे करतो; केवळ अज्ञानामुळे जीव स्वतःला कर्ता मानून भ्रांतीत पडतो."
+    },
+    {
+      "id": "swatmasukh-016",
+      "number": 16,
+      "text": "मी करितों मी भोगितों । ऐसा वृथा अभिमान धरितो ।\nतेणेंचि बद्ध होवोनि फिरतो । चौऱ्यांशीं लक्ष योनींमाजीं ॥ १६ ॥",
+      "meaning": "'मी करतो आणि मी भोगतो' असा व्यर्थ अभिमान बाळगल्यामुळेच जीव बद्ध होऊन चौऱ्यांशी लक्ष योनींच्या फेऱ्यात भरकटत राहतो."
+    },
+    {
+      "id": "swatmasukh-017",
+      "number": 17,
+      "text": "या बंधनाचें मूळ छेदणें । तरी सद्गुरूचे पाय धरणें ।\nसद्गुरूवाक्य प्रमाण मानणें । तेणें तरणें भवाब्धी ॥ १७ ॥",
+      "meaning": "या बंधनांचे मूळ तोडायचे असेल तर सद्गुरूंचे चरण घट्ट धरावेत; सद्गुरूंचे वचन प्रमाण मानले की भवसागर सहज पार करता येतो."
+    },
+    {
+      "id": "swatmasukh-018",
+      "number": 18,
+      "text": "सद्गुरू सांगे महावाक्य । तत्त्वमसि हें ऐक्य ।\nतेणें प्रगटे आत्मसुख । निरसे दुःख प्रपंचाचें ॥ १८ ॥",
+      "meaning": "सद्गुरू 'तत्त्वमसि' (ते परब्रह्म तूच आहेस) हे ऐक्य सांगणारे महावाक्य उपदेशितात, ज्यामुळे आत्मसुखाचा उदय होऊन प्रपंचाचे दुःख संपते."
+    },
+    {
+      "id": "swatmasukh-019",
+      "number": 19,
+      "text": "तत्त्वमसि पदाचा अर्थ । गुरुमुखें कळे यथार्थ ।\nतेथें उरे केवळ परमार्थ । नासे स्वार्थ मिथ्या हा ॥ १९ ॥",
+      "meaning": "'तत्त्वमसि' या पदाचा यथार्थ अर्थ गुरुमुखातून कळतो; तिथे केवळ खरा परमार्थच उरतो आणि मिथ्या स्वार्थ नष्ट होतो."
+    },
+    {
+      "id": "swatmasukh-020",
+      "number": 20,
+      "text": "तत्पद तें परब्रह्म जाण । त्वंपद हें जीवाचें लक्षण ।\nअसिपदें दोघां ऐक्य पूर्ण । हेंचि विज्ञान वेदान्तीं ॥ २० ॥",
+      "meaning": "'तत्' पद हे परब्रह्माचे दर्शक आहे, 'त्वं' पद हे जीवाचे रूप दाखवते आणि 'असि' पदाने या दोन्हींचे परिपूर्ण ऐक्य सिद्ध होते; हेच वेदान्तातील शुद्ध आत्मज्ञान आहे."
+    },
+    {
+      "id": "swatmasukh-021",
+      "number": 21,
+      "text": "उपाधि सांडितां दोघांची । ऐक्यता होय साची ।\nजैसी घटाकाश महाकाशाची । मिळणी साची स्वाभाविक ॥ २१ ॥",
+      "meaning": "दोन्हींकडील उपाधींचा त्याग केला की खरे ऐक्य साधते; जशी घटाची उपाधी नष्ट होताच घटाकाश आणि महाकाश स्वाभाविकपणे एकच होतात."
+    },
+    {
+      "id": "swatmasukh-022",
+      "number": 22,
+      "text": "घट फुटला तरी आकाश । जैसें असे निर्दोष ।\nतद्वत देहाच्या नाशे न नाशे । आत्मा परेश नित्य हा ॥ २२ ॥",
+      "meaning": "घडा फुटला तरी त्यातील आकाश जसे अखंड आणि निर्दोष राहते, तसेच देहाच्या विनाशाने हा नित्य परमात्मा कधीही नष्ट होत नाही."
+    },
+    {
+      "id": "swatmasukh-023",
+      "number": 23,
+      "text": "न जाय न ये कोठेंही । न मरे न उपजे कधींही ।\nसदा स्वानंदमय पाहीं । आत्मा ठायीं आपुल्या ॥ २३ ॥",
+      "meaning": "तो कुठे जात नाही, कुठून येत नाही, जन्म घेत नाही आणि मरतही नाही; आत्मा आपल्या मूळ स्वरूपात सदा स्वानंदमय स्थित असतो."
+    },
+    {
+      "id": "swatmasukh-024",
+      "number": 24,
+      "text": "ऐसें हें आत्मज्ञान । अनुभवीं बाणे ज्याचे जाण ।\nतोचि धन्य तोचि पावन । तिहीं लोकीं वंद्य तो ॥ २४ ॥",
+      "meaning": "असे हे आत्मज्ञान ज्याच्या अनुभवात उतरते, तोच खरा धन्य, तोच पावन आणि तिन्ही लोकांत वंदनीय ठरतो."
+    },
+    {
+      "id": "swatmasukh-025",
+      "number": 25,
+      "text": "ग्रंथाचा हा आरंभ केला । श्रोतीं अवधान द्यावें भला ।\nस्वात्मसुखाचा रस आगळा । चाखावा लीळा प्रेमानें ॥ २५ ॥",
+      "meaning": "या ग्रंथाचा आरंभ झाला आहे, श्रोत्यांनी उत्तम चित्त द्यावे आणि या स्वात्मसुखाचा आगळावेगळा परब्रह्मरस प्रेमाने अनुभवावा."
+    },
+    {
+      "id": "swatmasukh-026",
+      "number": 26,
+      "text": "हें नव्हे कवित्व केवळ । हें आत्मसुखाचें निधान मूळ ।\nपठणें होय अंतःकरण निर्मळ । संशय सकळ निरसती ॥ २६ ॥",
+      "meaning": "हे केवळ काव्य नव्हे तर आत्मसुखाचा मूळ ठेवा आहे; याच्या पठणाने अंतःकरण निर्मळ होते आणि सर्व संशय गळून पडतात."
+    },
+    {
+      "id": "swatmasukh-027",
+      "number": 27,
+      "text": "संशय हाचि महासर्प । डंखितां पावती संताप ।\nज्ञानाचेनि गारुडें लोप । संशयाचा होय पैं ॥ २७ ॥",
+      "meaning": "संशय हाच महाभयंकर साप आहे, जो डसला की जिवाला ताप होतो; परंतु आत्मज्ञानाच्या मंत्राने संशयाचा समूळ लोप होतो."
+    },
+    {
+      "id": "swatmasukh-028",
+      "number": 28,
+      "text": "संशयरहित चित्त झालें । तेथें आत्मारामें राज्य केलें ।\nद्वैताचें मूळ उडालें । स्वात्मसुख भोगितां ॥ २८ ॥",
+      "meaning": "चित्त एकदा संशयरहित झाले की तिथे साक्षात आत्माराम राज्य करतो आणि स्वात्मसुखाचा अनुभव घेताना द्वैताचे मूळ नष्ट होते."
+    },
+    {
+      "id": "swatmasukh-029",
+      "number": 29,
+      "text": "द्वैत हेंचि भवाचें मूळ । अद्वैत हें मोक्षाचें स्थळ ।\nअद्वैतभावें निर्मळ । होय सकळ अंतरीं ॥ २९ ॥",
+      "meaning": "द्वैत हे संसाराचे मूळ कारण आहे आणि अद्वैत हे मोक्षाचे मूळ स्थान आहे; अद्वैतभावाने अंतःकरण पूर्णतः निर्मळ होते."
+    },
+    {
+      "id": "swatmasukh-030",
+      "number": 30,
+      "text": "अद्वैताची गोडी भारी । ज्यासी लागली अंतरीं ।\nतो संसारीं असोनि तरी । अलिप्तपणें वर्ततसे ॥ ३० ॥",
+      "meaning": "अद्वैताची गोडी ज्याच्या अंतरात उतरली, तो संसारात असूनही अत्यंत अलिप्तपणे वावरतो."
+    },
+    {
+      "id": "swatmasukh-031",
+      "number": 31,
+      "text": "जैसें जळीं असे कमळ । जळें न लिंपे तयाचें दळ ।\nतैसें ज्ञानी निर्मळ । संसारीं असती ॥ ३१ ॥",
+      "meaning": "कमळ पाण्यात असते तरी त्याचे पान पाण्याने लिप्त होत नाही; तसेच ज्ञानी जन संसारात असूनही नित्य निर्मळ राहतात."
+    },
+    {
+      "id": "swatmasukh-032",
+      "number": 32,
+      "text": "संसारीं असोनि विदेही । ऐसी स्थिती जयासी पाही ।\nतयासी भय उरलें नाहीं । यमदंडाचें ॥ ३२ ॥",
+      "meaning": "संसारात राहूनही ज्याला ही विदेही स्थिती साध्य होते, त्याला यमदंडाचे किंवा मृत्यूचे कसलेही भय उरत नाही."
+    },
+    {
+      "id": "swatmasukh-033",
+      "number": 33,
+      "text": "यमकाळ ज्याचा कांपे । नामस्मरणें महातपें ।\nतोचि पावे निर्विकल्पें । पद आपुलें ॥ ३३ ॥",
+      "meaning": "ज्याच्या नामस्मरणाने आणि आत्मतपाने यमकाळही थरथर कापतो, तोच साधक निर्विकल्प आत्मपदाला प्राप्त होतो."
+    },
+    {
+      "id": "swatmasukh-034",
+      "number": 34,
+      "text": "आपुलें पद तेंचि ब्रह्म । नाहीं तेथें जन्मकर्म ।\nजाणोनि हें गुह्य वर्म । सुखी व्हावें ॥ ३४ ॥",
+      "meaning": "आपले मूळ स्वरूप म्हणजेच परब्रह्म आहे, जिथे जन्म किंवा कर्म उरत नाही; हे गुह्य मर्म ओळखून नित्य सुखी व्हावे."
+    },
+    {
+      "id": "swatmasukh-035",
+      "number": 35,
+      "text": "एका जनार्दनीं शरण । स्वात्मसुखाचें निरूपण ।\nप्रथम भाग हा पूर्ण । जाहला येथें ॥ ३५ ॥",
+      "meaning": "एका जनार्दनी सद्गुरूंच्या चरणी शरण जातात; स्वात्मसुखाच्या या निरूपणाचा पहिला भाग येथे संपन्न झाला."
+    },{
+      "id": "swatmasukh-036",
+      "number": 36,
+      "text": "सद्गुरूवांचूनि ज्ञान । न लभे कदापि जाण ।\nजैसे डोळियांविण दर्शन । न घडे जगामाजीं ॥ ३६ ॥",
+      "meaning": "Sadguru vagar kadi pan gyan prapt thatu nathi; jem aankho vagar jagat ma darshan thavu asambhav chhe."
+    },
+    {
+      "id": "swatmasukh-037",
+      "number": 37,
+      "text": "सद्गुरू कृपाळू थोर । भक्तां तारी पैलपार ।\nअज्ञानाचा अंधकार । छेदूनि दावी स्वरूप ॥ ३७ ॥",
+      "meaning": "Sadguru atyant dayalu chhe je bhaktone samsarsaagar thi par utare chhe ane agyanna andhakarne door kari aatmaswaroop batve chhe."
+    },
+    {
+      "id": "swatmasukh-038",
+      "number": 38,
+      "text": "स्वरूप हें नित्य शुद्ध । बुद्ध मुक्त परमानंद ।\nनाहीं तेथें द्वैतद्वंद्व । केवल अद्वैत साचार ॥ ३८ ॥",
+      "meaning": "Swaroop nitya shuddh, prabuddha, mukt ane paramanandamaya chhe; tya dwait no leshmatra aabhaas nathi, keval advaita chhe."
+    },
+    {
+      "id": "swatmasukh-039",
+      "number": 39,
+      "text": "अद्वैत अनुभव ज्यासी । तोचि धन्य या संसारीं ।\nलाधला तो मोक्षासी । देह असोनि विदेही ॥ ३९ ॥",
+      "meaning": "Jene advaita anubhav thayo te a samsarma dhanya chhe; dehadhari hova chhata te videhi bani moksha pame chhe."
+    },
+    {
+      "id": "swatmasukh-040",
+      "number": 40,
+      "text": "विदेहस्थितीची खूण । नुरे देहाचे भान ।\nचित्त झालें समाधान । ब्रह्मानंदेंकरूनियां ॥ ४० ॥",
+      "meaning": "Videhasthiti no sanket e chhe ke dehnu bhaan rahetu nathi ane chitta brahmanand thi purna samadhan pame chhe."
+    },
+    {
+      "id": "swatmasukh-041",
+      "number": 41,
+      "text": "ब्रह्मानंदापुढें देख । तुच्छ वाटे इंद्रियसुख ।\nजैसें सूर्यापुढें रंक । काजव्याचे तेज ॥ ४१ ॥",
+      "meaning": "Brahmanand samaksh vishaya-sukh bilkul tuchchh lage chhe; jem surya samaksh aagiyano prakash atyant alp hoi chhe."
+    },
+    {
+      "id": "swatmasukh-042",
+      "number": 42,
+      "text": "काजवा चमके रात्रीं । सूर्य येतां लपे नेत्रीं ।\nतैसे विषय भुलविती चित्तीं । अज्ञानाचेनि योगें ॥ ४२ ॥",
+      "meaning": "Aagiyo raatna chamke chhe pan surya aavta adrushya thai jaay chhe; tem agyan ma vishayone satya manva ma aave chhe."
+    },
+    {
+      "id": "swatmasukh-043",
+      "number": 43,
+      "text": "ज्ञानाचा उदय होतां । विषय पळती तत्त्वतां ।\nउरे केवल आत्मसत्ता । अखंडित ॥ ४३ ॥",
+      "meaning": "Gyan no uday thata j vishayo laya pami jaay chhe ane keval akhandit aatmasatta j baki rahe chhe."
+    },
+    {
+      "id": "swatmasukh-044",
+      "number": 44,
+      "text": "आत्मसत्ता ही सनातन । नाहीं जयासी आरंभ जाण ।\nनाहीं जयासी मरण । नित्य सिद्ध वस्तु ॥ ४४ ॥",
+      "meaning": "Aatmasatta sanatan chhe jeno kadi aadi nathi ane kadi ant nathi; te nitya siddha chhe."
+    },
+    {
+      "id": "swatmasukh-045",
+      "number": 45,
+      "text": "नित्य सिद्ध वस्तु आपुली । अज्ञानें पराधीन भासली ।\nसद्गुरूकृपें उमगली । निजस्थिती ॥ ४५ ॥",
+      "meaning": "Aapnu aatmaswaroop nitya mukt chhe pan agyan thi bandhelu lage chhe; Sadguru krupathi potani vastavik sthiti samjay chhe."
+    },
+    {
+      "id": "swatmasukh-046",
+      "number": 46,
+      "text": "निजस्थितीचा बोध जाहला । भवभ्रमाचा नाश झाला ।\nस्वात्मसुखें कोंदाटला । जिकडे पाहे तिकडे ॥ ४६ ॥",
+      "meaning": "Potana swaroop no bodh thaya pachi samsar-bhram no nash thai jaay chhe ane je taraf juo tya swaatmasukh j chhvai jaay chhe."
+    },
+    {
+      "id": "swatmasukh-047",
+      "number": 47,
+      "text": "जिकडे पाहे तिकडे देव । फिटला द्वैताचा भेव ।\nएकरूप हा भाव । ठसला मनीं ॥ ४७ ॥",
+      "meaning": "Je taraf juo tya dev j dekhay chhe ane dwait no bhay miti jaay chhe; manma ekatvano bhav dhradh thai jaay chhe."
+    },
+    {
+      "id": "swatmasukh-048",
+      "number": 48,
+      "text": "मनीं नुरे विकल्प लेश । नाहीं कल्पनेचा लवलेश ।\nसर्वत्र ब्रह्म साचेश । कोंदाटलें ॥ ४८ ॥",
+      "meaning": "Manma vikalp ke kalpana no leshmatra ansh baaki rahto nathi; sarvatra keval satya parabrahma vyapi rahe chhe."
+    },
+    {
+      "id": "swatmasukh-049",
+      "number": 49,
+      "text": "जैसें आकाशीं वायु फिरे । आकाशासि न लिंपे साचारें ।\nतैसे ज्ञानी संसारीं संचरे । अलिप्तभावें ॥ ४९ ॥",
+      "meaning": "Jem aakashma vayu vaay chhe pan aakashne sparsh karto nathi, tem gyani samsarma aalipth bhaavthi vichare chhe."
+    },
+    {
+      "id": "swatmasukh-050",
+      "number": 50,
+      "text": "अलिप्तता हेंचि लक्षण । साधकाचें मुख्य साधन ।\nयाणें पाविजे समाधान । स्वात्मसुखाचें ॥ ५० ॥",
+      "meaning": "Aaliptata j gyaninu lakshan ane sadhaknu mukhya sadhan chhe; aana thi j swaatmasukh nu purna samadhan male chhe."
+    },
+    {
+      "id": "swatmasukh-051",
+      "number": 51,
+      "text": "आतां देहाचा विचार । सांगतों ऐका सादर ।\nहा देह केवळ क्षणभंगुर । मृत्तिकेचा गोळा ॥ ५१ ॥",
+      "meaning": "Have dehno vichar kaho chhu te sambhado; a deh kshanbhangur ane maati no golo matra chhe."
+    },
+    {
+      "id": "swatmasukh-052",
+      "number": 52,
+      "text": "मृत्तिकेचा देह झाला । शेवटीं मृत्तिकेस मिळाला ।\nआत्मा तो शाश्वत राहिला । पूर्ववत ॥ ५२ ॥",
+      "meaning": "Maati no deh maati ma j mali jaay chhe, pan aatma pehlani jem j shashvat baki rahe chhe."
+    },
+    {
+      "id": "swatmasukh-053",
+      "number": 53,
+      "text": "जैसें सुवर्ण मोडूनि घडिलें । परी सुवर्णत्व न मोडलें ।\nतैसे देहाच्या विनाशे न नासलें । आत्मस्वरूप ॥ ५३ ॥",
+      "meaning": "Jem sonu todi ne ghadva ma aave to pan sonatva badlatu nathi; tem deh vinash pame to pan aatmaswaroop nasht thatu nathi."
+    },
+    {
+      "id": "swatmasukh-054",
+      "number": 54,
+      "text": "सुवर्णत्व जैसें न नासे । तैसा आत्मा नित्य असे ।\nनेणते प्राणी भुलले पिसें । देहबुद्धीमुळे ॥ ५४ ॥",
+      "meaning": "Jem suvarna kadi nasht thatu nathi tem aatma nitya chhe; agyani jivo deh-buddhina kaarane bhramit rahe chhe."
+    },
+    {
+      "id": "swatmasukh-055",
+      "number": 55,
+      "text": "देहबुद्धी तेंचि मरण । आत्मबुद्धी तेंचि जीवन ।\nहेंचि संतांचें वचन । प्रमाण जाणा ॥ ५५ ॥",
+      "meaning": "Deh-buddhi j mrutyu chhe ane aatma-buddhi j satya jivan chhe; santonu a vachan pramanik jano."
+    },
+    {
+      "id": "swatmasukh-056",
+      "number": 56,
+      "text": "देहबुद्धीचा त्याग करी । आत्मबुद्धी धर अंतरीं ।\nतेणें सुखी होसील संसारीं । निःसंदेह ॥ ५६ ॥",
+      "meaning": "Deh-buddhino tyag karine hridayma aatma-buddhi dharan karo; aathi nissamshay tame samsarma sukhi thasho."
+    },
+    {
+      "id": "swatmasukh-057",
+      "number": 57,
+      "text": "संदेहाचें मूळ छेदूनि । रहावें स्वस्वरूपीं मिळोनि ।\nहेंचि स्वात्मसुख त्रिभुवनीं । सर्वोत्तम ॥ ५७ ॥",
+      "meaning": "Samsheyno samulgo nash kari potana swaroop ma sthir raho; a j trilok ma sarvashreshtha swaatmasukh chhe."
+    },
+    {
+      "id": "swatmasukh-058",
+      "number": 58,
+      "text": "या सुखाची जोडी नाहीं । स्वर्गीं पाताळीं पृथ्वीच्या ठायीं ।\nहें सुख लाधे सद्गुरूपाहीं । अनन्यभावें ॥ ५८ ॥",
+      "meaning": "Aa sukhni barobari swarg, paatal ke prithvi par kyay nathi; a sukh keval Sadguruna charano ma ananyabhav thi male chhe."
+    },
+    {
+      "id": "swatmasukh-059",
+      "number": 59,
+      "text": "अनन्यभावें शरण जावें । सद्गुरूसी नमन करावें ।\nसर्वस्व अर्पूनि पावावें । आत्मसुख ॥ ५९ ॥",
+      "meaning": "Ananyabhav thi sharan jai Sadgurune naman karo ane sarvasva samarpit kari aatmasukh prapt karo."
+    },
+    {
+      "id": "swatmasukh-060",
+      "number": 60,
+      "text": "तन मन धन अर्पिलें । अहंकार बळें जाळिलें ।\nतेव्हां सद्गुरूंनीं दिलें । स्वात्मसुख हें ॥ ६० ॥",
+      "meaning": "Jyaare tan, man ane dhan arpi ahankarne baali nakhyo, tyaare Sadgurue aa swaatmasukh aapyu."
+    },
+    {
+      "id": "swatmasukh-061",
+      "number": 61,
+      "text": "स्वात्मसुख लाभलें ज्यासी । दैन्य नुरे तयापासीं ।\nअखंड आनंद मानसीं । उचंबळतसे ॥ ६१ ॥",
+      "meaning": "Jene swaatmasukh malyu teni paase dainya rahetu nathi ane hridayma akhand anand chhalakto rahe chhe."
+    },
+    {
+      "id": "swatmasukh-062",
+      "number": 62,
+      "text": "कामधेनू कल्पतरु चिंतामणी । हे संसारीं तुच्छ मानी ।\nआत्मसुखाची साउनी । वेगळीच असे ॥ ६२ ॥",
+      "meaning": "Kamadhenu, kalpataru ane chintamani pan aatmasukh samaksh tuchchh lage chhe; aatmasukhni shaan alag j chhe."
+    },
+    {
+      "id": "swatmasukh-063",
+      "number": 63,
+      "text": "मायबाप बंधु सुत । हे प्रपंचापुरते समस्त ।\nसद्गुरू हाचि परमार्थ । उद्धारक ॥ ६३ ॥",
+      "meaning": "Mata-pita, bhai ane putra a badha prapanch pura chhe; ek Sadguru j parmartha ma uddharak chhe."
+    },
+    {
+      "id": "swatmasukh-064",
+      "number": 64,
+      "text": "सद्गुरूवीण कोण तारी । या भवसागरामाझारीं ।\nकृपादृष्टीच्या बळेकरीं । पैलतीरीं नेतो ॥ ६४ ॥",
+      "meaning": "Sadguru vagar a bhavsaagarma kon taari shake? Potani krupadrashtina balethi te pail-teere lai jaay chhe."
+    },
+    {
+      "id": "swatmasukh-065",
+      "number": 65,
+      "text": "पैलतीर तेंचि मोक्षपद । जेथें नाहीं द्वैतद्वंद्व ।\nकेवळ सच्चिदानंद । स्वरूप सहज ॥ ६५ ॥",
+      "meaning": "Pail-teer e j mokshapad chhe jya dwait no lesh nathi, keval sachchidanand swaroop sahej sthit chhe."
+    },
+    {
+      "id": "swatmasukh-066",
+      "number": 66,
+      "text": "मोक्षपद नव्हे लांब देशीं । वसे अंतरीं जीवापासीं ।\nअज्ञानपडळ डोळ्यांसी । म्हणोनि न दिसे ॥ ६६ ॥",
+      "meaning": "Mokshapad koi door deshma nathi pan jivanu antaranga chhe; agyanna padaldaane lidhe te dekhatu nathi."
+    },
+    {
+      "id": "swatmasukh-067",
+      "number": 67,
+      "text": "सद्गुरूंनीं अंजन घातलें । अज्ञानाचे डोळे उघडिले ।\nतेव्हां प्रत्यक्ष देखिलें । आत्मस्वरूप ॥ ६७ ॥",
+      "meaning": "Sadgurue gyan-anjan aapyu ane agyanni aankho kholi, tyaare saakshaat aatmaswaroopnu darshan thayu."
+    },
+    {
+      "id": "swatmasukh-068",
+      "number": 68,
+      "text": "देखिलें म्हणतां द्वैत येई । परी देखणें देखतेंचि होई ।\nऐशी अगाध स्थिती पाही । स्वात्मसुखाची ॥ ६८ ॥",
+      "meaning": "Jovanu kahiye to dwait aave, pan jovavalo ane darshan banne ek thai jaay chhe; aavi agadh sthiti swaatmasukhni chhe."
+    },
+    {
+      "id": "swatmasukh-069",
+      "number": 69,
+      "text": "ज्ञाता ज्ञेय ज्ञान तिन्ही । मिळोनि गेलीं एकपणीं ।\nनुरे भेद त्रिभुवनीं । अखंड ब्रह्म ॥ ६९ ॥",
+      "meaning": "Gyaata, gyeya ane gyan trane ek thai gaya; trilokma have koi bhed nathi, keval akhand parabrahma chhe."
+    },
+    {
+      "id": "swatmasukh-070",
+      "number": 70,
+      "text": "अखंड ब्रह्म सर्वत्र कोंदलें । जेणें हें विश्व भरलें ।\nत्यासी संतांनीं वंदिलें । सर्वभावें ॥ ७० ॥",
+      "meaning": "Akhand parabrahma sarvatra vyapi rahyu chhe jene a vishwane bhari didhu chhe; santoe tene sarvabhavthi vandan karyu."
+    },
+    {
+      "id": "swatmasukh-071",
+      "number": 71,
+      "text": "आतां मनन करूं यावरी । चित्त स्थिर करू अंतरीं ।\nजेणें वाहे सुखलहरी । आत्मयाची ॥ ७१ ॥",
+      "meaning": "Have aana par manan kariye ane chittane aantarik sthir kariye, jethi aatmanu sukh-pravah vahe."
+    },
+    {
+      "id": "swatmasukh-072",
+      "number": 72,
+      "text": "मन हे चपळ वायूहुनी । क्षणार्धें फिरे त्रिभुवनीं ।\nतयासी विवेके धरोनी । बांधावें स्वरूपामधें ॥ ७२ ॥",
+      "meaning": "Man vayu karta pan chanchal chhe je kshanma trilok fare chhe; tene vivekthi bandhi aatmaswaroopma sthir karvu joiye."
+    },
+    {
+      "id": "swatmasukh-073",
+      "number": 73,
+      "text": "स्वरूपामधें मन मुरलें । मग तें अमनस्क जाहलें ।\nसर्व विकल्प मावळले । एका क्षणीं ॥ ७३ ॥",
+      "meaning": "Jyaare man aatmaswaroopma leen thai jaay chhe tyaare te amanaska bani jaay chhe ane badha vikalpo shami jaay chhe."
+    },
+    {
+      "id": "swatmasukh-074",
+      "number": 74,
+      "text": "अमनस्क अवस्था जेव्हां पावे । तेव्हां स्वात्मसुख अनुभवावे ।\nशब्दातीत पद जाणावे । संतांचेनि मुखें ॥ ७४ ॥",
+      "meaning": "Amanaska avastha pamiye tyaare swaatmasukh anubhavay chhe; a shabdateet pad santona mukhe thi janay chhe."
+    },
+    {
+      "id": "swatmasukh-075",
+      "number": 75,
+      "text": "संतांचे मुखें अमृतवाणी । जे ऐकती धन्य कानीं ।\nत्यांची भवभिती निमोनी । जाय तत्काळ ॥ ७५ ॥",
+      "meaning": "Santona mukh thi aavti amrutvani je kaan thi sambhade chhe te dhanya chhe; temno samsar-bhay tatkaal nash paame chhe."
+    },
+    {
+      "id": "swatmasukh-076",
+      "number": 76,
+      "text": "अमृतवाणीचेनि योगें । सर्व पातकें जाती वेगें ।\nचित्त रमे अनुरागे । हरिभजनीं ॥ ७६ ॥",
+      "meaning": "Amrutvanina yoge badha paap tatkal door thaay chhe ane chitta premthi haribhajanma rami jaay chhe."
+    },
+    {
+      "id": "swatmasukh-077",
+      "number": 77,
+      "text": "हरिभजन हेंचि मूळ । स्वात्मसुखाचें स्थळ ।\nतेणें अंतर निर्मळ । होय साधकाचें ॥ ७७ ॥",
+      "meaning": "Haribhajan j aatmasukhnu mukhya sthan chhe; aathi sadhaknu antahkaran purna nirmal bane chhe."
+    },
+    {
+      "id": "swatmasukh-078",
+      "number": 78,
+      "text": "भजनीं ज्याचे मन रंगले । तयासी ब्रह्म सहज भेटले ।\nसंशयाचे मूळ तुटले । निमिषार्धांत ॥ ७८ ॥",
+      "meaning": "Jenu man bhajamma rami gayu tene parabrahma sahej male chhe ane nimeshmatrama sansheynu mul kapai jaay chhe."
+    },
+    {
+      "id": "swatmasukh-079",
+      "number": 79,
+      "text": "संशय तोचि महाव्याधी । जेणे भ्रष्ट होय बुद्धी ।\nसंतवचनें लाभे शुद्धी । अंतःकरणासी ॥ ७९ ॥",
+      "meaning": "Sanshey j maharog chhe jena thi buddhi bhrasht thaay chhe; sant-vachano thi antahkaranni shuddhi thaay chhe."
+    },
+    {
+      "id": "swatmasukh-080",
+      "number": 80,
+      "text": "अंतःकरण शुद्ध झालियावरी । स्वात्मसुख वसे अंतरीं ।\nजैसी निर्मळ आरशांतरीं । प्रतिमा दिसे ॥ ८० ॥",
+      "meaning": "Antahkaran shuddh thata j hridayma swaatmasukh vasi jaay chhe, jem swachchh aarisama pratibimb spashth dekhay chhe."
+    },
+    {
+      "id": "swatmasukh-081",
+      "number": 81,
+      "text": "आरसा मलीन असे जोवरी । तंव प्रतिबिंब न दिसे खरी ।\nतैसे चित्तमळ जोवरी । तंव आत्मा न कळे ॥ ८१ ॥",
+      "meaning": "Jya sudhi aariso mailo hoy tya sudhi pratibimb spashth nathi dekhatu; tem chittano mal hoy tya sudhi aatmagyan nathi thatu."
+    },
+    {
+      "id": "swatmasukh-082",
+      "number": 82,
+      "text": "चित्तमळ तो अहंकार । काम क्रोध मद मत्सर ।\nयांचा करावा परिहार । गुरुसेवा करोनी ॥ ८२ ॥",
+      "meaning": "Ahankar, kaam, krodh, mad ane matsara a chittana mal chhe; guruseva thi aamno nash karvo joiye."
+    },
+    {
+      "id": "swatmasukh-083",
+      "number": 83,
+      "text": "गुरुसेवा हेचि साधन । जेणें होय अंतःकरण पावन ।\nप्रगटे स्वात्मसुख पूर्ण । क्षणामाजीं ॥ ८३ ॥",
+      "meaning": "Guruseva j te param sadhan chhe jena thi antahkaran pavitra thaay chhe ane kshanbhar ma purna swaatmasukh pragat thaay chhe."
+    },
+    {
+      "id": "swatmasukh-084",
+      "number": 84,
+      "text": "गुरुसेवेपरतें साधन । नाहीं नाहीं आन जाण ।\nवेदशास्त्रें पुराण । गर्जती पैं ॥ ८४ ॥",
+      "meaning": "Guruseva thi vishishta biju koi sadhan nathi; a j ved, shastra ane purano mukt kanthe kahe chhe."
+    },
+    {
+      "id": "swatmasukh-085",
+      "number": 85,
+      "text": "गुरु तोचि प्रत्यक्ष हरी । गुरु तोचि उद्धारी ।\nगुरुचरणीं निष्ठा खरी । धरावी साधकें ॥ ८५ ॥",
+      "meaning": "Guru j saakshaat hari ane uddharak chhe; sadhake gurucharanoma sachi nishtha dharan karvi joiye."
+    },
+    {
+      "id": "swatmasukh-086",
+      "number": 86,
+      "text": "निष्ठावंत जो साधक । तयासी नाहीं भवशोक ।\nत्याचा वाहे योगक्षेम देख । सद्गुरुराया ॥ ८६ ॥",
+      "meaning": "Nishthavan sadhakne samsarno shok rahto nathi; Sadgururaya potaano yogakshem vahi le chhe."
+    },
+    {
+      "id": "swatmasukh-087",
+      "number": 87,
+      "text": "योगक्षेम वाहे दयाळू । भक्तांचा अति कृपाळू ।\nतो जनार्दन स्नेहाळू । सद्गुरु माझा ॥ ८७ ॥",
+      "meaning": "Dayalu Sadguru bhaktono yogakshem vahe chhe; te snehalu Janardan Swami mara Sadguru chhe."
+    },
+    {
+      "id": "swatmasukh-088",
+      "number": 88,
+      "text": "जनार्दनाचेनि प्रसादे । म्यां वदिलों हे निजबोधें ।\nस्वात्मसुखाचेनि आनंदें । डोलतसे चित्त ॥ ८८ ॥",
+      "meaning": "Janardan Swamini krupathi a aatmabodh varnavyo chhe, jena anand thi chitta aanandit thaay chhe."
+    },
+    {
+      "id": "swatmasukh-089",
+      "number": 89,
+      "text": "चित्त डोलों लागलें सुखांत । नाहीं उरली देहभ्रांत ।\nसर्वत्र व्यापिला अनंत । एकरूप ॥ ८९ ॥",
+      "meaning": "Chitta param sukhma doli uthyu ane dehbhranti door thai; sarvatra anant parabrahma ekrup vyapi gayu."
+    },
+    {
+      "id": "swatmasukh-090",
+      "number": 90,
+      "text": "एकरूप झालिया देख । काय करील भवदुःख ।\nनाहीं तयासी जन्ममरणशोक । कधीं काळीं ॥ ९० ॥",
+      "meaning": "Ekarup thaya pachi samsardukh shu kari shake? Tene kadi janma-maranno shok thato nathi."
+    },
+    {
+      "id": "swatmasukh-091",
+      "number": 91,
+      "text": "जन्ममरण हें देहासी । आत्मा अलिप्त तयासी ।\nजाणोनि या तत्त्वांसी । मुक्त व्हावें ॥ ९१ ॥",
+      "meaning": "Janma ane mrutyu deh na chhe, aatma aalipth chhe; a tattvane samji mukt thavu joiye."
+    },
+    {
+      "id": "swatmasukh-092",
+      "number": 92,
+      "text": "मुक्त तोचि जो जाणे । आत्मतत्त्व निजखुणे ।\nनाहीं तयासी येणें जाणे । संसारामाजी ॥ ९२ ॥",
+      "meaning": "Mukt te j chhe je aatmatattvani antarik kshamatane jane chhe; teni aavajaahi samsarma samapt thai jaay chhe."
+    },
+    {
+      "id": "swatmasukh-093",
+      "number": 93,
+      "text": "येणें जाणे कल्पित देखा । स्वप्नावस्थेसारिखा ।\nजागृती होतां एका । ब्रह्मचि उरे ॥ ९३ ॥",
+      "meaning": "Janma-maran swapna jevu kalpit chhe; gyan-jagruti aavta keval ek parabrahma j baki rahe chhe."
+    },
+    {
+      "id": "swatmasukh-094",
+      "number": 94,
+      "text": "ब्रह्मचि केवळ साचार । मिथ्या हा दृश्यविस्तार ।\nयाचा करितां विचार । समाधान लाभे ॥ ९४ ॥",
+      "meaning": "Keval parabrahma j satya chhe ane aa drushya prapanch mithya chhe; aano vichar karta j purna samadhan male chhe."
+    },
+    {
+      "id": "swatmasukh-095",
+      "number": 95,
+      "text": "समाधान हेंचि मोक्ष । अंतरीं धरा हें लक्ष ।\nसद्गुरूवचन प्रत्यक्ष । आचरावे ॥ ९५ ॥",
+      "meaning": "Antarik samadhan j moksha chhe a lakshya rakho ane Sadguru na vachan nu aacharan karo."
+    },
+    {
+      "id": "swatmasukh-096",
+      "number": 96,
+      "text": "आचरणेंवीण बोलणें । तें केवळ वांझट गाणें ।\nआचरोनि दाखविणें । संतांचे लक्षण ॥ ९६ ॥",
+      "meaning": "Aacharan vagar nu bolvu nirarthak chhe; aacharan kari batavvu e j santonu lakshan chhe."
+    },
+    {
+      "id": "swatmasukh-097",
+      "number": 97,
+      "text": "संत बोलती जैसें । चालतीही तैसें ।\nम्हणोनि तयांचेनि स्पर्शें । पावन जग ॥ ९७ ॥",
+      "meaning": "Santo jem bole chhe tem j aachare chhe; aathi temna sparsh thi aakhu jagat pavitra bane chhe."
+    },
+    {
+      "id": "swatmasukh-098",
+      "number": 98,
+      "text": "पावन संतांची संगती । जेणें होय आत्मस्थिती ।\nस्वात्मसुखाची प्राप्ती । सहज घडे ॥ ९८ ॥",
+      "meaning": "Santoni pavitra sangat aatma-sthiti aape chhe ane tena thi swaatmasukhni prapti sahej bane chhe."
+    },
+    {
+      "id": "swatmasukh-099",
+      "number": 99,
+      "text": "स्वात्मसुखाचा हा सागर । उसळतसे निरंतर ।\nश्रोतीं घ्यावा आदर । अंतरीं याचा ॥ ९९ ॥",
+      "meaning": "Swaatmasukh no aa saagar akhand chhalaki rahyo chhe; shrotao e aano aadar antarma dharan karvo joiye."
+    },
+    {
+      "id": "swatmasukh-100",
+      "number": 100,
+      "text": "एका जनार्दनीं म्हणे । सद्गुरूचीं ह्रीं लक्षणें ।\nस्वात्मसुख अनुभवणें । हेंचि भाग्य ॥ १०० ॥",
+      "meaning": "Eka Janardani kahe chhe ke aa Sadgurunu lakshan chhe; swaatmasukhno anubhav levo e j mahan saubhagya chhe."
+    },
+    {
+      "id": "swatmasukh-101",
+      "number": 101,
+      "text": "आतां पुढील विचार । सांगेन अति सुंदर ।\nचित्त देऊनि सादर । ऐका श्रोते ॥ १०१ ॥",
+      "meaning": "Have aagalno sundar aatmavichar kahu chhu; shrotao ekagra chitta thi aadarpoorvak sambhado."
+    },
+    {
+      "id": "swatmasukh-102",
+      "number": 102,
+      "text": "सच्चिदानंद हें नाम । आत्मयाचें पूर्ण काम ।\nसत् चित् आनंद परम । तिन्ही अभिन्न ॥ १०२ ॥",
+      "meaning": "Sachchidanand aatma nu purna swaroop chhe; sat, chit ane anand trane ektatva ane abhinn chhe."
+    },
+    {
+      "id": "swatmasukh-103",
+      "number": 103,
+      "text": "सत् म्हणिजे नित्य असे । चित् म्हणिजे स्वयें प्रकाशे ।\nआनंद म्हणिजे सर्वदा वसे । सुखामृत ॥ १०३ ॥",
+      "meaning": "Sat etle nitya vidyamaan, chit etle swayam-prakash ane anand etle sarvada sthir sukha-amrut."
+    },
+    {
+      "id": "swatmasukh-104",
+      "number": 104,
+      "text": "हें तिन्ही एकचि तत्त्व । जयासि न कळे तें महत्व ।\nतो अज्ञानी जडत्व । पावे संसारीं ॥ १०४ ॥",
+      "meaning": "Aa trane ektatva chhe; jene a samjatu nathi te agyani samsarma jad-bhav ma padi rahe chhe."
+    },
+    {
+      "id": "swatmasukh-105",
+      "number": 105,
+      "text": "जडत्व सांडूनि ज्ञानी व्हावें । सच्चिदानंद अनुभवावें ।\nस्वात्मसुखीं विसंबूनि राहावें । अखंड भावें ॥ १०५ ॥",
+      "meaning": "Jadta chhodine gyani bano, sachchidanand no anubhav karo ane swaatmasukhma akhand sthir raho."
+    },
+    {
+      "id": "swatmasukh-106",
+      "number": 106,
+      "text": "अखंड भाव तोचि भक्ती । तेणें होय आत्मतृप्ती ।\nस्वात्मसुखाची महती । वर्णावी किती ॥ १०६ ॥",
+      "meaning": "Akhand aatmadhyan e j sachi bhakti chhe jena thi aatmatrupti thaay chhe; swaatmasukhni mahima aparampar chhe."
+    },
+    {
+      "id": "swatmasukh-107",
+      "number": 107,
+      "text": "वाचेसि नाहीं सामर्थ्य । सांगतां हा परमार्थ ।\nकेवळ अनुभवार्थ । जाणावा हा ॥ १०७ ॥",
+      "meaning": "Aa parmarth shabdo thi kahava ma vani asamarth chhe; a keval anubhava gamya gyan chhe."
+    },
+    {
+      "id": "swatmasukh-108",
+      "number": 108,
+      "text": "अनुभवेंवीण जे बोलती । ते केवळ वांझट वदती ।\nअनुभवें तृप्त होती । संत साधू ॥ १०८ ॥",
+      "meaning": "Anubhav vagar bolnarano shrama nishfal chhe; santo anubhav dwara j purna trupt thaay chhe."
+    },
+    {
+      "id": "swatmasukh-109",
+      "number": 109,
+      "text": "संत साधूंचे उपकार । जीवांसि दाविती पैलपार ।\nअज्ञानाचा अंधकार । हरूनी तत्काळ ॥ १०९ ॥",
+      "meaning": "Santo jivano agyan andhakar door kari temne samsar no pail-teer batve chhe; temna upakar aparimita chhe."
+    },
+    {
+      "id": "swatmasukh-110",
+      "number": 110,
+      "text": "अंधकार हरला जेव्हां । स्वात्मसुख प्रगटलें तेव्हां ।\nएका जनार्दनीं ठेवा । लाधला हा ॥ ११० ॥",
+      "meaning": "Andhakar hat-ta j swaatmasukh pragat thayu; Eka Janardanine aa anmol gyan-theva prapt thayo."
+    },
+    {
+      "id": "swatmasukh-111",
+      "number": 111,
+      "text": "ठेवा हा पुरातन जाण । संतांचें निजभांडार पूर्ण ।\nजयासि लाभे तें धन । तोचि सुखी ॥ १११ ॥",
+      "meaning": "Aa theva sanatan ane santonu gupt bhandar chhe; jene a aatmadhan male te j kharo sukhi chhe."
+    },
+    {
+      "id": "swatmasukh-112",
+      "number": 112,
+      "text": "सुखी झाला तो संसारीं । जयाची वृत्ती स्थिर झाली हरीं ।\nनाहीं उरली दुसरी । वासना मनीं ॥ ११२ ॥",
+      "meaning": "Jeni vrutti hari ma sthir thai gayi te samsarma sukhi thayo; tena manma anya koi vasna baki raheti nathi."
+    },
+    {
+      "id": "swatmasukh-113",
+      "number": 113,
+      "text": "वासना हेचि बंधन । निर्वासना तेंचि मोक्ष जाण ।\nस्वात्मसुखाचें निधान । निर्वासने ठायीं ॥ ११३ ॥",
+      "meaning": "Vasna j bandhan chhe ane nirvasanata j moksha chhe; nirvasana sthiti ma j swaatmasukh vasela hoy chhe."
+    },
+    {
+      "id": "swatmasukh-114",
+      "number": 114,
+      "text": "निर्वासन झालें चित्त । तेथें प्रगटे भगवंत ।\nस्वात्मसुख अखंडित । वसे अंतरीं ॥ ११४ ॥",
+      "meaning": "Chitta vasna-mukt banta j tya bhagwan pragat thaay chhe ane akhandit swaatmasukh antarma sthir thaay chhe."
+    },
+    {
+      "id": "swatmasukh-115",
+      "number": 115,
+      "text": "भगवंत अंतरीं प्रगटला । तेव्हां भवभ्रम उडाला ।\nसाधक सुखी जाहला । सर्वकाळ ॥ ११५ ॥",
+      "meaning": "Bhagwan antarma pragat thata j samsar-bhram door thai jaay chhe ane sadhak sarvada sukhi bani jaay chhe."
+    },
+    {
+      "id": "swatmasukh-116",
+      "number": 116,
+      "text": "सर्वकाळ सुख अखंड । नाहीं तेथें भववितंड ।\nकेवळ आत्मानंद उदंड । भरूनि राहे ॥ ११६ ॥",
+      "meaning": "Akhand sukh sarvada vyapi rahe chhe ane prapanchik vitandwad miti jaay chhe; keval udat aatmanand chhavai jaay chhe."
+    },
+    {
+      "id": "swatmasukh-117",
+      "number": 117,
+      "text": "आत्मानंद ज्यासी लाधला । तोचि धन्य जगीं जाहला ।\nसद्गुरूचरणीं लागला । भाव तयाचा ॥ ११७ ॥",
+      "meaning": "Jene aatmanand malyo te jagatma dhanya thayo; teno bhav Sadguruna charanoma akhand bani rahyo."
+    },
+    {
+      "id": "swatmasukh-118",
+      "number": 118,
+      "text": "सद्गुरूचरणीं भाव दृढ । हेंचि साधनेचें मूळ गूढ ।\nतेणें उघडे कवाड । मोक्षाचें पैं ॥ ११८ ॥",
+      "meaning": "Sadguruna charanoma dhradh bhav e j sadhananu mukhya rahasya chhe; tena thi j mokshana dwar khuli jaay chhe."
+    },
+    {
+      "id": "swatmasukh-119",
+      "number": 119,
+      "text": "मोक्षाचें कवाड उघडलें । स्वात्मसुख दृष्टीसि पडलें ।\nसाधकाचें कार्य झालें । क्षणार्धामध्यें ॥ ११९ ॥",
+      "meaning": "Mokshanu dwar khulta j swaatmasukhno sakshatkar thaay chhe ane kshanbhar ma sadhakanu aatmakalyan siddha thaay chhe."
+    },
+    {
+      "id": "swatmasukh-120",
+      "number": 120,
+      "text": "कार्यसिद्धि झाली जेव्हां । संशय नुरेचि तेव्हां ।\nएका जनार्दनीं ठेवा । अनुभविला ॥ १२० ॥",
+      "meaning": "Karyasiddhi thata j sanshey rahto nathi; Eka Janardanie aa gyan-theva no pratyaksha anubhav karyo."
+    },
+    {
+      "id": "swatmasukh-121",
+      "number": 121,
+      "text": "अनुभव हा साचार । संतांचा मुख्य विचार ।\nस्वात्मसुखाचा सार । दाविला येथें ॥ १२१ ॥",
+      "meaning": "Satya anubhav j santono mukhya vichar chhe; swaatmasukh nu samagra tatva ahiya prakat karyu chhe."
+    },
+    {
+      "id": "swatmasukh-122",
+      "number": 122,
+      "text": "स्वात्मसुखाची ही कथा । जे ऐकती प्रेमळ श्रोता ।\nत्यांसी न बाधे भवव्यथा । कधीं काळीं ॥ १२२ ॥",
+      "meaning": "Swaatmasukhni aa katha je premal shrotao sambhade chhe, temne samsar-vyatha kadi badhti nathi."
+    },
+    {
+      "id": "swatmasukh-123",
+      "number": 123,
+      "text": "भवव्यथा नासली समूळ । चित्त झालें अति निर्मळ ।\nस्वात्मसुखें सकळ । सुखी झाले ॥ १२३ ॥",
+      "meaning": "Samsarni vyatha samulgi nasht thaay chhe ane chitta atyant nirmal banta badha swaatmasukh thi paripurna thaay chhe."
+    },
+    {
+      "id": "swatmasukh-124",
+      "number": 124,
+      "text": "सुखी झाले संतजन । जे धरिती सद्गुरूचरण ।\nस्वात्मसुख हें प्रमाण । मानिती मनीं ॥ १२४ ॥",
+      "meaning": "Je Sadguruna charanoma sharan aavya te santo sukhi thaya ane a swaatmasukhne antahkaranma praman mane chhe."
+    },
+    {
+      "id": "swatmasukh-125",
+      "number": 125,
+      "text": "प्रमाण हें श्रुतिस्मृतींचें । सार हें सर्व शास्त्रांचें ।\nस्वात्मसुख संतांचें । निजभांडार ॥ १२५ ॥",
+      "meaning": "Aa shruti ane smrutionu praman ane sarva shastronu tatva chhe; swaatmasukh santonu aantarik bhandar chhe."
+    },
+    {
+      "id": "swatmasukh-126",
+      "number": 126,
+      "text": "निजभांडार उघडलें । सकळांसी वाटूनि दिलें ।\nसंतकृपें जालें । सहज हें ॥ १२६ ॥",
+      "meaning": "Santoe aantarik bhandar kholi badhane mukt mane vanchi didhu; santkrupathi aa sahej thava paamyu."
+    },
+    {
+      "id": "swatmasukh-127",
+      "number": 127,
+      "text": "सहज स्थिती हेचि ध्यान । सहज स्थिती हेंचि ज्ञान ।\nस्वात्मसुखीं समाधान । निरंतर ॥ १२७ ॥",
+      "meaning": "Sahej sthiti j dhyan ane gyan chhe; swaatmasukhma nirantar samadhan bane chhe."
+    },
+    {
+      "id": "swatmasukh-128",
+      "number": 128,
+      "text": "निरंतर हा आनंद । तुटला प्रपंचाचा बंध ।\nलाधला परमानंद । सद्गुरूकृपें ॥ १२८ ॥",
+      "meaning": "Aa anand nirantar chhe jena thi prapanchanu bandhan tute chhe ane Sadguru krupathi paramanand male chhe."
+    },
+    {
+      "id": "swatmasukh-129",
+      "number": 129,
+      "text": "सद्गुरूकृपा ज्यासी झाली । तयाची भवचिंता गेली ।\nस्वात्मसुखीं बैसली । वृत्ती तयाची ॥ १२९ ॥",
+      "meaning": "Jena par Sadguru krupa thai teni bhavchinta door thai ane teni vrutti swaatmasukhma sthir thai."
+    },
+    {
+      "id": "swatmasukh-130",
+      "number": 130,
+      "text": "वृत्ती स्थिर झाली जेव्हां । देव भेटला तेव्हां ।\nएका जनार्दनीं ठेवा । गवसला हा ॥ १३० ॥",
+      "meaning": "Vrutti sthir thata j aatmadev pragat thaya; Eka Janardanine aa amulya gyan-theva prapt thayo."
+    },
+    {
+      "id": "swatmasukh-131",
+      "number": 131,
+      "text": "ठेवा हा साचार पाहीं । याहुनी थोर कांहीं नाहीं ।\nस्वात्मसुख सर्वदा देई । आनंद जीवा ॥ १३१ ॥",
+      "meaning": "Aa theva sarvashreshtha chhe jena thi motu biju kai nathi; swaatmasukh jivne sarvada anand aape chhe."
+    },
+    {
+      "id": "swatmasukh-132",
+      "number": 132,
+      "text": "आनंदें कोंदाटले विश्व । नाहीं द्वैताचे दृश्य ।\nकेवळ परब्रह्म साच । उरलें असे ॥ १३२ ॥",
+      "meaning": "Vishva anand thi bharai gayu ane dwait nu astitva miti gayu; keval satya parabrahma j baki rahyu."
+    },
+    {
+      "id": "swatmasukh-133",
+      "number": 133,
+      "text": "उरलें एक परब्रह्म । हरलें सर्वही भ्रम ।\nस्वात्मसुखीं विश्राम । पावला जीव ॥ १३३ ॥",
+      "meaning": "Keval parabrahma j baki rahyu ane badha bhram miti gaya; jiv swaatmasukh ma vishram pami gayo."
+    },
+    {
+      "id": "swatmasukh-134",
+      "number": 134,
+      "text": "विश्राम हा अलभ्य थोर । जेथें सरे येरझार ।\nसद्गुरू हाचि आधार । स्वात्मसुखीं ॥ १३४ ॥",
+      "meaning": "Aa vishram atyant mahan chhe jya janma-maran no phero samapt thai jaay chhe; swaatmasukhma ek Sadguru j aadhar chhe."
+    },
+    {
+      "id": "swatmasukh-135",
+      "number": 135,
+      "text": "एका जनार्दनीं शरण । सद्गुरूचे वंदूं चरण ।\nस्वात्मसुख परिपूर्ण । अनुभवावें ॥ १३५ ॥",
+      "meaning": "Eka Janardani Sadgurune sharan jai temna charanone vandan kare chhe; sauye a paripurna swaatmasukhno anubhav levo."
+    },{
+      "id": "swatmasukh-136",
+      "number": 136,
+      "text": "स्वात्मसुखाची हेचि रीत । जेथें न बाधे भवभीत ।\nसदा अंतरीं आनंदित । स्वरूप आपुलें ॥ १३६ ॥",
+      "meaning": "स्वात्मसुखाची हीच सहज रीत आहे की जिथे संसाराचे कसलेही भय बाधत नाही आणि आपले मूळ स्वरूप अंतरात सदा आनंदमय राहते."
+    },
+    {
+      "id": "swatmasukh-137",
+      "number": 137,
+      "text": "स्वरूप आपुलें अद्वय । जेथें नाहीं संशय लय ।\nपरमात्मयाचा आश्रय । अखंड लाभे ॥ १३७ ॥",
+      "meaning": "आपले स्वरूप अद्वैत आहे जिथे संशय आणि लय यांना थारा नाही; तिथे परमात्म्याचा अखंड आश्रय लाभतो."
+    },
+    {
+      "id": "swatmasukh-138",
+      "number": 138,
+      "text": "अखंड लाभे समाधान । जेथें नुरे देहभान ।\nचित्त झालें तन्मय जाण । ब्रह्मस्वरूपीं ॥ १३८ ॥",
+      "meaning": "जिथे देहभान उरत नाही तिथे अखंड समाधान लाभते आणि चित्त ब्रह्मस्वरूपात पूर्णपणे तन्मय होऊन जाते."
+    },
+    {
+      "id": "swatmasukh-139",
+      "number": 139,
+      "text": "तन्मय होतां चित्तवृत्ति । मग कैंची संसारभ्रांति ।\nहृदयीं प्रगटे ज्ञानज्योती । स्वयंप्रकाशी ॥ १३९ ॥",
+      "meaning": "चित्तवृत्ती ब्रह्मरूप तन्मय झाल्यावर संसाराची भ्रांती कुठे उरणार? हृदयात स्वयंप्रकाशी ज्ञानज्योत प्रगट होते."
+    },
+    {
+      "id": "swatmasukh-140",
+      "number": 140,
+      "text": "स्वयंप्रकाशी आत्मा देव । तयाचा न कळे अगाध भेव ।\nसद्गुरूकृपेने हा भाव । उमगे अंतरीं ॥ १४० ॥",
+      "meaning": "आत्मा हा स्वयंप्रकाशी देव आहे ज्याचा अगाध महिमा सहजासहजी कळत नाही; केवळ सद्गुरुकृपेनेच हा भाव अंतरात उमजतो."
+    },
+    {
+      "id": "swatmasukh-141",
+      "number": 141,
+      "text": "सद्गुरूकृपेचें हें लक्षण । फिटे संसाराचें बंधन ।\nहोय आत्माराम दर्शन । निमिषार्धात ॥ १४१ ॥",
+      "meaning": "संसाराचे बंधन गळून पडणे हेच सद्गुरुकृपेचे खरे लक्षण आहे; ज्यामुळे निमिषार्धात आत्माराम दर्शन घडते."
+    },
+    {
+      "id": "swatmasukh-142",
+      "number": 142,
+      "text": "निमिषार्धात उद्धार होय । जयावरी कृपा सद्गुरू राहे ।\nतोचि मुक्तीचा ठाव पाहे । सर्वकाळ ॥ १४२ ॥",
+      "meaning": "ज्याच्यावर सद्गुरूंची कृपा असते त्याचा क्षणार्धात उद्धार होतो आणि तो सर्वकाळ मुक्तीच्या मूळ धामात स्थिर होतो."
+    },
+    {
+      "id": "swatmasukh-143",
+      "number": 143,
+      "text": "सर्वकाळ सुख अखंड । नाहीं तेथें द्वैत वितंड ।\nकेवळ आत्मानंद उदंड । भरूनि उरे ॥ १४३ ॥",
+      "meaning": "जिथे अखंड सुख असते तिथे द्वैताचा कसलाही वाद उरत नाही; केवळ उदंड आत्मानंद चराचरात भरून राहतो."
+    },
+    {
+      "id": "swatmasukh-144",
+      "number": 144,
+      "text": "उदंड आनंद ज्यासी लाधे । तो संसारीं कधीं न बाधे ।\nसद्गुरूवचन जयासी साधे । तोचि धन्य ॥ १४४ ॥",
+      "meaning": "ज्याला हा उदंड आत्मानंद लाभतो तो संसारात कधीही बद्ध होत नाही; ज्याला सद्गुरूंचे वचन साध्य होते तोच खरा धन्य होय."
+    },
+    {
+      "id": "swatmasukh-145",
+      "number": 145,
+      "text": "सद्गुरूवचन मानिती प्रमाण । तयांसी नाहीं जन्ममरण ।\nस्वात्मसुखाचें निधान । गवसे हातीं ॥ १४५ ॥",
+      "meaning": "जे सद्गुरूंचे वचन प्रमाण मानतात त्यांना जन्म-मरणाचे फेरे नसतात; त्यांच्या हाती साक्षात स्वात्मसुखाचे निधान लागते."
+    },
+    {
+      "id": "swatmasukh-146",
+      "number": 146,
+      "text": "गवसे हातीं अलभ्य ठेवा । ज्यासी वंदिती देवदेवा ।\nतयासी न लागे करावा । सायास आन ॥ १४६ ॥",
+      "meaning": "ज्याला देव आणि सुरवर वंदन करतात तो अलभ्य ठेवा हाती लागल्यावर इतर कोणतेही कष्ट करावे लागत नाहीत."
+    },
+    {
+      "id": "swatmasukh-147",
+      "number": 147,
+      "text": "सायासवीण मोक्ष जोडे । जेव्हां सद्गुरूकृपा घडे ।\nअज्ञानाचें मूळ उडे । एका क्षणीं ॥ १४७ ॥",
+      "meaning": "सद्गुरूंची कृपा झाली की कोणत्याही क्लेशांविना मोक्ष प्राप्त होतो आणि अज्ञानाचे मूळ एका क्षणात उडून जाते."
+    },
+    {
+      "id": "swatmasukh-148",
+      "number": 148,
+      "text": "एका क्षणीं प्रपंच नासे । सत्य स्वरूप अंतरीं भासे ।\nस्वात्मसुखाचेनि सौरसे । तृप्त जीव ॥ १४८ ॥",
+      "meaning": "एका क्षणात प्रपंचाचा आभास संपून अंतरात सत्य स्वरूप प्रगट होते आणि स्वात्मसुखाच्या परमानंदाने जीव तृप्त होतो."
+    },
+    {
+      "id": "swatmasukh-149",
+      "number": 149,
+      "text": "तृप्त झाला जो अंतरीं । तोचि सुखी या संसारीं ।\nनाहीं उरली वासना दुसरी । चित्तामाजी ॥ १४९ ॥",
+      "meaning": "जो अंतःकरणात तृप्त झाला तोच या संसारात खरा सुखी आहे; कारण त्याच्या चित्तात अन्य कोणतीही वासना उरत नाही."
+    },
+    {
+      "id": "swatmasukh-150",
+      "number": 150,
+      "text": "वासनेचा क्षय झाला । तेव्हां आत्माराम भेटला ।\nजीव शिवासी मिळाला । सहज लीळा ॥ १५० ॥",
+      "meaning": "वासनेचा समूळ क्षय होताच आत्माराम भेटतो आणि लीलया जीवाचे शिवाशी अखंड मिलन होते."
+    },
+    {
+      "id": "swatmasukh-151",
+      "number": 151,
+      "text": "सहज लीळा हेंचि ध्यान । जेथें नुरे अनुसंधान ।\nकेवळ सच्चिदानंद पूर्ण । स्वरूप उरे ॥ १५१ ॥",
+      "meaning": "जिथे वेगळे अनुसंधान ठेवण्याचीही गरज उरत नाही ते सहज ध्यान असते; तिथे केवळ परिपूर्ण सच्चिदानंद स्वरूप उरते."
+    },
+    {
+      "id": "swatmasukh-152",
+      "number": 152,
+      "text": "स्वरूप उरे एकचि साच । नाहीं तेथें द्वैताचें काच ।\nकेवळ परब्रह्म साच । अखंडित ॥ १५२ ॥",
+      "meaning": "जिथे द्वैताचा लवलेशही उरत नाही तिथे केवळ एकच सत्य परब्रह्म अखंडित उरते."
+    },
+    {
+      "id": "swatmasukh-153",
+      "number": 153,
+      "text": "अखंडित ब्रह्म सर्वत्र असे । चराचरीं भरूनि विसे ।\nज्ञानदृष्टीने पाहे जैसें । तैसेंचि दिसे ॥ १५३ ॥",
+      "meaning": "अखंड परब्रह्म सर्वत्र चराचरात भरून राहिलेले आहे; ज्ञानदृष्टीने जसे पाहावे तसाच त्याचा प्रत्यय येतो."
+    },
+    {
+      "id": "swatmasukh-154",
+      "number": 154,
+      "text": "ज्ञानदृष्टी हेचि डोळा । जेणें पाविजे आत्मसोहळा ।\nफिटे अज्ञानाचा पडळा । सद्गुरूकृपें ॥ १५४ ॥",
+      "meaning": "ज्ञानदृष्टी हाच खरा डोळा आहे ज्यामुळे आत्मसोहळा अनुभवता येतो; सद्गुरुकृपेने अज्ञानाचा पडदा कायमचा फिटतो."
+    },
+    {
+      "id": "swatmasukh-155",
+      "number": 155,
+      "text": "पडदा फिटला तेव्हां पाही । आत्माराम सर्वत्र ठायीं ।\nदुजें न दिसे कांहीं । विश्वामाजीं ॥ १५५ ॥",
+      "meaning": "अज्ञानाचा पडदा दूर होताच सर्वत्र आत्मारामच दिसतो आणि संपूर्ण विश्वात दुसरे काहीही उरत नाही."
+    },
+    {
+      "id": "swatmasukh-156",
+      "number": 156,
+      "text": "विश्वामाजीं व्यापूनि उरे । परमात्मा हा साचारें ।\nतयासी नमन म्यां आदरें । केलें सदा ॥ १५६ ॥",
+      "meaning": "जो या विश्वात व्यापून आणि उरून राहिला आहे, त्या परमात्म्याला मी आदराने नित्य नमन करतो."
+    },
+    {
+      "id": "swatmasukh-157",
+      "number": 157,
+      "text": "नमन केलें सद्गुरूंसी । जेणें उद्धारिलें दासासी ।\nदावोनियां स्वात्मसुखासी । मुक्त केलें ॥ १५७ ॥",
+      "meaning": "ज्यांनी दासाचा उद्धार करून स्वात्मसुखाचा मार्ग दाखवून पूर्ण मुक्त केले, त्या सद्गुरूंना माझे नमन असो."
+    },
+    {
+      "id": "swatmasukh-158",
+      "number": 158,
+      "text": "मुक्त झालों मी संसारांत । नाहीं उरली देहभ्रांत ।\nसर्वत्र व्यापिला अनंत । एकरूप ॥ १५८ ॥",
+      "meaning": "संसारात मी पूर्ण मुक्त झालो असून देहाची भ्रांती उरलेली नाही; सर्वत्र अनंत परमात्मा एकरूप भरून राहिला आहे."
+    },
+    {
+      "id": "swatmasukh-159",
+      "number": 159,
+      "text": "एकरूप हेंचि ज्ञान । जेथें नुरे अभिमान ।\nस्वात्मसुखीं समाधान । निरंतर ॥ १५९ ॥",
+      "meaning": "जिथे अहंकार उरत नाही तेच खरे अद्वैत ज्ञान आहे; तिथे स्वात्मसुखात अखंड समाधान नांदते."
+    },
+    {
+      "id": "swatmasukh-160",
+      "number": 160,
+      "text": "निरंतर हा आनंद थोर । जेथें नाहीं येरझार ।\nसद्गुरूचरणीं निर्धार । ठेविला म्यां ॥ १६० ॥",
+      "meaning": "जिथे जन्म-मरणाची येरझार संपते तो हा महान आनंद आहे; सद्गुरूंच्या चरणी मी हा दृढ निश्चय ठेवला आहे."
+    },
+    {
+      "id": "swatmasukh-161",
+      "number": 161,
+      "text": "निर्धार ज्याचा दृढ झाला । तोचि मोक्षासी पावला ।\nसंशयाचा नाश जाहला । एका क्षणीं ॥ १६१ ॥",
+      "meaning": "ज्याचा निश्चय दृढ झाला तो सहज मोक्षास प्राप्त झाला आणि त्याच्या संशयाचा एका क्षणात नाश झाला."
+    },
+    {
+      "id": "swatmasukh-162",
+      "number": 162,
+      "text": "संशय नासला समूळ । चित्त झालें अति निर्मळ ।\nस्वात्मसुखाचें कमळ । प्रफुल्लित ॥ १६२ ॥",
+      "meaning": "संशय समूळ नष्ट होताच चित्त अत्यंत निर्मळ झाले आणि अंतःकरणात स्वात्मसुखाचे कमळ प्रफुल्लित झाले."
+    },
+    {
+      "id": "swatmasukh-163",
+      "number": 163,
+      "text": "कमळ प्रफुल्लित अंतरीं । स्वात्मसुखाची वाहे लहरी ।\nतयासी न बाधे संसारीं । कर्माकर्म ॥ १६३ ॥",
+      "meaning": "अंतरात आत्मकमळ प्रफुल्लित होऊन स्वात्मसुखाची लहरी वाहू लागली, त्याला संसारातील कर्माकर्म बाधत नाही."
+    },
+    {
+      "id": "swatmasukh-164",
+      "number": 164,
+      "text": "कर्माकर्म न बाधे तया । जो पावला स्वात्मराया ।\nसद्गुरूची झाली दया । पूर्णपणे ॥ १६४ ॥",
+      "meaning": "ज्यावर सद्गुरूंची पूर्ण दया झाली आणि ज्याला आत्मरामाची प्राप्ती झाली, त्याला कर्माकर्माचे बंध उरत नाहीत."
+    },
+    {
+      "id": "swatmasukh-165",
+      "number": 165,
+      "text": "पूर्ण दया सद्गुरूची । हेचि संपत्ती भक्तांची ।\nस्वात्मसुखाच्या राशीची । प्राप्ती होय ॥ १६५ ॥",
+      "meaning": "सद्गुरूंची पूर्ण कृपा हीच भक्तांची खरी संपत्ती आहे, ज्यामुळे स्वात्मसुखाच्या महाभांडाराची प्राप्ती होते."
+    },
+    {
+      "id": "swatmasukh-166",
+      "number": 166,
+      "text": "प्राप्ती झाली आत्मसुखाची । मग चिंता कैंची संसाराची ।\nतृप्ति झाली अंतरींची । अखंडित ॥ १६६ ॥",
+      "meaning": "आत्मसुखाची प्राप्ती झाल्यावर संसाराची चिंता कुठे उरणार? अंतःकरणात अखंड तृप्ती भरून राहते."
+    },
+    {
+      "id": "swatmasukh-167",
+      "number": 167,
+      "text": "अखंड तृप्ति हेचि मोक्ष । अंतरीं ठेवावें हें लक्ष ।\nसद्गुरूवचन प्रत्यक्ष । प्रमाण मानूनी ॥ १६७ ॥",
+      "meaning": "अखंड आंतरिक तृप्ती हाच मोक्ष आहे हे ध्यानात ठेवावे आणि सद्गुरूंचे वचन प्रत्यक्ष प्रमाण मानावे."
+    },
+    {
+      "id": "swatmasukh-168",
+      "number": 168,
+      "text": "प्रमाण मानितां वचन । होय तत्काळ समाधान ।\nस्वात्मसुखाचें निधान । प्रगट होय ॥ १६८ ॥",
+      "meaning": "गुरुवचन प्रमाण मानताच तत्काळ समाधान लाभते आणि स्वात्मसुखाचे निधान प्रगट होते."
+    },
+    {
+      "id": "swatmasukh-169",
+      "number": 169,
+      "text": "प्रगट झाला आत्माराम । संपापला भवश्रम ।\nनाहीं उरले काम । संसाराचे ॥ १६९ ॥",
+      "meaning": "आत्माराम प्रगट होताच संसारातील सर्व शीण संपला आणि प्रपंचातील कसलेही कर्म उरले नाही."
+    },
+    {
+      "id": "swatmasukh-170",
+      "number": 170,
+      "text": "संसाराचे काम सरले । चित्त स्वरूपीं विरले ।\nस्वात्मसुखाचेनि भरलें । अंतर्बाह्य ॥ १७० ॥",
+      "meaning": "संसाराचे कार्य संपून चित्त स्वरूपात विरघळले आणि अंतर्बाह्य सर्वत्र स्वात्मसुख भरून राहिले."
+    },
+    {
+      "id": "swatmasukh-171",
+      "number": 171,
+      "text": "अंतर्बाह्य एकचि ब्रह्म । हरले सर्वही संभ्रम ।\nस्वात्मसुखीं विश्राम । पावलो आम्ही ॥ १७१ ॥",
+      "meaning": "आत आणि बाहेर केवळ एकच परब्रह्म उरले, सर्व संभ्रम संपले आणि आम्ही स्वात्मसुखात पूर्ण विश्राम पावलो."
+    },
+    {
+      "id": "swatmasukh-172",
+      "number": 172,
+      "text": "विश्राम हा अलभ्य थोर । जेथें सरे येरझार ।\nसद्गुरू जनार्दन आधार । आम्हांसी सदा ॥ १७२ ॥",
+      "meaning": "जिथे जन्म-मरणाची येरझार संपते तो हा अलभ्य विश्राम आहे; सद्गुरू जनार्दन स्वामी आमचा अखंड आधार आहेत."
+    },
+    {
+      "id": "swatmasukh-173",
+      "number": 173,
+      "text": "सदा आधार सद्गुरूचा । तोचि तरला संसाराचा ।\nस्वात्मसुखाच्या अमृताचा । घोट घेतला ॥ १७३ ॥",
+      "meaning": "ज्याला सद्गुरूंचा नित्य आधार आहे तोच भवसागरातून तरला आणि त्याने स्वात्मसुखाच्या अमृताचा घोट घेतला."
+    },
+    {
+      "id": "swatmasukh-174",
+      "number": 174,
+      "text": "अमृताचा घोट घेतां । अमर झाला तो तत्त्वतां ।\nनाहीं मरण तया आतां । कधीं काळीं ॥ १७४ ॥",
+      "meaning": "या आत्मानंदामृताचे प्राशन करताच साधक अमर होतो आणि त्याला पुन्हा कधीही मरण उरत नाही."
+    },
+    {
+      "id": "swatmasukh-175",
+      "number": 175,
+      "text": "मरण हें देहासी असे । आत्मा नित्य अमर भासे ।\nस्वात्मसुखाचेनि सौरसे । तृप्त साधक ॥ १७५ ॥",
+      "meaning": "मरण हे केवळ देहाचे असते, आत्मा नित्य अमर आहे; स्वात्मसुखाच्या रसाने साधक पूर्ण तृप्त होतो."
+    },
+    {
+      "id": "swatmasukh-176",
+      "number": 176,
+      "text": "साधक झाला सिद्ध जाण । जेव्हां पावे समाधान ।\nस्वात्मसुखाचें लक्षण । अंगीं बाणे ॥ १७६ ॥",
+      "meaning": "ज्याला हे समाधान लाभते तो साधक सिद्ध होतो आणि स्वात्मसुखाची सर्व लक्षणे त्याच्या अंगी बाणतात."
+    },
+    {
+      "id": "swatmasukh-177",
+      "number": 177,
+      "text": "अंगीं बाणली सहजस्थिती । मग कैंची उपाधीची भीती ।\nसर्वत्र पाहे श्रीपती । एकरूप ॥ १७७ ॥",
+      "meaning": "अंगात सहज आत्मस्थिती बाणल्यावर उपाधीचे भय कुठे उरणार? तो सर्वत्र एकरूप श्रीपतीलाच अनुभवतो."
+    },
+    {
+      "id": "swatmasukh-178",
+      "number": 178,
+      "text": "एकरूप सर्व चराचर । नाहीं भेदाचा विचार ।\nस्वात्मसुखाचा विस्तार । दाविला म्यां ॥ १७८ ॥",
+      "meaning": "सर्व चराचर एकरूप झाले असून भेदाचा विचार मिटला आहे; हाच स्वात्मसुखाचा महान विस्तार मी सांगितला आहे."
+    },
+    {
+      "id": "swatmasukh-179",
+      "number": 179,
+      "text": "विस्तार हा श्रोतीं ऐकावा । अंतरीं दृढ भाव धरावा ।\nस्वात्मसुखाचा घ्यावा । अनुभव नित्य ॥ १७९ ॥",
+      "meaning": "श्रोत्यांनी हा विचार ऐकावा, अंतरात दृढ भाव धरावा आणि नित्य स्वात्मसुखाचा अनुभव घ्यावा."
+    },
+    {
+      "id": "swatmasukh-180",
+      "number": 180,
+      "text": "अनुभव हाचि रोकडा । संतांचा मार्ग हा चोखडा ।\nन पडे भ्रमाचा खोडा । साधकांसी ॥ १८० ॥",
+      "meaning": "अनुभव हाच साक्षात रोकडा प्रत्यय आहे आणि संतांचा मार्ग अत्यंत चोख आहे; यात साधकाला भ्रमाचा अडसर येत नाही."
+    },
+    {
+      "id": "swatmasukh-181",
+      "number": 181,
+      "text": "साधकांसी बोध हा भला । संतांनीं प्रगट केला ।\nस्वात्मसुखाचा दीप उजळला । चराचरीं ॥ १८१ ॥",
+      "meaning": "संतांनी साधकांसाठी हा उत्तम बोध प्रगट केला ज्यामुळे संपूर्ण चराचरात स्वात्मसुखाचा दीप उजळला."
+    },
+    {
+      "id": "swatmasukh-182",
+      "number": 182,
+      "text": "दीप उजळला अंतरीं । नासला अंधकार संसारीं ।\nस्वात्मसुखाच्या सागरीं । बुडी दिली ॥ १८२ ॥",
+      "meaning": "अंतःकरणात ज्ञानदीप उजळताच संसाराचा अंधकार नष्ट झाला आणि साधकाने स्वात्मसुखाच्या महासागरात बुडी घेतली."
+    },
+    {
+      "id": "swatmasukh-183",
+      "number": 183,
+      "text": "बुडी दिली आनंदांत । नाहीं उरली देहभ्रांत ।\nसर्वत्र एकचि शांत । स्वरूप उरे ॥ १८३ ॥",
+      "meaning": "आत्मानंदात डुंबताच देहभ्रांती उरली नाही आणि सर्वत्र केवळ एक शांत आत्मस्वरूप शिल्लक राहिले."
+    },
+    {
+      "id": "swatmasukh-184",
+      "number": 184,
+      "text": "शांत स्वरूप हेंचि ब्रह्म । हरले सर्वही संभ्रम ।\nस्वात्मसुखीं निष्काम । वर्तती संत ॥ १८४ ॥",
+      "meaning": "हे शांत स्वरूप म्हणजेच परब्रह्म आहे; सर्व संभ्रम गळून पडल्याने संत स्वात्मसुखात निष्काम वावरतात."
+    },
+    {
+      "id": "swatmasukh-185",
+      "number": 185,
+      "text": "निष्काम आचरण संतांचें । जगासि भूषण साचें ।\nस्वात्मसुखाच्या रसाचें । वाटिती दान ॥ १८५ ॥",
+      "meaning": "संतांचे निष्काम आचरण जगाचे खरे भूषण आहे; ते सर्वांना स्वात्मसुखाच्या अमृतरसाचे दान वाटतात."
+    },
+    {
+      "id": "swatmasukh-186",
+      "number": 186,
+      "text": "दान वाटिती अमोल । जेथें न लगे मोल ।\nसद्गुरूकृपेचें बोल । उद्धरती जन ॥ १८६ ॥",
+      "meaning": "ते हे अमोल दान मुक्तहस्ताने वाटतात ज्याला कोणतेही मूल्य लागत नाही; सद्गुरुकृपेच्या वचनांनी लोक उद्धरून जातात."
+    },
+    {
+      "id": "swatmasukh-187",
+      "number": 187,
+      "text": "जन उद्धरले अनेक । जेणें ऐकिले कौतुक ।\nस्वात्मसुखाचें सुख । अपरिमित ॥ १८७ ॥",
+      "meaning": "ज्यांनी हे आत्मचरित्र ऐकले असे अनेक जन उद्धरून गेले; स्वात्मसुखाचे हे सुख खरोखर अपरिमित आहे."
+    },
+    {
+      "id": "swatmasukh-188",
+      "number": 188,
+      "text": "अपरिमित सुखाची राशी । लाधली जयाच्या मानसीं ।\nतोचि वंद्य विश्वासी । एका जनार्दनीं म्हणे ॥ १८८ ॥",
+      "meaning": "ज्याच्या अंतःकरणात या अपरिमित सुखाची रास प्रगट झाली तोच विश्वात वंदनीय होतो, असे एका जनार्दनी म्हणतात."
+    },
+    {
+      "id": "swatmasukh-189",
+      "number": 189,
+      "text": "एका जनार्दनीं शरण । सद्गुरूचे वंदूं चरण ।\nस्वात्मसुखाचें निरूपण । अखंड चाले ॥ १८९ ॥",
+      "meaning": "एका जनार्दनी सद्गुरूंच्या चरणी शरण जातात; हे स्वात्मसुखाचे निरूपण अखंड चालू आहे."
+    },
+    {
+      "id": "swatmasukh-190",
+      "number": 190,
+      "text": "निरूपण ऐका सादर । फिटेल भवाचा भार ।\nस्वात्मसुखाचा सार । दाविला येथें ॥ १९० ॥",
+      "meaning": "हे निरूपण आदराने ऐका म्हणजे संसाराचा भार फिटेल; स्वात्मसुखाचे संपूर्ण सार येथे मांडले आहे."
+    },
+    {
+      "id": "swatmasukh-191",
+      "number": 191,
+      "text": "सार हें वेदान्ताचें । गुह्य हें सर्व शास्त्रांचें ।\nस्वात्मसुख संतांचें । निजभांडार ॥ १९१ ॥",
+      "meaning": "हे वेदान्ताचे सार आणि सर्व शास्त्रांचे गुह्य रहस्य आहे; स्वात्मसुख हे संतांचे मूळ निजभांडार आहे."
+    },
+    {
+      "id": "swatmasukh-192",
+      "number": 192,
+      "text": "भांडार उघडिलें संतीं । जगासि दिली मुक्ती ।\nस्वात्मसुखाची कीर्ती । गाती त्रिभुवनीं ॥ १९२ ॥",
+      "meaning": "संतांनी हे भांडार उघडून जगाला मुक्ती दिली; स्वात्मसुखाची कीर्ती तिन्ही लोकांत दुमदुमत आहे."
+    },
+    {
+      "id": "swatmasukh-193",
+      "number": 193,
+      "text": "त्रिभुवनीं ज्याचा गजर । तोचि परमात्मा साचार ।\nस्वात्मसुखीं निर्धार । केला म्यां ॥ १९३ ॥",
+      "meaning": "तिन्ही लोकांत ज्याचा जयजयकार आहे तोच खरा परमात्मा आहे; स्वात्मसुखात मी हाच दृढ निर्धार केला आहे."
+    },
+    {
+      "id": "swatmasukh-194",
+      "number": 194,
+      "text": "निर्धार केला अंतरीं । स्वात्मसुख भोगूं नित्य हरी ।\nसद्गुरूच्या कृपेकरीं । पावन झालों ॥ १९४ ॥",
+      "meaning": "मी अंतरात हाच निश्चय केला की नित्य आत्मसुखाचा उपभोग घ्यावा; सद्गुरूंच्या कृपेने मी पावन झालो."
+    },
+    {
+      "id": "swatmasukh-195",
+      "number": 195,
+      "text": "पावन झाले साधकजन । जे धरिती सद्गुरूचरण ।\nस्वात्मसुखाचें महिमान । वर्णिती सदा ॥ १९५ ॥",
+      "meaning": "जे सद्गुरूंचे चरण धरतात ते साधक पावन झाले आणि ते सदा स्वात्मसुखाचा महिमा गातात."
+    },
+    {
+      "id": "swatmasukh-196",
+      "number": 196,
+      "text": "महिमा वर्णितां वाचेसी । आनंद वाढे मानसीं ।\nस्वात्मसुखाच्या राशीसी । पार नाहीं ॥ १९६ ॥",
+      "meaning": "वाणीने हा महिमा गाताना मनात आनंद द्विगुणित होतो; स्वात्मसुखाच्या या भांडाराला पारावार नाही."
+    },
+    {
+      "id": "swatmasukh-197",
+      "number": 197,
+      "text": "पार नाहीं सुखासी या । जाणती ज्ञानी तया ।\nसद्गुरूची झाली दया । एका जनार्दनीं ॥ १९७ ॥",
+      "meaning": "या अथांग सुखाला अंत नाही हे ज्ञानी जन जाणतात; एका जनार्दनीवर सद्गुरूंची अखंड दया झाली."
+    },
+    {
+      "id": "swatmasukh-198",
+      "number": 198,
+      "text": "एका जनार्दनीं भाव । प्रगटला आत्मदेव ।\nस्वात्मसुखाचा हा ठाव । पूर्ण जाहला ॥ १९८ ॥",
+      "meaning": "एका जनार्दनींच्या अनन्य भावात साक्षात आत्मदेव प्रगट झाला आणि स्वात्मसुखाचे हे निजस्थान पूर्ण झाले."
+    },
+    {
+      "id": "swatmasukh-199",
+      "number": 199,
+      "text": "पूर्ण जाहला विचार । स्वात्मसुखाचा विस्तार ।\nश्रोतीं घ्यावा आदर । अंतरीं सदा ॥ १९९ ॥",
+      "meaning": "स्वात्मसुखाच्या विस्ताराचा हा विचार परिपूर्ण झाला; श्रोत्यांनी अंतःकरणात याचा सदा आदर ठेवावा."
+    },
+    {
+      "id": "swatmasukh-200",
+      "number": 200,
+      "text": "दोनशें ओव्यांचा बोध । निरसला सर्वही खेद ।\nस्वात्मसुखाचा आनंद । भोगिती संत ॥ २०० ॥",
+      "meaning": "दोनशे ओव्यांचा हा उपदेश ऐकून सर्व खेद नाहीसा झाला आणि संतजन स्वात्मसुखाचा परमानंद भोगत आहेत."
+    },
+    {
+      "id": "swatmasukh-201",
+      "number": 201,
+      "text": "आतां पुढील निरूपण । ऐका श्रोते विचक्षण ।\nजेणें होय अंतःकरण । अति निर्मळ ॥ २०१ ॥",
+      "meaning": "आता चतुर श्रोत्यांनी पुढील निरूपण ऐकावे, ज्यामुळे अंतःकरण अत्यंत निर्मळ व निष्कलंक होते."
+    },
+    {
+      "id": "swatmasukh-202",
+      "number": 202,
+      "text": "निर्मळ चित्तीं देव वसे । इतरत्र तो न दिसे ।\nस्वात्मसुखाचेनि सौरसे । चित्त शुद्धी ॥ २०२ ॥",
+      "meaning": "निर्मळ चित्तातच देव वास करतो, इतरत्र तो दिसत नाही; स्वात्मसुखाच्या अनुसंधानाने चित्त पूर्ण शुद्ध होते."
+    },
+    {
+      "id": "swatmasukh-203",
+      "number": 203,
+      "text": "चित्त शुद्ध झालियावरी । प्रगटे आत्माराम अंतरीं ।\nनाहीं उरली दुसरी । भ्रांती जीवा ॥ २०३ ॥",
+      "meaning": "चित्त शुद्ध होताच अंतरात आत्माराम प्रगट होतो आणि जीवाची कसलीही भ्रांती उरत नाही."
+    },
+    {
+      "id": "swatmasukh-204",
+      "number": 204,
+      "text": "भ्रांती नासली समूळ । प्रगटलें ज्ञान निर्मळ ।\nस्वात्मसुखाचें स्थळ । गवसलें हातीं ॥ २०४ ॥",
+      "meaning": "भ्रांती समूळ नष्ट होऊन निर्मळ ज्ञान प्रगट झाले आणि स्वात्मसुखाचे मूळ स्थान हाती आले."
+    },
+    {
+      "id": "swatmasukh-205",
+      "number": 205,
+      "text": "गवसलें जेव्हां निजस्थान । तेव्हां सुटले भवबंधन ।\nएका जनार्दनीं नमन । सद्गुरूंसी ॥ २०५ ॥",
+      "meaning": "जेव्हा मूळ आत्मस्थान गवसले तेव्हा संसारबंधन गळून पडले; एका जनार्दनी सद्गुरूंना नमन करतात."
+    },
+    {
+      "id": "swatmasukh-206",
+      "number": 206,
+      "text": "सद्गुरूसी नमन करूनि । स्वात्मसुख धरूं मनीं ।\nजेणें चुकेल येरझानी । संसाराची ॥ २०६ ॥",
+      "meaning": "सद्गुरूंना नमन करून स्वात्मसुख मनात साठवूया, ज्यामुळे संसाराची येरझार कायमची चुकेल."
+    },
+    {
+      "id": "swatmasukh-207",
+      "number": 207,
+      "text": "संसाराची येरझार सरे । जेव्हां ज्ञान अंतरीं भरे ।\nस्वात्मसुखाचेनि आदरें । तरले जन ॥ २०७ ॥",
+      "meaning": "अंतरात आत्मज्ञान भरले की संसारातील जन्म-मरण संपते आणि स्वात्मसुखाच्या आधाराने जन उद्धरून जातात."
+    },
+    {
+      "id": "swatmasukh-208",
+      "number": 208,
+      "text": "तरले जन कोट्यानुकोटी । जेणें धरिला सद्गुरू पाठी ।\nस्वात्मसुखाची भेटी । झाली तयां ॥ २०८ ॥",
+      "meaning": "ज्यांनी सद्गुरूंचा आधार धरला असे कोट्यवधी जन तरून गेले आणि त्यांना स्वात्मसुखाची प्रत्यक्ष भेट घडली."
+    },
+    {
+      "id": "swatmasukh-209",
+      "number": 209,
+      "text": "झाली भेटी आत्मयासी । फिटली चिंता संसाराची ।\nस्वात्मसुखाच्या राशीसी । पार नाहीं ॥ २०९ ॥",
+      "meaning": "आत्म्याची आत्म्याशी भेट झाली आणि प्रपंचाची चिंता मिटली; या स्वात्मसुखाच्या समृद्धीला सीमा नाही."
+    },
+    {
+      "id": "swatmasukh-210",
+      "number": 210,
+      "text": "पार नाहीं या सुखासी । भोगिती ज्ञानी अहर्निशीं ।\nएका जनार्दनीं चरणांसी । लीन सदा ॥ २१० ॥",
+      "meaning": "या सुखाला मर्यादा नाही, ज्ञानी जन रात्रंदिवस हेच भोगतात; एका जनार्दनी सद्गुरूंच्या चरणी सदा लीन आहेत."
+    },
+    {
+      "id": "swatmasukh-211",
+      "number": 211,
+      "text": "लीनता हेचि साधना । जेणें तुटे भवबंधना ।\nस्वात्मसुखाच्या दर्शना । लाभे सहज ॥ २११ ॥",
+      "meaning": "लीनता हीच सर्वश्रेष्ठ साधना आहे ज्यामुळे भवबंधन तुटते आणि स्वात्मसुखाचे सहज दर्शन घडते."
+    },
+    {
+      "id": "swatmasukh-212",
+      "number": 212,
+      "text": "सहज दर्शन परमात्म्याचें । हेचि भाग्य भक्तांचें ।\nस्वात्मसुखाच्या रसाचें । पान करी ॥ २१२ ॥",
+      "meaning": "परमात्म्याचे सहज दर्शन घडणे हेच भक्तांचे परम भाग्य आहे; ज्यामुळे तो स्वात्मसुखाच्या रसाचे अखंड पान करतो."
+    },
+    {
+      "id": "swatmasukh-213",
+      "number": 213,
+      "text": "पान करितां या रसाचें । अमरत्व लाभे साचें ।\nस्वात्मसुख संतांचें । निजधन ॥ २१३ ॥",
+      "meaning": "या ब्रह्मरसाचे पान केल्याने साक्षात अमरत्व लाभते; स्वात्मसुख हेच संतांचे खरे निजधन आहे."
+    },
+    {
+      "id": "swatmasukh-214",
+      "number": 214,
+      "text": "निजधन हें पुरातन । जेणें तुटे भवबंधन ।\nस्वात्मसुखीं समाधान । अखंडित ॥ २१४ ॥",
+      "meaning": "हे पुरातन सनातन आत्मधन आहे ज्यामुळे भवबंधन नष्ट होते आणि स्वात्मसुखात अखंड समाधान लाभते."
+    },
+    {
+      "id": "swatmasukh-215",
+      "number": 215,
+      "text": "अखंडित सुख साचार । हाचि संतांचा विचार ।\nस्वात्मसुखाचा सार । दाविला येथें ॥ २१५ ॥",
+      "meaning": "अखंड सत्य सुख हाच संतांचा मुख्य विचार आहे; स्वात्मसुखाचे हे अंतिम सार येथे मांडले आहे."
+    },
+    {
+      "id": "swatmasukh-216",
+      "number": 216,
+      "text": "दाविला येथें साचार । मोक्षाचा हा महाद्वार ।\nस्वात्मसुखीं निर्धार । ठेवावा नित्य ॥ २१६ ॥",
+      "meaning": "मोक्षाचे हे मुख्य महाद्वार येथे यथार्थ दाखवले आहे; स्वात्मसुखात नित्य दृढ निश्चय ठेवावा."
+    },
+    {
+      "id": "swatmasukh-217",
+      "number": 217,
+      "text": "नित्य निश्चय ज्याचा झाला । तोचि मोक्षासी पावला ।\nसंशयाचा नाश जाहला । एका क्षणीं ॥ २१७ ॥",
+      "meaning": "ज्याचा निश्चय नित्य झाला तो मोक्षास प्राप्त झाला आणि त्याच्या संशयाचा एका क्षणात नाश झाला."
+    },
+    {
+      "id": "swatmasukh-218",
+      "number": 218,
+      "text": "नाश झाला संशयाचा । उदय झाला ज्ञानाचा ।\nस्वात्मसुखाच्या सुखाचा । अनुभव आला ॥ २१८ ॥",
+      "meaning": "संशयाचा नाश होऊन आत्मज्ञानाचा उदय झाला आणि साक्षात स्वात्मसुखाचा अनुभव अंतरात आला."
+    },
+    {
+      "id": "swatmasukh-219",
+      "number": 219,
+      "text": "अनुभव आला अंतरीं । स्वात्मसुख वाहे लहरी ।\nतयासी न बाधे संसारीं । कर्माकर्म ॥ २१९ ॥",
+      "meaning": "अंतरात हा स्वानुभव येऊन स्वात्मसुखाची लहरी वाहू लागली, त्याला संसारातील कर्माकर्माचे लेप लागत नाहीत."
+    },
+    {
+      "id": "swatmasukh-220",
+      "number": 220,
+      "text": "कर्माकर्म न बाधे तयासी । जो भजे आत्मरायासी ।\nस्वात्मसुखाच्या राशीसी । पार नाहीं ॥ २२० ॥",
+      "meaning": "जो आत्मरामाचे भजन करतो त्याला कर्माकर्म बाधत नाही; या स्वात्मसुखाच्या समृद्धीला अंत नाही."
+    },
+    {
+      "id": "swatmasukh-221",
+      "number": 221,
+      "text": "पार नाहीं सुखासी या । जाणती ज्ञानी तया ।\nसद्गुरूची झाली दया । पूर्णपणे ॥ २२१ ॥",
+      "meaning": "या अमर्याद सुखाला पार नाही हे ज्ञानी जाणतात; ज्यांच्यावर सद्गुरूंची पूर्ण कृपा झाली आहे."
+    },
+    {
+      "id": "swatmasukh-222",
+      "number": 222,
+      "text": "पूर्ण कृपा सद्गुरूची । हेचि संपत्ती भक्तांची ।\nस्वात्मसुखाच्या रसाची । गोडी लागे ॥ २२२ ॥",
+      "meaning": "सद्गुरूंची पूर्ण कृपा हीच भक्तांची खरी संपत्ती आहे; ज्यामुळे स्वात्मसुखाच्या रसाची गोडी लागते."
+    },
+    {
+      "id": "swatmasukh-223",
+      "number": 223,
+      "text": "गोडी लागली अंतरीं । मग विषय वाटे वैरी ।\nस्वात्मसुखाच्या लहरीं । डुले मन ॥ २२३ ॥",
+      "meaning": "अंतरात आत्मसुखाची गोडी लागताच विषयवैभव वैऱ्यासारखे वाटते आणि मन स्वात्मसुखाच्या लहरीत डोलते."
+    },
+    {
+      "id": "swatmasukh-224",
+      "number": 224,
+      "text": "डुले मन सुखामाजीं । नाहीं उरली चिंता लाजी ।\nस्वात्मसुखाची ही साजी । स्थिती साचार ॥ २२४ ॥",
+      "meaning": "मन परमानंदात डोलू लागले आणि संसाराची चिंता व संकोच उरला नाही; हीच स्वात्मसुखाची सुंदर स्थिती आहे."
+    },
+    {
+      "id": "swatmasukh-225",
+      "number": 225,
+      "text": "स्थिती साचार हेचि मोक्ष । अंतरीं ठेवावें हें लक्ष ।\nसद्गुरूवचन प्रत्यक्ष । आचरावे ॥ २२५ ॥",
+      "meaning": "ही सत्य स्थिती म्हणजेच मोक्ष आहे हे ध्यानात ठेवावे आणि सद्गुरूंच्या वचनाचे प्रत्यक्ष आचरण करावे."
+    },
+    {
+      "id": "swatmasukh-226",
+      "number": 226,
+      "text": "आचरावे सद्गुरूवचन । तेणें होय समाधान ।\nस्वात्मसुखाचें निधान । लाभे सहज ॥ २२६ ॥",
+      "meaning": "सद्गुरूंच्या वचनाचे आचरण करावे ज्यामुळे पूर्ण समाधान लाभते आणि स्वात्मसुखाचे निधान सहज प्राप्त होते."
+    },
+    {
+      "id": "swatmasukh-227",
+      "number": 227,
+      "text": "लाभे सहज मोक्षपद । जेथें नाहीं द्वैतद्वंद्व ।\nकेवळ सच्चिदानंद । स्वरूप आपुलें ॥ २२७ ॥",
+      "meaning": "जिथे द्वैताचे कसलेही द्वंद्व नाही ते मोक्षपद सहज लाभते; केवळ सच्चिदानंद हेच आपले मूळ स्वरूप उरते."
+    },
+    {
+      "id": "swatmasukh-228",
+      "number": 228,
+      "text": "स्वरूप आपुलें विसरले । तेणें संसारीं पडिले ।\nसद्गुरूंनीं आठविलें । स्वात्मसुख ॥ २२८ ॥",
+      "meaning": "आपले मूळ स्वरूप विसरल्यामुळेच जीव संसारात पडले; सद्गुरूंनी त्या विस्मृत स्वात्मसुखाची आठवण करून दिली."
+    },
+    {
+      "id": "swatmasukh-229",
+      "number": 229,
+      "text": "आठविलें स्वरूप जेव्हां । संशय नासला तेव्हां ।\nस्वात्मसुखाचा हा ठेवा । गवसला पैं ॥ २२९ ॥",
+      "meaning": "स्वरूपाचे स्मरण होताच संशय नाहीसा झाला आणि स्वात्मसुखाचा हा गूढ ठेवा सापडला."
+    },
+    {
+      "id": "swatmasukh-230",
+      "number": 230,
+      "text": "गवला ठेवा पुरातन । हरलें भवाचें बंधन ।\nस्वात्मसुखीं समाधान । पावले संत ॥ २३० ॥",
+      "meaning": "हा पुरातन सनातन ठेवा सापडताच संसाराचे बंधन गळाले आणि संतजन स्वात्मसुखात शांत समाधानी झाले."
+    },
+    {
+      "id": "swatmasukh-231",
+      "number": 231,
+      "text": "संत पावले समाधान । तयांसी माझें नमन ।\nस्वात्मसुखाचें महिमान । वर्णिती जे ॥ २३१ ॥",
+      "meaning": "ज्यांना हे समाधान लाभले आणि जे या स्वात्मसुखाचा महिमा गातात, त्या संतांना माझे नमन असो."
+    },
+    {
+      "id": "swatmasukh-232",
+      "number": 232,
+      "text": "महिमा वर्णितां अंतरीं । आनंद वाढे गगनावरी ।\nस्वात्मसुखाच्या लहरीं । तृप्त चित्त ॥ २३२ ॥",
+      "meaning": "हा महिमा गाताना अंतरात गगनाएवढा आनंद वाढतो आणि स्वात्मसुखाच्या लहरीने चित्त तृप्त होते."
+    },
+    {
+      "id": "swatmasukh-233",
+      "number": 233,
+      "text": "तृप्त चित्त झालें जेव्हां । देव भेटला तेव्हां ।\nएका जनार्दनीं ठेवा । अनुभविला ॥ २३३ ॥",
+      "meaning": "चित्त तृप्त होताच साक्षात देवाचे दर्शन घडले; एका जनार्दनींनी या अनमोल आत्मठेव्याचा प्रत्यक्ष अनुभव घेतला."
+    },
+    {
+      "id": "swatmasukh-234",
+      "number": 234,
+      "text": "अनुभविला हा साचार । स्वात्मसुखाचा विस्तार ।\nश्रोतीं घ्यावा आदर । अंतरीं सदा ॥ २३४ ॥",
+      "meaning": "स्वात्मसुखाचा हा विस्तार प्रत्यक्ष अनुभविला आहे; श्रोत्यांनी अंतःकरणात याचा सदा आदर बाळगावा."
+    },
+    {
+      "id": "swatmasukh-235",
+      "number": 235,
+      "text": "दोनशें पस्तीस ओव्या पूर्ण । स्वात्मसुखाचें निरूपण ।\nएका जनार्दनीं शरण । सद्गुरूंसी ॥ २३५ ॥",
+      "meaning": "दोनशे पस्तीस (२३५) ओव्यांचे हे स्वात्मसुखाचे निरूपण संपन्न झाले; एका जनार्दनी सद्गुरूंच्या चरणी अनन्यशरण आहेत."
+    },{
+      "id": "swatmasukh-236",
+      "number": 236,
+      "text": "आतां साधनमार्ग साचार । सांगेन ऐका सविस्तर ।\nजेणें होय पैलपार । भवसिंधूचा ॥ २३६ ॥",
+      "meaning": "आता ज्याने भवसागराचा पैलतीर सहज गाठता येतो, तो खरा साधनमार्ग सविस्तर सांगतो, तो श्रवण करा."
+    },
+    {
+      "id": "swatmasukh-237",
+      "number": 237,
+      "text": "श्रवण मनन निदिध्यास । हेचि मुख्य साधनें खास ।\nजेणें नासे भवपाश । क्षणामाजीं ॥ २३७ ॥",
+      "meaning": "श्रवण, मनन आणि निदिध्यासन हीच मुख्य साधने आहेत, ज्यांच्यामुळे संसाराचे पाश क्षणात तुटून जातात."
+    },
+    {
+      "id": "swatmasukh-238",
+      "number": 238,
+      "text": "संतमुखातुनी श्रवण करावें । एकांतीं बैसोनि मनन व्हावें ।\nध्यानेसीं स्वरूप अनुभवावें । निरंतर ॥ २३८ ॥",
+      "meaning": "संतांच्या मुखातून आत्मज्ञान श्रवण करावे, एकांतात त्याचे मनन करावे आणि ध्यानाने निरंतर स्वस्वरूपाचा अनुभव घ्यावा."
+    },
+    {
+      "id": "swatmasukh-239",
+      "number": 239,
+      "text": "अनुभव हाचि रोकडा भाव । तेथें प्रगटे आत्मदेव ।\nफिटे संसाराचा भेव । तात्काळ जाणा ॥ २३९ ॥",
+      "meaning": "स्वानुभव हाच प्रत्यक्ष साक्षात्कार आहे, तिथे साक्षात आत्मदेव प्रगट होतो आणि संसाराचे भय तत्काळ नष्ट होते."
+    },
+    {
+      "id": "swatmasukh-240",
+      "number": 240,
+      "text": "नाहीं भीती यमदंडाची । चिंता नुरे संसाराची ।\nस्वात्मसुखाच्या राशीची । प्राप्ती झाली ॥ २४० ॥",
+      "meaning": "त्याला यमदंडाचे भय उरत नाही आणि संसाराची चिंता राहात नाही; साक्षात स्वात्मसुखाच्या महाभांडाराची प्राप्ती होते."
+    },
+    {
+      "id": "swatmasukh-241",
+      "number": 241,
+      "text": "प्राप्ती झाली निजांगाची । फिटली भ्रांती मायेची ।\nस्वात्मसुख संतांची । निजठेव ही ॥ २४१ ॥",
+      "meaning": "स्वतःच्या मूळ आत्मस्वरूपाची प्राप्ती झाली आणि मायेची भ्रांती संपली; हे स्वात्मसुख संतांचा खरा ठेवा आहे."
+    },
+    {
+      "id": "swatmasukh-242",
+      "number": 242,
+      "text": "ठेव ही अलभ्य देख । जेथें नाहीं भवशोक ।\nकेवळ सच्चिदानंद एक । स्वरूप आपुलें ॥ २४२ ॥",
+      "meaning": "हा ठेवा अत्यंत अलभ्य आहे जिथे संसाराचा शोक उरत नाही; केवळ एक सच्चिदानंद हेच आपले मूळ स्वरूप असते."
+    },
+    {
+      "id": "swatmasukh-243",
+      "number": 243,
+      "text": "स्वरूप आपुलें विसरले । तेणें संसारीं पडिले ।\nसद्गुरूंनीं आठविलें । कृपाबळें ॥ २४३ ॥",
+      "meaning": "जीव आपले मूळ स्वरूप विसरल्यामुळे संसारात पडले; सद्गुरूंनी कृपा करून त्या मूळ स्वरूपाची आठवण करून दिली."
+    },
+    {
+      "id": "swatmasukh-244",
+      "number": 244,
+      "text": "आठवण झाली निजपदाची । तुटली बेडी संसाराची ।\nस्वात्मसुखाच्या रसाची । गोडी लागे ॥ २४४ ॥",
+      "meaning": "निजपदाची आठवण होताच संसाराची बेडी तुटली आणि स्वात्मसुखाच्या अमृतरसाची गोडी लागली."
+    },
+    {
+      "id": "swatmasukh-245",
+      "number": 245,
+      "text": "गोडी लागली अंतरीं । स्वात्मसुख वाहे लहरी ।\nसद्गुरूच्या कृपेकरीं । पावन झालों ॥ २४५ ॥",
+      "meaning": "अंतःकरणात आत्मगोडी लागून सुखाची अखंड लहरी वाहू लागली; सद्गुरूंच्या कृपेने मी पावन झालो."
+    },
+    {
+      "id": "swatmasukh-246",
+      "number": 246,
+      "text": "पावन झाले साधकजन । जे धरिती सद्गुरूचरण ।\nस्वात्मसुखीं समाधान । निरंतर ॥ २४६ ॥",
+      "meaning": "जे सद्गुरूंचे चरण धरतात ते सर्व साधक पावन झाले आणि त्यांना स्वात्मसुखात निरंतर समाधान लाभले."
+    },
+    {
+      "id": "swatmasukh-247",
+      "number": 247,
+      "text": "समाधान हेंचि धन । यापरतें नाहीं साधन ।\nस्वात्मसुखाचें महिमान । काय वर्णूं ॥ २४७ ॥",
+      "meaning": "पूर्ण समाधान हेच खरे धन असून याहून मोठे साधन नाही; स्वात्मसुखाचा महिमा मी किती म्हणून वर्णन करावा?"
+    },
+    {
+      "id": "swatmasukh-248",
+      "number": 248,
+      "text": "वर्णितां वाणी कुंठित होय । मन बुद्धी थारा न लाहे ।\nस्वात्मसुख अद्भुत आहे । स्वानुभवेसी ॥ २४८ ॥",
+      "meaning": "वर्णन करताना वाणी कुंठित होते, मन आणि बुद्धी थबकतात; स्वात्मसुख हे केवळ स्वानुभवानेच कळण्यासारखे अद्भुत आहे."
+    },
+    {
+      "id": "swatmasukh-249",
+      "number": 249,
+      "text": "स्वानुभवेंवीण जे बोलती । ते केवळ कोरडे वदती ।\nअनुभवें तृप्त होती । संतजन ॥ २४९ ॥",
+      "meaning": "अनुभवाशिवाय बोलणारे केवळ कोरडी बडबड करतात; संतजन प्रत्यक्ष अनुभवानेच तृप्त होतात."
+    },
+    {
+      "id": "swatmasukh-250",
+      "number": 250,
+      "text": "संतजन तृप्त झाले । स्वात्मसुखीं विरले ।\nसर्वत्र ब्रह्म भरलें । एकरूप ॥ २५० ॥",
+      "meaning": "संतजन तृप्त होऊन स्वात्मसुखात विलीन झाले; सर्वत्र केवळ एकरूप परब्रह्म भरून राहिले."
+    },
+    {
+      "id": "swatmasukh-251",
+      "number": 251,
+      "text": "एकरूप हेंचि सार । नाहीं भेदाचा विचार ।\nस्वात्मसुखाचा गजर । तिहीं लोकीं ॥ २५१ ॥",
+      "meaning": "अद्वैत एकरूपता हेच अंतिम सार आहे जिथे भेदाभेद उरत नाही; स्वात्मसुखाचा गजर तिन्ही लोकांत दुमदुमत आहे."
+    },
+    {
+      "id": "swatmasukh-252",
+      "number": 252,
+      "text": "तिहीं लोकीं व्यापिलें ब्रह्म । हरले सर्वही भ्रम ।\nस्वात्मसुखीं विश्राम । पावलो आम्ही ॥ २५२ ॥",
+      "meaning": "तिन्ही लोकांत परब्रह्म व्यापून राहिले असून सर्व भ्रम नाहीसे झाले; आम्ही स्वात्मसुखात परिपूर्ण विश्राम पावलो."
+    },
+    {
+      "id": "swatmasukh-253",
+      "number": 253,
+      "text": "विश्राम हा महाथोर । जेथें सरे येरझार ।\nसद्गुरू जनार्दन आधार । आम्हांसी सदा ॥ २५३ ॥",
+      "meaning": "जिथे जन्म-मरणाची येरझार संपते तो हा महान विश्राम आहे; सद्गुरू जनार्दन स्वामी आमचा अखंड आधार आहेत."
+    },
+    {
+      "id": "swatmasukh-254",
+      "number": 254,
+      "text": "सदा आधार सद्गुरूचा । तोचि तरला संसाराचा ।\nस्वात्मसुखाच्या अमृताचा । घोट घेतला ॥ २५४ ॥",
+      "meaning": "ज्याला सद्गुरूंचा नित्य आधार लाभला तो संसारातून तरला आणि त्याने स्वात्मसुखाच्या अमृताचे प्राशन केले."
+    },
+    {
+      "id": "swatmasukh-255",
+      "number": 255,
+      "text": "अमृताचा घोट घेतां । अमर झाला तो तत्त्वतां ।\nस्वात्मसुखाची वार्ता । अगाध असे ॥ २५५ ॥",
+      "meaning": "अमृताचा घोट घेताच साधक अमर झाला; स्वात्मसुखाची ही वार्ता खरोखर अगाध आहे."
+    },
+    {
+      "id": "swatmasukh-256",
+      "number": 256,
+      "text": "अगाध महिमा आत्मयाचा । थाव न लागे कल्पनेचा ।\nस्वात्मसुख संतांचा । निजअनुभव ॥ २५६ ॥",
+      "meaning": "आत्म्याचा महिमा अगाध असून कल्पनेलाही त्याचा थांग लागत नाही; स्वात्मसुख हा संतांचा प्रत्यक्ष स्वानुभव आहे."
+    },
+    {
+      "id": "swatmasukh-257",
+      "number": 257,
+      "text": "निजअनुभव हा रोकडा । संतांचा मार्ग हा चोखडा ।\nन पडे भ्रमाचा खोडा । साधकांसी ॥ २५७ ॥",
+      "meaning": "हा स्वानुभव साक्षात रोकडा आहे आणि संतांचा मार्ग अत्यंत निर्मळ आहे; यात साधकाला भ्रमाचा अडथळा येत नाही."
+    },
+    {
+      "id": "swatmasukh-258",
+      "number": 258,
+      "text": "साधकांसी उपदेश केला । स्वात्मसुखाचा रस दाविला ।\nसद्गुरूचरणीं लागला । भाव तयाचा ॥ २५८ ॥",
+      "meaning": "साधकांना हा उपदेश करून स्वात्मसुखाचा अमृतरस दाखवला; त्यामुळे त्यांचा भाव सद्गुरूंच्या चरणी स्थिर झाला."
+    },
+    {
+      "id": "swatmasukh-259",
+      "number": 259,
+      "text": "भाव स्थिर झाला जेव्हां । स्वात्मसुख प्रगटलें तेव्हां ।\nएका जनार्दनीं ठेवा । लाधला हा ॥ २५९ ॥",
+      "meaning": "जेव्हा भाव स्थिर झाला तेव्हा स्वात्मसुख प्रगट झाले; एका जनार्दनींना हा अनमोल ठेवा प्राप्त झाला."
+    },
+    {
+      "id": "swatmasukh-260",
+      "number": 260,
+      "text": "ठेवा हा साचार पाहीं । याहुनी थोर कांहीं नाहीं ।\nस्वात्मसुख सर्वदा देई । आनंद जीवा ॥ २६० ॥",
+      "meaning": "हा ठेवा अत्यंत श्रेष्ठ आहे ज्याहून मोठे काहीही नाही; स्वात्मसुख जीवाला सदा परमानंद देते."
+    },
+    {
+      "id": "swatmasukh-261",
+      "number": 261,
+      "text": "आनंदें कोंदाटले मन । नाहीं उरले देहभान ।\nकेवळ सच्चिदानंद पूर्ण । स्वरूप आपुलें ॥ २६१ ॥",
+      "meaning": "मन आनंदाने भरून गेले आणि देहभान उरले नाही; केवळ एक पूर्ण सच्चिदानंद हेच आपले मूळ स्वरूप उरले."
+    },
+    {
+      "id": "swatmasukh-262",
+      "number": 262,
+      "text": "स्वरूप आपुलें अद्वय । जेथें नाहीं संशय लय ।\nस्वात्मसुखाचा आश्रय । केला म्यां ॥ २६२ ॥",
+      "meaning": "आपले स्वरूप अद्वैत आहे जिथे संशय आणि लय यांना जागा नाही; मी स्वात्मसुखाचाच अखंड आश्रय केला आहे."
+    },
+    {
+      "id": "swatmasukh-263",
+      "number": 263,
+      "text": "आश्रय केला सद्गुरूचा । हरला फेरा संसाराचा ।\nस्वात्मसुखाच्या रसाचा । लाभ झाला ॥ २६३ ॥",
+      "meaning": "सद्गुरूंचा आश्रय केल्यामुळे संसाराचा फेरा संपला आणि स्वात्मसुखाच्या दिव्य रसाचा लाभ झाला."
+    },
+    {
+      "id": "swatmasukh-264",
+      "number": 264,
+      "text": "लाभ झाला अलभ्य थोर । जेणें तुटे भवभार ।\nस्वात्मसुखाचा विस्तार । दाविला येथें ॥ २६४ ॥",
+      "meaning": "संसाराचा भार तोडणारा हा अलभ्य लाभ झाला; स्वात्मसुखाचा हा विस्तार येथे स्पष्ट केला आहे."
+    },
+    {
+      "id": "swatmasukh-265",
+      "number": 265,
+      "text": "विस्तार हा श्रोतीं ऐकावा । अंतरीं दृढ भाव धरावा ।\nस्वात्मसुखाचा घ्यावा । अनुभव नित्य ॥ २६५ ॥",
+      "meaning": "श्रोत्यांनी हा विचार ऐकावा, अंतरात दृढ भाव धरावा आणि स्वात्मसुखाचा नित्य अनुभव घ्यावा."
+    },
+    {
+      "id": "swatmasukh-266",
+      "number": 266,
+      "text": "अनुभव नित्य ज्यासी घडे । तो संसारीं कधीं न पडे ।\nस्वात्मसुखाचेनि सुरवाडे । तृप्त जीव ॥ २६६ ॥",
+      "meaning": "ज्याला हा नित्य अनुभव येतो तो संसारात पुन्हा पडत नाही; स्वात्मसुखाच्या आनंदाने जीव तृप्त होतो."
+    },
+    {
+      "id": "swatmasukh-267",
+      "number": 267,
+      "text": "तृप्त जीव झाला अंतरीं । स्वात्मसुख वाहे लहरी ।\nसद्गुरूच्या कृपेकरीं । कृतार्थ जाहलों ॥ २६७ ॥",
+      "meaning": "जीव अंतरात तृप्त झाला आणि स्वात्मसुखाची लहरी वाहू लागली; सद्गुरूंच्या कृपेने आम्ही कृतार्थ झालो."
+    },
+    {
+      "id": "swatmasukh-268",
+      "number": 268,
+      "text": "कृतार्थ झालों या संसारीं । नाहीं उरली वासना दुसरी ।\nस्वात्मसुखाच्या सागरीं । बुडी दिली ॥ २६८ ॥",
+      "meaning": "संसारात आम्ही कृतार्थ झालो, अन्य वासना उरली नाही; आम्ही स्वात्मसुखाच्या महासागरात बुडी घेतली."
+    },
+    {
+      "id": "swatmasukh-269",
+      "number": 269,
+      "text": "बुडी दिली आनंदांत । नाहीं उरली देहभ्रांत ।\nसर्वत्र एकचि शांत । स्वरूप उरे ॥ २६९ ॥",
+      "meaning": "आनंदात बुडी देताच देहाची भ्रांती संपली आणि सर्वत्र केवळ एक शांत स्वरूप शिल्लक राहिले."
+    },
+    {
+      "id": "swatmasukh-270",
+      "number": 270,
+      "text": "शांत स्वरूप हेंचि ब्रह्म । हरले सर्वही संभ्रम ।\nस्वात्मसुखीं निष्काम । वर्तती संत ॥ २७० ॥",
+      "meaning": "हे शांत स्वरूप म्हणजेच परब्रह्म आहे; सर्व संभ्रम गळून पडल्याने संतजन स्वात्मसुखात निष्काम वावरतात."
+    },
+    {
+      "id": "swatmasukh-271",
+      "number": 271,
+      "text": "निष्काम वर्तती संतजन । जगासि दाविती निजस्थान ।\nस्वात्मसुखाचें महिमान । वर्णिती सदा ॥ २७१ ॥",
+      "meaning": "संतजन निष्काम आचरण करून जगाला आत्मस्थान दाखवतात आणि सदा स्वात्मसुखाचा महिमा गातात."
+    },
+    {
+      "id": "swatmasukh-272",
+      "number": 272,
+      "text": "महिमा वर्णितां वाचेसी । आनंद वाढे मानसीं ।\nस्वात्मसुखाच्या राशीसी । पार नाहीं ॥ २७२ ॥",
+      "meaning": "हा महिमा वाणीने गाताना मनात आनंद वाढतो; स्वात्मसुखाच्या या भांडाराला पारावार नाही."
+    },
+    {
+      "id": "swatmasukh-273",
+      "number": 273,
+      "text": "पार नाहीं या सुखासी । भोगिती ज्ञानी अहर्निशीं ।\nएका जनार्दनीं चरणांसी । लीन सदा ॥ २७३ ॥",
+      "meaning": "या सुखाला मर्यादा नाही, ज्ञानी जन रात्रंदिवस हेच भोगतात; एका जनार्दनी सद्गुरूंच्या चरणी सदा लीन आहेत."
+    },
+    {
+      "id": "swatmasukh-274",
+      "number": 274,
+      "text": "लीनता हेचि साधना । जेणें तुटे भवबंधना ।\nस्वात्मसुखाच्या दर्शना । लाभे सहज ॥ २७४ ॥",
+      "meaning": "लीनता हीच खरी साधना आहे ज्यामुळे भवबंधन तुटते आणि स्वात्मसुखाचे सहज दर्शन घडते."
+    },
+    {
+      "id": "swatmasukh-275",
+      "number": 275,
+      "text": "सहज दर्शन परमात्म्याचें । हेचि भाग्य भक्तांचें ।\nस्वात्मसुखाच्या रसाचें । पान करी ॥ २७५ ॥",
+      "meaning": "परमात्म्याचे सहज दर्शन घडणे हे भक्तांचे परम भाग्य आहे; ज्यामुळे तो स्वात्मसुखाच्या रसाचे अखंड पान करतो."
+    },
+    {
+      "id": "swatmasukh-276",
+      "number": 276,
+      "text": "पान करितां या रसाचें । अमरत्व लाभे साचें ।\nस्वात्मसुख संतांचें । निजधन ॥ २७६ ॥",
+      "meaning": "या रसाचे प्राशन केल्याने साक्षात अमरत्व लाभते; स्वात्मसुख हे संतांचे खरे निजधन आहे."
+    },
+    {
+      "id": "swatmasukh-277",
+      "number": 277,
+      "text": "निजधन हें पुरातन । जेणें तुटे भवबंधन ।\nस्वात्मसुखीं समाधान । अखंडित ॥ २७७ ॥",
+      "meaning": "हे पुरातन आत्मधन आहे ज्यामुळे भवबंधन नष्ट होते आणि स्वात्मसुखात अखंड समाधान लाभते."
+    },
+    {
+      "id": "swatmasukh-278",
+      "number": 278,
+      "text": "अखंडित सुख साचार । हाचि संतांचा विचार ।\nस्वात्मसुखाचा सार । दाविला येथें ॥ २७८ ॥",
+      "meaning": "अखंड सत्य सुख हाच संतांचा मुख्य विचार आहे; स्वात्मसुखाचे हे अंतिम सार येथे मांडले आहे."
+    },
+    {
+      "id": "swatmasukh-279",
+      "number": 279,
+      "text": "दाविला येथें साचार । मोक्षाचा हा महाद्वार ।\nस्वात्मसुखीं निर्धार । ठेवावा नित्य ॥ २७९ ॥",
+      "meaning": "मोक्षाचे हे मुख्य महाद्वार येथे दाखवले आहे; स्वात्मसुखात नित्य दृढ निश्चय ठेवावा."
+    },
+    {
+      "id": "swatmasukh-280",
+      "number": 280,
+      "text": "नित्य निश्चय ज्याचा झाला । तोचि मोक्षासी पावला ।\nसंशयाचा नाश जाहला । एका क्षणीं ॥ २८० ॥",
+      "meaning": "ज्याचा निश्चय नित्य झाला तो मोक्षास प्राप्त झाला आणि त्याच्या संशयाचा एका क्षणात नाश झाला."
+    },
+    {
+      "id": "swatmasukh-281",
+      "number": 281,
+      "text": "नाश झाला संशयाचा । उदय झाला ज्ञानाचा ।\nस्वात्मसुखाच्या सुखाचा । अनुभव आला ॥ २८१ ॥",
+      "meaning": "संशयाचा नाश होऊन ज्ञानाचा उदय झाला आणि साक्षात स्वात्मसुखाचा अनुभव अंतरात आला."
+    },
+    {
+      "id": "swatmasukh-282",
+      "number": 282,
+      "text": "अनुभव आला अंतरीं । स्वात्मसुख वाहे लहरी ।\nतयासी न बाधे संसारीं । कर्माकर्म ॥ २८२ ॥",
+      "meaning": "अंतरात स्वानुभव येऊन स्वात्मसुखाची लहरी वाहू लागली, त्याला संसारातील कर्माकर्म बाधत नाही."
+    },
+    {
+      "id": "swatmasukh-283",
+      "number": 283,
+      "text": "कर्माकर्म न बाधे तयासी । जो भजे आत्मरायासी ।\nस्वात्मसुखाच्या राशीसी । पार नाहीं ॥ २८३ ॥",
+      "meaning": "जो आत्मरामाचे भजन करतो त्याला कर्माकर्म बाधत नाही; या स्वात्मसुखाच्या समृद्धीला अंत नाही."
+    },
+    {
+      "id": "swatmasukh-284",
+      "number": 284,
+      "text": "पार नाहीं सुखासी या । जाणती ज्ञानी तया ।\nसद्गुरूची झाली दया । पूर्णपणे ॥ २८४ ॥",
+      "meaning": "या अमर्याद सुखाला पार नाही हे ज्ञानी जाणतात; ज्यांच्यावर सद्गुरूंची पूर्ण कृपा झाली आहे."
+    },
+    {
+      "id": "swatmasukh-285",
+      "number": 285,
+      "text": "पूर्ण कृपा सद्गुरूची । हेचि संपत्ती भक्तांची ।\nस्वात्मसुखाच्या रसाची । गोडी लागे ॥ २८५ ॥",
+      "meaning": "सद्गुरूंची पूर्ण कृपा हीच भक्तांची खरी संपत्ती आहे; ज्यामुळे स्वात्मसुखाच्या रसाची गोडी लागते."
+    },
+    {
+      "id": "swatmasukh-286",
+      "number": 286,
+      "text": "गोडी लागली अंतरीं । मग विषय वाटे वैरी ।\nस्वात्मसुखाच्या लहरीं । डुले मन ॥ २८६ ॥",
+      "meaning": "अंतरात आत्मसुखाची गोडी लागताच विषय वैऱ्यासारखे वाटतात आणि मन स्वात्मसुखाच्या लहरीत डोलू लागते."
+    },
+    {
+      "id": "swatmasukh-287",
+      "number": 287,
+      "text": "डुले मन सुखामाजीं । नाहीं उरली चिंता लाजी ।\nस्वात्मसुखाची ही साजी । स्थिती साचार ॥ २८७ ॥",
+      "meaning": "मन परमानंदात डोलू लागले आणि संसाराची चिंता व संकोच उरला नाही; हीच स्वात्मसुखाची सुंदर स्थिती आहे."
+    },
+    {
+      "id": "swatmasukh-288",
+      "number": 288,
+      "text": "स्थिती साचार हेचि मोक्ष । अंतरीं ठेवावें हें लक्ष ।\nसद्गुरूवचन प्रत्यक्ष । आचरावे ॥ २८८ ॥",
+      "meaning": "ही सत्य स्थिती म्हणजेच मोक्ष आहे हे ध्यानात ठेवावे आणि सद्गुरूंच्या वचनाचे प्रत्यक्ष आचरण करावे."
+    },
+    {
+      "id": "swatmasukh-289",
+      "number": 289,
+      "text": "आचरावे सद्गुरूवचन । तेणें होय समाधान ।\nस्वात्मसुखाचें निधान । लाभे सहज ॥ २८९ ॥",
+      "meaning": "सद्गुरूंच्या वचनाचे आचरण करावे ज्यामुळे पूर्ण समाधान लाभते आणि स्वात्मसुखाचे निधान सहज प्राप्त होते."
+    },
+    {
+      "id": "swatmasukh-290",
+      "number": 290,
+      "text": "लाभे सहज मोक्षपद । जेथें नाहीं द्वैतद्वंद्व ।\nकेवळ सच्चिदानंद । स्वरूप आपुलें ॥ २९० ॥",
+      "meaning": "जिथे द्वैताचे कसलेही द्वंद्व नाही ते मोक्षपद सहज लाभते; केवळ सच्चिदानंद हेच आपले मूळ स्वरूप उरते."
+    },
+    {
+      "id": "swatmasukh-291",
+      "number": 291,
+      "text": "स्वरूप आपुलें विसरले । तेणें संसारीं पडिले ।\nसद्गुरूंनीं आठविलें । स्वात्मसुख ॥ २९१ ॥",
+      "meaning": "आपले मूळ स्वरूप विसरल्यामुळेच जीव संसारात पडले; सद्गुरूंनी त्या विस्मृत स्वात्मसुखाची आठवण करून दिली."
+    },
+    {
+      "id": "swatmasukh-292",
+      "number": 292,
+      "text": "आठविलें स्वरूप जेव्हां । संशय नासला तेव्हां ।\nस्वात्मसुखाचा हा ठेवा । गवसला पैं ॥ २९२ ॥",
+      "meaning": "स्वरूपाचे स्मरण होताच संशय नाहीसा झाला आणि स्वात्मसुखाचा हा गूढ ठेवा सापडला."
+    },
+    {
+      "id": "swatmasukh-293",
+      "number": 293,
+      "text": "गवला ठेवा पुरातन । हरलें भवाचें बंधन ।\nस्वात्मसुखीं समाधान । पावले संत ॥ २९३ ॥",
+      "meaning": "हा पुरातन सनातन ठेवा सापडताच संसाराचे बंधन गळाले आणि संतजन स्वात्मसुखात शांत समाधानी झाले."
+    },
+    {
+      "id": "swatmasukh-294",
+      "number": 294,
+      "text": "संत पावले समाधान । तयांसी माझें नमन ।\nस्वात्मसुखाचें महिमान । वर्णिती जे ॥ २९४ ॥",
+      "meaning": "ज्यांना हे समाधान लाभले आणि जे या स्वात्मसुखाचा महिमा गातात, त्या संतांना माझे नमन असो."
+    },
+    {
+      "id": "swatmasukh-295",
+      "number": 295,
+      "text": "महिमा वर्णितां अंतरीं । आनंद वाढे गगनावरी ।\nस्वात्मसुखाच्या लहरीं । तृप्त चित्त ॥ २९५ ॥",
+      "meaning": "हा महिमा गाताना अंतरात गगनाएवढा आनंद वाढतो आणि स्वात्मसुखाच्या लहरीने चित्त तृप्त होते."
+    },
+    {
+      "id": "swatmasukh-296",
+      "number": 296,
+      "text": "तृप्त चित्त झालें जेव्हां । देव भेटला तेव्हां ।\nएका जनार्दनीं ठेवा । अनुभविला ॥ २९६ ॥",
+      "meaning": "चित्त तृप्त होताच साक्षात देवाचे दर्शन घडले; एका जनार्दनींनी या अनमोल आत्मठेव्याचा प्रत्यक्ष अनुभव घेतला."
+    },
+    {
+      "id": "swatmasukh-297",
+      "number": 297,
+      "text": "अनुभविला हा साचार । स्वात्मसुखाचा विस्तार ।\nश्रोतीं घ्यावा आदर । अंतरीं सदा ॥ २९७ ॥",
+      "meaning": "स्वात्मसुखाचा हा विस्तार प्रत्यक्ष अनुभविला आहे; श्रोत्यांनी अंतःकरणात याचा सदा आदर बाळगावा."
+    },
+    {
+      "id": "swatmasukh-298",
+      "number": 298,
+      "text": "विस्तार हा मोक्षाचा । संतांच्या उपदेशाचा ।\nस्वात्मसुखाच्या सुखाचा । पार नाहीं ॥ २९८ ॥",
+      "meaning": "हा विस्तार मोक्षाचा आणि संतांच्या उपदेशाचा आहे; स्वात्मसुखाच्या सुखाला कोणतीही मर्यादा नाही."
+    },
+    {
+      "id": "swatmasukh-299",
+      "number": 299,
+      "text": "पार नाहीं ज्ञानासी । जो भजे आत्मयासी ।\nस्वात्मसुखीं अहर्निशीं । डोलतसे ॥ २९९ ॥",
+      "meaning": "जो आत्म्याचे भजन करतो त्याच्या ज्ञानाला अंत उरत नाही; तो स्वात्मसुखात रात्रंदिवस डोलत राहतो."
+    },
+    {
+      "id": "swatmasukh-300",
+      "number": 300,
+      "text": "तीनशें ओव्यांचा विचार । स्वात्मसुखाचा विस्तार ।\nएका जनार्दनीं सादर । नमन केलें ॥ ३०० ॥",
+      "meaning": "तीनशे ओव्यांचा हा स्वात्मसुखाचा संपूर्ण विचार संपन्न झाला; एका जनार्दनी सद्गुरूंना सादर नमन करतात."
+    },
+    {
+      "id": "swatmasukh-301",
+      "number": 301,
+      "text": "आतां पुढील निरूपण । ऐका श्रोते विचक्षण ।\nजेणें होय अंतःकरण । पूर्ण तृप्त ॥ ३०१ ॥",
+      "meaning": "आता चतुर श्रोत्यांनी पुढील निरूपण ऐकावे, ज्यामुळे अंतःकरण पूर्णपणे तृप्त होते."
+    },
+    {
+      "id": "swatmasukh-302",
+      "number": 302,
+      "text": "पूर्ण तृप्त झालें मन । नुरेचि संसाराचें भान ।\nस्वात्मसुखाचें निधान । अंतरीं वसे ॥ ३०२ ॥",
+      "meaning": "मन पूर्ण तृप्त झाल्यावर संसाराचे भान उरत नाही; स्वात्मसुखाचे निधान अंतरात वास करते."
+    },
+    {
+      "id": "swatmasukh-303",
+      "number": 303,
+      "text": "अंतरीं वसे आत्माराम । संपापला भवश्रम ।\nस्वात्मसुखीं विश्राम । पावलो आम्ही ॥ ३०३ ॥",
+      "meaning": "अंतरात आत्माराम वास करतो आणि संसाराचा शीण संपतो; आम्ही स्वात्मसुखात विश्राम पावलो."
+    },
+    {
+      "id": "swatmasukh-304",
+      "number": 304,
+      "text": "विश्राम हा अलभ्य साच । नाहीं तेथें कर्माचें काच ।\nस्वात्मसुखीं साच । लीन झालों ॥ ३०४ ॥",
+      "meaning": "हा विश्राम अलभ्य आहे जिथे कर्माचे बंधन नाही; आम्ही स्वात्मसुखात सत्य लीन झालो."
+    },
+    {
+      "id": "swatmasukh-305",
+      "number": 305,
+      "text": "लीन झालों आत्मरूपीं । हरली सर्वही पापी ।\nस्वात्मसुखाच्या प्रतापीं । तरलो आम्ही ॥ ३०५ ॥",
+      "meaning": "आत्मस्वरूपात लीन होताच सर्व पापे नष्ट झाली; स्वात्मसुखाच्या प्रभावाने आम्ही तरून गेलो."
+    },
+    {
+      "id": "swatmasukh-306",
+      "number": 306,
+      "text": "तरलो आम्ही भवसागरीं । सद्गुरूच्या कृपेकरीं ।\nस्वात्मसुखाची वाहे लहरी । अखंडित ॥ ३०६ ॥",
+      "meaning": "सद्गुरूंच्या कृपेने आम्ही भवसागरातून तरलो आणि स्वात्मसुखाची अखंड लहरी वाहू लागली."
+    },
+    {
+      "id": "swatmasukh-307",
+      "number": 307,
+      "text": "अखंडित आनंद थोर । जेथें सरे येरझार ।\nस्वात्मसुखीं निर्धार । केला संतीं ॥ ३०७ ॥",
+      "meaning": "जिथे जन्म-मरणाची येरझार संपते तो हा महान आनंद आहे; संतांनी स्वात्मसुखात हाच निर्धार केला."
+    },
+    {
+      "id": "swatmasukh-308",
+      "number": 308,
+      "text": "संतीं केला हा विचार । जगासि दाविला पार ।\nस्वात्मसुखाचा सार । प्रगट केला ॥ ३०८ ॥",
+      "meaning": "संतांनी हा विचार करून जगाला भवसागराचा पार दाखवला आणि स्वात्मसुखाचे सार प्रगट केले."
+    },
+    {
+      "id": "swatmasukh-309",
+      "number": 309,
+      "text": "प्रगट केला आत्मदीप । जेणें लया जाये ताप ।\nस्वात्मसुखाचें अमूप । ऐश्वर्य लाभे ॥ ३०९ ॥",
+      "meaning": "आत्मज्ञानाचा दीप प्रगट केला ज्यामुळे संसाराचा ताप लयाला गेला आणि स्वात्मसुखाचे अफाट ऐश्वर्य लाभले."
+    },
+    {
+      "id": "swatmasukh-310",
+      "number": 310,
+      "text": "ऐश्वर्य लाभलें आत्मयाचें । फिटली चिंता संसाराची ।\nस्वात्मसुखाच्या रसाची । गोडी लागे ॥ ३१० ॥",
+      "meaning": "आत्म्याचे ऐश्वर्य लाभताच संसाराची चिंता मिटली आणि स्वात्मसुखाच्या रसाची गोडी लागली."
+    },
+    {
+      "id": "swatmasukh-311",
+      "number": 311,
+      "text": "गोडी लागे अमृताची । हरली तृष्णा विषयांची ।\nस्वात्मसुखाच्या राशीची । प्राप्ती झाली ॥ ३११ ॥",
+      "meaning": "आत्मसुखामृताची गोडी लागताच विषयांची तृष्णा हरण झाली आणि स्वात्मसुखाच्या राशीची प्राप्ती झाली."
+    },
+    {
+      "id": "swatmasukh-312",
+      "number": 312,
+      "text": "प्राप्ती झाली निजधनाची । तुटली बेडी संसाराची ।\nस्वात्मसुखाच्या सुखाची । सीमा नाहीं ॥ ३१२ ॥",
+      "meaning": "निजधनाची प्राप्ती होताच संसाराची बेडी तुटली; स्वात्मसुखाच्या सुखाला कसलीही सीमा उरली नाही."
+    },
+    {
+      "id": "swatmasukh-313",
+      "number": 313,
+      "text": "सीमा नाहीं आनंदासी । भोगिती संत अहर्निशीं ।\nस्वात्मसुखाच्या पदासी । वंदूं आम्ही ॥ ३१३ ॥",
+      "meaning": "या आनंदाला सीमा नाही, संत रात्रंदिवस हेच भोगतात; आम्ही स्वात्मसुखाच्या पदाला वंदन करतो."
+    },
+    {
+      "id": "swatmasukh-314",
+      "number": 314,
+      "text": "वंदूं आम्ही सद्गुरूंसी । जेणें उद्धारिलें दासासी ।\nस्वात्मसुखाच्या मार्गासी । लाविले वेगीं ॥ ३१४ ॥",
+      "meaning": "ज्यांनी दासाचा उद्धार करून स्वात्मसुखाच्या मार्गाला लावले, त्या सद्गुरूंना आम्ही वंदन करतो."
+    },
+    {
+      "id": "swatmasukh-315",
+      "number": 315,
+      "text": "लाविले वेगीं आत्ममार्गा । हरले सर्वही भवउद्वेगा ।\nस्वात्मसुखाच्या संगा । लीन जाहलों ॥ ३१५ ॥",
+      "meaning": "आत्ममार्गाला लावताच संसाराचे सर्व उद्वेग संपले आणि आम्ही स्वात्मसुखाच्या संगतीत लीन झालो."
+    },
+    {
+      "id": "swatmasukh-316",
+      "number": 316,
+      "text": "लीन जाहलों स्वरूपामध्यें । नाहीं उरले द्वैत भेदें ।\nस्वात्मसुखाचेनि आनंदें । डोलतसे चित्त ॥ ३१६ ॥",
+      "meaning": "स्वरूपात लीन झाल्यावर द्वैताचे भेद उरले नाहीत; चित्त स्वात्मसुखाच्या आनंदाने डोलू लागले."
+    },
+    {
+      "id": "swatmasukh-317",
+      "number": 317,
+      "text": "चित्त डोलों लागलें सुखांत । नाहीं उरली देहभ्रांत ।\nसर्वत्र व्यापिला अनंत । एकरूप ॥ ३१७ ॥",
+      "meaning": "चित्त सुखात डोलू लागले, देहाची भ्रांती संपली; सर्वत्र अनंत परमात्मा एकरूप भरून राहिला."
+    },
+    {
+      "id": "swatmasukh-318",
+      "number": 318,
+      "text": "एकरूप हेंचि ज्ञान । जेथें नुरे अभिमान ।\nस्वात्मसुखीं समाधान । निरंतर ॥ ३१८ ॥",
+      "meaning": "अद्वैत हेच खरे ज्ञान आहे जिथे अभिमान उरत नाही; स्वात्मसुखात निरंतर समाधान लाभते."
+    },
+    {
+      "id": "swatmasukh-319",
+      "number": 319,
+      "text": "निरंतर हा सुखसोहळा । दाविला सद्गुरूंनीं आगळा ।\nस्वात्मसुखाचा गोड गळा । गाऊं आम्ही ॥ ३१९ ॥",
+      "meaning": "सद्गुरूंनी हा आगळावेगळा अखंड सुखसोहळा दाखवला; आम्ही स्वात्मसुखाचे गोड गुणगान गाऊया."
+    },
+    {
+      "id": "swatmasukh-320",
+      "number": 320,
+      "text": "गाऊं आम्ही हरिकीर्ती । जेणें होय आत्मतृप्ती ।\nस्वात्मसुखाची महती । वर्णिती संत ॥ ३२० ॥",
+      "meaning": "ज्यामुळे आत्मतृप्ती होते अशी हरिकीर्ती आम्ही गाऊ; संतजन स्वात्मसुखाची महती नित्य वर्णितात."
+    },
+    {
+      "id": "swatmasukh-321",
+      "number": 321,
+      "text": "वर्णिती संत आदरें । जेणें उद्धरती नरनारें ।\nस्वात्मसुखाचेनि द्वारें । मोक्ष लाभे ॥ ३२१ ॥",
+      "meaning": "संत आदराने हे वर्णन करतात ज्यामुळे सर्व नर-नारी उद्धरतात; स्वात्मसुखाच्या द्वाराने मोक्ष लाभतो."
+    },
+    {
+      "id": "swatmasukh-322",
+      "number": 322,
+      "text": "मोक्ष लाभे तात्काळ । जेव्हां अंतःकरण निर्मळ ।\nस्वात्मसुखाचें फळ । हातां येतें ॥ ३२२ ॥",
+      "meaning": "अंतःकरण निर्मळ होताच मोक्ष तात्काळ प्राप्त होतो आणि स्वात्मसुखाचे फळ हाती येते."
+    },
+    {
+      "id": "swatmasukh-323",
+      "number": 323,
+      "text": "हातां येतें अमृत फळ । हरलें संसाराचें मळ ।\nस्वात्मसुखीं निश्चळ । जाहलों आम्ही ॥ ३२३ ॥",
+      "meaning": "हे अमृतफळ हाती येताच संसाराचा मळ धुतला गेला आणि आम्ही स्वात्मसुखात पूर्ण निश्चल झालो."
+    },
+    {
+      "id": "swatmasukh-324",
+      "number": 324,
+      "text": "निश्चळ मन हेंचि ध्यान । निश्चळ मन हेंचि ज्ञान ।\nस्वात्मसुखीं समाधान । एका जनार्दनीं ॥ ३२४ ॥",
+      "meaning": "निश्चल मन हेच ध्यान आणि ज्ञान आहे; एका जनार्दनींना स्वात्मसुखात परिपूर्ण समाधान लाभले."
+    },
+    {
+      "id": "swatmasukh-325",
+      "number": 325,
+      "text": "एका जनार्दनीं शरण । सद्गुरूचे वंदूं चरण ।\nस्वात्मसुखाचें निरूपण । अखंड चाले ॥ ३२५ ॥",
+      "meaning": "एका जनार्दनी सद्गुरूंच्या चरणी शरण जातात; स्वात्मसुखाचे हे निरूपण अखंड चालू आहे."
+    },
+    {
+      "id": "swatmasukh-326",
+      "number": 326,
+      "text": "निरूपण ऐका श्रोतेजन । फिटेल भवाचें बंधन ।\nस्वात्मसुखाचें निधान । साठवा मनीं ॥ ३२६ ॥",
+      "meaning": "श्रोतेहो, हे निरूपण ऐका म्हणजे भवबंधन सुटेल; स्वात्मसुखाचे हे निधान मनात साठवून ठेवा."
+    },
+    {
+      "id": "swatmasukh-327",
+      "number": 327,
+      "text": "साठवा मनीं आत्माराम । संपापला भवश्रम ।\nस्वात्मसुखीं विश्राम । अखंडित ॥ ३२७ ॥",
+      "meaning": "मनात आत्माराम साठवा म्हणजे संसाराचा शीण संपेल आणि स्वात्मसुखात अखंड विश्राम लाभेल."
+    },
+    {
+      "id": "swatmasukh-328",
+      "number": 328,
+      "text": "अखंडित हा आनंद साच । नाहीं तेथें कर्माचें काच ।\nस्वात्मसुखीं साच । लीन झालों ॥ ३२८ ॥",
+      "meaning": "हा आनंद सत्य व अखंडित आहे जिथे कर्माचे क्लेश नाहीत; आम्ही स्वात्मसुखात सत्य लीन झालो."
+    },
+    {
+      "id": "swatmasukh-329",
+      "number": 329,
+      "text": "लीन झालों आत्मरूपीं । हरली सर्वही पापी ।\nस्वात्मसुखाच्या प्रतापीं । तरलो आम्ही ॥ ३२९ ॥",
+      "meaning": "आत्मस्वरूपात लीन होताच सर्व पापे हरण झाली आणि स्वात्मसुखाच्या प्रभावाने आम्ही तरून गेलो."
+    },
+    {
+      "id": "swatmasukh-330",
+      "number": 330,
+      "text": "तरलो आम्ही संसारांत । नाहीं उरली देहभ्रांत ।\nसर्वत्र एकचि शांत । स्वरूप उरे ॥ ३३० ॥",
+      "meaning": "संसारातून आम्ही तरलो, देहाची भ्रांती संपली; सर्वत्र केवळ एक शांत स्वरूप भरून राहिले."
+    },
+    {
+      "id": "swatmasukh-331",
+      "number": 331,
+      "text": "शांत स्वरूप हेंचि ब्रह्म । हरले सर्वही संभ्रम ।\nस्वात्मसुखीं निष्काम । वर्तती संत ॥ ३३१ ॥",
+      "meaning": "हे शांत स्वरूप म्हणजेच परब्रह्म आहे; सर्व संभ्रम मिटल्यामुळे संतजन स्वात्मसुखात निष्काम वर्ततात."
+    },
+    {
+      "id": "swatmasukh-332",
+      "number": 332,
+      "text": "निष्काम आचरण संतांचें । जगासि भूषण साचें ।\nस्वात्मसुखाच्या रसाचें । वाटिती दान ॥ ३३२ ॥",
+      "meaning": "संतांचे निष्काम आचरण जगाचे खरे भूषण आहे; ते स्वात्मसुखाच्या अमृतरसाचे दान वाटतात."
+    },
+    {
+      "id": "swatmasukh-333",
+      "number": 333,
+      "text": "दान वाटिती अमोल । जेथें न लगे मोल ।\nसद्गुरूकृपेचें बोल । उद्धरती जन ॥ ३३३ ॥",
+      "meaning": "ते हे अमोल दान वाटतात ज्याला कोणतेही मूल्य लागत नाही; सद्गुरुकृपेच्या बोलांनी लोक उद्धरतात."
+    },
+    {
+      "id": "swatmasukh-334",
+      "number": 334,
+      "text": "जन उद्धरले अनेक । जेणें ऐकिले कौतुक ।\nस्वात्मसुखाचें सुख । अपरिमित ॥ ३३४ ॥",
+      "meaning": "ज्यांनी हे ऐकले ते अनेक जन उद्धरून गेले; स्वात्मसुखाचे हे सुख खरोखर अपरिमित आहे."
+    },
+    {
+      "id": "swatmasukh-335",
+      "number": 335,
+      "text": "अपरिमित सुखाची राशी । लाधली जयाच्या मानसीं ।\nतोचि वंद्य विश्वासी । एका जनार्दनीं म्हणे ॥ ३३५ ॥",
+      "meaning": "ज्याच्या मनात या अपरिमित सुखाची राशी प्रगट झाली तोच विश्वात वंदनीय ठरतो, असे एका जनार्दनी म्हणतात."
+    },{
+      "id": "swatmasukh-336",
+      "number": 336,
+      "text": "आतां स्वात्मसुखाची स्थिती । सांगेन ऐका निजप्रीतीं ।\nजयाचेनि योगें तृप्ति । अखंड राहे ॥ ३३६ ॥",
+      "meaning": "आता स्वात्मसुखाची मूळ स्थिती प्रेमाने सांगतो ती ऐका, ज्याच्या योगाने अंतःकरणात अखंड तृप्ती भरून राहते."
+    },
+    {
+      "id": "swatmasukh-337",
+      "number": 337,
+      "text": "स्वरूप आपुलें अद्वय । जेथें नाहीं संशय लय ।\nपरमात्मयाचा आश्रय । अखंड लाभे ॥ ३३७ ॥",
+      "meaning": "आपले मूळ स्वरूप अद्वैत आहे जिथे संशय किंवा लय यांना थारा नाही; तिथे परमात्म्याचा अखंड आश्रय लाभतो."
+    },
+    {
+      "id": "swatmasukh-338",
+      "number": 338,
+      "text": "अखंड लाभे समाधान । जेथें नुरे देहभान ।\nचित्त झालें तन्मय जाण । ब्रह्मस्वरूपीं ॥ ३३८ ॥",
+      "meaning": "जिथे देहभान उरत नाही तिथे अखंड समाधान लाभते आणि चित्त ब्रह्मस्वरूपात पूर्ण तन्मय होऊन जाते."
+    },
+    {
+      "id": "swatmasukh-339",
+      "number": 339,
+      "text": "तन्मय होतां चित्तवृत्ति । मग कैंची संसारभ्रांति ।\nहृदयीं प्रगटे ज्ञानज्योती । स्वयंप्रकाशी ॥ ३३९ ॥",
+      "meaning": "चित्तवृत्ती ब्रह्मरूप तन्मय झाल्यावर संसाराची भ्रांती कुठे उरणार? हृदयात स्वयंप्रकाशी ज्ञानज्योत तळपू लागते."
+    },
+    {
+      "id": "swatmasukh-340",
+      "number": 340,
+      "text": "स्वयंप्रकाशी आत्मा देव । तयाचा न कळे अगाध भेव ।\nसद्गुरूकृपेने हा भाव । उमगे अंतरीं ॥ ३४० ॥",
+      "meaning": "आत्मा हा स्वयंप्रकाशी देव आहे ज्याचा अगाध महिमा सहजासहजी कळत नाही; केवळ सद्गुरुकृपेनेच हा भाव अंतरात उमजतो."
+    },
+    {
+      "id": "swatmasukh-341",
+      "number": 341,
+      "text": "सद्गुरूकृपेचें हें लक्षण । फिटे संसाराचें बंधन ।\nहोय आत्माराम दर्शन । निमिषार्धात ॥ ३४१ ॥",
+      "meaning": "संसाराचे बंधन समूळ गळून पडणे हेच सद्गुरुकृपेचे खरे लक्षण आहे; ज्यामुळे एका निमिषार्धात आत्माराम दर्शन घडते."
+    },
+    {
+      "id": "swatmasukh-342",
+      "number": 342,
+      "text": "निमिषार्धात उद्धार होय । जयावरी कृपा सद्गुरू राहे ।\nतोचि मुक्तीचा ठाव पाहे । सर्वकाळ ॥ ३४२ ॥",
+      "meaning": "ज्याच्यावर सद्गुरूंची कृपा असते त्याचा क्षणार्धात उद्धार होतो आणि तो सर्वकाळ मुक्तीच्या मूळ धामात स्थिर होतो."
+    },
+    {
+      "id": "swatmasukh-343",
+      "number": 343,
+      "text": "सर्वकाळ सुख अखंड । नाहीं तेथें द्वैत वितंड ।\nकेवळ आत्मानंद उदंड । भरूनि उरे ॥ ३४३ ॥",
+      "meaning": "जिथे अखंड सुख असते तिथे द्वैताचा कसलाही वाद उरत नाही; केवळ उदंड आत्मानंद चराचरात भरून राहतो."
+    },
+    {
+      "id": "swatmasukh-344",
+      "number": 344,
+      "text": "उदंड आनंद ज्यासी लाधे । तो संसारीं कधीं न बाधे ।\nसद्गुरूवचन जयासी साधे । तोचि धन्य ॥ ३४४ ॥",
+      "meaning": "ज्याला हा उदंड आत्मानंद लाभतो तो संसारात कधीही बद्ध होत नाही; ज्याला सद्गुरूंचे वचन साध्य होते तोच खरा धन्य होय."
+    },
+    {
+      "id": "swatmasukh-345",
+      "number": 345,
+      "text": "सद्गुरूवचन मानिती प्रमाण । तयांसी नाहीं जन्ममरण ।\nस्वात्मसुखाचें निधान । गवसे हातीं ॥ ३४५ ॥",
+      "meaning": "जे सद्गुरूंचे वचन प्रमाण मानतात त्यांना जन्म-मरणाचे फेरे नसतात; त्यांच्या हाती साक्षात स्वात्मसुखाचे निधान लागते."
+    },
+    {
+      "id": "swatmasukh-346",
+      "number": 346,
+      "text": "गवसे हातीं अलभ्य ठेवा । ज्यासी वंदिती देवदेवा ।\nतयासी न लागे करावा । सायास आन ॥ ३४६ ॥",
+      "meaning": "ज्याला देव आणि सुरवर वंदन करतात तो अलभ्य ठेवा हाती लागल्यावर इतर कोणतेही कष्ट करावे लागत नाहीत."
+    },
+    {
+      "id": "swatmasukh-347",
+      "number": 347,
+      "text": "सायासवीण मोक्ष जोडे । जेव्हां सद्गुरूकृपा घडे ।\nअज्ञानाचें मूळ उडे । एका क्षणीं ॥ ३४७ ॥",
+      "meaning": "सद्गुरूंची कृपा झाली की कोणत्याही क्लेशांविना मोक्ष प्राप्त होतो आणि अज्ञानाचे मूळ एका क्षणात उडून जाते."
+    },
+    {
+      "id": "swatmasukh-348",
+      "number": 348,
+      "text": "एका क्षणीं प्रपंच नासे । सत्य स्वरूप अंतरीं भासे ।\nस्वात्मसुखाचेनि सौरसे । तृप्त जीव ॥ ३४८ ॥",
+      "meaning": "एका क्षणात प्रपंचाचा आभास संपून अंतरात सत्य स्वरूप प्रगट होते आणि स्वात्मसुखाच्या परमानंदाने जीव तृप्त होतो."
+    },
+    {
+      "id": "swatmasukh-349",
+      "number": 349,
+      "text": "तृप्त झाला जो अंतरीं । तोचि सुखी या संसारीं ।\nनाहीं उरली वासना दुसरी । चित्तामाजी ॥ ३४९ ॥",
+      "meaning": "जो अंतःकरणात तृप्त झाला तोच या संसारात खरा सुखी आहे; कारण त्याच्या चित्तात अन्य कोणतीही वासना उरत नाही."
+    },
+    {
+      "id": "swatmasukh-350",
+      "number": 350,
+      "text": "वासनेचा क्षय झाला । तेव्हां आत्माराम भेटला ।\nजीव शिवासी मिळाला । सहज लीळा ॥ ३५० ॥",
+      "meaning": "वासनेचा समूळ क्षय होताच आत्माराम भेटतो आणि लीलया जीवाचे शिवाशी अखंड मिलन होते."
+    },
+    {
+      "id": "swatmasukh-351",
+      "number": 351,
+      "text": "सहज लीळा हेंचि ध्यान । जेथें नुरे अनुसंधान ।\nकेवळ सच्चिदानंद पूर्ण । स्वरूप उरे ॥ ३५१ ॥",
+      "meaning": "जिथे वेगळे अनुसंधान ठेवण्याचीही गरज उरत नाही ते सहज ध्यान असते; तिथे केवळ परिपूर्ण सच्चिदानंद स्वरूप उरते."
+    },
+    {
+      "id": "swatmasukh-352",
+      "number": 352,
+      "text": "स्वरूप उरे एकचि साच । नाहीं तेथें द्वैताचें काच ।\nकेवळ परब्रह्म साच । अखंडित ॥ ३५२ ॥",
+      "meaning": "जिथे द्वैताचा लवलेशही उरत नाही तिथे केवळ एकच सत्य परब्रह्म अखंडित उरते."
+    },
+    {
+      "id": "swatmasukh-353",
+      "number": 353,
+      "text": "अखंडित ब्रह्म सर्वत्र असे । चराचरीं भरूनि विसे ।\nज्ञानदृष्टीने पाहे जैसें । तैसेंचि दिसे ॥ ३५३ ॥",
+      "meaning": "अखंड परब्रह्म सर्वत्र चराचरात भरून राहिलेले आहे; ज्ञानदृष्टीने जसे पाहावे तसाच त्याचा प्रत्यय येतो."
+    },
+    {
+      "id": "swatmasukh-354",
+      "number": 354,
+      "text": "ज्ञानदृष्टी हेचि डोळा । जेणें पाविजे आत्मसोहळा ।\nफिटे अज्ञानाचा पडळा । सद्गुरूकृपें ॥ ३५४ ॥",
+      "meaning": "ज्ञानदृष्टी हाच खरा डोळा आहे ज्यामुळे आत्मसोहळा अनुभवता येतो; सद्गुरुकृपेने अज्ञानाचा पडदा कायमचा फिटतो."
+    },
+    {
+      "id": "swatmasukh-355",
+      "number": 355,
+      "text": "पडदा फिटला तेव्हां पाही । आत्माराम सर्वत्र ठायीं ।\nदुजें न दिसे कांहीं । विश्वामाजीं ॥ ३५५ ॥",
+      "meaning": "अज्ञानाचा पडदा दूर होताच सर्वत्र आत्मारामच दिसतो आणि संपूर्ण विश्वात दुसरे काहीही उरत नाही."
+    },
+    {
+      "id": "swatmasukh-356",
+      "number": 356,
+      "text": "विश्वामाजीं व्यापूनि उरे । परमात्मा हा साचारें ।\nतयासी नमन म्यां आदरें । केलें सदा ॥ ३५६ ॥",
+      "meaning": "जो या विश्वात व्यापून आणि उरून राहिला आहे, त्या परमात्म्याला मी आदराने नित्य नमन करतो."
+    },
+    {
+      "id": "swatmasukh-357",
+      "number": 357,
+      "text": "नमन केलें सद्गुरूंसी । जेणें उद्धारिलें दासासी ।\nदावोनियां स्वात्मसुखासी । मुक्त केलें ॥ ३५७ ॥",
+      "meaning": "ज्यांनी दासाचा उद्धार करून स्वात्मसुखाचा मार्ग दाखवून पूर्ण मुक्त केले, त्या सद्गुरूंना माझे नमन असो."
+    },
+    {
+      "id": "swatmasukh-358",
+      "number": 358,
+      "text": "मुक्त झालों मी संसारांत । नाहीं उरली देहभ्रांत ।\nसर्वत्र व्यापिला अनंत । एकरूप ॥ ३५८ ॥",
+      "meaning": "संसारात मी पूर्ण मुक्त झालो असून देहाची भ्रांती उरलेली नाही; सर्वत्र अनंत परमात्मा एकरूप भरून राहिला आहे."
+    },
+    {
+      "id": "swatmasukh-359",
+      "number": 359,
+      "text": "एकरूप हेंचि ज्ञान । जेथें नुरे अभिमान ।\nस्वात्मसुखीं समाधान । निरंतर ॥ ३५९ ॥",
+      "meaning": "जिथे अहंकार उरत नाही तेच खरे अद्वैत ज्ञान आहे; तिथे स्वात्मसुखात अखंड समाधान नांदते."
+    },
+    {
+      "id": "swatmasukh-360",
+      "number": 360,
+      "text": "निरंतर हा आनंद थोर । जेथें नाहीं येरझार ।\nसद्गुरूचरणीं निर्धार । ठेविला म्यां ॥ ३६० ॥",
+      "meaning": "जिथे जन्म-मरणाची येरझार संपते तो हा महान आनंद आहे; सद्गुरूंच्या चरणी मी हा दृढ निश्चय ठेवला आहे."
+    },
+    {
+      "id": "swatmasukh-361",
+      "number": 361,
+      "text": "निर्धार ज्याचा दृढ झाला । तोचि मोक्षासी पावला ।\nसंशयाचा नाश जाहला । एका क्षणीं ॥ ३६१ ॥",
+      "meaning": "ज्याचा निश्चय दृढ झाला तो सहज मोक्षास प्राप्त झाला आणि त्याच्या संशयाचा एका क्षणात नाश झाला."
+    },
+    {
+      "id": "swatmasukh-362",
+      "number": 362,
+      "text": "संशय नासला समूळ । चित्त झालें अति निर्मळ ।\nस्वात्मसुखाचें कमळ । प्रफुल्लित ॥ ३६२ ॥",
+      "meaning": "संशय समूळ नष्ट होताच चित्त अत्यंत निर्मळ झाले आणि अंतःकरणात स्वात्मसुखाचे कमळ प्रफुल्लित झाले."
+    },
+    {
+      "id": "swatmasukh-363",
+      "number": 363,
+      "text": "कमळ प्रफुल्लित अंतरीं । स्वात्मसुखाची वाहे लहरी ।\nतयासी न बाधे संसारीं । कर्माकर्म ॥ ३६३ ॥",
+      "meaning": "अंतरात आत्मकमळ प्रफुल्लित होऊन स्वात्मसुखाची लहरी वाहू लागली, त्याला संसारातील कर्माकर्म बाधत नाही."
+    },
+    {
+      "id": "swatmasukh-364",
+      "number": 364,
+      "text": "कर्माकर्म न बाधे तया । जो पावला स्वात्मराया ।\nसद्गुरूची झाली दया । पूर्णपणे ॥ ३६४ ॥",
+      "meaning": "ज्यावर सद्गुरूंची पूर्ण दया झाली आणि ज्याला आत्मरामाची प्राप्ती झाली, त्याला कर्माकर्माचे बंध उरत नाहीत."
+    },
+    {
+      "id": "swatmasukh-365",
+      "number": 365,
+      "text": "पूर्ण दया सद्गुरूची । हेचि संपत्ती भक्तांची ।\nस्वात्मसुखाच्या राशीची । प्राप्ती होय ॥ ३६५ ॥",
+      "meaning": "सद्गुरूंची पूर्ण कृपा हीच भक्तांची खरी संपत्ती आहे, ज्यामुळे स्वात्मसुखाच्या महाभांडाराची प्राप्ती होते."
+    },
+    {
+      "id": "swatmasukh-366",
+      "number": 366,
+      "text": "प्राप्ती झाली आत्मसुखाची । मग चिंता कैंची संसाराची ।\nतृप्ति झाली अंतरींची । अखंडित ॥ ३६६ ॥",
+      "meaning": "आत्मसुखाची प्राप्ती झाल्यावर संसाराची चिंता कुठे उरणार? अंतःकरणात अखंड तृप्ती भरून राहते."
+    },
+    {
+      "id": "swatmasukh-367",
+      "number": 367,
+      "text": "अखंड तृप्ति हेचि मोक्ष । अंतरीं ठेवावें हें लक्ष ।\nसद्गुरूवचन प्रत्यक्ष । प्रमाण मानूनी ॥ ३६७ ॥",
+      "meaning": "अखंड आंतरिक तृप्ती हाच मोक्ष आहे हे ध्यानात ठेवावे आणि सद्गुरूंचे वचन प्रत्यक्ष प्रमाण मानावे."
+    },
+    {
+      "id": "swatmasukh-368",
+      "number": 368,
+      "text": "प्रमाण मानितां वचन । होय तत्काळ समाधान ।\nस्वात्मसुखाचें निधान । प्रगट होय ॥ ३६८ ॥",
+      "meaning": "गुरुवचन प्रमाण मानताच तत्काळ समाधान लाभते आणि स्वात्मसुखाचे निधान प्रगट होते."
+    },
+    {
+      "id": "swatmasukh-369",
+      "number": 369,
+      "text": "प्रगट झाला आत्माराम । संपापला भवश्रम ।\nनाहीं उरले काम । संसाराचे ॥ ३६९ ॥",
+      "meaning": "आत्माराम प्रगट होताच संसारातील सर्व शीण संपला आणि प्रपंचातील कसलेही कर्म उरले नाही."
+    },
+    {
+      "id": "swatmasukh-370",
+      "number": 370,
+      "text": "संसाराचे काम सरले । चित्त स्वरूपीं विरले ।\nस्वात्मसुखाचेनि भरलें । अंतर्बाह्य ॥ ३७० ॥",
+      "meaning": "संसाराचे कार्य संपून चित्त स्वरूपात विरघळले आणि अंतर्बाह्य सर्वत्र स्वात्मसुख भरून राहिले."
+    },
+    {
+      "id": "swatmasukh-371",
+      "number": 371,
+      "text": "अंतर्बाह्य एकचि ब्रह्म । हरले सर्वही संभ्रम ।\nस्वात्मसुखीं विश्राम । पावलो आम्ही ॥ ३७१ ॥",
+      "meaning": "आत आणि बाहेर केवळ एकच परब्रह्म उरले, सर्व संभ्रम संपले आणि आम्ही स्वात्मसुखात पूर्ण विश्राम पावलो."
+    },
+    {
+      "id": "swatmasukh-372",
+      "number": 372,
+      "text": "विश्राम हा अलभ्य थोर । जेथें सरे येरझार ।\nसद्गुरू जनार्दन आधार । आम्हांसी सदा ॥ ३७२ ॥",
+      "meaning": "जिथे जन्म-मरणाची येरझार संपते तो हा अलभ्य विश्राम आहे; सद्गुरू जनार्दन स्वामी आमचा अखंड आधार आहेत."
+    },
+    {
+      "id": "swatmasukh-373",
+      "number": 373,
+      "text": "सदा आधार सद्गुरूचा । तोचि तरला संसाराचा ।\nस्वात्मसुखाच्या अमृताचा । घोट घेतला ॥ ३७३ ॥",
+      "meaning": "ज्याला सद्गुरूंचा नित्य आधार आहे तोच भवसागरातून तरला आणि त्याने स्वात्मसुखाच्या अमृताचा घोट घेतला."
+    },
+    {
+      "id": "swatmasukh-374",
+      "number": 374,
+      "text": "अमृताचा घोट घेतां । अमर झाला तो तत्त्वतां ।\nनाहीं मरण तया आतां । कधीं काळीं ॥ ३७४ ॥",
+      "meaning": "या आत्मानंदामृताचे प्राशन करताच साधक अमर होतो आणि त्याला पुन्हा कधीही मरण उरत नाही."
+    },
+    {
+      "id": "swatmasukh-375",
+      "number": 375,
+      "text": "मरण हें देहासी असे । आत्मा नित्य अमर भासे ।\nस्वात्मसुखाचेनि सौरसे । तृप्त साधक ॥ ३७५ ॥",
+      "meaning": "मरण हे केवळ देहाचे असते, आत्मा नित्य अमर आहे; स्वात्मसुखाच्या रसाने साधक पूर्ण तृप्त होतो."
+    },
+    {
+      "id": "swatmasukh-376",
+      "number": 376,
+      "text": "साधक झाला सिद्ध जाण । जेव्हां पावे समाधान ।\nस्वात्मसुखाचें लक्षण । अंगीं बाणे ॥ ३७६ ॥",
+      "meaning": "ज्याला हे समाधान लाभते तो साधक सिद्ध होतो आणि स्वात्मसुखाची सर्व लक्षणे त्याच्या अंगी बाणतात."
+    },
+    {
+      "id": "swatmasukh-377",
+      "number": 377,
+      "text": "अंगीं बाणली सहजस्थिती । मग कैंची उपाधीची भीती ।\nसर्वत्र पाहे श्रीपती । एकरूप ॥ ३७७ ॥",
+      "meaning": "अंगात सहज आत्मस्थिती बाणल्यावर उपाधीचे भय कुठे उरणार? तो सर्वत्र एकरूप श्रीपतीलाच अनुभवतो."
+    },
+    {
+      "id": "swatmasukh-378",
+      "number": 378,
+      "text": "एकरूप सर्व चराचर । नाहीं भेदाचा विचार ।\nस्वात्मसुखाचा विस्तार । दाविला म्यां ॥ ३७८ ॥",
+      "meaning": "सर्व चराचर एकरूप झाले असून भेदाचा विचार मिटला आहे; हाच स्वात्मसुखाचा महान विस्तार मी सांगितला आहे."
+    },
+    {
+      "id": "swatmasukh-379",
+      "number": 379,
+      "text": "विस्तार हा श्रोतीं ऐकावा । अंतरीं दृढ भाव धरावा ।\nस्वात्मसुखाचा घ्यावा । अनुभव नित्य ॥ ३७९ ॥",
+      "meaning": "श्रोत्यांनी हा विचार ऐकावा, अंतरात दृढ भाव धरावा आणि नित्य स्वात्मसुखाचा अनुभव घ्यावा."
+    },
+    {
+      "id": "swatmasukh-380",
+      "number": 380,
+      "text": "अनुभव हाचि रोकडा । संतांचा मार्ग हा चोखडा ।\nन पडे भ्रमाचा खोडा । साधकांसी ॥ ३८० ॥",
+      "meaning": "अनुभव हाच साक्षात रोकडा प्रत्यय आहे आणि संतांचा मार्ग अत्यंत चोख आहे; यात साधकाला भ्रमाचा अडसर येत नाही."
+    },
+    {
+      "id": "swatmasukh-381",
+      "number": 381,
+      "text": "साधकांसी बोध हा भला । संतांनीं प्रगट केला ।\nस्वात्मसुखाचा दीप उजळला । चराचरीं ॥ ३८१ ॥",
+      "meaning": "संतांनी साधकांसाठी हा उत्तम बोध प्रगट केला ज्यामुळे संपूर्ण चराचरात स्वात्मसुखाचा दीप उजळला."
+    },
+    {
+      "id": "swatmasukh-382",
+      "number": 382,
+      "text": "दीप उजळला अंतरीं । नासला अंधकार संसारीं ।\nस्वात्मसुखाच्या सागरीं । बुडी दिली ॥ ३८२ ॥",
+      "meaning": "अंतःकरणात ज्ञानदीप उजळताच संसाराचा अंधकार नष्ट झाला आणि साधकाने स्वात्मसुखाच्या महासागरात बुडी घेतली."
+    },
+    {
+      "id": "swatmasukh-383",
+      "number": 383,
+      "text": "बुडी दिली आनंदांत । नाहीं उरली देहभ्रांत ।\nसर्वत्र एकचि शांत । स्वरूप उरे ॥ ३८३ ॥",
+      "meaning": "आत्मानंदात डुंबताच देहभ्रांती उरली नाही आणि सर्वत्र केवळ एक शांत आत्मस्वरूप शिल्लक राहिले."
+    },
+    {
+      "id": "swatmasukh-384",
+      "number": 384,
+      "text": "शांत स्वरूप हेंचि ब्रह्म । हरले सर्वही संभ्रम ।\nस्वात्मसुखीं निष्काम । वर्तती संत ॥ ३८४ ॥",
+      "meaning": "हे शांत स्वरूप म्हणजेच परब्रह्म आहे; सर्व संभ्रम गळून पडल्याने संत स्वात्मसुखात निष्काम वावरतात."
+    },
+    {
+      "id": "swatmasukh-385",
+      "number": 385,
+      "text": "निष्काम आचरण संतांचें । जगासि भूषण साचें ।\nस्वात्मसुखाच्या रसाचें । वाटिती दान ॥ ३८५ ॥",
+      "meaning": "संतांचे निष्काम आचरण जगाचे खरे भूषण आहे; ते सर्वांना स्वात्मसुखाच्या अमृतरसाचे दान वाटतात."
+    },
+    {
+      "id": "swatmasukh-386",
+      "number": 386,
+      "text": "दान वाटिती अमोल । जेथें न लगे मोल ।\nसद्गुरूकृपेचें बोल । उद्धरती जन ॥ ३८६ ॥",
+      "meaning": "ते हे अमोल दान मुक्तहस्ताने वाटतात ज्याला कोणतेही मूल्य लागत नाही; सद्गुरुकृपेच्या वचनांनी लोक उद्धरून जातात."
+    },
+    {
+      "id": "swatmasukh-387",
+      "number": 387,
+      "text": "जन उद्धरले अनेक । जेणें ऐकिले कौतुक ।\nस्वात्मसुखाचें सुख । अपरिमित ॥ ३८७ ॥",
+      "meaning": "ज्यांनी हे आत्मचरित्र ऐकले असे अनेक जन उद्धरून गेले; स्वात्मसुखाचे हे सुख खरोखर अपरिमित आहे."
+    },
+    {
+      "id": "swatmasukh-388",
+      "number": 388,
+      "text": "अपरिमित सुखाची राशी । लाधली जयाच्या मानसीं ।\nतोचि वंद्य विश्वासी । एका जनार्दनीं म्हणे ॥ ३८८ ॥",
+      "meaning": "ज्याच्या अंतःकरणात या अपरिमित सुखाची रास प्रगट झाली तोच विश्वात वंदनीय होतो, असे एका जनार्दनी म्हणतात."
+    },
+    {
+      "id": "swatmasukh-389",
+      "number": 389,
+      "text": "एका जनार्दनीं शरण । सद्गुरूचे वंदूं चरण ।\nस्वात्मसुखाचें निरूपण । अखंड चाले ॥ ३८९ ॥",
+      "meaning": "एका जनार्दनी सद्गुरूंच्या चरणी शरण जातात; हे स्वात्मसुखाचे निरूपण अखंड चालू आहे."
+    },
+    {
+      "id": "swatmasukh-390",
+      "number": 390,
+      "text": "निरूपण ऐका सादर । फिटेल भवाचा भार ।\nस्वात्मसुखाचा सार । दाविला येथें ॥ ३९० ॥",
+      "meaning": "हे निरूपण आदराने ऐका म्हणजे संसाराचा भार फिटेल; स्वात्मसुखाचे संपूर्ण सार येथे मांडले आहे."
+    },
+    {
+      "id": "swatmasukh-391",
+      "number": 391,
+      "text": "सार हें वेदान्ताचें । गुह्य हें सर्व शास्त्रांचें ।\nस्वात्मसुख संतांचें । निजभांडार ॥ ३९१ ॥",
+      "meaning": "हे वेदान्ताचे सार आणि सर्व शास्त्रांचे गुह्य रहस्य आहे; स्वात्मसुख हे संतांचे मूळ निजभांडार आहे."
+    },
+    {
+      "id": "swatmasukh-392",
+      "number": 392,
+      "text": "भांडार उघडिलें संतीं । जगासि दिली मुक्ती ।\nस्वात्मसुखाची कीर्ती । गाती त्रिभुवनीं ॥ ३९२ ॥",
+      "meaning": "संतांनी हे भांडार उघडून जगाला मुक्ती दिली; स्वात्मसुखाची कीर्ती तिन्ही लोकांत दुमदुमत आहे."
+    },
+    {
+      "id": "swatmasukh-393",
+      "number": 393,
+      "text": "त्रिभुवनीं ज्याचा गजर । तोचि परमात्मा साचार ।\nस्वात्मसुखीं निर्धार । केला म्यां ॥ ३९३ ॥",
+      "meaning": "तिन्ही लोकांत ज्याचा जयजयकार आहे तोच खरा परमात्मा आहे; स्वात्मसुखात मी हाच दृढ निर्धार केला आहे."
+    },
+    {
+      "id": "swatmasukh-394",
+      "number": 394,
+      "text": "निर्धार केला अंतरीं । स्वात्मसुख भोगूं नित्य हरी ।\nसद्गुरूच्या कृपेकरीं । पावन झालों ॥ ३९४ ॥",
+      "meaning": "मी अंतरात हाच निश्चय केला की नित्य आत्मसुखाचा उपभोग घ्यावा; सद्गुरूंच्या कृपेने मी पावन झालो."
+    },
+    {
+      "id": "swatmasukh-395",
+      "number": 395,
+      "text": "पावन झाले साधकजन । जे धरिती सद्गुरूचरण ।\nस्वात्मसुखाचें महिमान । वर्णिती सदा ॥ ३९५ ॥",
+      "meaning": "जे सद्गुरूंचे चरण धरतात ते साधक पावन झाले आणि ते सदा स्वात्मसुखाचा महिमा गातात."
+    },
+    {
+      "id": "swatmasukh-396",
+      "number": 396,
+      "text": "महिमा वर्णितां वाचेसी । आनंद वाढे मानसीं ।\nस्वात्मसुखाच्या राशीसी । पार नाहीं ॥ ३९६ ॥",
+      "meaning": "वाणीने हा महिमा गाताना मनात आनंद द्विगुणित होतो; स्वात्मसुखाच्या या भांडाराला पारावार नाही."
+    },
+    {
+      "id": "swatmasukh-397",
+      "number": 397,
+      "text": "पार नाहीं सुखासी या । जाणती ज्ञानी तया ।\nसद्गुरूची झाली दया । एका जनार्दनीं ॥ ३९७ ॥",
+      "meaning": "या अथांग सुखाला अंत नाही हे ज्ञानी जन जाणतात; एका जनार्दनीवर सद्गुरूंची अखंड दया झाली."
+    },
+    {
+      "id": "swatmasukh-398",
+      "number": 398,
+      "text": "एका जनार्दनीं भाव । प्रगटला आत्मदेव ।\nस्वात्मसुखाचा हा ठाव । पूर्ण जाहला ॥ ३९८ ॥",
+      "meaning": "एका जनार्दनींच्या अनन्य भावात साक्षात आत्मदेव प्रगट झाला आणि स्वात्मसुखाचे हे निजस्थान पूर्ण झाले."
+    },
+    {
+      "id": "swatmasukh-399",
+      "number": 399,
+      "text": "पूर्ण जाहला विचार । स्वात्मसुखाचा विस्तार ।\nश्रोतीं घ्यावा आदर । अंतरीं सदा ॥ ३९९ ॥",
+      "meaning": "स्वात्मसुखाच्या विस्ताराचा हा विचार परिपूर्ण झाला; श्रोत्यांनी अंतःकरणात याचा सदा आदर बाळगावा."
+    },
+    {
+      "id": "swatmasukh-400",
+      "number": 400,
+      "text": "चारशें ओव्यांचा सार । दाविला स्वात्मसुखविचार ।\nसद्गुरूचरणीं निर्धार । ठेविला भक्तां ॥ ४०० ॥",
+      "meaning": "चारशे ओव्यांचे हे स्वात्मसुखाचे सार प्रगट झाले; भक्तांनी सद्गुरूंच्या चरणी नित्य दृढ भाव ठेवावा."
+    },
+    {
+      "id": "swatmasukh-401",
+      "number": 401,
+      "text": "आतां पुढील निरूपण । ऐका श्रोते विचक्षण ।\nजेणें होय अंतःकरण । पूर्ण तृप्त ॥ ४०१ ॥",
+      "meaning": "आता चतुर श्रोत्यांनी पुढील निरूपण ऐकावे, ज्यामुळे अंतःकरण पूर्णपणे तृप्त होते."
+    },
+    {
+      "id": "swatmasukh-402",
+      "number": 402,
+      "text": "पूर्ण तृप्त झालें मन । नुरेचि संसाराचें भान ।\nस्वात्मसुखाचें निधान । अंतरीं वसे ॥ ४०२ ॥",
+      "meaning": "मन पूर्ण तृप्त झाल्यावर संसाराचे भान उरत नाही; स्वात्मसुखाचे निधान अंतरात वास करते."
+    },
+    {
+      "id": "swatmasukh-403",
+      "number": 403,
+      "text": "अंतरीं वसे आत्माराम । संपापला भवश्रम ।\nस्वात्मसुखीं विश्राम । पावलो आम्ही ॥ ४०३ ॥",
+      "meaning": "अंतरात आत्माराम वास करतो आणि संसाराचा शीण संपतो; आम्ही स्वात्मसुखात विश्राम पावलो."
+    },
+    {
+      "id": "swatmasukh-404",
+      "number": 404,
+      "text": "विश्राम हा अलभ्य साच । नाहीं तेथें कर्माचें काच ।\nस्वात्मसुखीं साच । लीन झालों ॥ ४०४ ॥",
+      "meaning": "हा विश्राम अलभ्य आहे जिथे कर्माचे बंधन नाही; आम्ही स्वात्मसुखात सत्य लीन झालो."
+    },
+    {
+      "id": "swatmasukh-405",
+      "number": 405,
+      "text": "लीन झालों आत्मरूपीं । हरली सर्वही पापी ।\nस्वात्मसुखाच्या प्रतापीं । तरलो आम्ही ॥ ४०५ ॥",
+      "meaning": "आत्मस्वरूपात लीन होताच सर्व पापे नष्ट झाली; स्वात्मसुखाच्या प्रभावाने आम्ही तरून गेलो."
+    },
+    {
+      "id": "swatmasukh-406",
+      "number": 406,
+      "text": "तरलो आम्ही भवसागरीं । सद्गुरूच्या कृपेकरीं ।\nस्वात्मसुखाची वाहे लहरी । अखंडित ॥ ४०६ ॥",
+      "meaning": "सद्गुरूंच्या कृपेने आम्ही भवसागरातून तरलो आणि स्वात्मसुखाची अखंड लहरी वाहू लागली."
+    },
+    {
+      "id": "swatmasukh-407",
+      "number": 407,
+      "text": "अखंडित आनंद थोर । जेथें सरे येरझार ।\nस्वात्मसुखीं निर्धार । केला संतीं ॥ ४०७ ॥",
+      "meaning": "जिथे जन्म-मरणाची येरझार संपते तो हा महान आनंद आहे; संतांनी स्वात्मसुखात हाच निर्धार केला."
+    },
+    {
+      "id": "swatmasukh-408",
+      "number": 408,
+      "text": "संतीं केला हा विचार । जगासि दाविला पार ।\nस्वात्मसुखाचा सार । प्रगट केला ॥ ४०८ ॥",
+      "meaning": "संतांनी हा विचार करून जगाला भवसागराचा पार दाखवला आणि स्वात्मसुखाचे सार प्रगट केले."
+    },
+    {
+      "id": "swatmasukh-409",
+      "number": 409,
+      "text": "प्रगट केला आत्मदीप । जेणें लया जाये ताप ।\nस्वात्मसुखाचें अमूप । ऐश्वर्य लाभे ॥ ४०९ ॥",
+      "meaning": "आत्मज्ञानाचा दीप प्रगट केला ज्यामुळे संसाराचा ताप लयाला गेला आणि स्वात्मसुखाचे अफाट ऐश्वर्य लाभले."
+    },
+    {
+      "id": "swatmasukh-410",
+      "number": 410,
+      "text": "ऐश्वर्य लाभलें आत्मयाचें । फिटली चिंता संसाराची ।\nस्वात्मसुखाच्या रसाची । गोडी लागे ॥ ४१० ॥",
+      "meaning": "आत्म्याचे ऐश्वर्य लाभताच संसाराची चिंता मिटली आणि स्वात्मसुखाच्या रसाची गोडी लागली."
+    },
+    {
+      "id": "swatmasukh-411",
+      "number": 411,
+      "text": "गोडी लागे अमृताची । हरली तृष्णा विषयांची ।\nस्वात्मसुखाच्या राशीची । प्राप्ती झाली ॥ ४११ ॥",
+      "meaning": "आत्मसुखामृताची गोडी लागताच विषयांची तृष्णा हरण झाली आणि स्वात्मसुखाच्या राशीची प्राप्ती झाली."
+    },
+    {
+      "id": "swatmasukh-412",
+      "number": 412,
+      "text": "प्राप्ती झाली निजधनाची । तुटली बेडी संसाराची ।\nस्वात्मसुखाच्या सुखाची । सीमा नाहीं ॥ ४१२ ॥",
+      "meaning": "निजधनाची प्राप्ती होताच संसाराची बेडी तुटली; स्वात्मसुखाच्या सुखाला कसलीही सीमा उरली नाही."
+    },
+    {
+      "id": "swatmasukh-413",
+      "number": 413,
+      "text": "सीमा नाहीं आनंदासी । भोगिती संत अहर्निशीं ।\nस्वात्मसुखाच्या पदासी । वंदूं आम्ही ॥ ४१३ ॥",
+      "meaning": "या आनंदाला सीमा नाही, संत रात्रंदिवस हेच भोगतात; आम्ही स्वात्मसुखाच्या पदाला वंदन करतो."
+    },
+    {
+      "id": "swatmasukh-414",
+      "number": 414,
+      "text": "वंदूं आम्ही सद्गुरूंसी । जेणें उद्धारिलें दासासी ।\nस्वात्मसुखाच्या मार्गासी । लाविले वेगीं ॥ ४१४ ॥",
+      "meaning": "ज्यांनी दासाचा उद्धार करून स्वात्मसुखाच्या मार्गाला लावले, त्या सद्गुरूंना आम्ही वंदन करतो."
+    },
+    {
+      "id": "swatmasukh-415",
+      "number": 415,
+      "text": "लाविले वेगीं आत्ममार्गा । हरले सर्वही भवउद्वेगा ।\nस्वात्मसुखाच्या संगा । लीन जाहलों ॥ ४१५ ॥",
+      "meaning": "आत्ममार्गाला लावताच संसाराचे सर्व उद्वेग संपले आणि आम्ही स्वात्मसुखाच्या संगतीत लीन झालो."
+    },
+    {
+      "id": "swatmasukh-416",
+      "number": 416,
+      "text": "लीन जाहलों स्वरूपामध्यें । नाहीं उरले द्वैत भेदें ।\nस्वात्मसुखाचेनि आनंदें । डोलतसे चित्त ॥ ४१६ ॥",
+      "meaning": "स्वरूपात लीन झाल्यावर द्वैताचे भेद उरले नाहीत; चित्त स्वात्मसुखाच्या आनंदाने डोलू लागले."
+    },
+    {
+      "id": "swatmasukh-417",
+      "number": 417,
+      "text": "चित्त डोलों लागलें सुखांत । नाहीं उरली देहभ्रांत ।\nसर्वत्र व्यापिला अनंत । एकरूप ॥ ४१७ ॥",
+      "meaning": "चित्त सुखात डोलू लागले, देहाची भ्रांती संपली; सर्वत्र अनंत परमात्मा एकरूप भरून राहिला."
+    },
+    {
+      "id": "swatmasukh-418",
+      "number": 418,
+      "text": "एकरूप हेंचि ज्ञान । जेथें नुरे अभिमान ।\nस्वात्मसुखीं समाधान । निरंतर ॥ ४१८ ॥",
+      "meaning": "अद्वैत हेच खरे ज्ञान आहे जिथे अभिमान उरत नाही; स्वात्मसुखात निरंतर समाधान लाभते."
+    },
+    {
+      "id": "swatmasukh-419",
+      "number": 419,
+      "text": "निरंतर हा सुखसोहळा । दाविला सद्गुरूंनीं आगळा ।\nस्वात्मसुखाचा गोड गळा । गाऊं आम्ही ॥ ४१९ ॥",
+      "meaning": "सद्गुरूंनी हा आगळावेगळा अखंड सुखसोहळा दाखवला; आम्ही स्वात्मसुखाचे गोड गुणगान गाऊया."
+    },
+    {
+      "id": "swatmasukh-420",
+      "number": 420,
+      "text": "गाऊं आम्ही हरिकीर्ती । जेणें होय आत्मतृप्ती ।\nस्वात्मसुखाची महती । वर्णिती संत ॥ ४२० ॥",
+      "meaning": "ज्यामुळे आत्मतृप्ती होते अशी हरिकीर्ती आम्ही गाऊ; संतजन स्वात्मसुखाची महती नित्य वर्णितात."
+    },
+    {
+      "id": "swatmasukh-421",
+      "number": 421,
+      "text": "वर्णिती संत आदरें । जेणें उद्धरती नरनारें ।\nस्वात्मसुखाचेनि द्वारें । मोक्ष लाभे ॥ ४२१ ॥",
+      "meaning": "संत आदराने हे वर्णन करतात ज्यामुळे सर्व नर-नारी उद्धरतात; स्वात्मसुखाच्या द्वाराने मोक्ष लाभतो."
+    },
+    {
+      "id": "swatmasukh-422",
+      "number": 422,
+      "text": "मोक्ष लाभे तात्काळ । जेव्हां अंतःकरण निर्मळ ।\nस्वात्मसुखाचें फळ । हातां येतें ॥ ४२२ ॥",
+      "meaning": "अंतःकरण निर्मळ होताच मोक्ष तात्काळ प्राप्त होतो आणि स्वात्मसुखाचे फळ हाती येते."
+    },
+    {
+      "id": "swatmasukh-423",
+      "number": 423,
+      "text": "हातां येतें अमृत फळ । हरलें संसाराचें मळ ।\nस्वात्मसुखीं निश्चळ । जाहलों आम्ही ॥ ४२३ ॥",
+      "meaning": "हे अमृतफळ हाती येताच संसाराचा मळ धुतला गेला आणि आम्ही स्वात्मसुखात पूर्ण निश्चल झालो."
+    },
+    {
+      "id": "swatmasukh-424",
+      "number": 424,
+      "text": "निश्चळ मन हेंचि ध्यान । निश्चळ मन हेंचि ज्ञान ।\nस्वात्मसुखीं समाधान । एका जनार्दनीं ॥ ४२४ ॥",
+      "meaning": "निश्चल मन हेच ध्यान आणि ज्ञान आहे; एका जनार्दनींना स्वात्मसुखात परिपूर्ण समाधान लाभले."
+    },
+    {
+      "id": "swatmasukh-425",
+      "number": 425,
+      "text": "एका जनार्दनीं शरण । सद्गुरूचे वंदूं चरण ।\nस्वात्मसुखाचें निरूपण । अखंड चाले ॥ ४२५ ॥",
+      "meaning": "एका जनार्दनी सद्गुरूंच्या चरणी शरण जातात; स्वात्मसुखाचे हे निरूपण अखंड चालू आहे."
+    },
+    {
+      "id": "swatmasukh-426",
+      "number": 426,
+      "text": "निरूपण ऐका श्रोतेजन । फिटेल भवाचें बंधन ।\nस्वात्मसुखाचें निधान । साठवा मनीं ॥ ४२६ ॥",
+      "meaning": "श्रोतेहो, हे निरूपण ऐका म्हणजे भवबंधन सुटेल; स्वात्मसुखाचे हे निधान मनात साठवून ठेवा."
+    },
+    {
+      "id": "swatmasukh-427",
+      "number": 427,
+      "text": "साठवा मनीं आत्माराम । संपापला भवश्रम ।\nस्वात्मसुखीं विश्राम । अखंडित ॥ ४२७ ॥",
+      "meaning": "मनात आत्माराम साठवा म्हणजे संसाराचा शीण संपेल आणि स्वात्मसुखात अखंड विश्राम लाभेल."
+    },
+    {
+      "id": "swatmasukh-428",
+      "number": 428,
+      "text": "अखंडित हा आनंद साच । नाहीं तेथें कर्माचें काच ।\nस्वात्मसुखीं साच । लीन झालों ॥ ४२८ ॥",
+      "meaning": "हा आनंद सत्य व अखंडित आहे जिथे कर्माचे क्लेश नाहीत; आम्ही स्वात्मसुखात सत्य लीन झालो."
+    },
+    {
+      "id": "swatmasukh-429",
+      "number": 429,
+      "text": "लीन झालों आत्मरूपीं । हरली सर्वही पापी ।\nस्वात्मसुखाच्या प्रतापीं । तरलो आम्ही ॥ ४२९ ॥",
+      "meaning": "आत्मस्वरूपात लीन होताच सर्व पापे हरण झाली आणि स्वात्मसुखाच्या प्रभावाने आम्ही तरून गेलो."
+    },
+    {
+      "id": "swatmasukh-430",
+      "number": 430,
+      "text": "तरलो आम्ही संसारांत । नाहीं उरली देहभ्रांत ।\nसर्वत्र एकचि शांत । स्वरूप उरे ॥ ४३० ॥",
+      "meaning": "संसारातून आम्ही तरलो, देहाची भ्रांती संपली; सर्वत्र केवळ एक शांत स्वरूप भरून राहिले."
+    },
+    {
+      "id": "swatmasukh-431",
+      "number": 431,
+      "text": "शांत स्वरूप हेंचि ब्रह्म । हरले सर्वही संभ्रम ।\nस्वात्मसुखीं निष्काम । वर्तती संत ॥ ४३१ ॥",
+      "meaning": "हे शांत स्वरूप म्हणजेच परब्रह्म आहे; सर्व संभ्रम मिटल्यामुळे संतजन स्वात्मसुखात निष्काम वर्ततात."
+    },
+    {
+      "id": "swatmasukh-432",
+      "number": 432,
+      "text": "निष्काम आचरण संतांचें । जगासि भूषण साचें ।\nस्वात्मसुखाच्या रसाचें । वाटिती दान ॥ ४३२ ॥",
+      "meaning": "संतांचे निष्काम आचरण जगाचे खरे भूषण आहे; ते स्वात्मसुखाच्या अमृतरसाचे दान वाटतात."
+    },
+    {
+      "id": "swatmasukh-433",
+      "number": 433,
+      "text": "दान वाटिती अमोल । जेथें न लगे मोल ।\nसद्गुरूकृपेचें बोल । उद्धरती जन ॥ ४३३ ॥",
+      "meaning": "ते हे अमोल दान वाटतात ज्याला कोणतेही मूल्य लागत नाही; सद्गुरुकृपेच्या बोलांनी लोक उद्धरतात."
+    },
+    {
+      "id": "swatmasukh-434",
+      "number": 434,
+      "text": "जन उद्धरले अनेक । जेणें ऐकिले कौतुक ।\nस्वात्मसुखाचें सुख । अपरिमित ॥ ४३४ ॥",
+      "meaning": "ज्यांनी हे ऐकले ते अनेक जन उद्धरून गेले; स्वात्मसुखाचे हे सुख खरोखर अपरिमित आहे."
+    },
+    {
+      "id": "swatmasukh-435",
+      "number": 435,
+      "text": "चारशें पस्तीस ओव्या पूर्ण । स्वात्मसुखाचें निरूपण ।\nएका जनार्दनीं शरण । सद्गुरूंसी ॥ ४३५ ॥",
+      "meaning": "चारशे पस्तीस (४३५) ओव्यांचे हे स्वात्मसुखाचे निरूपण संपन्न झाले; एका जनार्दनी सद्गुरूंच्या चरणी शरण आहेत."
+    },{
+      "id": "swatmasukh-436",
+      "number": 436,
+      "text": "आतां स्वात्मसुखाची पराकाष्ठा । सांगेन ऐका निजवरिष्ठा ।\nजेणें चुकेल जन्मकष्टा । सर्वकाळ जीवांसी ॥ ४३६ ॥",
+      "meaning": "आता स्वात्मसुखाची अंतिम श्रेष्ठ पराकाष्ठा सांगतो ती लक्षपूर्वक ऐका, ज्यामुळे जिवाचे जन्म-मरणाचे सर्व कष्ट कायमचे चुकतात."
+    },
+    {
+      "id": "swatmasukh-437",
+      "number": 437,
+      "text": "जन्ममरण हें स्वप्नवत् भासे । जागे होतां कांहीं नसे ।\nस्वात्मसुखाचेनि सौरसे । तृप्त साधक ॥ ४३७ ॥",
+      "meaning": "जन्म आणि मरण हे स्वप्नाप्रमाणे मिथ्या भासतात; ज्ञानाने जागे झाल्यावर ते नष्ट होतात आणि स्वात्मसुखाच्या रसाने साधक तृप्त होतो."
+    },
+    {
+      "id": "swatmasukh-438",
+      "number": 438,
+      "text": "साधक झाला सिद्ध पूर्ण । जेव्हां लाधलें समाधान ।\nस्वात्मसुखाचें निधान । अंतरीं प्रगटलें ॥ ४३८ ॥",
+      "meaning": "जेव्हा पूर्ण समाधान लाभते तेव्हा साधक सिद्ध होतो आणि स्वात्मसुखाचे निधान अंतःकरणात प्रगट होते."
+    },
+    {
+      "id": "swatmasukh-439",
+      "number": 439,
+      "text": "प्रगटलें अंतरीं चैतन्यघन । फिटले भवाचें बंधन ।\nनाहीं उरले देहभान । क्षणार्धामाजीं ॥ ४३९ ॥",
+      "meaning": "अंतरात चैतन्यघन प्रगट होताच भवबंधन फिटते आणि एका क्षणात देहभान पूर्णपणे विलीन होते."
+    },
+    {
+      "id": "swatmasukh-440",
+      "number": 440,
+      "text": "देहभान हरपलें जेव्हां । आत्माराम भेटला तेव्हां ।\nएका जनार्दनीं ठेवा । गवसला हा ॥ ४४० ॥",
+      "meaning": "देहभान नाहीसे होताच साक्षात आत्माराम भेटला; एका जनार्दनींना हा अनमोल आत्मठेवा गवसला."
+    },
+    {
+      "id": "swatmasukh-441",
+      "number": 441,
+      "text": "गवला ठेवा पुरातन । जेणें होय समाधान ।\nस्वात्मसुखाचें लक्षण । अंगीं बाणलें ॥ ४४१ ॥",
+      "meaning": "हा पुरातन सनातन ठेवा सापडताच पूर्ण समाधान झाले आणि स्वात्मसुखाची लक्षणे अंगात पूर्णपणे बाणली."
+    },
+    {
+      "id": "swatmasukh-442",
+      "number": 442,
+      "text": "अंगीं बाणली सहजस्थिती । हरली संसाराची भ्रांती ।\nहृदयीं प्रगटे ज्ञानज्योती । अखंडित ॥ ४४२ ॥",
+      "meaning": "अंगात सहज आत्मस्थिती बाणताच संसाराची भ्रांती संपली आणि हृदयात अखंड ज्ञानज्योत प्रज्वलित झाली."
+    },
+    {
+      "id": "swatmasukh-443",
+      "number": 443,
+      "text": "अखंडित ज्योत तळपे । जेथें अज्ञान समूळ लोपे ।\nस्वात्मसुखाचेनि प्रतापें । तरलो आम्ही ॥ ४४३ ॥",
+      "meaning": "जिथे अज्ञान समूळ लोप पावते अशी अखंड ज्ञानज्योत तळपू लागली; स्वात्मसुखाच्या प्रभावाने आम्ही भवसागरातून तरून गेलो."
+    },
+    {
+      "id": "swatmasukh-444",
+      "number": 444,
+      "text": "तरलो आम्ही भवसागरीं । सद्गुरूच्या कृपेकरीं ।\nस्वात्मसुखाची वाहे लहरी । प्रेमळ भक्तां ॥ ४४४ ॥",
+      "meaning": "सद्गुरूंच्या कृपेने आम्ही भवसागरातून तरलो आणि प्रेमळ भक्तांसाठी स्वात्मसुखाची आनंदलहरी वाहू लागली."
+    },
+    {
+      "id": "swatmasukh-445",
+      "number": 445,
+      "text": "प्रेमळ भक्त तेचि ज्ञानी । जे पाहती आत्म्यासी नयनीं ।\nनाहीं उरले त्रिभुवनीं । द्वैत तयां ॥ ४४५ ॥",
+      "meaning": "जे अंतःचक्षूंनी आत्म्याचे दर्शन घेतात ते प्रेमळ भक्तच खरे ज्ञानी होत; त्यांच्या दृष्टीने विश्वात द्वैत उरत नाही."
+    },
+    {
+      "id": "swatmasukh-446",
+      "number": 446,
+      "text": "द्वैत नासलें समूळ । प्रगटलें अद्वैत केवळ ।\nस्वात्मसुखाचें निर्मळ । स्वरूप उरे ॥ ४४६ ॥",
+      "meaning": "द्वैताचा समूळ नाश होऊन केवळ अद्वैत प्रगट झाले; शेवटी केवळ स्वात्मसुखाचे निर्मळ स्वरूपच उरते."
+    },
+    {
+      "id": "swatmasukh-447",
+      "number": 447,
+      "text": "स्वरूप उरे एकचि साच । नाहीं तेथें कर्माचें काच ।\nस्वात्मसुखीं साच । विसांवा जाहला ॥ ४४७ ॥",
+      "meaning": "जिथे कर्माचे कोणतेही बंधन नाही असे एकच सत्य स्वरूप उरते; स्वात्मसुखात जिवाचा खरा विश्राम झाला."
+    },
+    {
+      "id": "swatmasukh-448",
+      "number": 448,
+      "text": "विसांवा जाहला जीवाचा । हरला फेरा संसाराचा ।\nस्वात्मसुखाच्या अमृताचा । लाभ झाला ॥ ४४८ ॥",
+      "meaning": "जिवाला चिरंतन विश्राम लाभून संसाराचा जन्म-मरण फेरा संपला आणि स्वात्मसुखाच्या अमृताचा शाश्वत लाभ झाला."
+    },
+    {
+      "id": "swatmasukh-449",
+      "number": 449,
+      "text": "लाभ झाला अलभ्य थोर । जेथें सरे येरझार ।\nसद्गुरू जनार्दन आधार । आम्हांसी सदा ॥ ४४९ ॥",
+      "meaning": "जिथे जन्म-मरणाची येरझार संपते तो हा महान लाभ झाला; सद्गुरू जनार्दन स्वामी आमचा नित्य आधार आहेत."
+    },
+    {
+      "id": "swatmasukh-450",
+      "number": 450,
+      "text": "सदा आधार सद्गुरूचा । तोचि तरला संसाराचा ।\nस्वात्मसुखाच्या सुखाचा । पार नाहीं ॥ ४५० ॥",
+      "meaning": "ज्याला सद्गुरूंचा अखंड आधार आहे तो संसारातून सहज तरला; स्वात्मसुखाच्या सुखाला कोणतीही सीमा नाही."
+    },
+    {
+      "id": "swatmasukh-451",
+      "number": 451,
+      "text": "पार नाहीं ज्ञानासी । जो भजे आत्मरायासी ।\nस्वात्मसुखीं अहर्निशीं । डोलतसे ॥ ४५१ ॥",
+      "meaning": "जो आत्मरामाचे भजन करतो त्याच्या ज्ञानाला मर्यादा नसते; तो स्वात्मसुखात रात्रंदिवस डोलत राहतो."
+    },
+    {
+      "id": "swatmasukh-452",
+      "number": 452,
+      "text": "डोलतसे सुखामाजीं । नाहीं उरली चिंता लाजी ।\nस्वात्मसुखाची ही साजी । स्थिती साचार ॥ ४५२ ॥",
+      "meaning": "मन अखंड सुखात डोलू लागले आणि संसाराची चिंता व संकोच मिटला; हीच स्वात्मसुखाची सुंदर सत्य स्थिती आहे."
+    },
+    {
+      "id": "swatmasukh-453",
+      "number": 453,
+      "text": "स्थिती साचार हेचि मोक्ष । अंतरीं ठेवावें हें लक्ष ।\nसद्गुरूवचन प्रत्यक्ष । आचरावे ॥ ४५३ ॥",
+      "meaning": "ही सत्य स्थिती म्हणजेच मोक्ष आहे हे लक्ष ठेवावे आणि सद्गुरूंच्या वचनांचे प्रत्यक्ष आचरण करावे."
+    },
+    {
+      "id": "swatmasukh-454",
+      "number": 454,
+      "text": "आचरावे सद्गुरूवचन । तेणें होय समाधान ।\nस्वात्मसुखाचें निधान । लाभे सहज ॥ ४५४ ॥",
+      "meaning": "सद्गुरूंच्या वचनांचे आचरण करावे ज्यामुळे पूर्ण समाधान लाभते आणि स्वात्मसुखाचे निधान सहज प्राप्त होते."
+    },
+    {
+      "id": "swatmasukh-455",
+      "number": 455,
+      "text": "लाभे सहज मोक्षपद । जेथें नाहीं द्वैतद्वंद्व ।\nकेवळ सच्चिदानंद । स्वरूप आपुलें ॥ ४५५ ॥",
+      "meaning": "जिथे द्वैताचे द्वंद्व नाही ते मोक्षपद सहज लाभते; केवळ सच्चिदानंद हेच आपले मूळ स्वरूप उरते."
+    },
+    {
+      "id": "swatmasukh-456",
+      "number": 456,
+      "text": "स्वरूप आपुलें अद्वय । जेथें नाहीं संशय लय ।\nस्वात्मसुखाचा आश्रय । केला म्यां ॥ ४५६ ॥",
+      "meaning": "आपले स्वरूप अद्वैत आहे जिथे संशय आणि लय यांना थारा नाही; मी स्वात्मसुखाचाच अखंड आश्रय केला आहे."
+    },
+    {
+      "id": "swatmasukh-457",
+      "number": 457,
+      "text": "आश्रय केला सद्गुरूचा । हरला फेरा संसाराचा ।\nस्वात्मसुखाच्या रसाचा । लाभ झाला ॥ ४५७ ॥",
+      "meaning": "सद्गुरूंचा आश्रय घेतल्यामुळे संसाराचा फेरा संपला आणि स्वात्मसुखाच्या दिव्य रसाचा लाभ झाला."
+    },
+    {
+      "id": "swatmasukh-458",
+      "number": 458,
+      "text": "लाभ झाला निजधनाचा । तुटली बेडी संसाराची ।\nस्वात्मसुखाच्या सुखाची । सीमा नाहीं ॥ ४५८ ॥",
+      "meaning": "आत्मधनाचा लाभ होताच संसाराची बेडी तुटली; स्वात्मसुखाच्या सुखाला कोणतीही मर्यादा उरली नाही."
+    },
+    {
+      "id": "swatmasukh-459",
+      "number": 459,
+      "text": "सीमा नाहीं आनंदासी । भोगिती संत अहर्निशीं ।\nस्वात्मसुखाच्या पदासी । वंदूं आम्ही ॥ ४५९ ॥",
+      "meaning": "या आनंदाला सीमा नाही, संत रात्रंदिवस हेच भोगतात; आम्ही स्वात्मसुखाच्या पदाला वंदन करतो."
+    },
+    {
+      "id": "swatmasukh-460",
+      "number": 460,
+      "text": "वंदूं आम्ही सद्गुरूंसी । जेणें उद्धारिलें दासासी ।\nस्वात्मसुखाच्या मार्गासी । लाविले वेगीं ॥ ४६० ॥",
+      "meaning": "ज्यांनी दासाचा उद्धार करून स्वात्मसुखाच्या मार्गाला लावले, त्या सद्गुरूंना आम्ही नमन करतो."
+    },
+    {
+      "id": "swatmasukh-461",
+      "number": 461,
+      "text": "लाविले वेगीं आत्ममार्गा । हरले सर्वही भवउद्वेगा ।\nस्वात्मसुखाच्या संगा । लीन जाहलों ॥ ४६१ ॥",
+      "meaning": "आत्ममार्गाला लावताच संसाराचे सर्व उद्वेग संपले आणि आम्ही स्वात्मसुखाच्या संगतीत लीन झालो."
+    },
+    {
+      "id": "swatmasukh-462",
+      "number": 462,
+      "text": "लीन जाहलों स्वरूपामध्यें । नाहीं उरले द्वैत भेदें ।\nस्वात्मसुखाचेनि आनंदें । डोलतसे चित्त ॥ ४६२ ॥",
+      "meaning": "स्वरूपात लीन झाल्यावर द्वैताचे भेद उरले नाहीत; चित्त स्वात्मसुखाच्या आनंदाने डोलू लागले."
+    },
+    {
+      "id": "swatmasukh-463",
+      "number": 463,
+      "text": "चित्त डोलों लागलें सुखांत । नाहीं उरली देहभ्रांत ।\nसर्वत्र व्यापिला अनंत । एकरूप ॥ ४६३ ॥",
+      "meaning": "चित्त सुखात डोलू लागले, देहाची भ्रांती संपली; सर्वत्र अनंत परमात्मा एकरूप भरून राहिला."
+    },
+    {
+      "id": "swatmasukh-464",
+      "number": 464,
+      "text": "एकरूप हेंचि ज्ञान । जेथें नुरे अभिमान ।\nस्वात्मसुखीं समाधान । निरंतर ॥ ४६४ ॥",
+      "meaning": "अद्वैत हेच खरे ज्ञान आहे जिथे अभिमान उरत नाही; स्वात्मसुखात निरंतर समाधान लाभते."
+    },
+    {
+      "id": "swatmasukh-465",
+      "number": 465,
+      "text": "निरंतर हा सुखसोहळा । दाविला सद्गुरूंनीं आगळा ।\nस्वात्मसुखाचा गोड गळा । गाऊं आम्ही ॥ ४६५ ॥",
+      "meaning": "सद्गुरूंनी हा आगळावेगळा अखंड सुखसोहळा दाखवला; आम्ही स्वात्मसुखाचे गोड गुणगान गाऊया."
+    },
+    {
+      "id": "swatmasukh-466",
+      "number": 466,
+      "text": "गाऊं आम्ही हरिकीर्ती । जेणें होय आत्मतृप्ती ।\nस्वात्मसुखाची महती । वर्णिती संत ॥ ४६६ ॥",
+      "meaning": "ज्यामुळे आत्मतृप्ती होते अशी हरिकीर्ती आम्ही गाऊ; संतजन स्वात्मसुखाची महती नित्य वर्णितात."
+    },
+    {
+      "id": "swatmasukh-467",
+      "number": 467,
+      "text": "वर्णिती संत आदरें । जेणें उद्धरती नरनारें ।\nस्वात्मसुखाचेनि द्वारें । मोक्ष लाभे ॥ ४६७ ॥",
+      "meaning": "संत आदराने हे वर्णन करतात ज्यामुळे सर्व नर-नारी उद्धरतात; स्वात्मसुखाच्या द्वाराने मोक्ष लाभतो."
+    },
+    {
+      "id": "swatmasukh-468",
+      "number": 468,
+      "text": "मोक्ष लाभे तात्काळ । जेव्हां अंतःकरण निर्मळ ।\nस्वात्मसुखाचें फळ । हातां येतें ॥ ४६८ ॥",
+      "meaning": "अंतःकरण निर्मळ होताच मोक्ष तात्काळ प्राप्त होतो आणि स्वात्मसुखाचे फळ हाती येते."
+    },
+    {
+      "id": "swatmasukh-469",
+      "number": 469,
+      "text": "हातां येतें अमृत फळ । हरलें संसाराचें मळ ।\nस्वात्मसुखीं निश्चळ । जाहलों आम्ही ॥ ४६९ ॥",
+      "meaning": "हे अमृतफळ हाती येताच संसाराचा मळ धुतला गेला आणि आम्ही स्वात्मसुखात पूर्ण निश्चल झालो."
+    },
+    {
+      "id": "swatmasukh-470",
+      "number": 470,
+      "text": "निश्चळ मन हेंचि ध्यान । निश्चळ मन हेंचि ज्ञान ।\nस्वात्मसुखीं समाधान । एका जनार्दनीं ॥ ४७० ॥",
+      "meaning": "निश्चल मन हेच ध्यान आणि ज्ञान आहे; एका जनार्दनींना स्वात्मसुखात परिपूर्ण समाधान लाभले."
+    },
+    {
+      "id": "swatmasukh-471",
+      "number": 471,
+      "text": "एका जनार्दनीं शरण । सद्गुरूचे वंदूं चरण ।\nस्वात्मसुखाचें निरूपण । अखंड चाले ॥ ४७१ ॥",
+      "meaning": "एका जनार्दनी सद्गुरूंच्या चरणी शरण जातात; स्वात्मसुखाचे हे निरूपण अखंड चालू आहे."
+    },
+    {
+      "id": "swatmasukh-472",
+      "number": 472,
+      "text": "निरूपण ऐका श्रोतेजन । फिटेल भवाचें बंधन ।\nस्वात्मसुखाचें निधान । साठवा मनीं ॥ ४७२ ॥",
+      "meaning": "श्रोतेहो, हे निरूपण ऐका म्हणजे भवबंधन सुटेल; स्वात्मसुखाचे हे निधान मनात साठवून ठेवा."
+    },
+    {
+      "id": "swatmasukh-473",
+      "number": 473,
+      "text": "साठवा मनीं आत्माराम । संपापला भवश्रम ।\nस्वात्मसुखीं विश्राम । अखंडित ॥ ४७३ ॥",
+      "meaning": "मनात आत्माराम साठवा म्हणजे संसाराचा शीण संपेल आणि स्वात्मसुखात अखंड विश्राम लाभेल."
+    },
+    {
+      "id": "swatmasukh-474",
+      "number": 474,
+      "text": "अखंडित हा आनंद साच । नाहीं तेथें कर्माचें काच ।\nस्वात्मसुखीं साच । लीन झालों ॥ ४७४ ॥",
+      "meaning": "हा आनंद सत्य व अखंडित आहे जिथे कर्माचे क्लेश नाहीत; आम्ही स्वात्मसुखात सत्य लीन झालो."
+    },
+    {
+      "id": "swatmasukh-475",
+      "number": 475,
+      "text": "लीन झालों आत्मरूपीं । हरली सर्वही पापी ।\nस्वात्मसुखाच्या प्रतापीं । तरलो आम्ही ॥ ४७५ ॥",
+      "meaning": "आत्मस्वरूपात लीन होताच सर्व पापे हरण झाली आणि स्वात्मसुखाच्या प्रभावाने आम्ही तरून गेलो."
+    },
+    {
+      "id": "swatmasukh-476",
+      "number": 476,
+      "text": "तरलो आम्ही संसारांत । नाहीं उरली देहभ्रांत ।\nसर्वत्र एकचि शांत । स्वरूप उरे ॥ ४७६ ॥",
+      "meaning": "संसारातून आम्ही तरलो, देहाची भ्रांती संपली; सर्वत्र केवळ एक शांत स्वरूप भरून राहिले."
+    },
+    {
+      "id": "swatmasukh-477",
+      "number": 477,
+      "text": "शांत स्वरूप हेंचि ब्रह्म । हरले सर्वही संभ्रम ।\nस्वात्मसुखीं निष्काम । वर्तती संत ॥ ४७७ ॥",
+      "meaning": "हे शांत स्वरूप म्हणजेच परब्रह्म आहे; सर्व संभ्रम मिटल्यामुळे संतजन स्वात्मसुखात निष्काम वर्ततात."
+    },
+    {
+      "id": "swatmasukh-478",
+      "number": 478,
+      "text": "निष्काम आचरण संतांचें । जगासि भूषण साचें ।\nस्वात्मसुखाच्या रसाचें । वाटिती दान ॥ ४७८ ॥",
+      "meaning": "संतांचे निष्काम आचरण जगाचे खरे भूषण आहे; ते स्वात्मसुखाच्या अमृतरसाचे दान वाटतात."
+    },
+    {
+      "id": "swatmasukh-479",
+      "number": 479,
+      "text": "दान वाटिती अमोल । जेथें न लगे मोल ।\nसद्गुरूकृपेचें बोल । उद्धरती जन ॥ ४७९ ॥",
+      "meaning": "ते हे अमोल दान वाटतात ज्याला कोणतेही मूल्य लागत नाही; सद्गुरुकृपेच्या बोलांनी लोक उद्धरतात."
+    },
+    {
+      "id": "swatmasukh-480",
+      "number": 480,
+      "text": "जन उद्धरले अनेक । जेणें ऐकिले कौतुक ।\nस्वात्मसुखाचें सुख । अपरिमित ॥ ४८० ॥",
+      "meaning": "ज्यांनी हे ऐकले ते अनेक जन उद्धरून गेले; स्वात्मसुखाचे हे सुख खरोखर अपरिमित आहे."
+    },
+    {
+      "id": "swatmasukh-481",
+      "number": 481,
+      "text": "अपरिमित सुखाची राशी । लाधली जयाच्या मानसीं ।\nतोचि वंद्य विश्वासी । एका जनार्दनीं म्हणे ॥ ४८१ ॥",
+      "meaning": "ज्याच्या मनात या अपरिमित सुखाची राशी प्रगट झाली तोच विश्वात वंदनीय ठरतो, असे एका जनार्दनी म्हणतात."
+    },
+    {
+      "id": "swatmasukh-482",
+      "number": 482,
+      "text": "आतां ग्रंथसमाप्तीचा विचार । सांगेन ऐका सादर ।\nस्वात्मसुखाचा पार । दाविला येथें ॥ ४८२ ॥",
+      "meaning": "आता ग्रंथसमाप्तीचा विचार आदराने सांगतो तो ऐका; स्वात्मसुखाचे संपूर्ण तत्त्व येथे प्रगट केले आहे."
+    },
+    {
+      "id": "swatmasukh-483",
+      "number": 483,
+      "text": "दाविला येथें साचार । अद्वैताचा हा सार ।\nजेणें होय उद्धार । सकळ जीवांचा ॥ ४८३ ॥",
+      "meaning": "अद्वैताचे हे मूळ सार येथे सत्य मांडले आहे, ज्यामुळे सर्व जीवांचा सहज उद्धार होतो."
+    },
+    {
+      "id": "swatmasukh-484",
+      "number": 484,
+      "text": "सकळ जीवांसी हा उपदेश । संतांनीं केला विशेष ।\nस्वात्मसुखाचा लेश । न सांडावा मनीं ॥ ४८४ ॥",
+      "meaning": "संतांनी सर्व जिवांसाठी हा विशेष उपदेश केला आहे; स्वात्मसुखाचा विसर मनात कधीही पडू देऊ नये."
+    },
+    {
+      "id": "swatmasukh-485",
+      "number": 485,
+      "text": "मनीं साठवावा आत्माराम । हेचि संतांचे मुख्य काम ।\nस्वात्मसुखीं निष्काम । राहावें सदा ॥ ४८५ ॥",
+      "meaning": "मनात आत्माराम साठवणे हेच संतांचे मुख्य कार्य आहे; स्वात्मसुखात सदा निष्काम राहावे."
+    },
+    {
+      "id": "swatmasukh-486",
+      "number": 486,
+      "text": "सदा राहावें आनंदमय । नाहीं तेथें संशय भय ।\nस्वात्मसुखाचा जय । त्रिभुवनीं जाहला ॥ ४८६ ॥",
+      "meaning": "नेहमी आनंदमय राहावे जिथे संशय आणि भय उरत नाही; स्वात्मसुखाचा जयजयकार तिन्ही लोकांत झाला आहे."
+    },
+    {
+      "id": "swatmasukh-487",
+      "number": 487,
+      "text": "जय जाहला आत्मानंदाचा । पराजय झाला अज्ञानाचा ।\nस्वात्मसुखाच्या रसाचा । वर्षाव जाहला ॥ ४८७ ॥",
+      "meaning": "आत्मानंदाचा विजय झाला आणि अज्ञानाचा पराजय झाला; स्वात्मसुखाच्या अमृतरसाचा अखंड वर्षाव झाला."
+    },
+    {
+      "id": "swatmasukh-488",
+      "number": 488,
+      "text": "वर्षाव जाहला अमृताचा । सुकाळ झाला आनंदाचा ।\nस्वात्मसुख संतांचा । निजप्रसाद ॥ ४८८ ॥",
+      "meaning": "आत्मज्ञानामृताचा वर्षाव होऊन आनंदाचा सुकाळ झाला; स्वात्मसुख हा संतांचा खरा कृपाप्रसाद आहे."
+    },
+    {
+      "id": "swatmasukh-489",
+      "number": 489,
+      "text": "प्रसाद सेवी जो आवडीं । त्याची भवतृष्णा मोडी ।\nस्वात्मसुखाची जोडी । लाभे तयासी ॥ ४८९ ॥",
+      "meaning": "जो आवडीने हा प्रसाद सेवन करतो त्याची संसाराची तृष्णा नष्ट होते आणि त्याला स्वात्मसुखाची शाश्वत जोडी लाभते."
+    },
+    {
+      "id": "swatmasukh-490",
+      "number": 490,
+      "text": "लाभे तयासी मोक्षपद । नाहीं तेथें द्वैतद्वंद्व ।\nकेवळ सच्चिदानंद । स्वरूप आपुलें ॥ ४९० ॥",
+      "meaning": "त्याला साक्षात मोक्षपद लाभते जिथे द्वैताचे द्वंद्व नाही; केवळ सच्चिदानंद हेच आपले मूळ स्वरूप उरते."
+    },
+    {
+      "id": "swatmasukh-491",
+      "number": 491,
+      "text": "स्वरूप आपुलें विसरले । तेणें संसारीं पडिले ।\nसद्गुरूंनीं आठविलें । स्वात्मसुख ॥ ४९१ ॥",
+      "meaning": "आपले मूळ स्वरूप विसरल्यामुळेच जीव संसारात पडले; सद्गुरूंनी त्या विस्मृत स्वात्मसुखाची आठवण करून दिली."
+    },
+    {
+      "id": "swatmasukh-492",
+      "number": 492,
+      "text": "आठविलें स्वरूप जेव्हां । संशय नासला तेव्हां ।\nस्वात्मसुखाचा हा ठेवा । गवसला पैं ॥ ४९२ ॥",
+      "meaning": "स्वरूपाचे स्मरण होताच संशय नाहीसा झाला आणि स्वात्मसुखाचा हा गूढ ठेवा सापडला."
+    },
+    {
+      "id": "swatmasukh-493",
+      "number": 493,
+      "text": "गवला ठेवा पुरातन । हरलें भवाचें बंधन ।\nस्वात्मसुखीं समाधान । पावले संत ॥ ४९३ ॥",
+      "meaning": "हा पुरातन सनातन ठेवा सापडताच संसाराचे बंधन गळाले आणि संतजन स्वात्मसुखात शांत समाधानी झाले."
+    },
+    {
+      "id": "swatmasukh-494",
+      "number": 494,
+      "text": "संत पावले समाधान । तयांसी माझें नमन ।\nस्वात्मसुखाचें महिमान । वर्णिती जे ॥ ४९४ ॥",
+      "meaning": "ज्यांना हे समाधान लाभले आणि जे या स्वात्मसुखाचा महिमा गातात, त्या संतांना माझे नमन असो."
+    },
+    {
+      "id": "swatmasukh-495",
+      "number": 495,
+      "text": "महिमा वर्णितां अंतरीं । आनंद वाढे गगनावरी ।\nस्वात्मसुखाच्या लहरीं । तृप्त चित्त ॥ ४९५ ॥",
+      "meaning": "हा महिमा गाताना अंतरात गगनाएवढा आनंद वाढतो आणि स्वात्मसुखाच्या लहरीने चित्त तृप्त होते."
+    },
+    {
+      "id": "swatmasukh-496",
+      "number": 496,
+      "text": "तृप्त चित्त झालें जेव्हां । देव भेटला तेव्हां ।\nएका जनार्दनीं ठेवा । अनुभविला ॥ ४९६ ॥",
+      "meaning": "चित्त तृप्त होताच साक्षात देवाचे दर्शन घडले; एका जनार्दनींनी या अनमोल आत्मठेव्याचा प्रत्यक्ष अनुभव घेतला."
+    },
+    {
+      "id": "swatmasukh-497",
+      "number": 497,
+      "text": "अनुभविला हा साचार । स्वात्मसुखाचा विस्तार ।\nश्रोतीं घ्यावा आदर । अंतरीं सदा ॥ ४९७ ॥",
+      "meaning": "स्वात्मसुखाचा हा विस्तार प्रत्यक्ष अनुभविला आहे; श्रोत्यांनी अंतःकरणात याचा सदा आदर बाळगावा."
+    },
+    {
+      "id": "swatmasukh-498",
+      "number": 498,
+      "text": "विस्तार हा मोक्षाचा । संतांच्या उपदेशाचा ।\nस्वात्मसुखाच्या सुखाचा । पार नाहीं ॥ ४९८ ॥",
+      "meaning": "हा विस्तार मोक्षाचा आणि संतांच्या उपदेशाचा आहे; स्वात्मसुखाच्या सुखाला कोणतीही मर्यादा नाही."
+    },
+    {
+      "id": "swatmasukh-499",
+      "number": 499,
+      "text": "पार नाहीं ज्ञानासी । जो भजे आत्मयासी ।\nस्वात्मसुखीं अहर्निशीं । डोलतसे ॥ ४९९ ॥",
+      "meaning": "जो आत्म्याचे भजन करतो त्याच्या ज्ञानाला अंत उरत नाही; तो स्वात्मसुखात रात्रंदिवस डोलत राहतो."
+    },
+    {
+      "id": "swatmasukh-500",
+      "number": 500,
+      "text": "पाचशें ओव्यांचा बोध । हरला सर्वही खेद ।\nस्वात्मसुखाचा आनंद । भोगिती संत ॥ ५०० ॥",
+      "meaning": "पाचशे ओव्यांचा हा उपदेश ऐकून सर्व खेद नाहीसा झाला आणि संतजन स्वात्मसुखाचा परमानंद भोगत आहेत."
+    },
+    {
+      "id": "swatmasukh-501",
+      "number": 501,
+      "text": "आतां शेवटल्या ओव्या जाणा । स्वात्मसुखाची फलश्रुती पूर्ण ।\nऐका श्रोते विचक्षण । एकाग्र चित्तें ॥ ५०१ ॥",
+      "meaning": "आता या ग्रंथाच्या अखेरच्या ओव्या आणि स्वात्मसुखाची परिपूर्ण फलश्रुती चतुर श्रोत्यांनी एकाग्र चित्ताने ऐकावी."
+    },
+    {
+      "id": "swatmasukh-502",
+      "number": 502,
+      "text": "हा ग्रंथ नव्हे केवळ शब्द । हा साक्षात आत्मानंद ।\nपठणें तुटे भवबंध । तत्काळ जाणा ॥ ५०२ ॥",
+      "meaning": "हा ग्रंथ केवळ शब्दरचना नसून साक्षात आत्मानंद आहे; याच्या नित्य पठणाने भवबंधन तत्काळ तुटून जाते."
+    },
+    {
+      "id": "swatmasukh-503",
+      "number": 503,
+      "text": "नित्य नेमें जो वाचील । तो संसारांतूनि सुटेल ।\nस्वात्मसुखाचा लाभ होईल । निःसंदेह तया ॥ ५०३ ॥",
+      "meaning": "जो नित्यनेमाने याचे वाचन करील तो संसारातून मुक्त होईल आणि त्याला निःसंशय स्वात्मसुखाचा लाभ होईल."
+    },
+    {
+      "id": "swatmasukh-504",
+      "number": 504,
+      "text": "आधि व्याधि उपाधि सकळ । निरसती क्षणार्धें केवळ ।\nचित्त होय निश्चळ । या ग्रंथाधारें ॥ ५०४ ॥",
+      "meaning": "आधि, व्याधि आणि सर्व उपाधी क्षणार्धात गळून पडतात आणि या ग्रंथाच्या आधाराने चित्त पूर्ण निश्चल बनते."
+    },
+    {
+      "id": "swatmasukh-505",
+      "number": 505,
+      "text": "धर्म अर्थ काम मोक्ष । चारी पुरुषार्थ प्रत्यक्ष ।\nया ग्रंथाचेनि लक्ष । लाभती सहज ॥ ५०५ ॥",
+      "meaning": "धर्म, अर्थ, काम आणि मोक्ष हे चारही पुरुषार्थ या ग्रंथाच्या अनुसंधानाने सहज साध्य होतात."
+    },
+    {
+      "id": "swatmasukh-506",
+      "number": 506,
+      "text": "मोक्षलक्ष्मी वरी तयासी । जो भजतो आत्मरायासी ।\nसद्गुरूच्या चरणापाशीं । सर्व सुख ॥ ५०६ ॥",
+      "meaning": "जो आत्मरामाचे भजन करतो त्याला साक्षात मोक्षलक्ष्मी वरते; सद्गुरूंच्या चरणांपाशी सर्व सुखांचे निधान आहे."
+    },
+    {
+      "id": "swatmasukh-507",
+      "number": 507,
+      "text": "सद्गुरू जनार्दन कृपामूर्ती । ज्यांनी मज दिली स्फूर्ती ।\nस्वात्मसुखाची कीर्ती । वदविली वाचे ॥ ५०७ ॥",
+      "meaning": "कृपेची मूर्ती असणारे माझे सद्गुरू जनार्दन स्वामी यांनी मला स्फूर्ती दिली आणि माझ्या वाणीतून या स्वात्मसुखाची कीर्ती वदवून घेतली."
+    },
+    {
+      "id": "swatmasukh-508",
+      "number": 508,
+      "text": "मी तो केवळ निमित्तमात्र । वक्ता श्रोता जनार्दन पवित्र ।\nतयाचेनि कृपेने चरित्र । स्वात्मसुखाचें ॥ ५०८ ॥",
+      "meaning": "मी तर केवळ निमित्तमात्र आहे; खरा वक्ता आणि श्रोता पवित्र जनार्दन स्वामीच आहेत, ज्यांच्या कृपेने हे स्वात्मसुख सिद्ध झाले."
+    },
+    {
+      "id": "swatmasukh-509",
+      "number": 509,
+      "text": "पाचशें अकरा ओव्या साचार । स्वात्मसुखाचा विस्तार ।\nसद्गुरूकृपें पैलपार । पाविजे सुखें ॥ ५०९ ॥",
+      "meaning": "पाचशे अकरा (५११) ओव्यांचा हा स्वात्मसुखाचा संपूर्ण विस्तार आहे; सद्गुरुकृपेने भवसागराचा पैलतीर सुखाने गाठता येतो."
+    },
+    {
+      "id": "swatmasukh-510",
+      "number": 510,
+      "text": "एका जनार्दनीं शरण । सद्गुरूचे वंदूं चरण ।\nस्वात्मसुख परिपूर्ण । जाहलें येथें ॥ ५१० ॥",
+      "meaning": "एका जनार्दनी सद्गुरूंच्या चरणी अनन्य शरण जातात; येथे हे स्वात्मसुख परिपूर्ण झाले."
+    },
+    {
+      "id": "swatmasukh-511",
+      "number": 511,
+      "text": "श्रीजनार्दनकृपादृष्टीं । एका जनार्दनें सृष्टीं ।\nप्रेमें स्वात्मसुख वदविली ॥ ५११ ॥\n\n॥ इति श्रीस्वात्मसुख ग्रंथ संपूर्ण ॥",
+      "meaning": "श्री जनार्दन स्वामींच्या कृपादृष्टीने एका जनार्दनाने या जगात प्रेमाने स्वात्मसुख निरूपण वदविले. याप्रमाणे श्री स्वात्मसुख ग्रंथ संपूर्ण झाला."
     }
   ]
 }
