@@ -1,0 +1,797 @@
+{
+  "id": "gatha-index",
+  "title": "📿 अभंग अनुक्रमणिका 📿",
+  "type": "अनुक्रमणिका",
+  "description": "वाचनाच्या सोयीसाठी गाथेची १००-१०० अभंगांच्या भागांमध्ये विभागणी केली आहे.",
+  "totalEntries": 4583,
+  "partSize": 100,
+  "themes": [
+    {
+      "title": "करुणा रसाचे अभंग",
+      "type": "करुणा"
+    },
+    {
+      "title": "उपदेशपर वचने",
+      "type": "उपदेश"
+    },
+    {
+      "title": "विठ्ठल भक्ती",
+      "type": "भक्ती"
+    },
+    {
+      "title": "पांडुरंग आळवणी",
+      "type": "आळवणी"
+    },
+    {
+      "title": "नाममाहात्म्य पर अभंग",
+      "type": "नाममाहात्म्य"
+    },
+    {
+      "title": "संत महिमा व साधुसंगती",
+      "type": "संत महिमा"
+    },
+    {
+      "title": "पाखंड खंडन व ढोंग विदारण",
+      "type": "पाखंड खंडन"
+    },
+    {
+      "title": "गौळणी व कृष्णलीला",
+      "type": "गौळणी • कृष्णलीला"
+    },
+    {
+      "title": "संसार-वैराग्य व नश्वरता",
+      "type": "वैराग्य"
+    },
+    {
+      "title": "आत्मनिवेदन व स्वानुभव",
+      "type": "आत्मनिवेदन"
+    },
+    {
+      "title": "प्रार्थना व कृतज्ञता",
+      "type": "कृतज्ञता"
+    }
+  ],
+  "parts": [
+    {
+      "id": "gatha-01",
+      "number": 1,
+      "title": "भाग 1",
+      "subtitle": "अभंग 1 ते 100",
+      "range": [
+        1,
+        100
+      ],
+      "file": "tukaram/gatha_01.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_१_ते_३००",
+        "kind": "Wikisource",
+        "scope": "1-300"
+      }
+    },
+    {
+      "id": "gatha-02",
+      "number": 2,
+      "title": "भाग 2",
+      "subtitle": "अभंग 101 ते 200",
+      "range": [
+        101,
+        200
+      ],
+      "file": "tukaram/gatha_02.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_१_ते_३००",
+        "kind": "Wikisource",
+        "scope": "1-300"
+      }
+    },
+    {
+      "id": "gatha-03",
+      "number": 3,
+      "title": "भाग 3",
+      "subtitle": "अभंग 201 ते 300",
+      "range": [
+        201,
+        300
+      ],
+      "file": "tukaram/gatha_03.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_१_ते_३००",
+        "kind": "Wikisource",
+        "scope": "1-300"
+      }
+    },
+    {
+      "id": "gatha-04",
+      "number": 4,
+      "title": "भाग 4",
+      "subtitle": "अभंग 301 ते 400",
+      "range": [
+        301,
+        400
+      ],
+      "file": "tukaram/gatha_04.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_३०१_ते_६००",
+        "kind": "Wikisource",
+        "scope": "301-600"
+      }
+    },
+    {
+      "id": "gatha-05",
+      "number": 5,
+      "title": "भाग 5",
+      "subtitle": "अभंग 401 ते 500",
+      "range": [
+        401,
+        500
+      ],
+      "file": "tukaram/gatha_05.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_३०१_ते_६००",
+        "kind": "Wikisource",
+        "scope": "301-600"
+      }
+    },
+    {
+      "id": "gatha-06",
+      "number": 6,
+      "title": "भाग 6",
+      "subtitle": "अभंग 501 ते 600",
+      "range": [
+        501,
+        600
+      ],
+      "file": "tukaram/gatha_06.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_३०१_ते_६००",
+        "kind": "Wikisource",
+        "scope": "301-600"
+      }
+    },
+    {
+      "id": "gatha-07",
+      "number": 7,
+      "title": "भाग 7",
+      "subtitle": "अभंग 601 ते 700",
+      "range": [
+        601,
+        700
+      ],
+      "file": "tukaram/gatha_07.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_६०१_ते_९००",
+        "kind": "Wikisource",
+        "scope": "601-900"
+      }
+    },
+    {
+      "id": "gatha-08",
+      "number": 8,
+      "title": "भाग 8",
+      "subtitle": "अभंग 701 ते 800",
+      "range": [
+        701,
+        800
+      ],
+      "file": "tukaram/gatha_08.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_६०१_ते_९००",
+        "kind": "Wikisource",
+        "scope": "601-900"
+      }
+    },
+    {
+      "id": "gatha-09",
+      "number": 9,
+      "title": "भाग 9",
+      "subtitle": "अभंग 801 ते 900",
+      "range": [
+        801,
+        900
+      ],
+      "file": "tukaram/gatha_09.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_६०१_ते_९००",
+        "kind": "Wikisource",
+        "scope": "601-900"
+      }
+    },
+    {
+      "id": "gatha-10",
+      "number": 10,
+      "title": "भाग 10",
+      "subtitle": "अभंग 901 ते 1000",
+      "range": [
+        901,
+        1000
+      ],
+      "file": "tukaram/gatha_10.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_९०१_ते_१२००",
+        "kind": "Wikisource",
+        "scope": "901-1200"
+      }
+    },
+    {
+      "id": "gatha-11",
+      "number": 11,
+      "title": "भाग 11",
+      "subtitle": "अभंग 1001 ते 1100",
+      "range": [
+        1001,
+        1100
+      ],
+      "file": "tukaram/gatha_11.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_९०१_ते_१२००",
+        "kind": "Wikisource",
+        "scope": "901-1200"
+      }
+    },
+    {
+      "id": "gatha-12",
+      "number": 12,
+      "title": "भाग 12",
+      "subtitle": "अभंग 1101 ते 1200",
+      "range": [
+        1101,
+        1200
+      ],
+      "file": "tukaram/gatha_12.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_९०१_ते_१२००",
+        "kind": "Wikisource",
+        "scope": "901-1200"
+      }
+    },
+    {
+      "id": "gatha-13",
+      "number": 13,
+      "title": "भाग 13",
+      "subtitle": "अभंग 1201 ते 1300",
+      "range": [
+        1201,
+        1300
+      ],
+      "file": "tukaram/gatha_13.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_१२०१_ते_१५००",
+        "kind": "Wikisource",
+        "scope": "1201-1500"
+      }
+    },
+    {
+      "id": "gatha-14",
+      "number": 14,
+      "title": "भाग 14",
+      "subtitle": "अभंग 1301 ते 1400",
+      "range": [
+        1301,
+        1400
+      ],
+      "file": "tukaram/gatha_14.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_१२०१_ते_१५००",
+        "kind": "Wikisource",
+        "scope": "1201-1500"
+      }
+    },
+    {
+      "id": "gatha-15",
+      "number": 15,
+      "title": "भाग 15",
+      "subtitle": "अभंग 1401 ते 1500",
+      "range": [
+        1401,
+        1500
+      ],
+      "file": "tukaram/gatha_15.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_१२०१_ते_१५००",
+        "kind": "Wikisource",
+        "scope": "1201-1500"
+      }
+    },
+    {
+      "id": "gatha-16",
+      "number": 16,
+      "title": "भाग 16",
+      "subtitle": "अभंग 1501 ते 1600",
+      "range": [
+        1501,
+        1600
+      ],
+      "file": "tukaram/gatha_16.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_१५०१_ते_१८००",
+        "kind": "Wikisource",
+        "scope": "1501-1800"
+      }
+    },
+    {
+      "id": "gatha-17",
+      "number": 17,
+      "title": "भाग 17",
+      "subtitle": "अभंग 1601 ते 1700",
+      "range": [
+        1601,
+        1700
+      ],
+      "file": "tukaram/gatha_17.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_१५०१_ते_१८००",
+        "kind": "Wikisource",
+        "scope": "1501-1800"
+      }
+    },
+    {
+      "id": "gatha-18",
+      "number": 18,
+      "title": "भाग 18",
+      "subtitle": "अभंग 1701 ते 1800",
+      "range": [
+        1701,
+        1800
+      ],
+      "file": "tukaram/gatha_18.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_१५०१_ते_१८००",
+        "kind": "Wikisource",
+        "scope": "1501-1800"
+      }
+    },
+    {
+      "id": "gatha-19",
+      "number": 19,
+      "title": "भाग 19",
+      "subtitle": "अभंग 1801 ते 1900",
+      "range": [
+        1801,
+        1900
+      ],
+      "file": "tukaram/gatha_19.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_१८०१_ते_२१००",
+        "kind": "Wikisource",
+        "scope": "1801-2100"
+      }
+    },
+    {
+      "id": "gatha-20",
+      "number": 20,
+      "title": "भाग 20",
+      "subtitle": "अभंग 1901 ते 2000",
+      "range": [
+        1901,
+        2000
+      ],
+      "file": "tukaram/gatha_20.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_१८०१_ते_२१००",
+        "kind": "Wikisource",
+        "scope": "1801-2100"
+      }
+    },
+    {
+      "id": "gatha-21",
+      "number": 21,
+      "title": "भाग 21",
+      "subtitle": "अभंग 2001 ते 2100",
+      "range": [
+        2001,
+        2100
+      ],
+      "file": "tukaram/gatha_21.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_१८०१_ते_२१००",
+        "kind": "Wikisource",
+        "scope": "1801-2100"
+      }
+    },
+    {
+      "id": "gatha-22",
+      "number": 22,
+      "title": "भाग 22",
+      "subtitle": "अभंग 2101 ते 2200",
+      "range": [
+        2101,
+        2200
+      ],
+      "file": "tukaram/gatha_22.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_२१०१_ते_२४००",
+        "kind": "Wikisource",
+        "scope": "2101-2400"
+      }
+    },
+    {
+      "id": "gatha-23",
+      "number": 23,
+      "title": "भाग 23",
+      "subtitle": "अभंग 2201 ते 2300",
+      "range": [
+        2201,
+        2300
+      ],
+      "file": "tukaram/gatha_23.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_२१०१_ते_२४००",
+        "kind": "Wikisource",
+        "scope": "2101-2400"
+      }
+    },
+    {
+      "id": "gatha-24",
+      "number": 24,
+      "title": "भाग 24",
+      "subtitle": "अभंग 2301 ते 2400",
+      "range": [
+        2301,
+        2400
+      ],
+      "file": "tukaram/gatha_24.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_२१०१_ते_२४००",
+        "kind": "Wikisource",
+        "scope": "2101-2400"
+      }
+    },
+    {
+      "id": "gatha-25",
+      "number": 25,
+      "title": "भाग 25",
+      "subtitle": "अभंग 2401 ते 2500",
+      "range": [
+        2401,
+        2500
+      ],
+      "file": "tukaram/gatha_25.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_२४०१_ते_२७००",
+        "kind": "Wikisource",
+        "scope": "2401-2700"
+      }
+    },
+    {
+      "id": "gatha-26",
+      "number": 26,
+      "title": "भाग 26",
+      "subtitle": "अभंग 2501 ते 2600",
+      "range": [
+        2501,
+        2600
+      ],
+      "file": "tukaram/gatha_26.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_२४०१_ते_२७००",
+        "kind": "Wikisource",
+        "scope": "2401-2700"
+      }
+    },
+    {
+      "id": "gatha-27",
+      "number": 27,
+      "title": "भाग 27",
+      "subtitle": "अभंग 2601 ते 2700",
+      "range": [
+        2601,
+        2700
+      ],
+      "file": "tukaram/gatha_27.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_२४०१_ते_२७००",
+        "kind": "Wikisource",
+        "scope": "2401-2700"
+      }
+    },
+    {
+      "id": "gatha-28",
+      "number": 28,
+      "title": "भाग 28",
+      "subtitle": "अभंग 2701 ते 2800",
+      "range": [
+        2701,
+        2800
+      ],
+      "file": "tukaram/gatha_28.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_२७०१_ते_३०००",
+        "kind": "Wikisource",
+        "scope": "2701-3000"
+      }
+    },
+    {
+      "id": "gatha-29",
+      "number": 29,
+      "title": "भाग 29",
+      "subtitle": "अभंग 2801 ते 2900",
+      "range": [
+        2801,
+        2900
+      ],
+      "file": "tukaram/gatha_29.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_२७०१_ते_३०००",
+        "kind": "Wikisource",
+        "scope": "2701-3000"
+      }
+    },
+    {
+      "id": "gatha-30",
+      "number": 30,
+      "title": "भाग 30",
+      "subtitle": "अभंग 2901 ते 3000",
+      "range": [
+        2901,
+        3000
+      ],
+      "file": "tukaram/gatha_30.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_२७०१_ते_३०००",
+        "kind": "Wikisource",
+        "scope": "2701-3000"
+      }
+    },
+    {
+      "id": "gatha-31",
+      "number": 31,
+      "title": "भाग 31",
+      "subtitle": "अभंग 3001 ते 3100",
+      "range": [
+        3001,
+        3100
+      ],
+      "file": "tukaram/gatha_31.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_३००१_ते_३३००",
+        "kind": "Wikisource",
+        "scope": "3001-3300"
+      }
+    },
+    {
+      "id": "gatha-32",
+      "number": 32,
+      "title": "भाग 32",
+      "subtitle": "अभंग 3101 ते 3200",
+      "range": [
+        3101,
+        3200
+      ],
+      "file": "tukaram/gatha_32.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_३००१_ते_३३००",
+        "kind": "Wikisource",
+        "scope": "3001-3300"
+      }
+    },
+    {
+      "id": "gatha-33",
+      "number": 33,
+      "title": "भाग 33",
+      "subtitle": "अभंग 3201 ते 3300",
+      "range": [
+        3201,
+        3300
+      ],
+      "file": "tukaram/gatha_33.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_३००१_ते_३३००",
+        "kind": "Wikisource",
+        "scope": "3001-3300"
+      }
+    },
+    {
+      "id": "gatha-34",
+      "number": 34,
+      "title": "भाग 34",
+      "subtitle": "अभंग 3301 ते 3400",
+      "range": [
+        3301,
+        3400
+      ],
+      "file": "tukaram/gatha_34.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_३३०१_ते_३६०૦",
+        "kind": "Wikisource",
+        "scope": "3301-3600"
+      }
+    },
+    {
+      "id": "gatha-35",
+      "number": 35,
+      "title": "भाग 35",
+      "subtitle": "अभंग 3401 ते 3500",
+      "range": [
+        3401,
+        3500
+      ],
+      "file": "tukaram/gatha_35.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_३३०१_ते_३६०૦",
+        "kind": "Wikisource",
+        "scope": "3301-3600"
+      }
+    },
+    {
+      "id": "gatha-36",
+      "number": 36,
+      "title": "भाग 36",
+      "subtitle": "अभंग 3501 ते 3600",
+      "range": [
+        3501,
+        3600
+      ],
+      "file": "tukaram/gatha_36.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_३३०१_ते_३६०૦",
+        "kind": "Wikisource",
+        "scope": "3301-3600"
+      }
+    },
+    {
+      "id": "gatha-37",
+      "number": 37,
+      "title": "भाग 37",
+      "subtitle": "अभंग 3601 ते 3700",
+      "range": [
+        3601,
+        3700
+      ],
+      "file": "tukaram/gatha_37.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथા_३૬૦૧_તે_૩૯૦૦",
+        "kind": "Wikisource",
+        "scope": "3601-3900"
+      }
+    },
+    {
+      "id": "gatha-38",
+      "number": 38,
+      "title": "भाग 38",
+      "subtitle": "अभंग 3701 ते 3800",
+      "range": [
+        3701,
+        3800
+      ],
+      "file": "tukaram/gatha_38.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथા_३૬૦૧_તે_૩૯૦૦",
+        "kind": "Wikisource",
+        "scope": "3601-3900"
+      }
+    },
+    {
+      "id": "gatha-39",
+      "number": 39,
+      "title": "भाग 39",
+      "subtitle": "अभंग 3801 ते 3900",
+      "range": [
+        3801,
+        3900
+      ],
+      "file": "tukaram/gatha_39.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथા_३૬૦૧_તે_૩૯૦૦",
+        "kind": "Wikisource",
+        "scope": "3601-3900"
+      }
+    },
+    {
+      "id": "gatha-40",
+      "number": 40,
+      "title": "भाग 40",
+      "subtitle": "अभंग 3901 ते 4000",
+      "range": [
+        3901,
+        4000
+      ],
+      "file": "tukaram/gatha_40.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_३९०१_ते_४२००",
+        "kind": "Wikisource",
+        "scope": "3901-4200"
+      }
+    },
+    {
+      "id": "gatha-41",
+      "number": 41,
+      "title": "भाग 41",
+      "subtitle": "अभंग 4001 ते 4100",
+      "range": [
+        4001,
+        4100
+      ],
+      "file": "tukaram/gatha_41.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_३९०१_ते_४२००",
+        "kind": "Wikisource",
+        "scope": "3901-4200"
+      }
+    },
+    {
+      "id": "gatha-42",
+      "number": 42,
+      "title": "भाग 42",
+      "subtitle": "अभंग 4101 ते 4200",
+      "range": [
+        4101,
+        4200
+      ],
+      "file": "tukaram/gatha_42.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_३९०१_ते_४२००",
+        "kind": "Wikisource",
+        "scope": "3901-4200"
+      }
+    },
+    {
+      "id": "gatha-43",
+      "number": 43,
+      "title": "भाग 43",
+      "subtitle": "अभंग 4201 ते 4300",
+      "range": [
+        4201,
+        4300
+      ],
+      "file": "tukaram/gatha_43.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_४२०१_ते_४५८३",
+        "kind": "Wikisource",
+        "scope": "4201-4583"
+      }
+    },
+    {
+      "id": "gatha-44",
+      "number": 44,
+      "title": "भाग 44",
+      "subtitle": "अभंग 4301 ते 4400",
+      "range": [
+        4301,
+        4400
+      ],
+      "file": "tukaram/gatha_44.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_४२०१_ते_४५८३",
+        "kind": "Wikisource",
+        "scope": "4201-4583"
+      }
+    },
+    {
+      "id": "gatha-45",
+      "number": 45,
+      "title": "भाग 45",
+      "subtitle": "अभंग 4401 ते 4500",
+      "range": [
+        4401,
+        4500
+      ],
+      "file": "tukaram/gatha_45.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_४२०१_ते_४५८३",
+        "kind": "Wikisource",
+        "scope": "4201-4583"
+      }
+    },
+    {
+      "id": "gatha-46",
+      "number": 46,
+      "title": "भाग 46",
+      "subtitle": "अभंग 4501 ते 4583",
+      "range": [
+        4501,
+        4583
+      ],
+      "file": "tukaram/gatha_46.json",
+      "source": {
+        "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_४२०१_ते_४५८३",
+        "kind": "Wikisource",
+        "scope": "4201-4583"
+      }
+    }
+  ],
+  "source": {
+    "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा",
+    "kind": "Wikisource",
+    "copyrightStatus": "public-domain"
+  }
+}

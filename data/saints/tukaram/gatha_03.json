@@ -1,0 +1,19 @@
+{
+  "id": "gatha-03",
+  "title": "तुकाराम गाथा — भाग 3",
+  "subtitle": "अभंग 201 ते 300",
+  "type": "अभंग",
+  "days": 1,
+  "range": {
+    "start": 201,
+    "end": 300,
+    "count": 100
+  },
+  "entries": [],
+  "source": {
+    "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_१_ते_३००",
+    "kind": "Wikisource",
+    "scope": "गाथा 1-300"
+  },
+  "sourceStatus": "SOURCE_INDEXED_NOT_YET_IMPORTED"
+}

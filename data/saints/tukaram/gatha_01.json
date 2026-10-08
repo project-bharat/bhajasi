@@ -1,0 +1,30 @@
+{
+  "id": "gatha-01",
+  "title": "तुकाराम गाथा — भाग 1",
+  "subtitle": "अभंग 1 ते 100",
+  "type": "अभंग",
+  "days": 1,
+  "range": {
+    "start": 1,
+    "end": 100,
+    "count": 100
+  },
+  "entries": [
+    {
+      "id": "001",
+      "number": 1,
+      "text": "अखंड जया तुझी प्रीति । मज दे त्यांची संगति । मग मी कमळापति । तुज बा नानीं कांटाळा ॥१॥",
+      "source": {
+        "url": "https://www.santsahitya.in/tukaram/tukaram-gatha/",
+        "kind": "web-source",
+        "verified": "2026-10-06"
+      }
+    }
+  ],
+  "source": {
+    "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_१_ते_३००",
+    "kind": "Wikisource",
+    "scope": "गाथा 1-300"
+  },
+  "sourceStatus": "PARTIAL_SOURCE_VERIFIED"
+}

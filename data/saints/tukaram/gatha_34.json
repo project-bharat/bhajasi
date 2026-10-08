@@ -1,0 +1,19 @@
+{
+  "id": "gatha-34",
+  "title": "तुकाराम गाथा — भाग 34",
+  "subtitle": "अभंग 3301 ते 3400",
+  "type": "अभंग",
+  "days": 1,
+  "range": {
+    "start": 3301,
+    "end": 3400,
+    "count": 100
+  },
+  "entries": [],
+  "source": {
+    "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_३३०१_ते_३६०૦",
+    "kind": "Wikisource",
+    "scope": "गाथा 3301-3600"
+  },
+  "sourceStatus": "SOURCE_INDEXED_NOT_YET_IMPORTED"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "gatha-32",
+  "title": "तुकाराम गाथा — भाग 32",
+  "subtitle": "अभंग 3101 ते 3200",
+  "type": "अभंग",
+  "days": 1,
+  "range": {
+    "start": 3101,
+    "end": 3200,
+    "count": 100
+  },
+  "entries": [],
+  "source": {
+    "url": "https://mr.wikisource.org/wiki/तुकाराम_गाथा/गाथा_३००१_ते_३३००",
+    "kind": "Wikisource",
+    "scope": "गाथा 3001-3300"
+  },
+  "sourceStatus": "SOURCE_INDEXED_NOT_YET_IMPORTED"
+}
