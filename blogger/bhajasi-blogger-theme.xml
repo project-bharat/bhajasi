@@ -9,25 +9,31 @@
 <meta content='#2a3950' name='theme-color'/>
 <meta content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' name='robots'/>
 
-<!-- Fixed dark Bhajasi favicon for browser tabs and installed shortcuts -->
-<link rel='icon' type='image/png' sizes='192x192' href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQsnusVJ6kB8gTAULrKk9JaNddwvwUlw4-6HEZNIiF12IvKnbMAOwdUMrlevN5EKYgnl6LHpKvFZjlDqgZ9WvpNu_rjPzJ473O1rrL9iG_eD4VxA_EZKj2uN_DmIXTzZTKa3kaaB0p821aftNpRXTRZAqZQPqniktfZkVslxDAGMUkP5b3G4cOyAFYpVMn/s1600/dark%20bhajasi%20fevicon192.png'/>
-<link rel='shortcut icon' type='image/png' href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQsnusVJ6kB8gTAULrKk9JaNddwvwUlw4-6HEZNIiF12IvKnbMAOwdUMrlevN5EKYgnl6LHpKvFZjlDqgZ9WvpNu_rjPzJ473O1rrL9iG_eD4VxA_EZKj2uN_DmIXTzZTKa3kaaB0p821aftNpRXTRZAqZQPqniktfZkVslxDAGMUkP5b3G4cOyAFYpVMn/s1600/dark%20bhajasi%20fevicon192.png'/>
+<!-- Explicit favicon fallback for crawlers and link-preview validators.
+     JavaScript below updates this same link for the visitor's color scheme. -->
+<link id='bhajasi-adaptive-favicon' rel='icon' type='image/png' sizes='192x192' href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQsnusVJ6kB8gTAULrKk9JaNddwvwUlw4-6HEZNIiF12IvKnbMAOwdUMrlevN5EKYgnl6LHpKvFZjlDqgZ9WvpNu_rjPzJ473O1rrL9iG_eD4VxA_EZKj2uN_DmIXTzZTKa3kaaB0p821aftNpRXTRZAqZQPqniktfZkVslxDAGMUkP5b3G4cOyAFYpVMn/s1600/dark%20bhajasi%20fevicon192.png'/>
 <script>
 //<![CDATA[
 (function() {
-    var iconUrl = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQsnusVJ6kB8gTAULrKk9JaNddwvwUlw4-6HEZNIiF12IvKnbMAOwdUMrlevN5EKYgnl6LHpKvFZjlDqgZ9WvpNu_rjPzJ473O1rrL9iG_eD4VxA_EZKj2uN_DmIXTzZTKa3kaaB0p821aftNpRXTRZAqZQPqniktfZkVslxDAGMUkP5b3G4cOyAFYpVMn/s1600/dark%20bhajasi%20fevicon192.png';
-    var icons = document.querySelectorAll("link[rel*='icon']");
-    icons.forEach(function(el) {
-        if (el.id !== 'bhajasi-fixed-dark-favicon') el.parentNode.removeChild(el);
-    });
-    var icon = document.getElementById('bhajasi-fixed-dark-favicon');
-    if (!icon) {
-        icon = document.createElement('link');
-        icon.id = 'bhajasi-fixed-dark-favicon';
-        icon.rel = 'icon';
-        icon.type = 'image/png';
-        icon.href = iconUrl;
-        document.head.appendChild(icon);
+    var darkFavicon = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQsnusVJ6kB8gTAULrKk9JaNddwvwUlw4-6HEZNIiF12IvKnbMAOwdUMrlevN5EKYgnl6LHpKvFZjlDqgZ9WvpNu_rjPzJ473O1rrL9iG_eD4VxA_EZKj2uN_DmIXTzZTKa3kaaB0p821aftNpRXTRZAqZQPqniktfZkVslxDAGMUkP5b3G4cOyAFYpVMn/s1600/dark%20bhajasi%20fevicon192.png';
+    var lightFavicon = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg94LhEYUGaBU0HdY5Cumz3j-nmJ7NdDjBQ5DCKsZd5uBYDTKYFHgQGZ5Iik5cJoBJ2r4pntUVQDJVTI2SvvraMlgW0PVtCOcsx7ebdj2ILBLVEq-nPNy_sfukMA1GE7xfmr28iOBA3JfPy0BJNx08R_DaB6ncp6EFpkJ_o_IyAWZuD6QaTeN4BSMZ_cLkq/s1600/light%20bhajasi%20White%20Spiral%20Logo%20with%20Golden%20Dot.png';
+
+    var matcher = window.matchMedia('(prefers-color-scheme: dark)');
+    var faviconLink = document.getElementById('bhajasi-adaptive-favicon');
+
+    function applyFavicon() {
+        if (faviconLink) {
+            // Dark device theme uses the light logo; light device theme uses the dark logo.
+            faviconLink.href = matcher.matches ? lightFavicon : darkFavicon;
+        }
+    }
+
+    applyFavicon();
+
+    try {
+        matcher.addEventListener('change', applyFavicon);
+    } catch (e) {
+        matcher.addListener(applyFavicon);
     }
 })();
 //]]>
