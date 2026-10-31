@@ -9,6 +9,10 @@
 <meta content='#2a3950' name='theme-color'/>
 <meta content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' name='robots'/>
 
+<!-- Dark favicon fallback and fixed iOS home-screen icon; adaptive script selects browser-tab icon by device theme. -->
+<link id='bhajasi-adaptive-favicon' rel='icon' type='image/png' sizes='192x192' href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQsnusVJ6kB8gTAULrKk9JaNddwvwUlw4-6HEZNIiF12IvKnbMAOwdUMrlevN5EKYgnl6LHpKvFZjlDqgZ9WvpNu_rjPzJ473O1rrL9iG_eD4VxA_EZKj2uN_DmIXTzZTKa3kaaB0p821aftNpRXTRZAqZQPqniktfZkVslxDAGMUkP5b3G4cOyAFYpVMn/s1600/dark%20bhajasi%20fevicon192.png'/>
+<link rel='apple-touch-icon' sizes='192x192' href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQsnusVJ6kB8gTAULrKk9JaNddwvwUlw4-6HEZNIiF12IvKnbMAOwdUMrlevN5EKYgnl6LHpKvFZjlDqgZ9WvpNu_rjPzJ473O1rrL9iG_eD4VxA_EZKj2uN_DmIXTzZTKa3kaaB0p821aftNpRXTRZAqZQPqniktfZkVslxDAGMUkP5b3G4cOyAFYpVMn/s1600/dark%20bhajasi%20fevicon192.png'/>
+
 <!-- Robust Adaptive Favicon Script (Executes before all Blogger scripts) -->
 <script>
 //<![CDATA[
@@ -70,14 +74,14 @@
 <meta content='संत ज्ञानेश्वर, संत तुकाराम, समर्थ रामदास, संत नामदेव, संत एकनाथ यांच्या ग्रंथांचे मूळ संहितेसह सुलभ मराठीत अर्थ आणि दिवसानुसार नित्य पारायण. संकलक: भरत रासवे.' property='og:description'/>
 <meta expr:content='data:blog.canonicalUrl' property='og:url'/>
 <meta content='भजसी भारत .com' property='og:site_name'/>
-<meta content='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg94LhEYUGaBU0HdY5Cumz3j-nmJ7NdDjBQ5DCKsZd5uBYDTKYFHgQGZ5Iik5cJoBJ2r4pntUVQDJVTI2SvvraMlgW0PVtCOcsx7ebdj2ILBLVEq-nPNy_sfukMA1GE7xfmr28iOBA3JfPy0BJNx08R_DaB6ncp6EFpkJ_o_IyAWZuD6QaTeN4BSMZ_cLkq/s1600/light%20bhajasi%20White%20Spiral%20Logo%20with%20Golden%20Dot.png' property='og:image'/>
+<meta content='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQsnusVJ6kB8gTAULrKk9JaNddwvwUlw4-6HEZNIiF12IvKnbMAOwdUMrlevN5EKYgnl6LHpKvFZjlDqgZ9WvpNu_rjPzJ473O1rrL9iG_eD4VxA_EZKj2uN_DmIXTzZTKa3kaaB0p821aftNpRXTRZAqZQPqniktfZkVslxDAGMUkP5b3G4cOyAFYpVMn/s1600/dark%20bhajasi%20fevicon192.png' property='og:image'/>
 
 <!-- Twitter Card -->
 <meta content='summary_large_image' name='twitter:card'/>
 <meta content='भजसी भारत .com | सार्थ ज्ञानेश्वरी, हरिपाठ व अभंग पारायण' name='twitter:title'/>
 <meta content='मराठी संतसाहित्य, सार्थ ज्ञानेश्वरी अध्याय १-१८, हरिपाठ २८ अभंग, तुकाराम गाथा, मनाचे श्लोक व ग्रामगीता यांचे दिवसानुसार शांत वाचन.' name='twitter:description'/>
 <meta content='भरत रासवे' name='twitter:creator'/>
-<meta content='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg94LhEYUGaBU0HdY5Cumz3j-nmJ7NdDjBQ5DCKsZd5uBYDTKYFHgQGZ5Iik5cJoBJ2r4pntUVQDJVTI2SvvraMlgW0PVtCOcsx7ebdj2ILBLVEq-nPNy_sfukMA1GE7xfmr28iOBA3JfPy0BJNx08R_DaB6ncp6EFpkJ_o_IyAWZuD6QaTeN4BSMZ_cLkq/s1600/light%20bhajasi%20White%20Spiral%20Logo%20with%20Golden%20Dot.png' name='twitter:image'/>
+<meta content='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQsnusVJ6kB8gTAULrKk9JaNddwvwUlw4-6HEZNIiF12IvKnbMAOwdUMrlevN5EKYgnl6LHpKvFZjlDqgZ9WvpNu_rjPzJ473O1rrL9iG_eD4VxA_EZKj2uN_DmIXTzZTKa3kaaB0p821aftNpRXTRZAqZQPqniktfZkVslxDAGMUkP5b3G4cOyAFYpVMn/s1600/dark%20bhajasi%20fevicon192.png' name='twitter:image'/>
 
 <!-- Page Title -->
 <title>भजस&#2368; भ&#2366;रत .com &#8212; स&#2306;तव&#2366;ण&#2368; | स&#2366;र&#2381;थ स&#2306;तस&#2366;ह&#2367;त&#2381;य, हर&#2367;प&#2366;ठ, ज&#2381;ञ&#2366;न&#2375;श&#2381;वर&#2368; व अभ&#2306;ग च&#2367;&#2306;तन</title>
