@@ -2703,12 +2703,12 @@ function getSaintPortrait(saint) {
 
 function getBookCoverStyle(work, index) {
     const palettes = [
-        'linear-gradient(145deg, #581c87, #1e1b4b)',
-        'linear-gradient(145deg, #7c2d12, #3b0764)',
-        'linear-gradient(145deg, #065f46, #134e4a)',
-        'linear-gradient(145deg, #831843, #31102f)',
-        'linear-gradient(145deg, #1e3a8a, #172554)',
-        'linear-gradient(145deg, #78350f, #451a03)'
+        '#2D2051',
+        '#5B87B2',
+        '#B995C6',
+        '#B995C6',
+        '#5B87B2',
+        '#E8C26B'
     ];
     return palettes[(index || 0) % palettes.length];
 }
