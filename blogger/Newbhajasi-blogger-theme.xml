@@ -2678,36 +2678,61 @@ async function loadLogoImage(src) {
     if (FOOTER_LOGO && candidates.indexOf(FOOTER_LOGO) < 0) candidates.push(FOOTER_LOGO);
     if (SITE_LOGO && candidates.indexOf(SITE_LOGO) < 0) candidates.push(SITE_LOGO);
 
+    let attemptId = 0;
     for (const candidate of candidates) {
-        const loaded = await new Promise(function(resolve) {
-            const img = new Image();
-            img.crossOrigin = 'anonymous';
-            img.referrerPolicy = 'no-referrer';
-            let settled = false;
-            let timer = null;
-            const finish = function(value) {
-                if (settled) return;
-                settled = true;
-                if (timer) clearTimeout(timer);
-                resolve(value);
-            };
-            timer = setTimeout(function() { finish(null); }, 12000);
-            img.onload = async function() {
-                try {
-                    if (img.decode) await img.decode();
-                } catch (error) {}
-                finish(img.naturalWidth > 0 ? img : null);
-            };
-            img.onerror = function() { finish(null); };
-            img.src = candidate;
-            if (img.complete && img.naturalWidth > 0) finish(img);
-        });
-        if (loaded && loaded.naturalWidth > 0) return loaded;
+        // First try the canonical URL. If a browser cache contains a non-CORS
+        // copy, retry with a unique query parameter to force a fresh CDN request.
+        const urlsToTry = [candidate];
+        const hashIndex = candidate.indexOf('#');
+        const baseUrl = hashIndex >= 0 ? candidate.slice(0, hashIndex) : candidate;
+        const hash = hashIndex >= 0 ? candidate.slice(hashIndex) : '';
+        const separator = baseUrl.indexOf('?') >= 0 ? '&' : '?';
+        urlsToTry.push(baseUrl + separator + 'bhajasi_cors=' + Date.now() + '_' + (++attemptId) + hash);
+
+        for (const imageUrl of urlsToTry) {
+            const loaded = await new Promise(function(resolve) {
+                const img = new Image();
+                // crossOrigin must be set before src so the request is made in CORS mode.
+                img.crossOrigin = 'anonymous';
+                img.referrerPolicy = 'no-referrer';
+                let settled = false;
+                let timer = null;
+                const finish = function(value) {
+                    if (settled) return;
+                    settled = true;
+                    if (timer) clearTimeout(timer);
+                    resolve(value);
+                };
+                timer = setTimeout(function() { finish(null); }, 12000);
+                img.onload = async function() {
+                    try {
+                        if (img.decode) await img.decode();
+                        // Explicitly verify that the loaded image can be read by canvas.
+                        const testCanvas = document.createElement('canvas');
+                        testCanvas.width = 1;
+                        testCanvas.height = 1;
+                        const testContext = testCanvas.getContext('2d');
+                        testContext.drawImage(img, 0, 0, 1, 1);
+                        testContext.getImageData(0, 0, 1, 1);
+                        testCanvas.width = 0;
+                        testCanvas.height = 0;
+                        finish(img.naturalWidth > 0 ? img : null);
+                    } catch (error) {
+                        finish(null);
+                    }
+                };
+                img.onerror = function() { finish(null); };
+                img.src = imageUrl;
+                if (img.complete && img.naturalWidth > 0) {
+                    // Let onload perform decode and the canvas-safety check.
+                }
+            });
+            if (loaded && loaded.naturalWidth > 0) return loaded;
+        }
     }
-    console.warn('Bhajasi export logo could not be loaded from either configured logo source.');
+    console.warn('Bhajasi export logo failed both canonical and cache-busted CORS loading attempts.');
     return null;
 }
-
 async function shareImageFileNative(file, title, text) {
     try {
         if (navigator.canShare && navigator.canShare({ files: [file] })) {
