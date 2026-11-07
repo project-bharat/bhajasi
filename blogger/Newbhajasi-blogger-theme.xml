@@ -6104,9 +6104,9 @@ function App() {
                                     <i className='fa-solid fa-arrow-left' aria-hidden='true'></i> संतांकडे परत
                                 </button>
                                 <div className='bhajasi-breadcrumb' style={{marginTop:'10px'}}>
-                                    <span>संत</span>
-                                    <span>›</span>
-                                    <span>{selectedSaint.name}</span>
+                                    <button type='button' className='bhajasi-breadcrumb-link' onClick={goSaints}>संत</button>
+                                    <span className='bhajasi-breadcrumb-separator'>›</span>
+                                    <button type='button' className='bhajasi-breadcrumb-link' onClick={function(){openSaint(selectedSaint);}}>{selectedSaint.name}</button>
                                 </div>
                                 <div className='bhajasi-entity-banner'>
                                     <div className='bhajasi-entity-banner-avatar'>
@@ -6160,9 +6160,9 @@ function App() {
                                     <i className='fa-solid fa-arrow-left' aria-hidden='true'></i> {selectedSaint.name} कडे परत
                                 </button>
                                 <div className='bhajasi-breadcrumb' style={{marginTop:'10px'}}>
-                                    <span>{selectedSaint.name}</span>
-                                    <span>›</span>
-                                    <span>{selectedParentWork.title}</span>
+                                    <button type='button' className='bhajasi-breadcrumb-link' onClick={function(){openSaint(selectedSaint);}}>{selectedSaint.name}</button>
+                                    <span className='bhajasi-breadcrumb-separator'>›</span>
+                                    <button type='button' className='bhajasi-breadcrumb-link' onClick={function(){setSelectedContent(null);navigate('sections');}}>{selectedParentWork.title}</button>
                                 </div>
                                 <div className='bhajasi-entity-banner'>
                                     <div className='bhajasi-entity-banner-avatar'>
@@ -6233,7 +6233,9 @@ function App() {
                                     <i className='fa-solid fa-arrow-left' aria-hidden='true'></i> {selectedParentWork.title} कडे परत
                                 </button>
                                 <div className='bhajasi-breadcrumb' style={{marginTop:'10px'}}>
-                                    <span>{selectedSaint.name}</span><span>›</span><span>{selectedParentWork.title}</span><span>›</span><span>{selectedThemeIndex.title}</span>
+                                    <button type='button' className='bhajasi-breadcrumb-link' onClick={function(){openSaint(selectedSaint);}}>{selectedSaint.name}</button><span className='bhajasi-breadcrumb-separator'>›</span>
+                                    <button type='button' className='bhajasi-breadcrumb-link' onClick={function(){navigate('sections');}}>{selectedParentWork.title}</button><span className='bhajasi-breadcrumb-separator'>›</span>
+                                    <span aria-current='page'>{selectedThemeIndex.title}</span>
                                 </div>
                                 <div className='bhajasi-title-row'><h2 className='bhajasi-title'>{selectedThemeIndex.title}</h2></div>
                                 <p className='bhajasi-meta'>{selectedThemeIndex.description}</p>
@@ -6269,10 +6271,10 @@ function App() {
                                     <i className='fa-solid fa-arrow-left' aria-hidden='true'></i> विषयांकडे परत
                                 </button>
                                 <div className='bhajasi-breadcrumb' style={{marginTop:'10px'}}>
-                                    <span>{selectedSaint.name}</span><span>›</span>
-                                    <span>{selectedParentWork.title}</span><span>›</span>
-                                    <span>विषयानुसार गाथा</span><span>›</span>
-                                    <span>{selectedGathaTheme.title}</span>
+                                    <button type='button' className='bhajasi-breadcrumb-link' onClick={function(){openSaint(selectedSaint);}}>{selectedSaint.name}</button><span className='bhajasi-breadcrumb-separator'>›</span>
+                                    <button type='button' className='bhajasi-breadcrumb-link' onClick={function(){navigate('sections');}}>{selectedParentWork.title}</button><span className='bhajasi-breadcrumb-separator'>›</span>
+                                    <button type='button' className='bhajasi-breadcrumb-link' onClick={function(){navigate('themeIndex');}}>विषयानुसार गाथा</button><span className='bhajasi-breadcrumb-separator'>›</span>
+                                    <span aria-current='page'>{selectedGathaTheme.title}</span>
                                 </div>
                                 <div className='bhajasi-title-row'>
                                     <h2 className='bhajasi-title'>{selectedGathaTheme.title}</h2>
