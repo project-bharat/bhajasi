@@ -1881,59 +1881,6 @@ button {
 }
 .bhajasi-breadcrumb span:last-child { color: #fbd52d; font-weight: 600; }
 
-
-/* Bhajasi fixed-width action buttons and bottom dock spacing */
-.bhajasi-exam-card {
-    align-items: flex-start;
-}
-.bhajasi-exam-card > .bhajasi-primary-btn {
-    width: 172px;
-    min-width: 172px;
-    max-width: 100%;
-    flex: 0 0 172px;
-    align-self: flex-start;
-    box-sizing: border-box;
-    white-space: nowrap;
-}
-.bhajasi-study-actions {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 9px;
-}
-.bhajasi-study-actions > button {
-    width: 172px;
-    min-width: 172px;
-    max-width: 100%;
-    flex: 0 0 172px;
-    box-sizing: border-box;
-    white-space: nowrap;
-}
-.bhajasi-bottom button {
-    height: 62px;
-    min-height: 62px;
-    padding: 9px 2px 5px;
-    justify-content: flex-start;
-    gap: 5px;
-}
-.bhajasi-bottom button span {
-    white-space: nowrap;
-    overflow: visible;
-    text-overflow: clip;
-    max-width: none;
-    line-height: 1.2;
-}
-.bhajasi-bottom-icon {
-    flex: 0 0 auto;
-    line-height: 1.15;
-}
-@media (max-width: 390px) {
-    .bhajasi-study-actions {
-        flex-direction: column;
-    }
-}
-
 ]]></b:skin>
 
 </head>
