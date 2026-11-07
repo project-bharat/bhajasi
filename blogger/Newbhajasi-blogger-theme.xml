@@ -4881,12 +4881,9 @@ function App() {
         // Reuse that record only when it belongs to this exact exam; another exam is allowed.
         const legacyRecord=registry[nameKey] && String(registry[nameKey].examId || '')===String(selectedExam.id || '') ? registry[nameKey] : null;
         const existing=registry[certificateKey] || legacyRecord;
-        if(existing){
-            alert('या नावाने या परीक्षेचे डिजिटल प्रमाणपत्र आधीच उपलब्ध आहे.');
-            return;
-        }
-
-        const id=certificateId || makeCertificateId();
+        // Re-creating the same exam certificate reuses its original ID; a different
+        // exam/topic receives a separate registry entry and a new certificate ID.
+        const id=(existing && existing.id) || certificateId || makeCertificateId();
         const certificateSaint=String(selectedExam.subtitle || selectedExam.saint || 'संतवाणी').trim();
         const certificateSubject=String(selectedExam.title || 'ज्ञान परीक्षा').trim();
         const certificateAchievement='यांनी '+certificateSaint+' कृत '+certificateSubject+' विषयावरील ज्ञान परीक्षा उत्तीर्ण केली आहे.';
@@ -5930,7 +5927,7 @@ function App() {
                                 <div className='bhajasi-certificate-form'>
                                     <label htmlFor='bhajasi-certificate-name'>प्रमाणपत्रावर दिसावे असे पूर्ण नाव</label>
                                     <input id='bhajasi-certificate-name' value={certificateName} onChange={function(e){setCertificateName(e.target.value);}} placeholder='तुमचे नाव' autoComplete='name'/>
-                                    <p>नाव तपासून प्रमाणपत्र घ्या. एका व्यक्तीला एकच प्रमाणपत्र मिळेल.</p>
+                                    <p>नाव तपासून प्रमाणपत्र घ्या. प्रत्येक वेगळ्या परीक्षा किंवा विषयासाठी स्वतंत्र प्रमाणपत्र मिळू शकते.</p>
                                     <button className='bhajasi-primary-btn' onClick={createCertificate}>प्रमाणपत्र घ्या</button>
                                 </div>
                             ) : (
