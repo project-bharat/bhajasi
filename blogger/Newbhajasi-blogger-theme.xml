@@ -1261,6 +1261,17 @@ button {
 .bhajasi-primary-btn,
 .bhajasi-secondary-btn,
 .bhajasi-study-btn {
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:7px;
+    width:auto;
+    max-width:100%;
+    min-width:0;
+    flex:0 0 auto;
+    align-self:flex-start;
+    box-sizing:border-box;
+    white-space:nowrap;
     border-radius: 11px;
     padding: 10px 14px;
     font-size: 12px;
@@ -1371,16 +1382,21 @@ button {
 .bhajasi-study-title { color: #30c5ad; font-weight: 800; font-size: 12px; }
 .bhajasi-study-text { margin: 0; color: #cbd5e1; font-size: 11px; line-height: 1.5; text-align: center; }
 .bhajasi-study-actions {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
     gap: 7px;
     margin-top: 9px;
 }
 .bhajasi-study-actions button {
     margin: 0;
-    width: 100%;
+    width: auto;
+    max-width: 100%;
+    min-width: 0;
     min-height: 40px;
-    padding: 7px 8px;
+    flex: 0 1 auto;
+    padding: 7px 11px;
     border-radius: 10px;
     font-size: 11px;
     font-weight: 800;
@@ -1398,10 +1414,13 @@ button {
 }
 .bhajasi-exam-actions {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
     gap: 8px;
     margin-top: 13px;
 }
+.bhajasi-exam-actions button { width:auto; flex:0 1 auto; }
 .bhajasi-result-card {
     text-align: center;
     padding: 22px 16px;
@@ -1880,6 +1899,26 @@ button {
     margin-bottom: 8px;
 }
 .bhajasi-breadcrumb span:last-child { color: #fbd52d; font-weight: 600; }
+.bhajasi-breadcrumb-link {
+    display:inline;
+    padding:0;
+    margin:0;
+    border:0;
+    background:none;
+    color:#cbd5e1;
+    font:inherit;
+    line-height:inherit;
+    cursor:pointer;
+    text-align:left;
+}
+.bhajasi-breadcrumb-link:hover,
+.bhajasi-breadcrumb-link:focus-visible {
+    color:#fbd52d;
+    text-decoration:underline;
+    text-underline-offset:3px;
+    outline:none;
+}
+.bhajasi-breadcrumb-separator { color:#64748b; user-select:none; }
 
 ]]></b:skin>
 
@@ -5899,7 +5938,7 @@ function App() {
 
                     {view === 'exam' && selectedExam && (
                         <section className='bhajasi-section bhajasi-section-works' style={view === 'exam' ? {paddingBottom:'10px'} : {}}>
-                            <div className='bhajasi-reader-head'><button className='bhajasi-back' onClick={openParikshaList}>← परीक्षांकडे परत</button><div className='bhajasi-title-row' style={{marginTop:'10px'}}><h2 className='bhajasi-title'>{selectedExam.title}</h2></div><p className='bhajasi-meta'>प्रश्न {toMarathiDigits(examQuestionIndex+1)} / {toMarathiDigits(examQuestions.length)}</p></div>
+                            <div className='bhajasi-reader-head'><button className='bhajasi-back' onClick={openParikshaList}><i className='fa-solid fa-arrow-left' aria-hidden='true'></i> परीक्षांकडे परत</button><div className='bhajasi-title-row' style={{marginTop:'10px'}}><h2 className='bhajasi-title'>{selectedExam.title}</h2></div><p className='bhajasi-meta'>प्रश्न {toMarathiDigits(examQuestionIndex+1)} / {toMarathiDigits(examQuestions.length)}</p></div>
                             {examQuestions.length ? (function(){const question=examQuestions[examQuestionIndex];const questionKey=getExamQuestionKey(question,examQuestionIndex);const selectedOption=examAnswers[questionKey];return (
                                 <div className='bhajasi-exam-question'><div className='bhajasi-exam-progress'><div className='bhajasi-exam-progress-bar' style={{width:(((examQuestionIndex+1)/examQuestions.length)*100)+'%'}}></div></div><h3>{question.question}</h3>
                                     <div className='bhajasi-exam-options'>{(question.options||[]).map(function(option,optionIndex){const active=Number(selectedOption)===optionIndex;return <button key={optionIndex} className={'bhajasi-exam-option'+(active?' selected':'')} onClick={function(){selectExamAnswer(optionIndex);}}><span className='bhajasi-exam-radio'>{active?'✓':''}</span><span>{option}</span></button>;})}</div>
@@ -5913,14 +5952,14 @@ function App() {
                     {view === 'examResult' && selectedExam && examResult && (
                         <section className='bhajasi-section bhajasi-section-themes'><div className='bhajasi-reader-head'><div className='bhajasi-title-row'><h2 className='bhajasi-title'>परीक्षा पूर्ण</h2></div></div>
                             <div className='bhajasi-result-card'><div className='bhajasi-result-topic'>{selectedExam.title}</div><div className='bhajasi-result-score'>{toMarathiDigits(examResult.score)} / {toMarathiDigits(examResult.total)}</div><div className='bhajasi-result-percent'>{toMarathiDigits(examResult.percentage)}%</div><div className={'bhajasi-result-status '+(examResult.passed?'passed':'failed')}>{examResult.passed?'परीक्षा यशस्वीरीत्या पूर्ण':'उत्तीर्ण निकष पूर्ण झाला नाही'}</div></div>
-                            <div className='bhajasi-exam-actions'><button className='bhajasi-secondary-btn' onClick={retryExam}>पुन्हा परीक्षा द्या</button>{examResult.passed && (!selectedExam.certificate || selectedExam.certificate.enabled!==false) && <button className='bhajasi-primary-btn' onClick={function(){setCertificatePreview('');setCertificateName('');setCertificateId('');navigate('certificate');}}>प्रमाणपत्र मिळवा</button>}</div>
+                            <div className='bhajasi-exam-actions'><button className='bhajasi-secondary-btn' onClick={retryExam}>पुन्हा परीक्षा द्या</button>{examResult.passed && (!selectedExam.certificate || selectedExam.certificate.enabled!==false) && <button className='bhajasi-primary-btn' onClick={function(){setCertificatePreview('');setCertificateName('');setCertificateId('');navigate('certificate');}}><i className='fa-solid fa-award' aria-hidden='true'></i> प्रमाणपत्र</button>}</div>
                         </section>
                     )}
 
                     {view === 'certificate' && selectedExam && examResult && examResult.passed && (
                         <section className='bhajasi-section bhajasi-section-works'>
                             <div className='bhajasi-reader-head'>
-                                <button className='bhajasi-back' onClick={function(){navigate('examResult');}}>← निकालाकडे परत</button>
+                                <button className='bhajasi-back' onClick={function(){navigate('examResult');}}><i className='fa-solid fa-arrow-left' aria-hidden='true'></i> निकालाकडे परत</button>
                                 <div className='bhajasi-title-row' style={{marginTop:'10px'}}><h2 className='bhajasi-title'>प्रमाणपत्र</h2></div>
                             </div>
                             {!certificatePreview ? (
@@ -6053,7 +6092,7 @@ function App() {
                         <section>
                             <div className='bhajasi-reader-head'>
                                 <button className='bhajasi-back' onClick={goSaints}>
-                                    ← संतांकडे परत
+                                    <i className='fa-solid fa-arrow-left' aria-hidden='true'></i> संतांकडे परत
                                 </button>
                                 <div className='bhajasi-breadcrumb' style={{marginTop:'10px'}}>
                                     <span>संत</span>
@@ -6109,7 +6148,7 @@ function App() {
                         <section>
                             <div className='bhajasi-reader-head'>
                                 <button className='bhajasi-back' onClick={function() { openSaint(selectedSaint); }}>
-                                    ← {selectedSaint.name} कडे परत
+                                    <i className='fa-solid fa-arrow-left' aria-hidden='true'></i> {selectedSaint.name} कडे परत
                                 </button>
                                 <div className='bhajasi-breadcrumb' style={{marginTop:'10px'}}>
                                     <span>{selectedSaint.name}</span>
@@ -6182,7 +6221,7 @@ function App() {
                         <section>
                             <div className='bhajasi-reader-head'>
                                 <button className='bhajasi-back' onClick={function() { navigate('sections'); }}>
-                                    ← {selectedParentWork.title} कडे परत
+                                    <i className='fa-solid fa-arrow-left' aria-hidden='true'></i> {selectedParentWork.title} कडे परत
                                 </button>
                                 <div className='bhajasi-breadcrumb' style={{marginTop:'10px'}}>
                                     <span>{selectedSaint.name}</span><span>›</span><span>{selectedParentWork.title}</span><span>›</span><span>{selectedThemeIndex.title}</span>
@@ -6218,7 +6257,7 @@ function App() {
                         <section>
                             <div className='bhajasi-reader-head'>
                                 <button className='bhajasi-back' onClick={function() { navigate('themeIndex'); }}>
-                                    ← विषयांकडे परत
+                                    <i className='fa-solid fa-arrow-left' aria-hidden='true'></i> विषयांकडे परत
                                 </button>
                                 <div className='bhajasi-breadcrumb' style={{marginTop:'10px'}}>
                                     <span>{selectedSaint.name}</span><span>›</span>
@@ -6331,7 +6370,7 @@ function App() {
                                             else openSaint(selectedSaint);
                                         }}
                                     >
-                                        ← {examSourceReturn ? 'परीक्षेकडे परत' : 'परत'}
+                                        <i className='fa-solid fa-arrow-left' aria-hidden='true'></i> {examSourceReturn ? 'परीक्षेकडे परत' : 'परत'}
                                     </button>
                                     <span className='bhajasi-day-label'>
                                         {totalDays > 1 ? 'दिवस ' + toMarathiDigits(day) + ' / ' + toMarathiDigits(totalDays) : (selectedWork && selectedWork.type ? selectedWork.type : 'वाचन')}
@@ -6341,12 +6380,12 @@ function App() {
                                 <div className='bhajasi-breadcrumb'>
                                     {view === 'reader' ? (
                                         <>
-                                            <span>{selectedSaint && selectedSaint.name}</span>
-                                            <span>›</span>
+                                            {selectedSaint && <button type='button' className='bhajasi-breadcrumb-link' onClick={function(){openSaint(selectedSaint);}}>{selectedSaint.name}</button>}
+                                            <span className='bhajasi-breadcrumb-separator'>›</span>
                                             {selectedParentWork && (
                                                 <>
-                                                    <span>{selectedParentWork.title}</span>
-                                                    <span>›</span>
+                                                    <button type='button' className='bhajasi-breadcrumb-link' onClick={function(){setSelectedContent(null);navigate('sections');}}>{selectedParentWork.title}</button>
+                                                    <span className='bhajasi-breadcrumb-separator'>›</span>
                                                 </>
                                             )}
                                             <span>{selectedWork && selectedWork.title}</span>
