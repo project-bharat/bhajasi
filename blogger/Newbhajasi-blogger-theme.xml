@@ -2670,18 +2670,42 @@ function getThemeIcon(title) {
 }
 
 /* Image & Native Share Helpers */
+/* Load export logos through one CORS-safe path. Try the requested logo first,
+   then both configured brand marks so a single CDN failure cannot remove branding. */
 async function loadLogoImage(src) {
-    return new Promise(function(resolve) {
-        if (!src) {
-            resolve(null);
-            return;
-        }
-        const img = new Image();
-        img.crossOrigin = 'anonymous';
-        img.onload = function() { resolve(img); };
-        img.onerror = function() { resolve(null); };
-        img.src = src;
-    });
+    const candidates = [];
+    if (src) candidates.push(src);
+    if (FOOTER_LOGO && candidates.indexOf(FOOTER_LOGO) < 0) candidates.push(FOOTER_LOGO);
+    if (SITE_LOGO && candidates.indexOf(SITE_LOGO) < 0) candidates.push(SITE_LOGO);
+
+    for (const candidate of candidates) {
+        const loaded = await new Promise(function(resolve) {
+            const img = new Image();
+            img.crossOrigin = 'anonymous';
+            img.referrerPolicy = 'no-referrer';
+            let settled = false;
+            let timer = null;
+            const finish = function(value) {
+                if (settled) return;
+                settled = true;
+                if (timer) clearTimeout(timer);
+                resolve(value);
+            };
+            timer = setTimeout(function() { finish(null); }, 12000);
+            img.onload = async function() {
+                try {
+                    if (img.decode) await img.decode();
+                } catch (error) {}
+                finish(img.naturalWidth > 0 ? img : null);
+            };
+            img.onerror = function() { finish(null); };
+            img.src = candidate;
+            if (img.complete && img.naturalWidth > 0) finish(img);
+        });
+        if (loaded && loaded.naturalWidth > 0) return loaded;
+    }
+    console.warn('Bhajasi export logo could not be loaded from either configured logo source.');
+    return null;
 }
 
 async function shareImageFileNative(file, title, text) {
@@ -2836,7 +2860,7 @@ async function shareVerseSnap(entry, index, work, saint, parentWork) {
         const wmW = wmSize;
         const wmH = wmSize / Math.max(0.1, ratio);
         ctx.save();
-        ctx.globalAlpha = 0.075;
+        ctx.globalAlpha = 0.13;
         ctx.globalCompositeOperation = 'screen';
         ctx.drawImage(watermarkImg, (width - wmW) / 2, (height - wmH) / 2 - 30, wmW, wmH);
         ctx.restore();
@@ -2974,19 +2998,8 @@ async function shareVerseSnap(entry, index, work, saint, parentWork) {
     ctx.lineTo(width - padding, footerY);
     ctx.stroke();
 
-    // Footer Logo (Reliable Image Loader with Cross-Origin & Decode)
-    const footerLogoImg = await (async function() {
-        return new Promise(function(resolve) {
-            const img = new Image();
-            img.crossOrigin = 'anonymous';
-            img.onload = async function() {
-                try { if (img.decode) await img.decode(); } catch(e){}
-                resolve(img);
-            };
-            img.onerror = function() { resolve(null); };
-            img.src = FOOTER_LOGO;
-        });
-    })();
+    // Shared CORS-safe loader also retries the alternate configured logo.
+    const footerLogoImg = await loadLogoImage(FOOTER_LOGO);
 
     const footerLogoSize = 64;
     const footerLogoBoxSize = 84;
@@ -4912,7 +4925,7 @@ function App() {
             const wmW=wmSize;
             const wmH=wmSize/Math.max(.1,ratio);
             ctx.save();
-            ctx.globalAlpha=0.095;
+            ctx.globalAlpha=0.13;
             ctx.globalCompositeOperation='multiply';
             ctx.drawImage(logoImg,(1600-wmW)/2,300,wmW,wmH);
             ctx.restore();
