@@ -6000,7 +6000,7 @@ function App() {
                         <section className='bhajasi-section bhajasi-section-saints'>
                             <div className='bhajasi-reader-head'>
                                 <button className='bhajasi-back' onClick={goHome}>
-                                    ← मुख्य पानावर परत
+                                    <i className='fa-solid fa-arrow-left' aria-hidden='true'></i> मुख्य पानावर परत
                                 </button>
                                 <div className='bhajasi-title-row' style={{marginTop:'10px'}}>
                                     <h2 className='bhajasi-title'>संत आणि महाकवी</h2>
@@ -6051,7 +6051,7 @@ function App() {
                         <section className='bhajasi-section bhajasi-section-works'>
                             <div className='bhajasi-reader-head'>
                                 <button className='bhajasi-back' onClick={goHome}>
-                                    ← मुख्य पानावर परत
+                                    <i className='fa-solid fa-arrow-left' aria-hidden='true'></i> मुख्य पानावर परत
                                 </button>
                                 <div className='bhajasi-title-row' style={{marginTop:'10px'}}>
                                     <h2 className='bhajasi-title'>ग्रंथ संग्रह</h2>
@@ -6330,7 +6330,7 @@ function App() {
                         <section className='bhajasi-section bhajasi-section-themes'>
                             <div className='bhajasi-reader-head'>
                                 <button className='bhajasi-back' onClick={goHome}>
-                                    ← मुख्य पानावर परत
+                                    <i className='fa-solid fa-arrow-left' aria-hidden='true'></i> मुख्य पानावर परत
                                 </button>
                                 <div className='bhajasi-title-row' style={{marginTop:'10px'}}>
                                     <h2 className='bhajasi-title'>नित्य पठण स्तोत्रे व मंत्र</h2>
