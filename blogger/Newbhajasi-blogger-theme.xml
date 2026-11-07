@@ -4874,15 +4874,19 @@ function App() {
 
         const CERTIFICATE_REGISTRY_KEY='bhajasi_certificate_registry_v1';
         const nameKey=name.normalize('NFC').toLocaleLowerCase('mr-IN');
+        const examKey=String(selectedExam.id || selectedExam.title || 'exam').trim().normalize('NFC').toLocaleLowerCase('mr-IN');
+        const certificateKey=nameKey+'::'+examKey;
         const registry=safeJSON(localStorage.getItem(CERTIFICATE_REGISTRY_KEY) || '{}',{});
-        const existing=registry[nameKey];
-
-        if(existing && existing.examId && existing.examId!==selectedExam.id){
-            alert('या नावासाठी एकच डिजिटल प्रमाणपत्र दिले जाऊ शकते. या नावाचे प्रमाणपत्र आधीच उपलब्ध आहे.');
+        // Backward compatibility: older versions stored one record under the name alone.
+        // Reuse that record only when it belongs to this exact exam; another exam is allowed.
+        const legacyRecord=registry[nameKey] && String(registry[nameKey].examId || '')===String(selectedExam.id || '') ? registry[nameKey] : null;
+        const existing=registry[certificateKey] || legacyRecord;
+        if(existing){
+            alert('या नावाने या परीक्षेचे डिजिटल प्रमाणपत्र आधीच उपलब्ध आहे.');
             return;
         }
 
-        const id=(existing && existing.id) || certificateId || makeCertificateId();
+        const id=certificateId || makeCertificateId();
         const certificateSaint=String(selectedExam.subtitle || selectedExam.saint || 'संतवाणी').trim();
         const certificateSubject=String(selectedExam.title || 'ज्ञान परीक्षा').trim();
         const certificateAchievement='यांनी '+certificateSaint+' कृत '+certificateSubject+' विषयावरील ज्ञान परीक्षा उत्तीर्ण केली आहे.';
@@ -4919,6 +4923,32 @@ function App() {
             ctx.beginPath();
             if(ctx.roundRect) ctx.roundRect(x,y,w,h,r);
             else ctx.rect(x,y,w,h);
+        }
+
+        // Canvas-native Bhajasi spiral mark: independent of Blogger CDN/CORS and
+        // guaranteed to render in the certificate preview, PNG and PDF source image.
+        function drawBhajasiMark(centerX,centerY,size,color){
+            const scale=size/120;
+            ctx.save();
+            ctx.translate(centerX-size/2,centerY-size/2);
+            ctx.scale(scale,scale);
+            ctx.strokeStyle=color || '#26364a';
+            ctx.lineWidth=10;
+            ctx.lineCap='round';
+            ctx.lineJoin='round';
+            ctx.beginPath();
+            ctx.moveTo(76,12);
+            ctx.bezierCurveTo(34,2,8,34,14,72);
+            ctx.bezierCurveTo(20,112,78,126,101,92);
+            ctx.bezierCurveTo(122,61,95,30,67,39);
+            ctx.bezierCurveTo(42,47,39,78,58,88);
+            ctx.bezierCurveTo(72,96,85,84,80,72);
+            ctx.stroke();
+            ctx.fillStyle='#d6a62b';
+            ctx.beginPath();
+            ctx.arc(101,22,10,0,Math.PI*2);
+            ctx.fill();
+            ctx.restore();
         }
 
         function fitText(text,font,maxWidth,minSize){
@@ -4969,17 +4999,17 @@ function App() {
         let logoImg=null;
         try{ logoImg=await loadLogoImage(FOOTER_LOGO); }catch(e){}
 
+        ctx.save();
+        ctx.globalAlpha=0.13;
+        ctx.globalCompositeOperation='multiply';
         if(logoImg && logoImg.naturalWidth){
             const ratio=logoImg.naturalWidth/Math.max(1,logoImg.naturalHeight);
             const wmSize=500;
-            const wmW=wmSize;
-            const wmH=wmSize/Math.max(.1,ratio);
-            ctx.save();
-            ctx.globalAlpha=0.13;
-            ctx.globalCompositeOperation='multiply';
-            ctx.drawImage(logoImg,(1600-wmW)/2,300,wmW,wmH);
-            ctx.restore();
+            ctx.drawImage(logoImg,(1600-wmSize)/2,300,wmSize,wmSize/Math.max(.1,ratio));
+        }else{
+            drawBhajasiMark(800,570,500,'#26364a');
         }
+        ctx.restore();
 
         const qrImg=await loadCertificateQrImage('https://bhajasibharat.blogspot.com/');
         if(qrImg && qrImg.naturalWidth){
@@ -5011,6 +5041,8 @@ function App() {
             const logoW=courtesyLogoSize;
             const logoH=courtesyLogoSize/Math.max(.1,ratio);
             ctx.drawImage(logoImg,courtesyStart,78,logoW,logoH);
+        }else{
+            drawBhajasiMark(courtesyStart+courtesyLogoSize/2,109,courtesyLogoSize,'#26364a');
         }
         ctx.textAlign='left';
         ctx.fillStyle='#7b5a10';
@@ -5123,16 +5155,18 @@ function App() {
         const footerBrandW=footerLogoBoxSize+22+footerTextW;
         const footerBrandX=footerRight-footerBrandW;
         const footerLogoBoxY=934;
+        ctx.save();
+        ctx.fillStyle='#ffffff';
+        roundedRect(footerBrandX,footerLogoBoxY,footerLogoBoxSize,footerLogoBoxSize,13);ctx.fill();
         if(logoImg && logoImg.naturalWidth){
             const ratio=logoImg.naturalWidth/Math.max(1,logoImg.naturalHeight);
             const footerW=footerLogoSize;
             const footerH=footerLogoSize/Math.max(.1,ratio);
-            ctx.save();
-            ctx.fillStyle='#ffffff';
-            roundedRect(footerBrandX,footerLogoBoxY,footerLogoBoxSize,footerLogoBoxSize,13);ctx.fill();
             ctx.drawImage(logoImg,footerBrandX+6,footerLogoBoxY+6,footerW,footerH);
-            ctx.restore();
+        }else{
+            drawBhajasiMark(footerBrandX+footerLogoBoxSize/2,footerLogoBoxY+footerLogoBoxSize/2,footerLogoSize,'#26364a');
         }
+        ctx.restore();
 
         ctx.textAlign='right';
         ctx.fillStyle='#7b5a10';
@@ -5142,10 +5176,12 @@ function App() {
         ctx.font='500 20px "Hind", sans-serif';
         ctx.fillText(footerSubtitle,footerRight,997);
 
-        registry[nameKey]={
+        registry[certificateKey]={
             id:id,
             name:name,
+            nameKey:nameKey,
             examId:selectedExam.id,
+            examTitle:certificateSubject,
             completedAt:examResult.completedAt || new Date().toISOString()
         };
         try{localStorage.setItem(CERTIFICATE_REGISTRY_KEY,JSON.stringify(registry));}catch(e){}
