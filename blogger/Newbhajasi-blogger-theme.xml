@@ -2691,7 +2691,7 @@ async function loadLogoImage(src) {
                 const img = new Image();
                 // crossOrigin must be set before src so the request is made in CORS mode.
                 img.crossOrigin = 'anonymous';
-                img.referrerPolicy = 'no-referrer';
+                // Keep the browser's normal referrer policy; Blogger image CDN may reject no-referrer requests.
                 let settled = false;
                 let timer = null;
                 const finish = function(value) {
@@ -4243,36 +4243,37 @@ function App() {
         ctx.lineTo(width - padding, footerY);
         ctx.stroke();
 
-        const footerLogoImg = await loadLogoImage(FOOTER_LOGO);
+        // Reuse the verified image already loaded for this card watermark.
+        const footerLogoImg = watermarkImg;
         const footerLogoSize = 58;
         const footerLogoBoxSize = 82;
         const footerLogoX = padding;
         const footerLogoBoxY = height - 151;
         const footerLogoY = footerLogoBoxY + (footerLogoBoxSize - footerLogoSize) / 2;
 
-        ctx.save();
-        ctx.fillStyle = '#ffffff';
-        if (ctx.roundRect) {
-            ctx.beginPath();
-            ctx.roundRect(
-                footerLogoX - 5,
-                footerLogoBoxY,
-                footerLogoBoxSize,
-                footerLogoBoxSize,
-                12
-            );
-            ctx.fill();
-        } else {
-            ctx.fillRect(
-                footerLogoX - 5,
-                footerLogoBoxY,
-                footerLogoBoxSize,
-                footerLogoBoxSize
-            );
-        }
-        ctx.restore();
-
+        // Draw the white tile only when the real dark logo is available.
         if (footerLogoImg && footerLogoImg.naturalWidth) {
+            ctx.save();
+            ctx.fillStyle = '#ffffff';
+            if (ctx.roundRect) {
+                ctx.beginPath();
+                ctx.roundRect(
+                    footerLogoX - 5,
+                    footerLogoBoxY,
+                    footerLogoBoxSize,
+                    footerLogoBoxSize,
+                    12
+                );
+                ctx.fill();
+            } else {
+                ctx.fillRect(
+                    footerLogoX - 5,
+                    footerLogoBoxY,
+                    footerLogoBoxSize,
+                    footerLogoBoxSize
+                );
+            }
+            ctx.restore();
             const ratio = footerLogoImg.naturalWidth / Math.max(1, footerLogoImg.naturalHeight);
             const footerLogoW = footerLogoSize;
             const footerLogoH = footerLogoSize / Math.max(0.1, ratio);
@@ -4285,6 +4286,33 @@ function App() {
                 footerLogoW,
                 footerLogoH
             );
+            ctx.restore();
+        } else {
+            // Visible branded fallback instead of an empty white square when the CDN is unavailable.
+            const cx = footerLogoX + footerLogoBoxSize / 2 - 5;
+            const cy = footerLogoBoxY + footerLogoBoxSize / 2;
+            ctx.save();
+            ctx.fillStyle = '#ffffff';
+            if (ctx.roundRect) {
+                ctx.beginPath();
+                ctx.roundRect(footerLogoX - 5, footerLogoBoxY, footerLogoBoxSize, footerLogoBoxSize, 12);
+                ctx.fill();
+            } else {
+                ctx.fillRect(footerLogoX - 5, footerLogoBoxY, footerLogoBoxSize, footerLogoBoxSize);
+            }
+            ctx.strokeStyle = '#26364a';
+            ctx.lineWidth = 7;
+            ctx.lineCap = 'round';
+            ctx.beginPath();
+            ctx.arc(cx, cy, 22, -Math.PI * 0.72, Math.PI * 1.48);
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.arc(cx, cy, 10, -Math.PI * 0.55, Math.PI * 1.4);
+            ctx.stroke();
+            ctx.fillStyle = '#d6a62b';
+            ctx.beginPath();
+            ctx.arc(cx + 17, cy - 20, 6, 0, Math.PI * 2);
+            ctx.fill();
             ctx.restore();
         }
 
