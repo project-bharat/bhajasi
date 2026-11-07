@@ -2598,11 +2598,11 @@ const PARIKSHA_BASE =
 const SITE_URL =
     'https://bhajasibharat.blogspot.com/';
 
-/* Light White Spiral Logo with Golden Dot (Used in Header, Launcher & Watermark) */
+/* Light logo is reserved for site UI; every generated/exported asset uses FOOTER_LOGO. */
 const SITE_LOGO =
     'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgTGji7bVuxQqgcgqguU4TAA-YjybwONboWE3Gamq4xKo02fBuyO7C1ADxzOhqckxU0gBSF7gywCHJyUVeyJHujhcSf-M5pM_UUhSeVu2jKufaHfBvomoJGD4RM0wxmLu2XDLocgXG6K55dzZwBoR206llWYzFq4NtAUQY2pqS0uN294KwAk3i-LplR1l0/s1600/light%20bhajasi%20White%20Spiral%20Logo%20with%20Golden%20Dot.png';
 
-// Unified Single Constant used for both snap card and UI footer
+// Single dark logo source for all exported cards and certificates
 const FOOTER_LOGO =
     'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMhtOHJ0wFIxDkfVkVYJt8ftqWYdPZNFMgkOBRhc7WhXUIPZrTx7pppzpAuP-SWvJxk4BlNKsxG2M3wszK9JiTpNLex2gczJbiA2dGaZLOmo67YGYhDIy4TlKFcPS-YSdj3kWJ9p0bWCU_TwPyLSsV80uTwNbOCNTlkanvtRXeIjjaAh_yZwF6GZPSvnQ/s1600/dark%20bhajasi%20fevicon192.png';
 
@@ -2673,10 +2673,7 @@ function getThemeIcon(title) {
 /* Load export logos through one CORS-safe path. Try the requested logo first,
    then both configured brand marks so a single CDN failure cannot remove branding. */
 async function loadLogoImage(src) {
-    const candidates = [];
-    if (src) candidates.push(src);
-    if (FOOTER_LOGO && candidates.indexOf(FOOTER_LOGO) < 0) candidates.push(FOOTER_LOGO);
-    if (SITE_LOGO && candidates.indexOf(SITE_LOGO) < 0) candidates.push(SITE_LOGO);
+    const candidates = src ? [src] : [FOOTER_LOGO];
 
     let attemptId = 0;
     for (const candidate of candidates) {
@@ -2730,7 +2727,7 @@ async function loadLogoImage(src) {
             if (loaded && loaded.naturalWidth > 0) return loaded;
         }
     }
-    console.warn('Bhajasi export logo failed both canonical and cache-busted CORS loading attempts.');
+    console.warn('Bhajasi dark export logo failed canonical and cache-busted CORS loading.');
     return null;
 }
 async function shareImageFileNative(file, title, text) {
@@ -2878,7 +2875,7 @@ async function shareVerseSnap(entry, index, work, saint, parentWork) {
     ctx.restore();
 
     // Center Spiral Watermark Logo
-    const watermarkImg = await loadLogoImage(SITE_LOGO);
+    const watermarkImg = await loadLogoImage(FOOTER_LOGO);
     if (watermarkImg && watermarkImg.naturalWidth) {
         const wmSize = 440;
         const ratio = watermarkImg.naturalWidth / Math.max(1, watermarkImg.naturalHeight);
@@ -4144,7 +4141,7 @@ function App() {
         ctx.stroke();
         ctx.restore();
 
-        const watermarkImg = await loadLogoImage(SITE_LOGO);
+        const watermarkImg = await loadLogoImage(FOOTER_LOGO);
         if (watermarkImg && watermarkImg.naturalWidth) {
             const wmSize = 440;
             const ratio = watermarkImg.naturalWidth / Math.max(1, watermarkImg.naturalHeight);
@@ -5132,9 +5129,11 @@ function App() {
     }
 
     async function getCertificateFile(){
-        if(!certificatePreview)return null;
+        if(!certificatePreview)throw new Error('certificate preview unavailable');
         const response=await fetch(certificatePreview);
+        if(!response.ok)throw new Error('certificate image could not be read');
         const blob=await response.blob();
+        if(!blob || !blob.size)throw new Error('empty certificate image');
         return new File([blob],'bhajasi-certificate-'+(certificateId||'completion')+'.png',{type:'image/png'});
     }
 
@@ -5160,12 +5159,28 @@ function App() {
         if(!certificatePreview)return;
         try{
             const file=await getCertificateFile();
-            if(!file)throw new Error('certificate file unavailable');
             const url=URL.createObjectURL(file);
-            const a=document.createElement('a');a.href=url;a.download=file.name;document.body.appendChild(a);a.click();a.remove();
-            setTimeout(function(){URL.revokeObjectURL(url);},1500);
-            setTimeout(function(){navigate('examResult');},250);
-        }catch(error){alert('प्रतिमा जतन करता आली नाही.');}
+            const a=document.createElement('a');
+            a.href=url;
+            a.download=file.name;
+            a.style.display='none';
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+            setTimeout(function(){URL.revokeObjectURL(url);},10000);
+        }catch(error){
+            console.error('Certificate image download error:',error);
+            // Data-URL fallback supports browsers that reject Blob downloads.
+            try{
+                const a=document.createElement('a');
+                a.href=certificatePreview;
+                a.download='bhajasi-certificate-'+(certificateId||'completion')+'.png';
+                document.body.appendChild(a);a.click();a.remove();
+            }catch(fallbackError){
+                window.open(certificatePreview,'_blank','noopener');
+                alert('प्रतिमा नवीन टॅबमध्ये उघडली आहे. ती उघडून जतन करा.');
+            }
+        }
     }
 
     async function downloadCertificatePDF(){
@@ -5213,7 +5228,6 @@ function App() {
                 author:'भरत रासवे'
             });
             pdf.save('bhajasi-certificate-'+(certificateId||'completion')+'.pdf');
-            setTimeout(function(){navigate('examResult');},250);
         }catch(error){
             console.error('Certificate PDF error:',error);
             alert('PDF तयार करता आला नाही. कृपया पुन्हा प्रयत्न करा.');
@@ -5844,7 +5858,7 @@ function App() {
                                         <button className='bhajasi-secondary-btn' onClick={downloadCertificateImage}><i className='fa-solid fa-image'></i> प्रतिमा जतन करा</button>
                                         <button className='bhajasi-secondary-btn' onClick={downloadCertificatePDF}><i className='fa-solid fa-file-pdf'></i> PDF मिळवा</button>
                                     </div>
-                                    <p className='bhajasi-certificate-helper'>प्रतिमा किंवा PDF जतन केल्यानंतर हा प्रमाणपत्र दृश्य बंद होईल.</p>
+                                    <p className='bhajasi-certificate-helper'>प्रतिमा किंवा PDF जतन केल्यानंतर प्रमाणपत्र दृश्य येथेच राहील; आवश्यक असल्यास तुम्ही पुन्हा जतन करू शकता.</p>
                                 </div>
                             )}
                         </section>
