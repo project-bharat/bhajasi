@@ -18,7 +18,7 @@
 //<![CDATA[
 (function() {
     var darkFavicon = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMhtOHJ0wFIxDkfVkVYJt8ftqWYdPZNFMgkOBRhc7WhXUIPZrTx7pppzpAuP-SWvJxk4BlNKsxG2M3wszK9JiTpNLex2gczJbiA2dGaZLOmo67YGYhDIy4TlKFcPS-YSdj3kWJ9p0bWCU_TwPyLSsV80uTwNbOCNTlkanvtRXeIjjaAh_yZwF6GZPSvnQ/s1600/dark%20bhajasi%20fevicon192.png';
-    var lightFavicon = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgTGji7bVuxQqgcgqguU4TAA-YjybwONboWE3Gamq4xKo02fBuyO7C1ADxzOhqckxU0gBSF7gywCHJyUVeyJHujhcSf-M5pM_UUhSeVu2jKufaHfBvomoJGD4RM0wxmLu2XDLocgXG6K55dzZwBoR206llWYzFq4NtAUQY2pqS0uN294KwAk3i-LplR1l0/s1600/light%20bhajasi%20White%20Spiral%20Logo%20with%20Golden%20Dot.png';
+    var lightFavicon = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMhtOHJ0wFIxDkfVkVYJt8ftqWYdPZNFMgkOBRhc7WhXUIPZrTx7pppzpAuP-SWvJxk4BlNKsxG2M3wszK9JiTpNLex2gczJbiA2dGaZLOmo67YGYhDIy4TlKFcPS-YSdj3kWJ9p0bWCU_TwPyLSsV80uTwNbOCNTlkanvtRXeIjjaAh_yZwF6GZPSvnQ/s1600/dark%20bhajasi%20fevicon192.png';
 
     var matcher = window.matchMedia('(prefers-color-scheme: dark)');
 
@@ -3032,19 +3032,19 @@ async function shareVerseSnap(entry, index, work, saint, parentWork) {
     const footerLogoBoxY = height - 152;
     const footerLogoY = footerLogoBoxY + (footerLogoBoxSize - footerLogoSize) / 2;
 
-    // White Rounded Icon Box
-    ctx.save();
-    ctx.fillStyle = '#ffffff';
-    if (ctx.roundRect) {
-        ctx.beginPath();
-        ctx.roundRect(footerLogoX - 5, footerLogoBoxY, footerLogoBoxSize, footerLogoBoxSize, 14);
-        ctx.fill();
-    } else {
-        ctx.fillRect(footerLogoX - 5, footerLogoBoxY, footerLogoBoxSize, footerLogoBoxSize);
-    }
-    ctx.restore();
-
+    // Show the white icon tile only when the dark export logo loaded successfully.
     if (footerLogoImg && footerLogoImg.naturalWidth) {
+        ctx.save();
+        ctx.fillStyle = '#ffffff';
+        if (ctx.roundRect) {
+            ctx.beginPath();
+            ctx.roundRect(footerLogoX - 5, footerLogoBoxY, footerLogoBoxSize, footerLogoBoxSize, 14);
+            ctx.fill();
+        } else {
+            ctx.fillRect(footerLogoX - 5, footerLogoBoxY, footerLogoBoxSize, footerLogoBoxSize);
+        }
+        ctx.restore();
+
         const ratio = footerLogoImg.naturalWidth / Math.max(1, footerLogoImg.naturalHeight);
         const footerLogoW = footerLogoSize;
         const footerLogoH = footerLogoSize / Math.max(0.1, ratio);
