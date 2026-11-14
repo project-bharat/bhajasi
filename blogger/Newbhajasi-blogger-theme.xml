@@ -56,9 +56,6 @@
 <!-- Comprehensive Meta Description -->
 <meta content='Bhajasi Bharat (भजसी भारत), curated by Bharat Rasve: Marathi Sant Sahitya, Haripath, Dnyaneshwari, Tukaram Gatha, Abhang, Pasaydan, Manache Shlok and daily devotional reading in Marathi.' name='description'/>
 
-<!-- Exhaustive Long-tail, Entity, Semantic & Voice Search Keywords -->
-
-
 <meta content='भरत रासवे (Bharat Rasve)' name='author'/>
 <meta content='भरत रासवे (Bharat Rasve)' name='creator'/>
 <meta content='भरत रासवे' name='publisher'/>
@@ -110,8 +107,27 @@
       "name": "भरत रासवे",
       "alternateName": ["Bharat Rasve", "B. Rasve"],
       "jobTitle": "संतसाहित्य अभ्यासक, मुख्य संकलक व डिजिटल आर्काइव्हिस्ट",
-      "telephone": "+917218838122",
-      "url": "https://bhajasibharat.blogspot.com/"
+      "url": "https://bhajasibharat.blogspot.com/",
+      "sameAs": ["https://bharatrasve.blogspot.com/"]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://bhajasibharat.blogspot.com/#saints",
+      "name": "संत व ग्रंथसूची / Saints and works",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "संत ज्ञानेश्वर महाराज – हरिपाठ, ज्ञानेश्वरी, पसायदान, अमृतानुभव"},
+        {"@type": "ListItem", "position": 2, "name": "संत तुकाराम महाराज – तुकाराम गाथा, हरिपाठ"},
+        {"@type": "ListItem", "position": 3, "name": "समर्थ रामदास स्वामी – मनाचे श्लोक, दासबोध"},
+        {"@type": "ListItem", "position": 4, "name": "संत एकनाथ महाराज – एकनाथी भागवत, भावार्थ रामायण, हरिपाठ"},
+        {"@type": "ListItem", "position": 5, "name": "संत नामदेव महाराज – अभंग, नामदेव गाथा, हरिपाठ"},
+        {"@type": "ListItem", "position": 6, "name": "संत जनाबाई – अभंग"},
+        {"@type": "ListItem", "position": 7, "name": "संत गाडगे महाराज – कीर्तन, भजने"},
+        {"@type": "ListItem", "position": 8, "name": "संत सावता माळी – अभंग"},
+        {"@type": "ListItem", "position": 9, "name": "राष्ट्रसंत तुकडोजी महाराज – ग्रामगीता"},
+        {"@type": "ListItem", "position": 10, "name": "संत कबीर – दोहे, साखी"},
+        {"@type": "ListItem", "position": 11, "name": "संत मीराबाई – पदावली"},
+        {"@type": "ListItem", "position": 12, "name": "महाकवि कालिदास – मेघदूत, रघुवंश"}
+      ]
     }
   ]
 }
@@ -119,6 +135,8 @@
 </script>
 
 <!-- Google Devanagari Fonts Selection -->
+<link href='https://unpkg.com' rel='preconnect'/>
+<link href='https://cdn.tailwindcss.com' rel='preconnect'/>
 <link href='https://fonts.googleapis.com' rel='preconnect'/>
 <link crossorigin='crossorigin' href='https://fonts.gstatic.com' rel='preconnect'/>
 <link href='https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;600;700&amp;family=Hind:wght@400;500;600;700&amp;family=Kalam:wght@700&amp;family=Teko:wght@500;600;700&amp;family=Khand:wght@500;600;700&amp;family=Laila:wght@700&amp;family=Noto+Sans+Devanagari:wght@400;500;600;700;800&amp;family=Noto+Serif+Devanagari:wght@400;600;700;800&amp;family=Playpen+Sans:wght@400;500;600;700&amp;family=Rozha+One&amp;family=Tiro+Devanagari+Marathi:ital@0;1&amp;display=swap' rel='stylesheet'/>
@@ -1869,6 +1887,15 @@ button {
 }
 .bhajasi-breadcrumb span:last-child { color: #fbd52d; font-weight: 600; }
 
+/* Crawlable static content (replaced by React once the app mounts) */
+.bhajasi-seo-fallback { max-width: 960px; margin: 0 auto; padding: 28px 16px 48px; color: #ffffff; line-height: 1.75; font-size: 16px; }
+.bhajasi-seo-fallback h1 { font-size: 1.7rem; margin: 0 0 10px; color: #fbd52d; }
+.bhajasi-seo-fallback h2 { font-size: 1.25rem; margin: 26px 0 8px; color: #30c5ad; }
+.bhajasi-seo-fallback h3 { font-size: 1.05rem; margin: 14px 0 2px; }
+.bhajasi-seo-fallback p, .bhajasi-seo-fallback li { margin: 4px 0; }
+.bhajasi-seo-fallback a { color: #fbd52d; }
+.bhajasi-seo-fallback ul { padding-left: 20px; }
+
 ]]></b:skin>
 
 </head>
@@ -1897,7 +1924,39 @@ button {
     </b:widget-settings>
     <b:includable id='main'>
       <!-- REACT MOUNT ROOT -->
-      <div class='bhajasi-root' id='bhajasi-root'/>
+      <div class='bhajasi-root' id='bhajasi-root'>
+        <!-- Static content for search engines and slow connections. React replaces it when the app loads. -->
+        <main class='bhajasi-seo-fallback' id='bhajasi-seo-fallback'>
+          <h1>भजसी भारत (Bhajasi Bharat) — संतसाहित्य, हरिपाठ, ज्ञानेश्वरी व अभंग</h1>
+          <p>भजसी भारत हे मराठी संतसाहित्याचे डिजिटल संकलन आहे. येथे हरिपाठ, ज्ञानेश्वरी, पसायदान, तुकाराम गाथा, अभंग, मनाचे श्लोक, दासबोध, ग्रामगीता आणि नित्य पठण स्तोत्रे मराठी अर्थासह दिवसानुसार वाचता येतात. संकलन: भरत रासवे (Bharat Rasve).</p>
+          <p lang='en'>Bhajasi Bharat is a Marathi Sant Sahitya reading library compiled by Bharat Rasve: Haripath, Dnyaneshwari, Pasaydan, Tukaram Gatha, Abhang, Manache Shlok, Dasbodh and daily devotional recitations with Marathi meanings.</p>
+
+          <h2>संत व ग्रंथसूची</h2>
+          <ul>
+        <li><strong>संत ज्ञानेश्वर महाराज</strong> — श्री ज्ञानेश्वर महाराज हरिपाठ, ज्ञानेश्वरी, पसायदान, अमृतानुभव, अभंग / गौळणी</li>
+        <li><strong>संत तुकाराम महाराज</strong> — तुकाराम गाथा, श्री तुकाराम महाराज हरिपाठ, काकड आरती / भक्तिगीते</li>
+        <li><strong>समर्थ रामदास स्वामी</strong> — मनाचे श्लोक, दासबोध, आत्माराम, करुणाष्टके, श्री मारुती स्तोत्र, रामायण</li>
+        <li><strong>संत एकनाथ महाराज</strong> — एकनाथी भागवत, भावार्थ रामायण, एकनाथी भारुड, एकनाथांचे अभंग, रुक्मिणी स्वयंवर, श्री एकनाथ महाराज हरिपाठ, स्वात्मसुख, आनंदलहरी</li>
+        <li><strong>संत नामदेव महाराज</strong> — नामदेवांचे अभंग, नामदेव गाथा, श्री नामदेव महाराज हरिपाठ, हिंदी पदे / अभंग, निवडक अभंग अर्थासह</li>
+        <li><strong>संत जनाबाई</strong> — जनाबाईंचे अभंग, निवडक अभंग, विठ्ठलभक्ती पदे, स्त्री-अनुभव / भक्ती अभंग</li>
+        <li><strong>संत सावता माळी</strong> — सावता महाराजांचे अभंग, सावता माळी गाथा, विठ्ठलभक्ती अभंग, निवडक अभंग अर्थासह</li>
+        <li><strong>संत गाडगे महाराज</strong> — कीर्तन / प्रवचन, भजने / अभंग, सामाजिक संदेश, निवडक विचार</li>
+        <li><strong>राष्ट्रसंत तुकडोजी महाराज</strong> — ग्रामगीता, भजन / अभंग, राष्ट्रसंतांचे विचार, कीर्तन / प्रवचन, ग्रामविकास विषयक साहित्य</li>
+        <li><strong>संत कबीर</strong> — दोहावाणी, कबीर बीजक, साखी, सबद / शब्द, रमैनी, कबीर दोहे, कबीर ग्रंथावली</li>
+        <li><strong>संत मीराबाई</strong> — मीराबाई पदावली, कृष्णभक्ती पदे / भजने, निवडक मीरा भजने, विरह / कृष्णप्रेम पदे, मीरा काव्यसंग्रह</li>
+        <li><strong>महाकवि कालिदास</strong> — रघुवंश, कुमारसंभव, मेघदूत, अभिज्ञानशाकुंतलम्, ऋतुसंहार, मालविकाग्निमित्रम्, विक्रमोर्वशीयम्</li>
+          </ul>
+
+          <h2>दिवसानुसार हरिपाठ</h2>
+          <p>संत ज्ञानेश्वर, तुकाराम, नामदेव व एकनाथ महाराज यांचे हरिपाठ सात दिवसांच्या क्रमाने मराठी अर्थासह उपलब्ध आहेत.</p>
+
+          <h2>नित्य पठण स्तोत्रे व मंत्र</h2>
+          <p>मनाचे श्लोक, हनुमान चालीसा, रामरक्षा स्तोत्र, पुरुषसूक्त, रुद्राष्टक, गणपती अथर्वशीर्ष, आदित्य हृदयम् आणि इतर स्तोत्रे.</p>
+
+          <h2>संपर्क व संकलक</h2>
+          <p>संकलक: <a href='https://bharatrasve.blogspot.com/' rel='author'>भरत रासवे (Bharat Rasve)</a></p>
+        </main>
+      </div>
     </b:includable>
     <b:includable id='aboutPostAuthor'>
   <div class='author-name'>
@@ -3652,24 +3711,24 @@ function App() {
     }, []);
 
     useEffect(function() {
-        let pageTitle = 'भजसी भारत .com — संतवाणी | सार्थ संतसाहित्य, हरिपाठ, ज्ञानेश्वरी व अभंग चिंतन';
+        let pageTitle = 'Bhajasi Bharat (भजसी भारत) — संतवाणी | सार्थ संतसाहित्य, हरिपाठ, ज्ञानेश्वरी व अभंग चिंतन';
 
         if (view === 'reader' && selectedWork && selectedSaint) {
-            pageTitle = selectedWork.title + ' — ' + selectedSaint.name + ' | भजसी भारत .com';
+            pageTitle = selectedWork.title + ' — ' + selectedSaint.name + ' | Bhajasi Bharat (भजसी भारत)';
         } else if (view === 'nityaReader' && selectedNityaWork) {
-            pageTitle = selectedNityaWork.title + ' — नित्य पठण | भजसी भारत .com';
+            pageTitle = selectedNityaWork.title + ' — नित्य पठण | Bhajasi Bharat (भजसी भारत)';
         } else if (view === 'books') {
-            pageTitle = 'ग्रंथ संग्रह — भजसी भारत .com';
+            pageTitle = 'ग्रंथ संग्रह — Bhajasi Bharat (भजसी भारत)';
         } else if (view === 'works' && selectedSaint) {
-            pageTitle = selectedSaint.name + ' — ग्रंथसूची | भजसी भारत .com';
+            pageTitle = selectedSaint.name + ' — ग्रंथसूची | Bhajasi Bharat (भजसी भारत)';
         } else if (view === 'sections' && selectedParentWork) {
-            pageTitle = selectedParentWork.title + ' — ' + selectedSaint.name + ' | भजसी भारत .com';
+            pageTitle = selectedParentWork.title + ' — ' + selectedSaint.name + ' | Bhajasi Bharat (भजसी भारत)';
         } else if (view === 'theme' && theme) {
-            pageTitle = theme.title + ' — संतवाणी चिंतन | भजसी भारत .com';
+            pageTitle = theme.title + ' — संतवाणी चिंतन | Bhajasi Bharat (भजसी भारत)';
         } else if (view === 'gathaTheme' && selectedGathaTheme) {
-            pageTitle = selectedGathaTheme.title + ' — ' + (selectedParentWork ? selectedParentWork.title : 'तुकाराम गाथा') + ' | भजसी भारत .com';
+            pageTitle = selectedGathaTheme.title + ' — ' + (selectedParentWork ? selectedParentWork.title : 'तुकाराम गाथा') + ' | Bhajasi Bharat (भजसी भारत)';
         } else if (view === 'nitya') {
-            pageTitle = 'नित्य पठण स्तोत्रे व मंत्र — भजसी भारत .com';
+            pageTitle = 'नित्य पठण स्तोत्रे व मंत्र — Bhajasi Bharat (भजसी भारत)';
         }
 
         document.title = pageTitle;
