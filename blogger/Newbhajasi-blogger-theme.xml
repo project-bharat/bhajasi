@@ -54,10 +54,10 @@
 </script>
 
 <!-- Comprehensive Meta Description -->
-<meta content='भजसी भारत .com — मराठी संतसाहित्याचे अधिकृत व शांत वाचन व्यासपीठ. सार्थ ज्ञानेश्वरी (अध्याय १ ते १८ संपूर्ण ओव्या व अर्थ), संपूर्ण २८ अभंग हरिपाठ, पसायदान, तुकाराम गाथा, मनाचे श्लोक, दासबोध, ग्रामगीता व अभंगवाणीचे दिवसानुसार चिंतन. संकलन व संपादन: भरत रासवे (Bharat Rasve).' name='description'/>
+<meta content='Bhajasi Bharat (भजसी भारत), curated by Bharat Rasve: Marathi Sant Sahitya, Haripath, Dnyaneshwari, Tukaram Gatha, Abhang, Pasaydan, Manache Shlok and daily devotional reading in Marathi.' name='description'/>
 
 <!-- Exhaustive Long-tail, Entity, Semantic & Voice Search Keywords -->
-<meta content='भजसी भारत, भजसी भारत .com, भजसी, भजसी संतवाणी, भरत रासवे, Bharat Rasve, सार्थ ज्ञानेश्वरी मराठी, ज्ञानेश्वरी अध्याय १ ते १८ अर्थासह, भावार्थदीपिका, ज्ञानेश्वरी पारायण, संपूर्ण हरिपाठ २८ अभंग, हरिपाठ भावार्थ, पसायदान संपूर्ण अर्थ, संत ज्ञानेश्वर महाराज ओव्या, संत तुकाराम गाथा अर्थासह, तुकाराम महाराज अभंग, समर्थ रामदास मनाचे श्लोक अर्थ, दासबोध दशक समास, संत नामदेव अभंगवाणी, संत एकनाथ भारुड भावार्थ, संत जनाबाई अभंग, संत सावता माळी अभंग, संत गाडगे महाराज विचारवाणी दशसूत्री, राष्ट्रसंत तुकडोजी महाराज ग्रामगीता ओवी, कबीर दोहे मराठी अर्थ, मीराबाई भक्तीपदे, महाकवी कालिदास मेघदूत रघुवंश, वारकरी संप्रदाय नित्य नियम भजन, नित्यनेम पारायण, दिवसानुसार संतसाहित्य, नामस्मरण, भक्ती, आत्मज्ञान, समता, निष्काम सेवा, वैराग्य, सदाचार, मनःशांती' name='keywords'/>
+
 
 <meta content='भरत रासवे (Bharat Rasve)' name='author'/>
 <meta content='भरत रासवे (Bharat Rasve)' name='creator'/>
@@ -70,21 +70,21 @@
 <link expr:href='data:blog.canonicalUrl' rel='canonical'/>
 <meta content='website' property='og:type'/>
 <meta content='mr_IN' property='og:locale'/>
-<meta content='भजसी भारत .com | सार्थ ज्ञानेश्वरी, हरिपाठ, गाथा व दिवसानुसार संतसाहित्य चिंतन' property='og:title'/>
-<meta content='संत ज्ञानेश्वर, संत तुकाराम, समर्थ रामदास, संत नामदेव, संत एकनाथ यांच्या ग्रंथांचे मूळ संहितेसह सुलभ मराठीत अर्थ आणि दिवसानुसार नित्य पारायण. संकलक: भरत रासवे.' property='og:description'/>
+<meta content='Bhajasi Bharat (भजसी भारत) | Marathi Sant Sahitya, Haripath &amp; Abhang' property='og:title'/>
+<meta content='Marathi Sant Sahitya by Bharat Rasve: Haripath, Dnyaneshwari, Tukaram Gatha, Abhang, Pasaydan and daily devotional reading.' property='og:description'/>
 <meta expr:content='data:blog.canonicalUrl' property='og:url'/>
-<meta content='भजसी भारत .com' property='og:site_name'/>
+<meta content='Bhajasi Bharat (भजसी भारत)' property='og:site_name'/>
 <meta content='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMhtOHJ0wFIxDkfVkVYJt8ftqWYdPZNFMgkOBRhc7WhXUIPZrTx7pppzpAuP-SWvJxk4BlNKsxG2M3wszK9JiTpNLex2gczJbiA2dGaZLOmo67YGYhDIy4TlKFcPS-YSdj3kWJ9p0bWCU_TwPyLSsV80uTwNbOCNTlkanvtRXeIjjaAh_yZwF6GZPSvnQ/s1600/dark%20bhajasi%20fevicon192.png' property='og:image'/>
 
 <!-- Twitter Card -->
 <meta content='summary_large_image' name='twitter:card'/>
-<meta content='भजसी भारत .com | सार्थ ज्ञानेश्वरी, हरिपाठ व अभंग पारायण' name='twitter:title'/>
-<meta content='मराठी संतसाहित्य, सार्थ ज्ञानेश्वरी अध्याय १-१८, हरिपाठ २८ अभंग, तुकाराम गाथा, मनाचे श्लोक व ग्रामगीता यांचे दिवसानुसार शांत वाचन.' name='twitter:description'/>
+<meta content='Bhajasi Bharat (भजसी भारत) | Marathi Sant Sahitya &amp; Haripath' name='twitter:title'/>
+<meta content='Marathi Sant Sahitya by Bharat Rasve: Haripath, Dnyaneshwari, Tukaram Gatha, Abhang, Pasaydan and daily devotional reading.' name='twitter:description'/>
 <meta content='भरत रासवे' name='twitter:creator'/>
 <meta content='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMhtOHJ0wFIxDkfVkVYJt8ftqWYdPZNFMgkOBRhc7WhXUIPZrTx7pppzpAuP-SWvJxk4BlNKsxG2M3wszK9JiTpNLex2gczJbiA2dGaZLOmo67YGYhDIy4TlKFcPS-YSdj3kWJ9p0bWCU_TwPyLSsV80uTwNbOCNTlkanvtRXeIjjaAh_yZwF6GZPSvnQ/s1600/dark%20bhajasi%20fevicon192.png' name='twitter:image'/>
 
 <!-- Page Title -->
-<title>भजस&#2368; भ&#2366;रत .com &#8212; स&#2306;तव&#2366;ण&#2368; | स&#2366;र&#2381;थ स&#2306;तस&#2366;ह&#2367;त&#2381;य, हर&#2367;प&#2366;ठ, ज&#2381;ञ&#2366;न&#2375;श&#2381;वर&#2368; व अभ&#2306;ग च&#2367;&#2306;तन</title>
+<title>Bhajasi Bharat (भजसी भारत) | Marathi Sant Sahitya &amp; Haripath</title>
 
 <!-- Enhanced JSON-LD -->
 <script type='application/ld+json'>
@@ -96,10 +96,10 @@
       "@type": "WebSite",
       "@id": "https://bhajasibharat.blogspot.com/#website",
       "url": "https://bhajasibharat.blogspot.com/",
-      "name": "भजसी भारत .com",
-      "alternateName": ["Bhajasi Bharat", "Bhajasi", "भजसी भारत संतसाहित्य डिजिटल व्यासपीठ"],
+      "name": "Bhajasi Bharat (भजसी भारत)",
+      "alternateName": ["भजसी भारत", "Bhajasi", "Bhajasi Bharat Sant Sahitya"],
       "inLanguage": "mr-IN",
-      "description": "मराठी संतसाहित्याचे अस्सल संहितेसह सुलभ वाचन, संपूर्ण सार्थ ज्ञानेश्वरी, हरिपाठ, पसायदान, तुकाराम गाथा आणि दिवसानुसार नित्य पारायण.",
+      "description": "Marathi Sant Sahitya by Bharat Rasve, including Haripath, Dnyaneshwari, Tukaram Gatha, Abhang, Pasaydan and daily devotional reading in Marathi.",
       "publisher": {
         "@id": "https://bhajasibharat.blogspot.com/#author-bharat-rasve"
       }
@@ -205,18 +205,6 @@ button {
 
 .blog-posts, .blog-pager, .blog-feeds, .post-outer {
     display: none !important;
-}
-
-.seo-crawler-indexing {
-    position: absolute !important;
-    width: 1px !important;
-    height: 1px !important;
-    padding: 0 !important;
-    margin: -1px !important;
-    overflow: hidden !important;
-    clip: rect(0, 0, 0, 0) !important;
-    white-space: nowrap !important;
-    border: 0 !important;
 }
 
 /* Pro UI/UX Screen-Adaptive Container */
@@ -1886,25 +1874,6 @@ button {
 </head>
 
 <body>
-
-<!-- SEO Crawlers Semantic Injection -->
-<div aria-hidden='false' class='seo-crawler-indexing'>
-    <article itemscope='itemscope' itemtype='https://schema.org/CollectionPage'>
-        <header>
-            <h1 itemprop='name'>भजस&#2368; भ&#2366;रत .com &#8212; स&#2306;तव&#2366;ण&#2368; : मर&#2366;ठ&#2368; स&#2306;तस&#2366;ह&#2367;त&#2381;य&#2366;च&#2375; श&#2366;&#2306;त व&#2366;चन, स&#2366;र&#2381;थ ओव&#2381;य&#2366;, अभ&#2306;ग आण&#2367; द&#2367;वस&#2366;न&#2369;स&#2366;र च&#2367;&#2306;तन</h1>
-            <p itemprop='description'>स&#2306;कलन: भरत र&#2366;सव&#2375; (Bharat Rasve). भजस&#2368; भ&#2366;रत य&#2366; आध&#2381;य&#2366;त&#2381;म&#2367;क व&#2381;य&#2366;सप&#2368;ठ&#2366;वर स&#2306;त ज&#2381;ञ&#2366;न&#2375;श&#2381;वर मह&#2366;र&#2366;ज, स&#2306;त त&#2369;क&#2366;र&#2366;म मह&#2366;र&#2366;ज, समर&#2381;थ र&#2366;मद&#2366;स स&#2381;व&#2366;म&#2368;, स&#2306;त न&#2366;मद&#2375;व मह&#2366;र&#2366;ज, स&#2306;त एकन&#2366;थ मह&#2366;र&#2366;ज, स&#2306;त जन&#2366;ब&#2366;ई, स&#2306;त स&#2366;वत&#2366; म&#2366;ळ&#2368;, स&#2306;त ग&#2366;डग&#2375; मह&#2366;र&#2366;ज, र&#2366;ष&#2381;ट&#2381;रस&#2306;त त&#2369;कड&#2379;ज&#2368; मह&#2366;र&#2366;ज, स&#2306;त कब&#2368;र, म&#2368;र&#2366;ब&#2366;ई आण&#2367; मह&#2366;कव&#2368; क&#2366;ल&#2367;द&#2366;स य&#2366;&#2306;च&#2381;य&#2366; म&#2370;ळ रचन&#2366;&#2306;च&#2366; सव&#2367;स&#2381;तर मर&#2366;ठ&#2368; अर&#2381;थ व श&#2367;कवण द&#2367;वस&#2366;न&#2369;स&#2366;र व&#2366;चन&#2366;स&#2366;ठ&#2368; उपलब&#2381;ध आह&#2375;.</p>
-        </header>
-        <section>
-            <h2>ट&#2373;ब १: स&#2306;त&#2366;&#2306;न&#2369;स&#2366;र मर&#2366;ठ&#2368; स&#2306;तस&#2366;ह&#2367;त&#2381;य</h2>
-            <ul>
-                <li><strong>स&#2306;त ज&#2381;ञ&#2366;न&#2375;श&#2381;वर मह&#2366;र&#2366;ज:</strong> हर&#2367;प&#2366;ठ, स&#2366;र&#2381;थ ज&#2381;ञ&#2366;न&#2375;श&#2381;वर&#2368; (अध&#2381;य&#2366;य १ त&#2375; १८), पस&#2366;यद&#2366;न.</li>
-                <li><strong>स&#2306;त त&#2369;क&#2366;र&#2366;म मह&#2366;र&#2366;ज:</strong> त&#2369;क&#2366;र&#2366;म ग&#2366;थ&#2366;, अभ&#2306;गव&#2366;ण&#2368;.</li>
-                <li><strong>समर&#2381;थ र&#2366;मद&#2366;स स&#2381;व&#2366;म&#2368;:</strong> मन&#2366;च&#2375; श&#2381;ल&#2379;क, द&#2366;सब&#2379;ध.</li>
-                <li><strong>स&#2306;त न&#2366;मद&#2375;व मह&#2366;र&#2366;ज:</strong> न&#2366;मद&#2375;व अभ&#2306;गव&#2366;ण&#2368;.</li>
-            </ul>
-        </section>
-    </article>
-</div>
 
 <!-- Blogger Mandatory Engine Section & Widget -->
 <b:section id='main' showaddelement='yes'>
